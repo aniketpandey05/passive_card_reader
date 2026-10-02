@@ -9,7 +9,8 @@
     "typecheck": "tsc --noEmit",
     "check:pdf": "esbuild fixtures/check.ts --bundle --platform=node --format=esm --packages=external --outfile=fixtures/.check.mjs && node fixtures/.check.mjs",
     "check:ocr": "esbuild fixtures/ocr-check.ts --bundle --platform=node --format=esm --packages=external --outfile=fixtures/.ocr-check.mjs && node fixtures/.ocr-check.mjs",
-    "fixtures": "python fixtures/make_fixtures.py"
+    "fixtures": "python fixtures/make_fixtures.py",
+    "check:parts": "esbuild fixtures/morphology-check.ts --bundle --platform=node --format=esm --packages=external --outfile=fixtures/.morph.mjs && node fixtures/.morph.mjs"
   },
   "type": "module",
   "dependencies": {

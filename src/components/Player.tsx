@@ -1,8 +1,9 @@
-import { useCallback, useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { db, getEntry } from '../db'
 import type { Entry, Settings } from '../types'
 import { readMs, recallMs } from '../lib/timing'
 import { cancelSpeech, speak } from '../lib/speech'
+import { analyze } from '../lib/morphology'
 import SettingsSheet from './SettingsSheet'
 
 interface Props {
@@ -198,6 +199,8 @@ export default function Player({ deckId, startIdx, settings, onPatch, onExit }: 
 
   useEffect(() => cancelSpeech, [])
 
+  const parts = useMemo(() => (entry && settings.showParts ? analyze(entry.word) : null), [entry, settings.showParts])
+
   const phaseMs = entry ? (phase === 'word' ? recallMs(settings) : readMs(entry.meaning, settings)) : 0
   const deckPct = count ? ((idx + 1) / count) * 100 : 0
 
@@ -234,9 +237,20 @@ export default function Player({ deckId, startIdx, settings, onPatch, onExit }: 
             {entry.pos && <div className="pos">{entry.pos}</div>}
             <div className="meaning-slot">
               {phase === 'meaning' ? (
-                <p className="meaning" key={entry.idx}>
-                  {entry.meaning}
-                </p>
+                <div key={entry.idx}>
+                  <p className="meaning">{entry.meaning}</p>
+                  {parts && (
+                    <p className="parts">
+                      <span className="lang">{parts.lang}</span>
+                      {parts.parts.map((p) => (
+                        <span className="part" key={p.kind + p.form}>
+                          <b>{p.form}</b> {p.gloss}
+                        </span>
+                      ))}
+                      {parts.note && <span className="part note">{parts.note}</span>}
+                    </p>
+                  )}
+                </div>
               ) : (
                 <p className="hint">
                   tap, or press <kbd>↓</kbd>

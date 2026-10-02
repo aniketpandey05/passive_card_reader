@@ -28,6 +28,40 @@ Then open http://localhost:5173. `npm run build` produces a deployable `dist/`
   wait for the voice to finish before advancing, so nothing gets cut off.
   On phones, speech stops when the screen locks - that needs a native shell.
 - **Screen wake lock** while playing, so a session doesn't get interrupted.
+- **Word parts** under the meaning, where they are known: `anachronism` shows
+  *Greek · ana- up, back + chron time + -ism doctrine*. See below.
+
+## Word parts
+
+A table of Latin and Greek morphemes (`src/data/morphemes.ts`) plus an analyzer
+(`src/lib/morphology.ts`), rather than hand-written etymology per word. A table
+works on whatever you import; per-word notes only ever cover the words someone
+thought to write them for.
+
+It is tuned for precision, because a missing breakdown costs a hint while a
+wrong one teaches a false etymology. So a root must sit exactly where a root
+belongs - right after the prefix - the parts must account for 75% of the word,
+and both halves of a compound must be at least four letters. That last rule is
+what stops `mother` becoming *mot + her*.
+
+Coincidences that survive all of that are listed explicitly, with the real
+derivation in a comment: `mitigate` is *mitis* "mild", not *mittere* "send";
+`volatile` is *volare* "fly", not *velle* "wish". `OVERRIDES` goes the other
+way, giving the true story where an analyzer could never find it - `ephemeral`
+is *epi-* + *hemera*, lasting but a day.
+
+```bash
+npm run check:parts
+```
+
+| Measure | Result |
+| --- | --- |
+| Words that should break down | 24/25 |
+| Words that must stay quiet (plain English, false friends) | 26/26 |
+| Built-in deck covered | 69/279 |
+
+A quarter of the deck is the honest number: `thwart`, `wary` and `staunch` are
+Germanic and have no Latin or Greek parts to show, so the app says nothing.
 
 ## Importing text
 
@@ -127,7 +161,7 @@ likely to be wrong.
 src/
   db.ts              Dexie schema, deck creation, search
   types.ts           Deck, Entry, Progress, Settings
-  data/starter.ts    100-word sample deck
+  data/starter.ts    built-in deck
   lib/
     timing.ts        phase durations
     speech.ts        text-to-speech wrapper

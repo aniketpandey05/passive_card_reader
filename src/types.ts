@@ -38,6 +38,8 @@ export interface Settings {
   voice: boolean
   voiceURI: string | null
   speakMeaning: boolean
+  /** Show the Latin/Greek breakdown under the meaning when one is known. */
+  showParts: boolean
   order: Order
   theme: 'light' | 'dark'
 }
@@ -50,6 +52,7 @@ export const DEFAULT_SETTINGS: Settings = {
   voice: false,
   voiceURI: null,
   speakMeaning: true,
+  showParts: true,
   order: 'alpha',
   theme: 'light',
 }

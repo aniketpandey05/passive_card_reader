@@ -130,6 +130,23 @@ export default function SettingsSheet({ settings, onPatch, onClose }: Props) {
 
         <div className="setting">
           <div className="label">
+            <label className="switch">
+              <input
+                type="checkbox"
+                checked={settings.showParts}
+                onChange={(e) => onPatch({ showParts: e.target.checked })}
+              />
+              <b>Word parts</b>
+            </label>
+          </div>
+          <span className="note">
+            Shows the Latin or Greek pieces under the meaning, where they are known: prefix, root and suffix. Learning
+            that <i>spect</i> is "look" gives you circumspect, introspective and retrospect at once.
+          </span>
+        </div>
+
+        <div className="setting">
+          <div className="label">
             <b>Order</b>
             <span className="segmented">
               <button aria-pressed={settings.order === 'alpha'} onClick={() => onPatch({ order: 'alpha' })}>

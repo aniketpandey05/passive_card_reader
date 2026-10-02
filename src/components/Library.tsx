@@ -81,8 +81,8 @@ export default function Library({ settings, onPatch, onPlay, onPdf }: Props) {
       ) : rows.length === 0 && !importing ? (
         <div className="empty">
           <p>
-            Nothing here yet. Start with the 100-word sample deck, or bring your own: a dictionary or word list as a
-            PDF, CSV, TSV, text or JSON file.
+            Nothing here yet. Start with the built-in {STARTER_PACK.length}-word deck, or bring your own: a dictionary
+            or word list as a PDF, CSV, TSV, text or JSON file.
           </p>
           <div style={{ display: 'flex', gap: 8, justifyContent: 'center', flexWrap: 'wrap' }}>
             <button className="btn primary" onClick={() => void addStarter()}>
@@ -156,7 +156,7 @@ export default function Library({ settings, onPatch, onPlay, onPdf }: Props) {
       {rows !== null && rows.length > 0 && !rows.some((r) => r.name === STARTER_NAME) && !importing && (
         <p className="hint" style={{ marginTop: 20 }}>
           <button className="btn small ghost" onClick={() => void addStarter()}>
-            Add the 100-word starter pack
+            Add the built-in {STARTER_PACK.length}-word deck
           </button>
         </p>
       )}

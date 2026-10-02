@@ -1,9 +1,9 @@
 import type { RawEntry } from '../db'
 
 /**
- * A 100-word starter deck so the app does something useful before any import.
- * Alphabetical a-e, so it behaves like a slice of a real dictionary.
- * Definitions written for this project; free to use and redistribute.
+ * The built-in deck, so the app does something useful before any import.
+ * Alphabetical, spanning a-z. Definitions written for this project; free to
+ * use and redistribute.
  */
 const TSV = `
 abate	verb	to become less intense or widespread; to reduce something
@@ -106,6 +106,185 @@ exacerbate	verb	to make a bad situation worse
 exemplary	adjective	serving as a desirable model; outstandingly good
 exhaustive	adjective	thorough and complete, leaving nothing out
 exonerate	verb	to clear of blame or accusation
+facetious	adjective	joking about something that deserves to be taken seriously
+fallacious	adjective	based on faulty reasoning; misleading
+fastidious	adjective	very attentive to detail; hard to please
+fervent	adjective	showing intense and passionate feeling
+fickle	adjective	changing loyalty or affection without good reason
+flout	verb	to openly disregard a rule or convention
+fortuitous	adjective	happening by chance, often luckily
+frugal	adjective	sparing with money or resources
+furtive	adjective	done quietly to avoid being noticed
+futile	adjective	pointless; incapable of producing any result
+garrulous	adjective	excessively talkative about trivial things
+germane	adjective	genuinely relevant to the matter at hand
+gregarious	adjective	sociable; fond of company
+guile	noun	cunning used to deceive
+hackneyed	adjective	worn out by overuse; unoriginal
+harbinger	noun	a sign of something about to happen
+haughty	adjective	arrogantly superior toward others
+heresy	noun	a belief that contradicts accepted doctrine
+hiatus	noun	a pause or gap in continuity
+hubris	noun	excessive pride that invites downfall
+iconoclast	noun	a person who attacks cherished beliefs or institutions
+idiosyncrasy	noun	a peculiar habit or feature of one person
+immutable	adjective	unchanging and unable to be changed
+impeccable	adjective	flawless; without any fault
+impetuous	adjective	acting quickly without thought or care
+implacable	adjective	impossible to appease or soften
+inadvertent	adjective	unintentional; done without noticing
+incessant	adjective	continuing without pause
+incisive	adjective	showing sharp, clear thinking
+incongruous	adjective	out of place; not in harmony with its surroundings
+indigenous	adjective	originating naturally in a particular place
+indolent	adjective	habitually idle; averse to effort
+ineffable	adjective	too great to be put into words
+inexorable	adjective	impossible to stop or persuade
+ingenuous	adjective	innocent and unguarded; frank
+innocuous	adjective	harmless; unlikely to offend
+insidious	adjective	spreading harm gradually and unnoticed
+insipid	adjective	lacking flavour, interest, or vigour
+intransigent	adjective	refusing to compromise
+intrepid	adjective	fearless in the face of danger
+inundate	verb	to overwhelm, or to flood
+irascible	adjective	easily provoked to anger
+judicious	adjective	showing good judgment and sense
+juxtapose	verb	to place side by side for contrast
+laconic	adjective	using very few words
+languid	adjective	lacking energy; pleasantly slow
+laud	verb	to praise highly
+lethargic	adjective	sluggish and lacking energy
+levity	noun	lightness of manner, especially when seriousness is expected
+loquacious	adjective	very talkative
+lucid	adjective	clearly expressed, or clear-headed
+magnanimous	adjective	generous and forgiving, especially toward a rival
+malevolent	adjective	wishing harm to others
+malleable	adjective	easily shaped, or easily influenced
+meticulous	adjective	showing great care over every detail
+mitigate	verb	to make something bad less severe
+mollify	verb	to soothe the anger of
+morose	adjective	gloomy and sullen
+mundane	adjective	ordinary and dull; of the everyday world
+munificent	adjective	extremely generous
+myriad	noun	a countless number of things
+nebulous	adjective	vague and ill-defined
+nefarious	adjective	wicked; criminal in intent
+neophyte	noun	a beginner at something
+nonchalant	adjective	calmly unconcerned
+nuance	noun	a subtle difference in meaning or feeling
+obdurate	adjective	stubbornly refusing to change an opinion
+obfuscate	verb	to make something unclear on purpose
+oblivious	adjective	entirely unaware of what is happening
+obsequious	adjective	excessively eager to please or obey
+obsolete	adjective	no longer in use; out of date
+obstinate	adjective	stubbornly refusing to change course
+ominous	adjective	suggesting that something bad is coming
+opaque	adjective	impossible to see through, or hard to understand
+opulent	adjective	luxurious and costly
+ostentatious	adjective	designed to impress; showy
+ostracize	verb	to exclude someone from a group
+palpable	adjective	so intense it feels almost physical
+paragon	noun	a perfect example of a quality
+paucity	noun	a shortage; too small an amount
+pedantic	adjective	overly concerned with minor rules and details
+penchant	noun	a strong liking for something
+perfunctory	adjective	done without care, merely as a duty
+pernicious	adjective	causing harm in a gradual, hidden way
+perspicacious	adjective	having keen insight, especially into people
+pertinent	adjective	directly relevant
+pervasive	adjective	spreading widely through every part
+placate	verb	to calm someone's anger
+plausible	adjective	seeming reasonable, though possibly untrue
+pragmatic	adjective	dealing with things practically rather than ideally
+precarious	adjective	unstable; dependent on chance
+preclude	verb	to make impossible in advance
+predilection	noun	a natural preference for something
+prescient	adjective	knowing what will happen before it does
+pristine	adjective	in its original, unspoiled condition
+prodigal	adjective	wastefully extravagant
+prolific	adjective	producing a great deal
+propensity	noun	a natural inclination to behave a certain way
+prosaic	adjective	plain and unimaginative
+provincial	adjective	narrow in outlook; of the regions rather than the capital
+prudent	adjective	acting with care for the future
+pugnacious	adjective	eager to argue or fight
+quell	verb	to put an end to, usually by force
+querulous	adjective	habitually complaining
+quiescent	adjective	inactive or at rest for the time being
+quintessential	adjective	representing the purest example of its kind
+quixotic	adjective	idealistic to the point of being impractical
+rancor	noun	long-held bitterness or resentment
+rebuke	verb	to criticize sharply
+recalcitrant	adjective	stubbornly resisting authority
+reciprocal	adjective	given and received in equal measure
+redundant	adjective	more than is needed; superfluous
+refute	verb	to prove a claim wrong with evidence
+relegate	verb	to consign to a lower rank or position
+repudiate	verb	to reject or disown formally
+resilient	adjective	able to recover quickly from difficulty
+reticent	adjective	unwilling to say much
+rhetoric	noun	the art of persuasive speech, or language empty of substance
+rudimentary	adjective	basic and undeveloped
+ruminate	verb	to think something over at length
+sagacious	adjective	showing deep wisdom and good judgment
+salient	adjective	most noticeable or important
+sanguine	adjective	cheerfully optimistic, especially in bad circumstances
+scrupulous	adjective	careful to do what is right, down to the detail
+scrutinize	verb	to examine closely and critically
+servile	adjective	excessively submissive
+soporific	adjective	tending to induce sleep
+specious	adjective	seeming right but actually false
+sporadic	adjective	occurring at irregular intervals
+spurious	adjective	not genuine; based on false reasoning
+squander	verb	to waste something valuable
+stagnant	adjective	not flowing or developing
+staunch	adjective	loyal and firm in commitment
+stoic	adjective	enduring pain or hardship without complaint
+strident	adjective	loud and harsh; forcefully insistent
+subjugate	verb	to bring under domination
+succinct	adjective	expressed clearly in few words
+superfluous	adjective	more than is needed; unnecessary
+supplant	verb	to take the place of something displaced
+surreptitious	adjective	done secretly to escape notice
+sycophant	noun	a person who flatters the powerful for advantage
+taciturn	adjective	saying little by nature
+tangential	adjective	only loosely connected to the subject
+temerity	noun	boldness that borders on recklessness
+tenacious	adjective	holding firmly; persistent
+tentative	adjective	provisional; done without confidence
+tenuous	adjective	very weak or slight
+terse	adjective	brief to the point of curtness
+thwart	verb	to prevent someone from achieving something
+timorous	adjective	nervous and easily frightened
+torpor	noun	sluggish inactivity
+tractable	adjective	easy to control or manage
+transient	adjective	lasting only a short time
+trepidation	noun	anxiety about what is to come
+trite	adjective	dulled by overuse; lacking freshness
+truculent	adjective	aggressively defiant
+ubiquitous	adjective	present everywhere at once
+unequivocal	adjective	leaving no doubt; admitting one meaning only
+untenable	adjective	impossible to defend against objection
+usurp	verb	to seize a position or power wrongfully
+vacillate	verb	to waver between choices
+vapid	adjective	offering nothing of interest; flat
+vehement	adjective	showing strong, forceful feeling
+venerate	verb	to regard with deep respect
+veracity	noun	truthfulness; accuracy
+verbose	adjective	using more words than necessary
+viable	adjective	capable of working or surviving
+vicarious	adjective	experienced indirectly, through someone else
+vigilant	adjective	watchful for danger
+vilify	verb	to speak about with abusive disparagement
+vindicate	verb	to clear of blame, or to justify
+virulent	adjective	bitterly hostile, or severely poisonous
+vociferous	adjective	expressing opinions loudly and insistently
+volatile	adjective	liable to change rapidly and unpredictably
+wary	adjective	cautious about possible danger
+whimsical	adjective	playfully odd; given to sudden fancies
+wistful	adjective	quietly longing for something lost
+zealous	adjective	filled with intense enthusiasm for a cause
+zenith	noun	the highest point reached
 `
 
 export const STARTER_PACK: RawEntry[] = TSV.trim()
@@ -116,4 +295,4 @@ export const STARTER_PACK: RawEntry[] = TSV.trim()
   })
   .filter((e) => e.word && e.meaning)
 
-export const STARTER_NAME = 'Starter pack (a-e)'
+export const STARTER_NAME = 'Core vocabulary (a-z)'

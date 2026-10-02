@@ -317,7 +317,7 @@ h2.step {
   letter-spacing: -0.03em;
   color: var(--ink);
   overflow-wrap: anywhere;
-  animation: rise 0.45s ease-out both;
+  animation: rise 0.45s ease-out;
 }
 .pos { font-family: var(--serif); font-style: italic; color: var(--muted); font-size: clamp(0.95rem, 3.4vw, 1.2rem); }
 
@@ -328,16 +328,53 @@ h2.step {
   font-size: clamp(1.1rem, 4.4vw, 1.75rem);
   line-height: 1.45;
   color: var(--ink-soft);
-  animation: rise 0.42s ease-out both;
+  animation: rise 0.42s ease-out;
 }
+/* The word's Latin or Greek pieces: a quiet footnote, never competing with
+   the meaning above it. */
+.parts {
+  margin: 18px auto 0;
+  max-width: 36ch;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 10px;
+  justify-content: center;
+  align-items: baseline;
+  font-size: clamp(0.78rem, 2.9vw, 0.92rem);
+  line-height: 1.5;
+  color: var(--muted);
+  animation: rise 0.5s ease-out;
+}
+.parts .lang {
+  font-size: 0.86em;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 600;
+}
+.parts .part + .part::before,
+.parts .lang + .part::before {
+  content: '·';
+  margin-right: 10px;
+  opacity: 0.45;
+}
+.parts .part b { font-family: var(--serif); font-weight: 700; color: var(--ink-soft); }
+.parts .note { font-style: italic; }
+
 .hint { color: var(--muted); font-size: 13px; opacity: 0.8; margin: 6px 0 0; }
 .playing .hint { opacity: 0; }
 
 .done { color: var(--muted); display: grid; gap: 12px; justify-items: center; }
 
+/* Movement only, and no fill-mode. Both are deliberate: an opacity fade parks
+   the element at zero until the animation clock runs, so anything that stalls
+   that clock - a background tab, a throttled embedded view - leaves the word
+   invisible with no way to recover. Sliding into place reads the same and the
+   worst case is text sitting 10px low. Decoration must never be what makes
+   content visible. */
 @keyframes rise {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: none; }
+  from { transform: translateY(10px); }
+  to { transform: none; }
 }
 
 .controls {

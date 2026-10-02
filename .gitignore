@@ -1,0 +1,10 @@
+node_modules
+dist
+dev-dist
+.DS_Store
+
+# bundled test harnesses, rebuilt by npm run check:pdf / check:ocr
+fixtures/.*.mjs
+
+# Tesseract model, downloaded on demand by the OCR check
+eng.traineddata

@@ -1,0 +1,758 @@
+{
+  "dict-2col": [
+    {
+      "word": "abate",
+      "pos": "verb",
+      "meaning": "to become less intense or widespread; to reduce something"
+    },
+    {
+      "word": "aberration",
+      "pos": "noun",
+      "meaning": "a departure from what is normal or expected"
+    },
+    {
+      "word": "abhor",
+      "pos": "verb",
+      "meaning": "to regard with disgust and hatred"
+    },
+    {
+      "word": "abstain",
+      "pos": "verb",
+      "meaning": "to choose not to do or take something"
+    },
+    {
+      "word": "accolade",
+      "pos": "noun",
+      "meaning": "an award, or an expression of praise"
+    },
+    {
+      "word": "acumen",
+      "pos": "noun",
+      "meaning": "sharp judgment and quick insight"
+    },
+    {
+      "word": "adamant",
+      "pos": "adjective",
+      "meaning": "refusing to be persuaded; unshakably firm"
+    },
+    {
+      "word": "admonish",
+      "pos": "verb",
+      "meaning": "to warn or reprimand gently but firmly"
+    },
+    {
+      "word": "adversity",
+      "pos": "noun",
+      "meaning": "a difficult or unpleasant situation"
+    },
+    {
+      "word": "aesthetic",
+      "pos": "adjective",
+      "meaning": "concerned with beauty, or with the appreciation of beauty"
+    },
+    {
+      "word": "affable",
+      "pos": "adjective",
+      "meaning": "friendly and easy to talk to"
+    },
+    {
+      "word": "alleviate",
+      "pos": "verb",
+      "meaning": "to make pain or a problem less severe"
+    },
+    {
+      "word": "aloof",
+      "pos": "adjective",
+      "meaning": "distant and uninvolved; emotionally cool"
+    },
+    {
+      "word": "altruism",
+      "pos": "noun",
+      "meaning": "unselfish concern for the welfare of others"
+    },
+    {
+      "word": "ambiguous",
+      "pos": "adjective",
+      "meaning": "open to more than one interpretation; unclear"
+    },
+    {
+      "word": "ambivalent",
+      "pos": "adjective",
+      "meaning": "having mixed or contradictory feelings about something"
+    },
+    {
+      "word": "anachronism",
+      "pos": "noun",
+      "meaning": "something placed in the wrong historical period"
+    },
+    {
+      "word": "analogous",
+      "pos": "adjective",
+      "meaning": "comparable in some useful respect"
+    },
+    {
+      "word": "anecdote",
+      "pos": "noun",
+      "meaning": "a short personal story used to illustrate a point"
+    },
+    {
+      "word": "animosity",
+      "pos": "noun",
+      "meaning": "strong hostility or ill will"
+    },
+    {
+      "word": "anomaly",
+      "pos": "noun",
+      "meaning": "something that deviates from the standard or expected"
+    },
+    {
+      "word": "antipathy",
+      "pos": "noun",
+      "meaning": "a deep-seated dislike"
+    },
+    {
+      "word": "apathy",
+      "pos": "noun",
+      "meaning": "lack of interest, enthusiasm, or concern"
+    },
+    {
+      "word": "appease",
+      "pos": "verb",
+      "meaning": "to pacify someone by giving in to their demands"
+    },
+    {
+      "word": "arbitrary",
+      "pos": "adjective",
+      "meaning": "based on personal whim rather than reason or rule"
+    },
+    {
+      "word": "arcane",
+      "pos": "adjective",
+      "meaning": "understood by very few; mysteriously obscure"
+    },
+    {
+      "word": "arduous",
+      "pos": "adjective",
+      "meaning": "requiring great effort; strenuous"
+    },
+    {
+      "word": "articulate",
+      "pos": "adjective",
+      "meaning": "able to express thoughts clearly and fluently"
+    },
+    {
+      "word": "ascetic",
+      "pos": "noun",
+      "meaning": "a person who practices severe self-discipline and abstinence"
+    },
+    {
+      "word": "assiduous",
+      "pos": "adjective",
+      "meaning": "showing great care and persistent effort"
+    },
+    {
+      "word": "astute",
+      "pos": "adjective",
+      "meaning": "shrewd; quick to see an advantage"
+    },
+    {
+      "word": "audacious",
+      "pos": "adjective",
+      "meaning": "boldly daring, sometimes to the point of recklessness"
+    },
+    {
+      "word": "augment",
+      "pos": "verb",
+      "meaning": "to make greater by adding to it"
+    },
+    {
+      "word": "auspicious",
+      "pos": "adjective",
+      "meaning": "suggesting a favorable outcome; promising"
+    },
+    {
+      "word": "austere",
+      "pos": "adjective",
+      "meaning": "severely simple and plain; stern in manner"
+    },
+    {
+      "word": "banal",
+      "pos": "adjective",
+      "meaning": "so unoriginal as to be boring"
+    },
+    {
+      "word": "belie",
+      "pos": "verb",
+      "meaning": "to give a false impression of; to contradict"
+    },
+    {
+      "word": "benevolent",
+      "pos": "adjective",
+      "meaning": "kind and generous toward others"
+    },
+    {
+      "word": "bolster",
+      "pos": "verb",
+      "meaning": "to support or strengthen"
+    },
+    {
+      "word": "brevity",
+      "pos": "noun",
+      "meaning": "shortness of speech or writing; conciseness"
+    },
+    {
+      "word": "cacophony",
+      "pos": "noun",
+      "meaning": "a harsh, discordant mixture of sounds"
+    },
+    {
+      "word": "candid",
+      "pos": "adjective",
+      "meaning": "truthful and straightforward, even when it is awkward"
+    },
+    {
+      "word": "capricious",
+      "pos": "adjective",
+      "meaning": "given to sudden changes of mood or behavior"
+    },
+    {
+      "word": "castigate",
+      "pos": "verb",
+      "meaning": "to reprimand severely"
+    },
+    {
+      "word": "caustic",
+      "pos": "adjective",
+      "meaning": "bitingly sarcastic; corrosive"
+    },
+    {
+      "word": "censure",
+      "pos": "verb",
+      "meaning": "to express strong formal disapproval"
+    },
+    {
+      "word": "circumspect",
+      "pos": "adjective",
+      "meaning": "cautious; wary of risk and consequence"
+    },
+    {
+      "word": "clandestine",
+      "pos": "adjective",
+      "meaning": "kept secret, usually because it is improper"
+    },
+    {
+      "word": "coalesce",
+      "pos": "verb",
+      "meaning": "to come together to form one whole"
+    },
+    {
+      "word": "cogent",
+      "pos": "adjective",
+      "meaning": "clear, logical, and convincing"
+    },
+    {
+      "word": "complacent",
+      "pos": "adjective",
+      "meaning": "smugly satisfied, and so unaware of danger"
+    },
+    {
+      "word": "conciliatory",
+      "pos": "adjective",
+      "meaning": "intended to placate or win goodwill"
+    },
+    {
+      "word": "condone",
+      "pos": "verb",
+      "meaning": "to accept or overlook behavior that is wrong"
+    },
+    {
+      "word": "conundrum",
+      "pos": "noun",
+      "meaning": "a confusing and difficult problem"
+    },
+    {
+      "word": "corroborate",
+      "pos": "verb",
+      "meaning": "to confirm with supporting evidence"
+    },
+    {
+      "word": "credulous",
+      "pos": "adjective",
+      "meaning": "too ready to believe things; easily deceived"
+    },
+    {
+      "word": "cryptic",
+      "pos": "adjective",
+      "meaning": "mysterious in meaning; deliberately obscure"
+    },
+    {
+      "word": "culpable",
+      "pos": "adjective",
+      "meaning": "deserving blame"
+    },
+    {
+      "word": "cursory",
+      "pos": "adjective",
+      "meaning": "hasty and not thorough"
+    },
+    {
+      "word": "dearth",
+      "pos": "noun",
+      "meaning": "a scarcity or lack of something"
+    },
+    {
+      "word": "debunk",
+      "pos": "verb",
+      "meaning": "to expose the falseness of a claim or belief"
+    },
+    {
+      "word": "decorum",
+      "pos": "noun",
+      "meaning": "behavior that is proper and in good taste"
+    },
+    {
+      "word": "deference",
+      "pos": "noun",
+      "meaning": "polite respect, and submission to another's judgment"
+    },
+    {
+      "word": "deleterious",
+      "pos": "adjective",
+      "meaning": "causing harm or damage"
+    },
+    {
+      "word": "delineate",
+      "pos": "verb",
+      "meaning": "to describe or outline precisely"
+    },
+    {
+      "word": "deride",
+      "pos": "verb",
+      "meaning": "to mock or ridicule with contempt"
+    },
+    {
+      "word": "desultory",
+      "pos": "adjective",
+      "meaning": "lacking a plan or purpose; jumping from one thing to another"
+    },
+    {
+      "word": "deter",
+      "pos": "verb",
+      "meaning": "to discourage someone from acting, usually by instilling doubt"
+    },
+    {
+      "word": "diatribe",
+      "pos": "noun",
+      "meaning": "a bitter, forceful verbal attack"
+    },
+    {
+      "word": "didactic",
+      "pos": "adjective",
+      "meaning": "intended to teach, often in a heavy-handed moral way"
+    },
+    {
+      "word": "diffident",
+      "pos": "adjective",
+      "meaning": "shy and lacking self-confidence"
+    },
+    {
+      "word": "digress",
+      "pos": "verb",
+      "meaning": "to stray from the main subject"
+    },
+    {
+      "word": "dilatory",
+      "pos": "adjective",
+      "meaning": "slow to act; causing delay"
+    },
+    {
+      "word": "disparage",
+      "pos": "verb",
+      "meaning": "to belittle or speak of slightingly"
+    },
+    {
+      "word": "disparate",
+      "pos": "adjective",
+      "meaning": "essentially different and unrelated"
+    },
+    {
+      "word": "dissemble",
+      "pos": "verb",
+      "meaning": "to hide one's true motives or feelings"
+    },
+    {
+      "word": "docile",
+      "pos": "adjective",
+      "meaning": "easily managed and willing to be taught"
+    },
+    {
+      "word": "dogmatic",
+      "pos": "adjective",
+      "meaning": "asserting opinions as if they were beyond question"
+    },
+    {
+      "word": "dubious",
+      "pos": "adjective",
+      "meaning": "doubtful; questionable in quality or truth"
+    },
+    {
+      "word": "ebullient",
+      "pos": "adjective",
+      "meaning": "overflowing with enthusiasm and energy"
+    },
+    {
+      "word": "eclectic",
+      "pos": "adjective",
+      "meaning": "drawing on a wide and varied range of sources"
+    },
+    {
+      "word": "efficacy",
+      "pos": "noun",
+      "meaning": "the power to produce the intended result"
+    },
+    {
+      "word": "egregious",
+      "pos": "adjective",
+      "meaning": "outstandingly bad; shockingly wrong"
+    },
+    {
+      "word": "elicit",
+      "pos": "verb",
+      "meaning": "to draw out a response or reaction"
+    },
+    {
+      "word": "eloquent",
+      "pos": "adjective",
+      "meaning": "fluent and persuasive in speech or writing"
+    },
+    {
+      "word": "elucidate",
+      "pos": "verb",
+      "meaning": "to make clear by explaining"
+    },
+    {
+      "word": "emulate",
+      "pos": "verb",
+      "meaning": "to imitate, especially in order to match or surpass"
+    },
+    {
+      "word": "enervate",
+      "pos": "verb",
+      "meaning": "to drain of energy and vitality"
+    },
+    {
+      "word": "engender",
+      "pos": "verb",
+      "meaning": "to give rise to; to bring about"
+    },
+    {
+      "word": "enigma",
+      "pos": "noun",
+      "meaning": "a person or thing that is mysterious and hard to understand"
+    },
+    {
+      "word": "ephemeral",
+      "pos": "adjective",
+      "meaning": "lasting a very short time"
+    },
+    {
+      "word": "equanimity",
+      "pos": "noun",
+      "meaning": "calmness and composure under strain"
+    },
+    {
+      "word": "erudite",
+      "pos": "adjective",
+      "meaning": "having or showing deep scholarly knowledge"
+    },
+    {
+      "word": "esoteric",
+      "pos": "adjective",
+      "meaning": "understood only by a small group with special knowledge"
+    },
+    {
+      "word": "eulogy",
+      "pos": "noun",
+      "meaning": "a speech of high praise, especially for someone who has died"
+    },
+    {
+      "word": "euphemism",
+      "pos": "noun",
+      "meaning": "a mild word substituted for one thought harsh or blunt"
+    },
+    {
+      "word": "exacerbate",
+      "pos": "verb",
+      "meaning": "to make a bad situation worse"
+    },
+    {
+      "word": "exemplary",
+      "pos": "adjective",
+      "meaning": "serving as a desirable model; outstandingly good"
+    },
+    {
+      "word": "exhaustive",
+      "pos": "adjective",
+      "meaning": "thorough and complete, leaving nothing out"
+    },
+    {
+      "word": "exonerate",
+      "pos": "verb",
+      "meaning": "to clear of blame or accusation"
+    }
+  ],
+  "wordlist": [
+    {
+      "word": "abate",
+      "pos": null,
+      "meaning": "to become less intense or widespread; to reduce something"
+    },
+    {
+      "word": "aberration",
+      "pos": null,
+      "meaning": "a departure from what is normal or expected"
+    },
+    {
+      "word": "abhor",
+      "pos": null,
+      "meaning": "to regard with disgust and hatred"
+    },
+    {
+      "word": "abstain",
+      "pos": null,
+      "meaning": "to choose not to do or take something"
+    },
+    {
+      "word": "accolade",
+      "pos": null,
+      "meaning": "an award, or an expression of praise"
+    },
+    {
+      "word": "acumen",
+      "pos": null,
+      "meaning": "sharp judgment and quick insight"
+    },
+    {
+      "word": "adamant",
+      "pos": null,
+      "meaning": "refusing to be persuaded; unshakably firm"
+    },
+    {
+      "word": "admonish",
+      "pos": null,
+      "meaning": "to warn or reprimand gently but firmly"
+    },
+    {
+      "word": "adversity",
+      "pos": null,
+      "meaning": "a difficult or unpleasant situation"
+    },
+    {
+      "word": "aesthetic",
+      "pos": null,
+      "meaning": "concerned with beauty, or with the appreciation of beauty"
+    },
+    {
+      "word": "affable",
+      "pos": null,
+      "meaning": "friendly and easy to talk to"
+    },
+    {
+      "word": "alleviate",
+      "pos": null,
+      "meaning": "to make pain or a problem less severe"
+    },
+    {
+      "word": "aloof",
+      "pos": null,
+      "meaning": "distant and uninvolved; emotionally cool"
+    },
+    {
+      "word": "altruism",
+      "pos": null,
+      "meaning": "unselfish concern for the welfare of others"
+    },
+    {
+      "word": "ambiguous",
+      "pos": null,
+      "meaning": "open to more than one interpretation; unclear"
+    },
+    {
+      "word": "ambivalent",
+      "pos": null,
+      "meaning": "having mixed or contradictory feelings about something"
+    },
+    {
+      "word": "anachronism",
+      "pos": null,
+      "meaning": "something placed in the wrong historical period"
+    },
+    {
+      "word": "analogous",
+      "pos": null,
+      "meaning": "comparable in some useful respect"
+    },
+    {
+      "word": "anecdote",
+      "pos": null,
+      "meaning": "a short personal story used to illustrate a point"
+    },
+    {
+      "word": "animosity",
+      "pos": null,
+      "meaning": "strong hostility or ill will"
+    },
+    {
+      "word": "anomaly",
+      "pos": null,
+      "meaning": "something that deviates from the standard or expected"
+    },
+    {
+      "word": "antipathy",
+      "pos": null,
+      "meaning": "a deep-seated dislike"
+    },
+    {
+      "word": "apathy",
+      "pos": null,
+      "meaning": "lack of interest, enthusiasm, or concern"
+    },
+    {
+      "word": "appease",
+      "pos": null,
+      "meaning": "to pacify someone by giving in to their demands"
+    },
+    {
+      "word": "arbitrary",
+      "pos": null,
+      "meaning": "based on personal whim rather than reason or rule"
+    },
+    {
+      "word": "arcane",
+      "pos": null,
+      "meaning": "understood by very few; mysteriously obscure"
+    },
+    {
+      "word": "arduous",
+      "pos": null,
+      "meaning": "requiring great effort; strenuous"
+    },
+    {
+      "word": "articulate",
+      "pos": null,
+      "meaning": "able to express thoughts clearly and fluently"
+    },
+    {
+      "word": "ascetic",
+      "pos": null,
+      "meaning": "a person who practices severe self-discipline and abstinence"
+    },
+    {
+      "word": "assiduous",
+      "pos": null,
+      "meaning": "showing great care and persistent effort"
+    },
+    {
+      "word": "astute",
+      "pos": null,
+      "meaning": "shrewd; quick to see an advantage"
+    },
+    {
+      "word": "audacious",
+      "pos": null,
+      "meaning": "boldly daring, sometimes to the point of recklessness"
+    },
+    {
+      "word": "augment",
+      "pos": null,
+      "meaning": "to make greater by adding to it"
+    },
+    {
+      "word": "auspicious",
+      "pos": null,
+      "meaning": "suggesting a favorable outcome; promising"
+    }
+  ],
+  "scanned": [
+    {
+      "word": "abate",
+      "pos": "verb",
+      "meaning": "to become less intense or widespread; to reduce something"
+    },
+    {
+      "word": "aberration",
+      "pos": "noun",
+      "meaning": "a departure from what is normal or expected"
+    },
+    {
+      "word": "abhor",
+      "pos": "verb",
+      "meaning": "to regard with disgust and hatred"
+    },
+    {
+      "word": "abstain",
+      "pos": "verb",
+      "meaning": "to choose not to do or take something"
+    },
+    {
+      "word": "accolade",
+      "pos": "noun",
+      "meaning": "an award, or an expression of praise"
+    },
+    {
+      "word": "acumen",
+      "pos": "noun",
+      "meaning": "sharp judgment and quick insight"
+    },
+    {
+      "word": "adamant",
+      "pos": "adjective",
+      "meaning": "refusing to be persuaded; unshakably firm"
+    },
+    {
+      "word": "admonish",
+      "pos": "verb",
+      "meaning": "to warn or reprimand gently but firmly"
+    },
+    {
+      "word": "adversity",
+      "pos": "noun",
+      "meaning": "a difficult or unpleasant situation"
+    },
+    {
+      "word": "aesthetic",
+      "pos": "adjective",
+      "meaning": "concerned with beauty, or with the appreciation of beauty"
+    },
+    {
+      "word": "affable",
+      "pos": "adjective",
+      "meaning": "friendly and easy to talk to"
+    },
+    {
+      "word": "alleviate",
+      "pos": "verb",
+      "meaning": "to make pain or a problem less severe"
+    },
+    {
+      "word": "aloof",
+      "pos": "adjective",
+      "meaning": "distant and uninvolved; emotionally cool"
+    },
+    {
+      "word": "altruism",
+      "pos": "noun",
+      "meaning": "unselfish concern for the welfare of others"
+    },
+    {
+      "word": "ambiguous",
+      "pos": "adjective",
+      "meaning": "open to more than one interpretation; unclear"
+    },
+    {
+      "word": "ambivalent",
+      "pos": "adjective",
+      "meaning": "having mixed or contradictory feelings about something"
+    }
+  ]
+}

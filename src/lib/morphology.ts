@@ -50,6 +50,14 @@ const FALSE_FRIENDS = new Set([
   'cogent', //     cogere "drive together", not gens "birth"
   'provincial', // provincia, origin genuinely uncertain
   'stagnant', //   stagnum "pool", not stare "stand"
+  'articulate', // articulus "joint", not ad- + tacere "be silent"
+  'opaque', //     opacus "shaded", not ob- + aqua "water"
+  'armory', //     arma "weapons" - the -ory here is not the suffix
+  'artful', //     art + -ful is English, not a Latin derivation to teach
+  'satiric', //    satura "medley", not satis "enough"
+  'semitic', //    from Shem, a name - nothing to do with semi-
+  'ventilate', //  ventus "wind", not venire "come"
+  'dialect', //    Greek dialegesthai, so the Latin lect- reading mislabels it
   'person',
   'personal',
   'personality',

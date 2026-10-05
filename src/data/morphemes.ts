@@ -34,7 +34,16 @@ const PREFIXES = `
 a|Greek|not, without
 an|Greek|not, without
 ab|Latin|away from
+abs|Latin|away from
 ad|Latin|toward
+ac|Latin|toward
+af|Latin|toward
+ag|Latin|toward
+al|Latin|toward
+ap|Latin|toward
+ar|Latin|toward
+as|Latin|toward
+at|Latin|toward
 ambi|Latin|both, around
 amphi|Greek|both, around
 ana|Greek|up, back
@@ -70,6 +79,9 @@ hemi|Greek|half
 homo|Greek|same
 hyper|Greek|over, excessive
 hypo|Greek|under, too little
+il|Latin|not, or into
+im|Latin|not, or into
+ir|Latin|not, or into
 in|Latin|not, or into
 inter|Latin|between
 intra|Latin|within
@@ -84,6 +96,9 @@ multi|Latin|many
 neo|Greek|new
 non|Latin|not
 ob|Latin|against, toward
+oc|Latin|against, toward
+of|Latin|against, toward
+op|Latin|against, toward
 omni|Latin|all
 pan|Greek|all
 para|Greek|beside, beyond
@@ -100,6 +115,11 @@ retro|Latin|backward
 se|Latin|apart
 semi|Latin|half
 sub|Latin|under
+suc|Latin|under
+suf|Latin|under
+sug|Latin|under
+sup|Latin|under
+sus|Latin|under
 super|Latin|above, beyond
 sym|Greek|together with
 syn|Greek|together with
@@ -279,6 +299,83 @@ techn|Greek|skill, art|technique, technology, polytechnic
 the/theo|Greek|god|theology, atheist, theocracy
 top|Greek|place|topic, topography, utopia
 xen|Greek|stranger|xenophobia, xenon
+caus/cus|Latin|cause, reason|because, accusation, excuse
+mir|Latin|wonder|admire, miracle, marvel
+fa/fess|Latin|speak|fable, confess, profess
+ampl|Latin|large|amplify, ample, amplitude
+arbitr|Latin|judge|arbitrary, arbitrate, arbiter
+soci|Latin|companion|social, associate, sociable
+spond/spons|Latin|promise|respond, sponsor, responsible
+string/strict|Latin|bind tight|restrict, stringent, constriction
+sum/sumpt|Latin|take|assume, consume, presumption
+trib|Latin|give, pay|contribute, tribute, attribute
+clin|Latin|lean|incline, recline, inclination
+cresc/cret|Latin|grow|increase, crescent, accretion
+culp|Latin|blame|culpable, exculpate, culprit
+cumb/cub|Latin|lie down|incumbent, recumbent, succumb
+fals/fall|Latin|deceive|false, fallacy, infallible
+firm|Latin|strong|confirm, affirm, infirmity
+labor|Latin|work|laboratory, elaborate, collaborate
+later|Latin|side|lateral, bilateral, collateral
+liter|Latin|letter|literal, literature, obliterate
+medi|Latin|middle|medium, intermediate, mediate
+milit|Latin|soldier|military, militant, militia
+noc/nox|Latin|harm|innocent, noxious, obnoxious
+par|Latin|equal|compare, disparate, parity
+pet/petit|Latin|seek, strive|compete, appetite, petition
+sacr/secr|Latin|holy|sacred, consecrate, sacrilege
+sanct|Latin|holy|sanctuary, sanctify, sacrosanct
+sati|Latin|enough|satisfy, satiate, insatiable
+sever|Latin|serious|severe, persevere, severity
+ultim|Latin|last|ultimate, ultimatum, penultimate
+umbr|Latin|shade|umbrella, adumbrate, penumbra
+vest|Latin|clothe|vest, invest, travesty
+propri|Latin|one's own|property, appropriate, proprietary
+agog|Greek|leading|demagogue, pedagogue
+dyn|Greek|power|dynamic, dynasty, dynamite
+lith|Greek|stone|monolith, lithograph, megalith
+ortho|Greek|straight, correct|orthodox, orthography
+soph|Greek|wisdom|philosophy, sophisticated, sophistry
+tom|Greek|cut|atom, anatomy, dichotomy
+troph|Greek|nourishment|atrophy, dystrophy, hypertrophy
+und|Latin|wave|abundant, inundate, redundant
+acr/acu|Latin|sharp|acute, acrid, acrimony
+dot/don|Latin|give|donate, anecdote, antidote
+men/min|Latin|project, threaten|eminent, prominent, imminent
+aug|Latin|increase|augment, auction, auxiliary
+art|Latin|skill|artful, artisan, artifice
+arm|Latin|weapon|army, armory, disarm
+cura|Latin|care|curator, accurate, procure
+dign|Latin|worthy|dignity, indignant, deign
+grand|Latin|great|grandeur, aggrandize, grandiose
+integr|Latin|whole|integrate, integrity, disintegrate
+long|Latin|long|elongate, longitude, prolong
+mod|Latin|measure, manner|moderate, modify, accommodate
+nunci/nounc|Latin|report|announce, pronounce, denunciation
+ord|Latin|order|ordinary, coordinate, subordinate
+pen/pun|Latin|punish|penalty, punitive, impunity
+plan|Latin|flat|plane, explain, esplanade
+popul|Latin|people|popular, populace, depopulate
+prim|Latin|first|primary, primitive, primeval
+priv|Latin|separate|private, deprive, privilege
+quies/quiet|Latin|rest|quiet, acquiesce, requiem
+radic|Latin|root|radical, eradicate, radish
+reg|Latin|rule|regular, regime, interregnum
+stim|Latin|goad|stimulate, stimulus
+van/vain|Latin|empty|vanity, evanescent, vainglorious
+vigor|Latin|lively|vigorous, invigorate, vigour
+sper|Latin|hope|desperate, prosperity, despair
+bar|Greek|weight|barometer, baritone, isobar
+chrom|Greek|colour|chromatic, monochrome, chromosome
+clas|Greek|break|iconoclast, clastic
+derm|Greek|skin|dermatology, epidermis, taxidermy
+hypn|Greek|sleep|hypnosis, hypnotic, hypnotism
+idio|Greek|personal, peculiar|idiom, idiosyncrasy, idiotic
+mania|Greek|madness|maniac, bibliomania, kleptomania
+naut|Greek|sailor|nautical, astronaut, aeronautics
+pyr|Greek|fire|pyre, pyromania, pyrotechnic
+thes/thet|Greek|place, put|thesis, antithesis, synthetic
+tox|Greek|poison|toxic, intoxicate, antitoxin
 `
 
 const SUFFIXES = `
@@ -333,6 +430,17 @@ ship|Old English|state or skill of
 tude|Latin|state or quality
 ure|Latin|act or result of
 y|Latin|state or quality
+ation|Latin|act or result of
+ition|Latin|act or result of
+ancy|Latin|state of
+ency|Latin|state of
+ory|Latin|relating to, or a place for
+ish|Old English|somewhat, or to make
+ness|Old English|state or quality
+less|Old English|without
+ful|Old English|full of
+some|Old English|tending to
+age|French|action or result of
 `
 
 function parse(block: string): Morpheme[] {

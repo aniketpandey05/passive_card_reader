@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from 'react'
 import { createDeck, db, deleteDeck } from '../db'
 import type { Deck, Settings } from '../types'
-import { STARTER_NAME, STARTER_PACK } from '../data/starter'
+import { CORE_NAME, CORE_PACK } from '../data/core'
 import ImportPanel from './ImportPanel'
 import SettingsSheet from './SettingsSheet'
 import StartPicker from './StartPicker'
@@ -39,7 +39,7 @@ export default function Library({ settings, onPatch, onPlay, onPdf }: Props) {
   }, [load])
 
   const addStarter = async () => {
-    const id = await createDeck(STARTER_NAME, 'built in', STARTER_PACK)
+    const id = await createDeck(CORE_NAME, 'built in', CORE_PACK)
     await load()
     onPlay(id, 0)
   }
@@ -81,12 +81,12 @@ export default function Library({ settings, onPatch, onPlay, onPdf }: Props) {
       ) : rows.length === 0 && !importing ? (
         <div className="empty">
           <p>
-            Nothing here yet. Start with the built-in {STARTER_PACK.length}-word deck, or bring your own: a dictionary
+            Nothing here yet. Start with the built-in {CORE_PACK.length}-word deck, or bring your own: a dictionary
             or word list as a PDF, CSV, TSV, text or JSON file.
           </p>
           <div style={{ display: 'flex', gap: 8, justifyContent: 'center', flexWrap: 'wrap' }}>
             <button className="btn primary" onClick={() => void addStarter()}>
-              Add the built-in {STARTER_PACK.length}-word deck
+              Add the built-in {CORE_PACK.length}-word deck
             </button>
             <button className="btn" onClick={() => setImporting(true)}>
               Import a file
@@ -153,10 +153,10 @@ export default function Library({ settings, onPatch, onPlay, onPdf }: Props) {
         </>
       )}
 
-      {rows !== null && rows.length > 0 && !rows.some((r) => r.name === STARTER_NAME) && !importing && (
+      {rows !== null && rows.length > 0 && !rows.some((r) => r.name === CORE_NAME) && !importing && (
         <p className="hint" style={{ marginTop: 20 }}>
           <button className="btn small ghost" onClick={() => void addStarter()}>
-            Add the built-in {STARTER_PACK.length}-word deck
+            Add the built-in {CORE_PACK.length}-word deck
           </button>
         </p>
       )}

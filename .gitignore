@@ -8,3 +8,6 @@ fixtures/.*.mjs
 
 # Tesseract model, downloaded on demand by the OCR check
 eng.traineddata
+
+# downloaded source data for npm run build:deck
+scripts/.cache

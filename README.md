@@ -75,7 +75,55 @@ npm run check:parts
 | --- | --- |
 | Words that should break down | 24/25 |
 | Words that must stay quiet (plain English, false friends) | 26/26 |
-| Built-in deck covered | 65/279 |
+| Built-in deck covered | 211/1000 |
+
+Coverage is a fifth of the deck, and the reason is measurable: of the words with
+no breakdown, 625 contain no root the table knows, while only 88 fail on the
+thresholds. So coverage is bounded by how many roots are written down, not by
+how strict the rules are - each batch of ~40 roots has been worth about two
+points. The rest are Germanic (`thwart`, `wary`) and have nothing Latin or Greek
+to show.
+
+Known errors are handled by auditing the output and excluding by name. The last
+pass over 43 sampled breakdowns found four wrong - `satiric` is *satura*
+"medley" not *satis* "enough", `ventilate` is *ventus* "wind" not *venire*
+"come" - which is roughly a 9% error rate before exclusions. That hand audit is
+the real cost of this feature, and it is the right cost: the alternative is
+confidently teaching a false derivation.
+
+## Where the words come from
+
+```bash
+npm run build:deck     # regenerates src/data/core.ts
+```
+
+1,000 words: 279 written by hand, the rest built by `scripts/build-deck.mjs`
+from open data.
+
+- **Definitions: WordNet 3.0** (Princeton, permissive licence). Its glosses are
+  short and modern, which is what a card needs.
+- **Word choice: frequency rank** over the Google Web Trillion Word Corpus.
+  Rank is the difficulty signal - everyday English runs out around 20,000, and
+  the useful band runs to about 150,000 (`ubiquitous` 19k, `lucid` 25k, `abate`
+  41k, `laconic` 104k). Picks are spread across that band rather than taken from
+  its easy end, so the deck holds both.
+- **WordNet's own categories** separate vocabulary from inventory: abstract
+  nouns are kept, `noun.artifact` and `noun.animal` are not, and synsets tagged
+  with a topical domain are dropped as jargon. Compounds of two common words
+  (`workbook`, `workload`) and participles of common verbs (`abused`) go too.
+
+### Webster 1913 was tried first, and rejected
+
+It is the obvious public-domain dictionary, and it does not work for this. Its
+first sense is usually obsolete - *abate: "To beat down; to overthrow. [Obs.]"*,
+*candid: "White. [Obs.]"* - definitions are circular (*accessibility: "the
+quality of being accessible"*), literary citations run into the text (*"Judg.
+v"*), and the prose is a century old. Even after writing the cleaner, the deck
+it produced was full of `workshop`, `writer` and `zero`. WordNet gives
+`acrimonious: "marked by strong resentment or cynicism"` instead.
+
+Roget's Thesaurus has the same problem for definitions - it has none - though it
+would suit a future "similar words" feature.
 
 A quarter of the deck is the honest number: `thwart`, `wary` and `staunch` are
 Germanic and have no Latin or Greek parts to show, so the app says nothing.

@@ -15,6 +15,10 @@ export interface WordPart {
   form: string
   gloss: string
   lang: Lang
+  /** Roots only: the family all spelling variants share. */
+  family?: string
+  /** Roots only: everyday words built on the same root. */
+  examples?: string[]
 }
 
 export interface Analysis {
@@ -42,6 +46,10 @@ const FALSE_FRIENDS = new Set([
   'tenuous', //    tenuis "thin", not tenere "hold"
   'pedantic', //   pedante "teacher", not pes "foot"
   'relegate', //   legare "send away", not legere "read"
+  'audacious', //  audere "to dare", not audire "to hear"
+  'cogent', //     cogere "drive together", not gens "birth"
+  'provincial', // provincia, origin genuinely uncertain
+  'stagnant', //   stagnum "pool", not stare "stand"
   'person',
   'personal',
   'personality',
@@ -177,7 +185,16 @@ export function analyze(word: string): Analysis | null {
 
         const parts: WordPart[] = []
         if (prefix) parts.push({ kind: 'prefix', form: prefix.form + '-', gloss: prefix.gloss, lang: prefix.lang })
-        for (const r of roots) parts.push({ kind: 'root', form: r.form, gloss: r.gloss, lang: r.lang })
+        for (const r of roots) {
+          parts.push({
+            kind: 'root',
+            form: r.form,
+            gloss: r.gloss,
+            lang: r.lang,
+            family: r.family ?? r.form,
+            examples: r.examples,
+          })
+        }
         if (inner) parts.push({ kind: 'suffix', form: '-' + inner.form, gloss: inner.gloss, lang: inner.lang })
         if (outer) parts.push({ kind: 'suffix', form: '-' + outer.form, gloss: outer.gloss, lang: outer.lang })
 
@@ -194,6 +211,18 @@ export function analyze(word: string): Analysis | null {
   }
 
   return best
+}
+
+/**
+ * Root families a word belongs to, for the index that powers "words sharing
+ * this root". Returns nothing for words with no confident breakdown, so the
+ * index stays as trustworthy as the analysis behind it.
+ */
+export function familiesOf(word: string): string[] {
+  const analysis = analyze(word)
+  if (!analysis) return []
+  const families = analysis.parts.filter((p) => p.kind === 'root' && p.family).map((p) => p.family as string)
+  return [...new Set(families)]
 }
 
 /** One-line rendering: "Latin · bene- well + vol wish + -ent doing" */

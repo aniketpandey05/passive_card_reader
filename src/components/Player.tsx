@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
-import { db, getEntry } from '../db'
+import { db, familyWords, getEntry } from '../db'
 import type { Entry, Settings } from '../types'
 import { readMs, recallMs } from '../lib/timing'
 import { cancelSpeech, speak } from '../lib/speech'
@@ -201,6 +201,34 @@ export default function Player({ deckId, startIdx, settings, onPatch, onExit }: 
 
   const parts = useMemo(() => (entry && settings.showParts ? analyze(entry.word) : null), [entry, settings.showParts])
 
+  // Words built on the same root, the way a dictionary prints related forms
+  // under an entry: this deck's own words first, then the wider family.
+  const [relatives, setRelatives] = useState<{ root: string; inDeck: Entry[]; others: string[] } | null>(null)
+  useEffect(() => {
+    const root = parts?.parts.find((p) => p.kind === 'root' && p.family)
+    if (!entry || !root?.family) {
+      setRelatives(null)
+      return
+    }
+    let live = true
+    void familyWords(deckId, root.family, entry.idx, 4).then((inDeck) => {
+      if (!live) return
+      const taken = new Set([entry.word.toLowerCase(), ...inDeck.map((w) => w.word.toLowerCase())])
+      const others = (root.examples ?? []).filter((w) => !taken.has(w.toLowerCase())).slice(0, 6 - inDeck.length)
+      setRelatives(inDeck.length || others.length ? { root: root.form, inDeck, others } : null)
+    })
+    return () => {
+      live = false
+    }
+  }, [deckId, entry, parts])
+
+  const jumpTo = useCallback((target: number) => {
+    historyRef.current.push(idxRef.current)
+    setFinished(false)
+    setIdx(target)
+    setPhase('word')
+  }, [])
+
   const phaseMs = entry ? (phase === 'word' ? recallMs(settings) : readMs(entry.meaning, settings)) : 0
   const deckPct = count ? ((idx + 1) / count) * 100 : 0
 
@@ -248,6 +276,31 @@ export default function Player({ deckId, startIdx, settings, onPatch, onExit }: 
                         </span>
                       ))}
                       {parts.note && <span className="part note">{parts.note}</span>}
+                    </p>
+                  )}
+                  {relatives && (
+                    <p className="family">
+                      <span className="also">
+                        also from <b>{relatives.root}</b>
+                      </span>
+                      {relatives.inDeck.map((w) => (
+                        <button
+                          key={w.idx}
+                          className="relative"
+                          onClick={(e) => {
+                            e.stopPropagation() // the stage itself advances the card
+                            jumpTo(w.idx)
+                          }}
+                          title={w.meaning}
+                        >
+                          {w.word}
+                        </button>
+                      ))}
+                      {relatives.others.map((w) => (
+                        <span className="relative outside" key={w} title="not in this deck">
+                          {w}
+                        </span>
+                      ))}
                     </p>
                   )}
                 </div>

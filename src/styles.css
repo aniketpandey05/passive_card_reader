@@ -361,6 +361,35 @@ h2.step {
 .parts .part b { font-family: var(--serif); font-weight: 700; color: var(--ink-soft); }
 .parts .note { font-style: italic; }
 
+/* Dictionary-style cross-reference: other words built on the same root. */
+.family {
+  margin: 10px auto 0;
+  max-width: 38ch;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 8px;
+  justify-content: center;
+  align-items: baseline;
+  font-size: clamp(0.76rem, 2.8vw, 0.88rem);
+  color: var(--muted);
+}
+.family .also { font-size: 0.95em; }
+.family .also b { font-family: var(--serif); color: var(--ink-soft); }
+.relative {
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--ink-soft);
+  border-radius: 999px;
+  padding: 2px 10px;
+  font-family: var(--serif);
+  font-size: 1em;
+  line-height: 1.6;
+  transition: border-color 0.15s, color 0.15s;
+}
+.relative:hover { border-color: var(--accent); color: var(--accent); }
+/* Family words that aren't in this deck: shown for the pattern, not tappable. */
+.relative.outside { border-style: dashed; color: var(--muted); background: transparent; cursor: default; }
+
 .hint { color: var(--muted); font-size: 13px; opacity: 0.8; margin: 6px 0 0; }
 .playing .hint { opacity: 0; }
 

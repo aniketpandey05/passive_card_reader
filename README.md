@@ -50,6 +50,23 @@ derivation in a comment: `mitigate` is *mitis* "mild", not *mittere* "send";
 way, giving the true story where an analyzer could never find it - `ephemeral`
 is *epi-* + *hemera*, lasting but a day.
 
+### Word families
+
+Under the breakdown, the card prints the cross-reference a dictionary would:
+*also from **spect**: perspicacious · specious · inspect · spectacle*. Words
+from your own deck come first and are tappable - following one jumps to that
+card, and `←` comes back - while the rest are shown for the pattern.
+
+Those example words are carried in the morpheme table and are the reason the
+feature exists at all. Indexing only the current deck gave families to 15 of
+279 words, because a few hundred words rarely hold two relatives of the same
+root; with examples it is 50, and every one of them teaches the pattern rather
+than the coincidence of what you happen to own.
+
+Root families are stored per entry and indexed (`*roots` in Dexie), so this
+works on an imported dictionary too, and existing decks are backfilled by a
+schema migration rather than needing a re-import.
+
 ```bash
 npm run check:parts
 ```
@@ -58,7 +75,7 @@ npm run check:parts
 | --- | --- |
 | Words that should break down | 24/25 |
 | Words that must stay quiet (plain English, false friends) | 26/26 |
-| Built-in deck covered | 69/279 |
+| Built-in deck covered | 65/279 |
 
 A quarter of the deck is the honest number: `thwart`, `wary` and `staunch` are
 Germanic and have no Latin or Greek parts to show, so the app says nothing.

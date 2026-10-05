@@ -5,9 +5,14 @@
  * etymology: a table works on whatever a user imports, where hand-written
  * etymology only ever covers the words someone thought to write it for.
  *
- * Format per line: form | language | meaning
+ * Format per line: form | language | meaning | example words (roots only)
  * Roots list their main spelling variants separated by "/", so one entry
  * covers "duc" and "duct".
+ *
+ * The examples matter more than they look. A deck of a few hundred words
+ * rarely holds two relatives of the same root, so without them the family
+ * cross-reference would almost never appear - and seeing the family is the
+ * whole point of learning a root.
  */
 
 export type Lang = 'Latin' | 'Greek' | 'Old English' | 'French'
@@ -16,6 +21,13 @@ export interface Morpheme {
   form: string
   lang: Lang
   gloss: string
+  /**
+   * Shared identity for spelling variants of one root, so "spec", "spect" and
+   * "spic" count as the same family and their words find each other.
+   */
+  family?: string
+  /** Everyday words built on this root, shown as the family cross-reference. */
+  examples?: string[]
 }
 
 const PREFIXES = `
@@ -99,174 +111,174 @@ uni|Latin|one
 `
 
 const ROOTS = `
-act/ag|Latin|do, drive
-aesthe|Greek|feeling, perception
-alt|Latin|high
-am/amic/amor|Latin|love, friend
-anim|Latin|life, spirit
-anthrop|Greek|human being
-aqu|Latin|water
-arch|Greek|chief, rule
-aud/audit|Latin|hear
-bell|Latin|war
-bibli|Greek|book
-bio|Greek|life
-brev|Latin|short
-cad/cas/cid|Latin|fall
-cand|Latin|glow, white
-cap/capt/cept|Latin|take, seize
-carn|Latin|flesh
-ced/cess|Latin|go, yield
-chron|Greek|time
-cis/cid|Latin|cut, kill
-claim/clam|Latin|shout
-clud/clus/clos|Latin|shut
-cogn/gnos|Latin|know
-corp|Latin|body
-cred|Latin|believe
-cur/curs/cour|Latin|run
-dem|Greek|people
-dic/dict|Latin|say, speak
-doc/doct|Latin|teach
-duc/duct|Latin|lead
-dur|Latin|hard, lasting
-err|Latin|wander
-fac/fact/fect/fic|Latin|make, do
-fer|Latin|carry, bear
-fid|Latin|faith, trust
-fin|Latin|end, limit
-flect/flex|Latin|bend
-flu/fluct|Latin|flow
-form|Latin|shape
-fort|Latin|strong
-frag/fract|Latin|break
-fug|Latin|flee
-gen|Latin|birth, kind
-grad/gress|Latin|step, go
-graph/gram|Greek|write, draw
-grat|Latin|pleasing, thankful
-greg|Latin|flock, herd
-hydr|Greek|water
-ject|Latin|throw
-jud/jur/jus|Latin|law, judge
-jung/junct|Latin|join
-lect/leg|Latin|read, choose
-loc|Latin|place
-log|Greek|word, reason
-loqu/locut|Latin|speak
-luc/lum|Latin|light
-magn|Latin|great
-man/manu|Latin|hand
-mater/matr|Latin|mother
-mem|Latin|mindful
-ment|Latin|mind
-meter/metr|Greek|measure
-migr|Latin|move, wander
-mit/miss|Latin|send
-mon/monit|Latin|warn, advise
-morph|Greek|shape
-mort|Latin|death
-mov/mot|Latin|move
-mut|Latin|change
-nasc/nat|Latin|born
-nav|Latin|ship
-nom/nym|Greek|name
-nov|Latin|new
-ocul|Latin|eye
-oper|Latin|work
-pac/plac|Latin|peace, please
-pand/pans|Latin|spread
-pater/patr|Latin|father
-path|Greek|feeling, suffering
-ped|Latin|foot
-pel/puls|Latin|drive, push
-pend/pens|Latin|hang, weigh, pay
-phil|Greek|love
-phon|Greek|sound
-phot|Greek|light
-plen/plet|Latin|full
-plic/plex|Latin|fold
-pon/pos|Latin|put, place
-port|Latin|carry
-pot|Latin|power
-prehend/prehens|Latin|grasp
-prob|Latin|test, prove
-psych|Greek|mind, soul
-quir/quis/quest|Latin|ask, seek
-rect|Latin|straight, right
-rog|Latin|ask
-rupt|Latin|break
-sci|Latin|know
-scrib/script|Latin|write
-sect|Latin|cut
-sed/sess/sid|Latin|sit, settle
-sent/sens|Latin|feel
-sequ/secut|Latin|follow
-serv|Latin|keep, serve
-sign|Latin|mark, sign
-sol|Latin|alone, or sun
-solv/solut|Latin|loosen
-somn|Latin|sleep
-son|Latin|sound
-spec/spect/spic|Latin|look
-spir|Latin|breathe
-stru/struct|Latin|build
-tac/tic|Latin|silent
-tang/tact/ting|Latin|touch
-temp|Latin|time
-ten/tain/tent|Latin|hold
-tend/tens|Latin|stretch
-term|Latin|end, boundary
-terr|Latin|earth, or frighten
-test|Latin|witness
-therm|Greek|heat
-tort|Latin|twist
-tract|Latin|pull, draw
-trud/trus|Latin|push
-urb|Latin|city
-vac|Latin|empty
-ven/vent|Latin|come
-ver|Latin|true
-verb|Latin|word
-vert/vers|Latin|turn
-vid/vis|Latin|see
-vinc/vict|Latin|conquer
-viv/vit|Latin|life
-voc/vok|Latin|call, voice
-vol|Latin|wish, will
-volv/volut|Latin|roll, turn
-val/vail|Latin|strength, worth
-grav|Latin|heavy
-lev|Latin|light, raise
-liber|Latin|free
-lud/lus|Latin|play
-simil/simul|Latin|like, same
-cord|Latin|heart
-vag|Latin|wander
-plaud/plaus|Latin|clap, approve
-scend/scens|Latin|climb
-fus/fund|Latin|pour
-gest|Latin|carry
-her/hes|Latin|stick
-nect/nex|Latin|bind
-numer|Latin|number
-ora|Latin|speak, pray
-pugn|Latin|fight
-sal/sult|Latin|leap
-scrut|Latin|examine
-sta/stat/stit|Latin|stand
-turb|Latin|disturb
-vor|Latin|devour
-crypt|Greek|hidden
-cosm|Greek|world, order
-dox|Greek|opinion, belief
-erg|Greek|work
-geo|Greek|earth
-icon|Greek|image
-techn|Greek|skill, art
-the/theo|Greek|god
-top|Greek|place
-xen|Greek|stranger
+act/ag|Latin|do, drive|agent, agenda, agile, react
+aesthe|Greek|feeling, perception|aesthetic, anaesthetic
+alt|Latin|high|altitude, altar, exalt
+am/amic/amor|Latin|love, friend|amiable, amorous, enamoured
+anim|Latin|life, spirit|animal, unanimous, animated
+anthrop|Greek|human being|anthropology, philanthropy, misanthrope
+aqu|Latin|water|aquarium, aquatic, aqueduct
+arch|Greek|chief, rule|monarch, anarchy, architect
+aud/audit|Latin|hear|audible, audience, audition
+bell|Latin|war|rebel, belligerent, bellicose
+bibli|Greek|book|bibliography, bible, bibliophile
+bio|Greek|life|biology, biography, symbiosis
+brev|Latin|short|brief, abbreviate, brevity
+cad/cas/cid|Latin|fall|cascade, accident, decadent
+cand|Latin|glow, white|candle, candid, incandescent
+cap/capt/cept|Latin|take, seize|capture, accept, receptive
+carn|Latin|flesh|carnivore, incarnate, carnal
+ced/cess|Latin|go, yield|precede, recession, concede
+chron|Greek|time|chronic, synchronize, chronicle
+cis/cid|Latin|cut, kill|incision, precise, homicide
+claim/clam|Latin|shout|exclaim, clamour, proclaim
+clud/clus/clos|Latin|shut|include, seclusion, closet
+cogn/gnos|Latin|know|recognize, diagnosis, incognito
+corp|Latin|body|corpse, corporation, corporal
+cred|Latin|believe|credit, incredible, creed
+cur/curs/cour|Latin|run|current, excursion, recur
+dem|Greek|people|democracy, epidemic, demographic
+dic/dict|Latin|say, speak|dictate, predict, verdict
+doc/doct|Latin|teach|doctor, document, indoctrinate
+duc/duct|Latin|lead|conduct, educate, induce
+dur|Latin|hard, lasting|endure, durable, duration
+err|Latin|wander|error, erratic, aberration
+fac/fact/fect/fic|Latin|make, do|factory, effect, proficient
+fer|Latin|carry, bear|transfer, refer, fertile
+fid|Latin|faith, trust|confide, fidelity, infidel
+fin|Latin|end, limit|finish, infinite, define
+flect/flex|Latin|bend|reflect, flexible, deflect
+flu/fluct|Latin|flow|fluid, influence, fluctuate
+form|Latin|shape|reform, uniform, formation
+fort|Latin|strong|fortify, comfort, fortitude
+frag/fract|Latin|break|fragile, fracture, fragment
+fug|Latin|flee|refugee, fugitive, centrifugal
+gen|Latin|birth, kind|generate, genius, congenital
+grad/gress|Latin|step, go|gradual, progress, digress
+graph/gram|Greek|write, draw|autograph, diagram, telegram
+grat|Latin|pleasing, thankful|gratitude, congratulate, ingratiate
+greg|Latin|flock, herd|gregarious, congregate, segregate
+hydr|Greek|water|hydrant, dehydrate, hydraulic
+ject|Latin|throw|inject, reject, projectile
+jud/jur/jus|Latin|law, judge|judge, jury, justice
+jung/junct|Latin|join|junction, conjunction, adjoin
+lect/leg|Latin|read, choose|collect, legible, elect
+loc|Latin|place|local, dislocate, locate
+log|Greek|word, reason|logic, dialogue, prologue
+loqu/locut|Latin|speak|eloquent, soliloquy, colloquial
+luc/lum|Latin|light|lucid, illuminate, translucent
+magn|Latin|great|magnify, magnitude, magnate
+man/manu|Latin|hand|manual, manufacture, manuscript
+mater/matr|Latin|mother|maternal, matrimony, matriarch
+mem|Latin|mindful|memory, commemorate, memoir
+ment|Latin|mind|mental, demented, mention
+meter/metr|Greek|measure|thermometer, symmetry, diameter
+migr|Latin|move, wander|migrate, immigrant, emigrate
+mit/miss|Latin|send|transmit, mission, dismiss
+mon/monit|Latin|warn, advise|monitor, admonish, premonition
+morph|Greek|shape|metamorphosis, amorphous, morphology
+mort|Latin|death|mortal, mortuary, immortal
+mov/mot|Latin|move|motion, remove, motive
+mut|Latin|change|mutate, commute, immutable
+nasc/nat|Latin|born|native, prenatal, renaissance
+nav|Latin|ship|navy, navigate, circumnavigate
+nom/nym|Greek|name|synonym, anonymous, pseudonym
+nov|Latin|new|novel, innovate, renovate
+ocul|Latin|eye|binocular, ocular, monocle
+oper|Latin|work|operate, cooperate, opus
+pac/plac|Latin|peace, please|pacify, placid, complacent
+pand/pans|Latin|spread|expand, expansive
+pater/patr|Latin|father|paternal, patriot, patron
+path|Greek|feeling, suffering|sympathy, pathetic, apathy
+ped|Latin|foot|pedal, pedestrian, expedite
+pel/puls|Latin|drive, push|expel, repulse, compulsive
+pend/pens|Latin|hang, weigh, pay|pendant, suspend, pension
+phil|Greek|love|philosophy, bibliophile, philanthropy
+phon|Greek|sound|telephone, symphony, phonetic
+phot|Greek|light|photograph, photon, photosynthesis
+plen/plet|Latin|full|plenty, complete, replenish
+plic/plex|Latin|fold|complicate, duplex, implicate
+pon/pos|Latin|put, place|compose, deposit, postpone
+port|Latin|carry|transport, portable, export
+pot|Latin|power|potent, potential, omnipotent
+prehend/prehens|Latin|grasp|comprehend, apprehend
+prob|Latin|test, prove|probe, probable, reprobate
+psych|Greek|mind, soul|psychology, psychic
+quir/quis/quest|Latin|ask, seek|inquire, inquisitive, request
+rect|Latin|straight, right|correct, rectify, erect
+rog|Latin|ask|interrogate, arrogant, derogatory
+rupt|Latin|break|erupt, interrupt, rupture
+sci|Latin|know|science, conscious, omniscient
+scrib/script|Latin|write|describe, manuscript, inscription
+sect|Latin|cut|dissect, section, intersect
+sed/sess/sid|Latin|sit, settle|sediment, session, reside
+sent/sens|Latin|feel|sentiment, sensitive, consent
+sequ/secut|Latin|follow|sequence, consecutive, obsequious
+serv|Latin|keep, serve|preserve, servant, reservoir
+sign|Latin|mark, sign|signal, designate, significant
+sol|Latin|alone, or sun|solitude, solo, solar
+solv/solut|Latin|loosen|dissolve, solution, absolve
+somn|Latin|sleep|insomnia, somnolent
+son|Latin|sound|sonic, resonate, dissonance
+spec/spect/spic|Latin|look|inspect, spectacle, conspicuous
+spir|Latin|breathe|respire, inspire, conspire
+stru/struct|Latin|build|construct, structure, instrument
+tac/tic|Latin|silent|tacit, reticent, taciturn
+tang/tact/ting|Latin|touch|tangible, contact, contingent
+temp|Latin|time|temporary, contemporary, tempo
+ten/tain/tent|Latin|hold|retain, tenant, detention
+tend/tens|Latin|stretch|extend, tension, intense
+term|Latin|end, boundary|terminate, determine, terminal
+terr|Latin|earth, or frighten|territory, terrain, subterranean
+test|Latin|witness|testify, protest, testament
+therm|Greek|heat|thermal, thermostat, hypothermia
+tort|Latin|twist|distort, torture, contortion
+tract|Latin|pull, draw|attract, extract, tractor
+trud/trus|Latin|push|intrude, protrusion, obtrusive
+urb|Latin|city|urban, suburb, urbane
+vac|Latin|empty|vacant, evacuate, vacuum
+ven/vent|Latin|come|convene, prevent, advent
+ver|Latin|true|verify, veracity, verdict
+verb|Latin|word|verbal, proverb, verbatim
+vert/vers|Latin|turn|convert, reverse, diversion
+vid/vis|Latin|see|video, evident, revise
+vinc/vict|Latin|conquer|convince, victory, invincible
+viv/vit|Latin|life|survive, vivid, vital
+voc/vok|Latin|call, voice|vocal, invoke, advocate
+vol|Latin|wish, will|voluntary, benevolent, malevolent
+volv/volut|Latin|roll, turn|revolve, evolution, convoluted
+val/vail|Latin|strength, worth|valid, prevail, evaluate
+grav|Latin|heavy|gravity, grave, aggravate
+lev|Latin|light, raise|elevate, alleviate, levitate
+liber|Latin|free|liberty, liberal, deliberate
+lud/lus|Latin|play|elude, illusion, ludicrous
+simil/simul|Latin|like, same|similar, assimilate, simultaneous
+cord|Latin|heart|cordial, accord, discord
+vag|Latin|wander|vagrant, vague, extravagant
+plaud/plaus|Latin|clap, approve|applaud, plausible, applause
+scend/scens|Latin|climb|ascend, descent, transcend
+fus/fund|Latin|pour|confuse, refund, profuse
+gest|Latin|carry|digest, congestion, gesture
+her/hes|Latin|stick|adhere, cohesion, inherent
+nect/nex|Latin|bind|connect, annex, nexus
+numer|Latin|number|numeral, enumerate, innumerable
+ora|Latin|speak, pray|oral, orator, adore
+pugn|Latin|fight|repugnant, pugnacious, impugn
+sal/sult|Latin|leap|assault, resilient, exult
+scrut|Latin|examine|scrutiny, inscrutable
+sta/stat/stit|Latin|stand|stable, station, constitute
+turb|Latin|disturb|turbulent, perturb, turbine
+vor|Latin|devour|carnivore, voracious, devour
+crypt|Greek|hidden|cryptic, encrypt, apocryphal
+cosm|Greek|world, order|cosmos, cosmic, microcosm
+dox|Greek|opinion, belief|orthodox, paradox, doxology
+erg|Greek|work|energy, ergonomic, synergy
+geo|Greek|earth|geography, geology, geometry
+icon|Greek|image|icon, iconic, iconoclast
+techn|Greek|skill, art|technique, technology, polytechnic
+the/theo|Greek|god|theology, atheist, theocracy
+top|Greek|place|topic, topography, utopia
+xen|Greek|stranger|xenophobia, xenon
 `
 
 const SUFFIXES = `
@@ -328,17 +340,23 @@ function parse(block: string): Morpheme[] {
     .trim()
     .split('\n')
     .map((line) => {
-      const [form, lang, gloss] = line.split('|')
-      return { form, lang: lang as Lang, gloss }
+      const [form, lang, gloss, examples] = line.split('|')
+      return {
+        form,
+        lang: lang as Lang,
+        gloss,
+        examples: examples ? examples.split(',').map((w) => w.trim()).filter(Boolean) : undefined,
+      }
     })
     .filter((m) => m.form && m.gloss)
 }
 
-/** One root entry per spelling variant, each remembering the family's gloss. */
+/** One root entry per spelling variant, each remembering its family and gloss. */
 function parseRoots(block: string): Morpheme[] {
   const out: Morpheme[] = []
   for (const m of parse(block)) {
-    for (const variant of m.form.split('/')) out.push({ ...m, form: variant })
+    const variants = m.form.split('/')
+    for (const variant of variants) out.push({ ...m, form: variant, family: variants[0] })
   }
   return out
 }

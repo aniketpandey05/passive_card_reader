@@ -19,6 +19,8 @@ export interface Entry {
   key: string
   pos?: string
   meaning: string
+  /** Root families this word belongs to, indexed for "words sharing this root". */
+  roots?: string[]
 }
 
 export interface Progress {

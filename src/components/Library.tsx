@@ -86,7 +86,7 @@ export default function Library({ settings, onPatch, onPlay, onPdf }: Props) {
           </p>
           <div style={{ display: 'flex', gap: 8, justifyContent: 'center', flexWrap: 'wrap' }}>
             <button className="btn primary" onClick={() => void addStarter()}>
-              Add the starter pack
+              Add the built-in {STARTER_PACK.length}-word deck
             </button>
             <button className="btn" onClick={() => setImporting(true)}>
               Import a file

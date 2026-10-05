@@ -312,7 +312,10 @@ h2.step {
 .word {
   font-family: var(--serif);
   font-weight: 700;
-  font-size: clamp(2.6rem, 13vw, 6.5rem);
+  /* Height matters as much as width: on a short window (a laptop in landscape,
+     a small pane) a headword sized only by vw pushes the meaning, the parts and
+     the family off the bottom. */
+  font-size: min(clamp(2.6rem, 13vw, 6.5rem), 19vh);
   line-height: 1.04;
   letter-spacing: -0.03em;
   color: var(--ink);
@@ -391,6 +394,19 @@ h2.step {
 .relative.outside { border-style: dashed; color: var(--muted); background: transparent; cursor: default; }
 
 .hint { color: var(--muted); font-size: 13px; opacity: 0.8; margin: 6px 0 0; }
+
+/* Short windows: tighten the card so the word parts and family still fit
+   rather than disappearing under the controls. */
+@media (max-height: 620px) {
+  .stage { gap: 6px; padding: 10px 20px; }
+  .word { font-size: min(clamp(2rem, 10vw, 4rem), 15vh); }
+  .meaning { font-size: clamp(1rem, 3.4vw, 1.3rem); }
+  .meaning-slot { min-height: 2.6em; }
+  .parts { margin-top: 8px; }
+  .family { margin-top: 4px; }
+  .controls { gap: 8px; padding-bottom: max(8px, env(safe-area-inset-bottom)); }
+  .play { width: 52px; height: 52px; font-size: 19px; }
+}
 .playing .hint { opacity: 0; }
 
 .done { color: var(--muted); display: grid; gap: 12px; justify-items: center; }

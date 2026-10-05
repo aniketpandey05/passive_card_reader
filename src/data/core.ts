@@ -11,1015 +11,1024 @@ import type { RawEntry } from '../db'
  *
  * Word choice uses frequency ranks over the Google Web Trillion Word Corpus
  * (ranks 20,000-1,50,000): common enough to meet, uncommon enough to be worth learning.
+ *
+ * Origins (623 of 1000) come from GCIDE, the GNU edition of Webster's
+ * Revised Unabridged Dictionary (1913), which is distributed under the GPL.
  */
 const TSV = `
-abate	verb	to become less intense or widespread; to reduce something
-aberration	noun	a departure from what is normal or expected
-abhor	verb	to regard with disgust and hatred
-abounding	adjective	existing in abundance
-absenteeism	noun	habitual absence from work
-abstain	verb	to choose not to do or take something
-accolade	noun	an award, or an expression of praise
-accusation	noun	a formal charge of wrongdoing brought against a person; the act of imputing blame or guilt
-accusative	noun	the case of nouns serving as the direct object of a verb
-accustom	verb	make psychologically or physically used
-acrimonious	adjective	marked by strong resentment or cynicism
-acuity	noun	sharpness of vision; the visual ability to resolve fine detail
-acumen	noun	sharp judgment and quick insight
-adamant	adjective	refusing to be persuaded; unshakably firm
-adenoma	noun	a benign epithelial tumor of glandular origin
-adjoin	verb	lie adjacent to another or share a boundary
-admiration	noun	a feeling of delighted approval and liking
-admonish	verb	to warn or reprimand gently but firmly
-adventitious	adjective	associated by chance and not an integral part
-adversity	noun	a difficult or unpleasant situation
-aerosolized	adjective	in the form of ultramicroscopic solid or liquid particles dispersed or suspended in air or gas
-aesthetic	adjective	concerned with beauty, or with the appreciation of beauty
-affable	adjective	friendly and easy to talk to
-affective	adjective	characterized by emotion
-afforestation	noun	the conversion of bare or cultivated land into forest
-afield	adverb	far away from home or one's usual surroundings
-alleviate	verb	to make pain or a problem less severe
-alliteration	noun	use of the same consonant at the beginning of each stressed syllable in a line of verse
-aloof	adjective	distant and uninvolved; emotionally cool
-altruism	noun	unselfish concern for the welfare of others
-amateurish	adjective	lacking professional skill or expertise
-ambiguous	adjective	open to more than one interpretation; unclear
-ambivalent	adjective	having mixed or contradictory feelings about something
-amenable	adjective	disposed or willing to conform
-amity	noun	a cordial disposition
-ampersand	noun	a punctuation mark (&) used to represent conjunction
-amplify	verb	increase in size, volume or significance
-anachronism	noun	something placed in the wrong historical period
-analgesic	adjective	capable of relieving pain
-analogous	adjective	comparable in some useful respect
-anecdote	noun	a short personal story used to illustrate a point
-animatronics	noun	the construction of robots to look like animals
-animosity	noun	strong hostility or ill will
-annexation	noun	incorporation by joining or uniting
-anomaly	noun	something that deviates from the standard or expected
-anonym	noun	a fictitious name used when the person performs a particular social role
-anorectal	adjective	pertaining to the anus and rectum considered together
-antipathy	noun	a deep-seated dislike
-apathy	noun	lack of interest, enthusiasm, or concern
-appease	verb	to pacify someone by giving in to their demands
-arbitrary	adjective	based on personal whim rather than reason or rule
-arcane	adjective	understood by very few; mysteriously obscure
-arduous	adjective	requiring great effort; strenuous
-armory	noun	a collection of resources
-artful	adjective	not straightforward or candid; giving a false appearance of frankness
-articulate	adjective	able to express thoughts clearly and fluently
-ascetic	noun	a person who practices severe self-discipline and abstinence
-assassinate	verb	murder; especially of socially prominent persons
-assiduous	adjective	showing great care and persistent effort
-astride	adverb	with one leg on each side
-astute	adjective	shrewd; quick to see an advantage
-atheistic	adjective	rejecting any belief in gods
-attest	verb	provide evidence for; stand as proof of; show by one's behavior, attitude, or external attributes
-audacious	adjective	boldly daring, sometimes to the point of recklessness
-augment	verb	to make greater by adding to it
-auspicious	adjective	suggesting a favorable outcome; promising
-austere	adjective	severely simple and plain; stern in manner
-autoradiography	noun	producing a radiograph by means of the radiation emitted from the specimen being photographed
-avocation	noun	an auxiliary activity
-awkwardness	noun	unskillfulness resulting from a lack of training
-baccalaureate	noun	a farewell sermon to a graduating class at their commencement ceremonies
-bahasa	noun	the dialect of Malay used as the national language of the Republic of Indonesia or of Malaysia
-baldness	noun	the condition of having no hair on the top of the head
-baloney	noun	pretentious or silly talk or writing
-bamboozle	verb	conceal one's true motives from especially by elaborately feigning good intentions so as to gain an end
-banal	adjective	so unoriginal as to be boring
-barricaded	adjective	preventing entry or exit or a course of action
-battering	noun	the act of subjecting to strong attack
-beatification	noun	a state of supreme happiness
-belie	verb	to give a false impression of; to contradict
-benevolent	adjective	kind and generous toward others
-berate	verb	censure severely or angrily
-bibliomania	noun	preoccupation with the acquisition and possession of books
-billet	noun	a short personal letter
-bitterness	noun	a feeling of deep and bitter anger and ill-will
-blackness	noun	the quality or state of the achromatic color of least lightness
-blaring	adjective	unpleasantly loud and penetrating
-blister	noun	a flaw on a surface resulting when an applied substance does not adhere
-blurred	adjective	indistinct or hazy in outline
-boldness	noun	the trait of being willing to undertake things that involve risk or danger
-bolster	verb	to support or strengthen
-bonfire	noun	a large outdoor fire that is lighted as a signal or in celebration
-boozing	noun	the act of drinking alcoholic beverages to excess
-botch	verb	make a mess of, destroy or ruin
-bracing	adjective	imparting vitality and energy
-braised	adjective	cooked by browning in fat and then simmering in a closed container
-breve	noun	a diacritical mark (U-shaped) placed over a vowel to indicate a short sound
-brevity	noun	shortness of speech or writing; conciseness
-brilliancy	noun	a quality that outshines the usual
-bronchospasm	noun	a spasm of the bronchi that makes exhalation difficult and noisy; associated with asthma and bronchitis
-bruit	verb	tell or spread rumors
-buggery	noun	intercourse via the anus, committed by a man with a man or woman
-burnish	verb	polish and make shiny
-burnup	noun	a high-speed motorcycle race on a public road
-burping	noun	a reflex that expels gas noisily from the stomach through the mouth
-cackle	noun	the sound made by a hen after laying an egg
-cacophony	noun	a harsh, discordant mixture of sounds
-calorimetry	noun	measurement of quantities of heat
-candid	adjective	truthful and straightforward, even when it is awkward
-capricious	adjective	given to sudden changes of mood or behavior
-cardiomyopathy	noun	a disorder (usually of unknown origin) of the heart muscle
-carelessness	noun	the quality of not being careful or taking pains
-caries	noun	soft decayed area in a tooth; progressive decay can lead to the death of a tooth
-castigate	verb	to reprimand severely
-causation	noun	the act of causing something to happen
-caustic	adjective	bitingly sarcastic; corrosive
-censure	verb	to express strong formal disapproval
-centralization	noun	the act of consolidating power under a central control
-chafe	verb	become or make sore by or as if by rubbing
-chafed	adjective	painful from having the skin abraded
-charismatic	adjective	possessing an extraordinary ability to attract
-cheapness	noun	a price below the standard price
-checkup	noun	a thorough physical examination; includes a variety of tests depending on the age and sex and health of the person
-chequer	verb	mark into squares or draw squares on; draw crossed lines on
-chicanery	noun	the use of tricks to deceive someone
-chilly	adjective	not characterized by emotion
-chock	adverb	as completely as possible
-cholestasis	noun	a condition in which little or no bile is secreted or the flow of bile into the digestive tract is obstructed
-chomping	noun	the act of chewing noisily
-circumference	noun	the size of something as given by the distance around it
-circumflex	noun	a diacritical mark (^) placed above a vowel in some languages to indicate a special phonetic quality
-circumspect	adjective	cautious; wary of risk and consequence
-civics	noun	the social science of municipal affairs
-clandestine	adjective	kept secret, usually because it is improper
-clang	noun	a loud resonant repeating noise
-claptrap	noun	pompous or pretentious talk or writing
-clayey	adjective	resembling or containing clay
-cleave	verb	separate or cut with a tool, such as a sharp instrument
-cliffhanger	noun	a contest whose outcome is uncertain up to the very end
-cloistered	adjective	of communal life sequestered from the world under religious vows
-clotting	noun	the process of forming semisolid lumps in a liquid
-coalesce	verb	to come together to form one whole
-coaxing	adjective	pleasingly persuasive or intended to persuade
-codex	noun	an official list of chemicals or medicines etc.
-cogent	adjective	clear, logical, and convincing
-colonization	noun	the act of colonizing; the establishment of colonies
-colostomy	noun	a surgical operation that creates an opening from the colon to the surface of the body to function as an anus
-commemorate	verb	celebrate by some ceremony or observation
-complacent	adjective	smugly satisfied, and so unaware of danger
-conciliatory	adjective	intended to placate or win goodwill
-conciseness	noun	terseness and economy in writing and speaking achieved by expressing a great deal in just a few words
-condone	verb	to accept or overlook behavior that is wrong
-confirmatory	adjective	serving to support or corroborate
-constellation	noun	an arrangement of parts or elements
-contralateral	adjective	on or relating to the opposite side
-contravention	noun	coming into conflict with
-contusion	noun	an injury that doesn't break the skin but results in some discoloration
-conundrum	noun	a confusing and difficult problem
-convalescent	adjective	returning to health after illness or debility
-conversant	adjective	well informed about or knowing thoroughly
-coronation	noun	the ceremony of installing a new monarch
-corroborate	verb	to confirm with supporting evidence
-corrugated	adjective	shaped into alternating parallel grooves and ridges
-corruptible	adjective	capable of being corrupted
-cotillion	noun	a ball at which young ladies are presented to society
-crabs	noun	infestation of the pubic hair by crab lice
-craggy	adjective	having hills and crags
-craze	verb	cause to go crazy; cause to lose one's mind
-credulous	adjective	too ready to believe things; easily deceived
-crinkled	adjective	uneven by virtue of having wrinkles or waves
-croup	noun	a disease of infants and young children; harsh coughing and hoarseness and fever and difficult breathing
-cryptic	adjective	mysterious in meaning; deliberately obscure
-cuddle	verb	move or arrange oneself in a comfortable and cozy position
-culpable	adjective	deserving blame
-cursive	adjective	having successive letter joined together
-cursory	adjective	hasty and not thorough
-custodial	adjective	providing protective supervision; watching over or safeguarding
-dandruff	noun	a condition in which white scales of dead skin are shed by the scalp
-daunted	adjective	caused to show discomposure
-dazzling	adjective	amazingly impressive; suggestive of the flashing of lightning
-deafened	adjective	caused to hear poorly or not at all
-dearth	noun	a scarcity or lack of something
-debatable	adjective	open to doubt or debate
-debauchery	noun	a wild gathering involving excessive drinking and promiscuity
-debunk	verb	to expose the falseness of a claim or belief
-deceptive	adjective	causing one to believe what is not true or fail to believe what is true
-declarative	noun	a mood (grammatically unmarked) that represents the act or state as an objective fact
-decorum	noun	behavior that is proper and in good taste
-deference	noun	polite respect, and submission to another's judgment
-deferment	noun	act of putting off to a future time
-defiance	noun	intentionally contemptuous behavior or attitude
-deforestation	noun	the state of being clear of trees
-deleterious	adjective	causing harm or damage
-delineate	verb	to describe or outline precisely
-deluge	verb	fill quickly beyond capacity; as with a liquid
-demeaning	adjective	causing awareness of your shortcomings
-demeanour	noun	the way a person behaves toward other people
-densification	noun	an increase in the density of something
-densitometry	noun	measuring the optical density of a substance by shining light on it and measuring its transmission
-depleted	adjective	no longer sufficient
-depopulation	noun	the condition of having reduced numbers of inhabitants
-deride	verb	to mock or ridicule with contempt
-derogatory	adjective	expressive of low opinion
-desiccated	adjective	thoroughly dried out
-desolation	noun	the state of being decayed or destroyed
-desperation	noun	a state in which all hope is lost or absent
-destitute	adjective	poor enough to need help from others
-desultory	adjective	lacking a plan or purpose; jumping from one thing to another
-detachable	adjective	designed to be unfastened or disconnected without damage
-detente	noun	the easing of tensions or strained relations
-deter	verb	to discourage someone from acting, usually by instilling doubt
-deterrence	noun	a negative motivational influence
-detested	adjective	treated with dislike or contempt
-devious	adjective	indirect in departing from the accepted or proper way; misleading
-dialect	noun	the usage or vocabulary that is characteristic of a specific group of people
-diatribe	noun	a bitter, forceful verbal attack
-didactic	adjective	intended to teach, often in a heavy-handed moral way
-diffident	adjective	shy and lacking self-confidence
-digestibility	noun	the property of being easy to digest
-digitalization	noun	the administration of digitalis for the treatment of certain heart disorders
-digress	verb	to stray from the main subject
-dilatory	adjective	slow to act; causing delay
-dinge	verb	make a dent or impression in
-dingy	adjective	thickly covered with ingrained dirt or soot
-dirge	noun	a song or hymn of mourning composed or performed as a memorial to a dead person
-discoloration	noun	a soiled or discolored appearance
-discontented	adjective	showing or experiencing dissatisfaction or restless longing
-discrepant	adjective	not compatible with other facts
-disenchantment	noun	freeing from false belief or illusions
-disgusted	adjective	having a strong distaste from surfeit
-disheartened	adjective	made less hopeful or enthusiastic
-disparage	verb	to belittle or speak of slightingly
-disparate	adjective	essentially different and unrelated
-dispel	verb	force to go away; used both with concrete and metaphoric meanings
-dissemble	verb	to hide one's true motives or feelings
-distinctness	noun	the quality of being sharp and clear
-dizzy	adjective	having or causing a whirling sensation; liable to falling
-docile	adjective	easily managed and willing to be taught
-dogging	adjective	relentless and indefatigable in pursuit or as if in pursuit
-dogmatic	adjective	asserting opinions as if they were beyond question
-dower	verb	furnish with an endowment
-dramatization	noun	conversion into dramatic form
-drool	verb	be envious, desirous, eager for, or extremely happy about something
-dubious	adjective	doubtful; questionable in quality or truth
-dyslexia	noun	impaired ability to learn to read
-ebullient	adjective	overflowing with enthusiasm and energy
-eccentricity	noun	strange and unconventional behavior
-ecclesiology	noun	the branch of theology concerned with the nature and the constitution and the functions of a church
-eclectic	adjective	drawing on a wide and varied range of sources
-econometrics	noun	the application of mathematics and statistics to the study of economic and financial data
-efficacy	noun	the power to produce the intended result
-egoistic	adjective	limited to or caring only about yourself and your own needs
-egregious	adjective	outstandingly bad; shockingly wrong
-elaboration	noun	addition of extra material or illustration or clarifying detail
-eldritch	adjective	suggesting the operation of supernatural influences
-electrifying	adjective	causing a surge of emotion or excitement
-electrostatics	noun	the branch of physics that deals with static electricity
-elicit	verb	to draw out a response or reaction
-elope	verb	run away secretly with one's beloved
-eloquent	adjective	fluent and persuasive in speech or writing
-elucidate	verb	to make clear by explaining
-embargo	verb	ban the publication of (documents), as for security or copyright reasons
-embed	verb	fix or set securely or deeply
-embroiled	adjective	deeply involved especially in something complicated
-emcee	verb	act as a master of ceremonies
-empathetic	adjective	showing empathy or ready comprehension of others' states
-emulate	verb	to imitate, especially in order to match or surpass
-encompass	verb	include in scope; include as part of something broader; have as one's sphere or territory
-encrypt	verb	convert ordinary language into code
-endodontics	noun	the branch of dentistry dealing with diseases of the dental pulp
-enervate	verb	to drain of energy and vitality
-engender	verb	to give rise to; to bring about
-engorged	adjective	overfull as with blood
-engrossment	noun	complete attention; intense mental effort
-enigma	noun	a person or thing that is mysterious and hard to understand
-enmity	noun	a state of deep-seated ill-will
-enormity	noun	the quality of being outrageous
-entailment	noun	something that is inferred
-entreaty	noun	earnest or urgent request
-ephemeral	adjective	lasting a very short time
-epitaph	noun	an inscription on a tombstone or monument in memory of the person buried there
-epitomize	verb	embody the essential characteristics of or be a typical example of
-equanimity	noun	calmness and composure under strain
-errand	noun	a short trip that is taken in the performance of a necessary task or mission
-erudite	adjective	having or showing deep scholarly knowledge
-esoteric	adjective	understood only by a small group with special knowledge
-estrus	noun	applies to nonhuman mammals: a state or period of heightened sexual arousal and activity
-eulogy	noun	a speech of high praise, especially for someone who has died
-euphemism	noun	a mild word substituted for one thought harsh or blunt
-evacuate	verb	move out of an unsafe location into safety
-exacerbate	verb	to make a bad situation worse
-exemplar	noun	something to be imitated
-exemplary	adjective	serving as a desirable model; outstandingly good
-exemplifying	adjective	clarifying by use of examples
-exhaustive	adjective	thorough and complete, leaving nothing out
-exogenous	adjective	derived or originating externally
-exonerate	verb	to clear of blame or accusation
-expelling	noun	any of several bodily processes by which substances go out of the body
-expository	adjective	serving to expound or set forth
-extenuating	adjective	partially excusing or justifying
-exterminated	adjective	destroyed completely
-extravagant	adjective	unrestrained, especially with regard to feelings
-facetious	adjective	joking about something that deserves to be taken seriously
-fallacious	adjective	based on faulty reasoning; misleading
-fallow	adjective	left unplowed and unseeded during a growing season
-fanned	adjective	especially spread in a fan shape
-fastened	adjective	firmly closed or secured
-fastidious	adjective	very attentive to detail; hard to please
-fatness	noun	excess bodily weight
-fervent	adjective	showing intense and passionate feeling
-fester	verb	ripen and generate pus
-festschrift	noun	a collection of writings published in honor of a scholar
-fetching	adjective	very attractive; capturing interest
-fibrous	adjective	having or resembling fibers especially fibers used in making cordage such as those of jute
-fickle	adjective	changing loyalty or affection without good reason
-fidgety	adjective	nervous and unable to relax
-flaxen	adjective	of hair color; pale yellowish to yellowish brown
-flexion	noun	the state of being flexed
-flout	verb	to openly disregard a rule or convention
-foolhardy	adjective	marked by defiant disregard for danger or consequences
-foolishness	noun	the trait of acting stupidly or rashly
-foreground	noun	the part of a scene that is near the viewer
-foreshadowing	adjective	indistinctly prophetic
-fortify	verb	make strong or stronger
-fortuitous	adjective	happening by chance, often luckily
-frayed	adjective	worn away or tattered along the edges
-frizzy	adjective	in small tight curls
-frothing	adjective	producing or covered with lathery sweat or saliva from exhaustion or disease
-frugal	adjective	sparing with money or resources
-fulfilment	noun	a feeling of satisfaction at having achieved your desires
-furtive	adjective	done quietly to avoid being noticed
-futile	adjective	pointless; incapable of producing any result
-galvanizing	adjective	affected by emotion as if by electricity; thrilling
-gargantuan	adjective	of great mass; huge and bulky
-garrulous	adjective	excessively talkative about trivial things
-gasconade	noun	an instance of boastful talk
-gasification	noun	the process of changing into gas
-gayness	noun	a sexual attraction to (or sexual relations with) persons of the same sex
-germane	adjective	genuinely relevant to the matter at hand
-germinal	adjective	containing seeds of later development
-gerontology	noun	the branch of medical science that deals with diseases and problems specific to old people
-gestalt	noun	a configuration or pattern of elements so unified as a whole that it cannot be described merely as a sum of its parts
-gibberish	noun	unintelligible talking
-gilded	adjective	having the deep slightly brownish color of gold
-glaucous	adjective	having a frosted look from a powdery coating, as on plants
-glimmering	noun	a slight suggestion or vague understanding
-googly	noun	a cricket ball bowled as if to break one way that actually breaks in the opposite way
-graciousness	noun	excellence of manners or social conduct
-granular	adjective	composed of or covered with particles resembling meal in texture or consistency
-grapevine	noun	gossip spread by spoken communication
-grapple	verb	succeed in doing, achieving, or producing (something) with the limited or inadequate means available
-graven	adjective	cut into a desired shape
-gregarious	adjective	sociable; fond of company
-grinning	noun	a facial expression characterized by turning up the corners of the mouth; usually shows pleasure or amusement
-gripes	noun	acute abdominal pain
-grumpy	adjective	annoyed and irritable
-guile	noun	cunning used to deceive
-habitability	noun	suitability for living in or on
-hackneyed	adjective	worn out by overuse; unoriginal
-handmaid	noun	in a subordinate position
-handsewn	adjective	sewn by hand rather than machine
-hankering	noun	a yearning for something or to do something
-harangue	noun	a loud bombastic declamation expressed with strong emotion
-harbinger	noun	a sign of something about to happen
-harried	adjective	troubled persistently especially with petty annoyances
-haughty	adjective	arrogantly superior toward others
-heartening	adjective	cheerfully encouraging
-hedonism	noun	the pursuit of pleasure as a matter of ethical principle
-helplessness	noun	powerlessness revealed by an inability to act
-hepatoma	noun	carcinoma of the liver
-heresy	noun	a belief that contradicts accepted doctrine
-hermetic	adjective	completely sealed; completely airtight
-hesitating	adjective	lacking decisiveness of character; unable to act or decide quickly or firmly
-heterosexuality	noun	a sexual attraction to (or sexual relations with) persons of the opposite sex
-hiatus	noun	a pause or gap in continuity
-highbrow	adjective	highly cultured or educated
-hoary	adjective	showing characteristics of age, especially having grey or white hair
-hubris	noun	excessive pride that invites downfall
-huffing	noun	an act of forcible exhalation
-hulking	adjective	of great size and bulk
-hunch	verb	round one's back by bending forward and drawing the shoulders forward
-hunched	adjective	having the back and shoulders rounded; not erect
-hybridize	verb	breed animals or plants using parents of different races and varieties
-hydrotherapy	noun	the internal and external use of water in the treatment of disease
-hygienic	adjective	tending to promote or preserve health
-hyperbolic	adjective	enlarged beyond truth or reasonableness
-hyperglycemia	noun	abnormally high blood sugar usually associated with diabetes
-hypospadias	noun	an abnormal condition in males in which the urethra opens on the under surface of the penis
-iconoclast	noun	a person who attacks cherished beliefs or institutions
-ideograph	noun	a graphic character that indicates the meaning of a thing without indicating the sounds used to say it
-idiosyncrasy	noun	a peculiar habit or feature of one person
-illiteracy	noun	ignorance resulting from not reading
-illogical	adjective	lacking in correct logical relation
-illuminating	adjective	tending to increase knowledge or dissipate ignorance
-imbroglio	noun	an intricate and confusing interpersonal or political situation
-immunogenic	adjective	possessing the ability to elicit an immune response
-immutable	adjective	unchanging and unable to be changed
-impair	verb	make worse or less effective
-impartiality	noun	an inclination to weigh both views or opinions equally
-impassable	adjective	incapable of being passed
-impatience	noun	a lack of patience; irritation with anything that causes delay
-impeccable	adjective	flawless; without any fault
-impermanent	adjective	not permanent; not lasting
-impersonation	noun	a representation of a person that is exaggerated for comic effect
-impetuous	adjective	acting quickly without thought or care
-implacable	adjective	impossible to appease or soften
-impudent	adjective	marked by casual disrespect
-inadvertent	adjective	unintentional; done without noticing
-inaudible	adjective	impossible to hear; imperceptible by the ear
-incase	verb	enclose in, or as if in, a case
-incensed	adjective	angered at something unjust or wrong
-incessant	adjective	continuing without pause
-incisive	adjective	showing sharp, clear thinking
-incompleteness	noun	the state of being crude and incomplete and imperfect
-incongruous	adjective	out of place; not in harmony with its surroundings
-inconvenient	adjective	not suited to your comfort, purpose or needs
-incubate	verb	grow under conditions that promote development
-incursion	noun	the act of entering some territory or domain
-indefensible	adjective	incapable of being defended or justified
-indefinable	adjective	not capable of being precisely or readily described; not easily put into words
-indifference	noun	unbiased impartial unconcern
-indigenous	adjective	originating naturally in a particular place
-indolent	adjective	habitually idle; averse to effort
-indomitable	adjective	impossible to subdue
-ineffable	adjective	too great to be put into words
-inequity	noun	injustice by virtue of not conforming with rules or standards
-inert	adjective	unable to move or resist motion
-inexorable	adjective	impossible to stop or persuade
-infarction	noun	localized necrosis resulting from obstruction of the blood supply
-infective	adjective	able to cause disease
-infertile	adjective	incapable of reproducing
-infraction	noun	a crime less serious than a felony
-ingenuous	adjective	innocent and unguarded; frank
-ingrown	adjective	growing abnormally into the flesh
-inhibitory	adjective	restrictive of action
-injurious	adjective	harmful to living things
-innocuous	adjective	harmless; unlikely to offend
-inshore	adjective	coming from the sea toward the land
-insidious	adjective	spreading harm gradually and unnoticed
-insipid	adjective	lacking flavour, interest, or vigour
-insolation	noun	sudden prostration due to exposure to the sun or excessive heat
-insolent	adjective	marked by casual disrespect
-instantiation	noun	a representation of an idea in the form of an instance of it
-instillation	noun	the introduction of a liquid (by pouring or injection) drop by drop
-insulting	adjective	expressing extreme contempt
-intermediation	noun	the act of intervening for the purpose of bringing about a settlement
-internationale	noun	a revolutionary socialist anthem
-intimidated	adjective	made timid or fearful as by threats
-intoxication	noun	the physiological state produced by a poison or other toxic substance
-intractability	noun	the trait of being hard to influence or control
-intransigent	adjective	refusing to compromise
-intrepid	adjective	fearless in the face of danger
-inundate	verb	to overwhelm, or to flood
-inure	verb	cause to accept or become hardened to; habituate
-invective	noun	abusive or venomous language used to express blame or censure or bitter deep-seated ill will
-invertible	adjective	having an additive or multiplicative inverse
-investiture	noun	the ceremony of installing a new monarch
-invincible	adjective	incapable of being overcome or subdued
-inviolable	adjective	incapable of being transgressed or dishonored
-invulnerable	adjective	immune to attack; impregnable
-irascible	adjective	easily provoked to anger
-irate	adjective	feeling or showing extreme anger
-ironclad	adjective	sheathed in iron plates for protection
-irreparable	adjective	impossible to repair, rectify, or amend
-isomerization	noun	the conversion of a compound into an isomer of itself
-jinxed	adjective	causing or accompanied by misfortune
-judicious	adjective	showing good judgment and sense
-juxtapose	verb	to place side by side for contrast
-juxtaposed	adjective	placed side by side often for comparison
-kaleidoscopic	adjective	continually shifting or rapidly changing
-kannada	noun	a Dravidian language spoken in southern India
-knack	noun	a special way of doing something
-knockout	adjective	very strong or vigorous
-kudos	noun	an expression of approval and commendation
-kyphosis	noun	an abnormal backward curve to the vertebral column
-lacklustre	adjective	lacking brilliance or vitality
-laconic	adjective	using very few words
-ladin	noun	a Rhaeto-Romance dialect of Romansh spoken in southeastern Switzerland
-lamenting	adjective	vocally expressing grief or sorrow or resembling such expression
-languid	adjective	lacking energy; pleasantly slow
-languor	noun	a relaxed comfortable feeling
-lanky	adjective	tall and thin and having long slender limbs
-laud	verb	to praise highly
-laxative	adjective	stimulating evacuation of feces
-leafy	adjective	having or covered with leaves
-leaky	adjective	permitting the unwanted passage of fluids or gases
-lethargic	adjective	sluggish and lacking energy
-levity	noun	lightness of manner, especially when seriousness is expected
-libertine	adjective	unrestrained by convention or morality
-liege	adjective	owing or owed feudal allegiance and service
-likening	noun	the act of comparing similarities
-lineal	adjective	in a straight unbroken line of descent from parent to child
-lipped	adjective	having a lip or lips
-lithography	noun	a method of planographic printing from a metal or stone surface
-loamy	adjective	consisting of or having the character of loam
-loath	adjective	unwillingness to do something contrary to your custom
-loathing	noun	hate coupled with disgust
-loathsome	adjective	causing or able to cause nausea
-lofty	adjective	of high moral or intellectual value; elevated in nature or style
-loquacious	adjective	very talkative
-lossy	adjective	characterized by or causing dissipation of energy
-lowly	adjective	low or inferior in station or quality
-lucid	adjective	clearly expressed, or clear-headed
-luminescent	adjective	emitting light not caused by heat
-lunge	verb	make a thrusting forward movement
-magnanimous	adjective	generous and forgiving, especially toward a rival
-mahjong	noun	Chinese game played by 4 people with 144 tiles
-maimed	adjective	having a part of the body crippled or disabled
-malevolent	adjective	wishing harm to others
-malice	noun	feeling a need to see others suffer
-malleable	adjective	easily shaped, or easily influenced
-maneuver	verb	direct the course; determine the direction of travelling
-manly	adjective	possessing qualities befitting a man
-manoeuvre	verb	act in order to achieve a certain goal
-masochism	noun	sexual pleasure obtained from receiving punishment
-matinee	noun	a theatrical performance held during the daytime
-maximisation	noun	the act of raising to the highest possible point or condition or position
-mediocre	adjective	moderate to inferior in quality
-mediocrity	noun	ordinariness as a consequence of being average and not outstanding
-mellowed	adjective	having a full and pleasing flavor through proper aging
-melodious	adjective	having a musical sound; especially a pleasing tune
-mendacity	noun	the tendency to be untruthful
-menstruation	noun	the monthly discharge of blood from the uterus of nonpregnant women from puberty to menopause
-merciless	adjective	having or showing no mercy
-meticulous	adjective	showing great care over every detail
-metrical	adjective	based on the meter as a standard of measurement
-miscegenation	noun	reproduction by parents of different races
-misguided	adjective	poorly conceived or thought out
-mitigate	verb	to make something bad less severe
-mobilisation	noun	act of marshaling and organizing and making ready for use or action
-mollify	verb	to soothe the anger of
-momentary	adjective	lasting for a markedly brief time
-monopolize	verb	have and control fully and exclusively
-moony	adjective	lighted by moonlight
-moralizing	noun	indulgence in moral pronouncements; the exposition (often superficially) of a particular moral code
-morose	adjective	gloomy and sullen
-motility	noun	ability to move spontaneously and independently
-mountainous	adjective	having hills and crags
-multifaceted	adjective	having many aspects or qualities
-multiplicity	noun	the property of being multiple
-mummification	noun	a condition resembling that of a mummy
-mundane	adjective	ordinary and dull; of the everyday world
-munificent	adjective	extremely generous
-murmuring	adjective	making a low continuous indistinct sound
-mutilation	noun	an injury that causes disfigurement or that deprives you of a limb or other important body part
-myoclonus	noun	a clonic spasm of a muscle or muscle group
-myriad	noun	a countless number of things
-mystified	adjective	totally perplexed and mixed up
-mystifying	adjective	of an obscure nature
-nadir	noun	an extreme state of adversity; the lowest point of anything
-narcolepsy	noun	a sleep disorder characterized by sudden and uncontrollable episodes of deep sleep
-navigability	noun	the quality of being suitable for the passage of a ship or aircraft
-nebulous	adjective	vague and ill-defined
-nefarious	adjective	wicked; criminal in intent
-negate	verb	be in contradiction with
-neophyte	noun	a beginner at something
-neoplasia	noun	the pathological process that results in the formation and growth of a tumor
-neuroticism	noun	a mental or personality disturbance not attributable to any known neurological or organic dysfunction
-neutropenia	noun	leukopenia in which the decrease is primarily in number of neutrophils
-nippy	adjective	a sharp biting taste
-nociceptive	adjective	caused by or in response to pain
-nonchalant	adjective	calmly unconcerned
-nonconformist	adjective	not conforming to some norm or socially approved pattern of behavior or thought
-nonconformity	noun	lack of harmony or correspondence
-nonexistent	adjective	not having existence or being or actuality
-nonionic	adjective	not converted into ions
-nonsteroidal	adjective	not steroidal or not having the effects of steroid hormones
-nontaxable	adjective	not subject to taxation
-nuance	noun	a subtle difference in meaning or feeling
-nudism	noun	going without clothes as a social practice
-nullified	adjective	deprived of legal force
-nynorsk	noun	one of two official languages of Norway; based on rural dialects
-oaken	adjective	consisting of or made of wood of the oak tree
-obdurate	adjective	stubbornly refusing to change an opinion
-obfuscate	verb	to make something unclear on purpose
-obliteration	noun	destruction by annihilating something
-oblivious	adjective	entirely unaware of what is happening
-obsequious	adjective	excessively eager to please or obey
-obsolete	adjective	no longer in use; out of date
-obstinacy	noun	the trait of being difficult to handle or overcome
-obstinate	adjective	stubbornly refusing to change course
-obstruct	verb	hinder or prevent the progress or accomplishment of
-oedema	noun	swelling from excessive accumulation of watery fluid in cells, tissues, or serous cavities
-ominous	adjective	suggesting that something bad is coming
-onshore	adjective	coming from the sea toward the land
-opaque	adjective	impossible to see through, or hard to understand
-opinionated	adjective	obstinate in your opinions
-opulent	adjective	luxurious and costly
-ordeal	noun	a severe or trying experience
-orientalism	noun	the scholarly knowledge of Asian cultures and languages and people
-orienting	adjective	positioning with respect to a reference system or determining your bearings physically or intellectually
-orphaned	adjective	deprived of parents by death or desertion
-oscillating	adjective	having periodic vibrations
-ostentatious	adjective	designed to impress; showy
-ostracize	verb	to exclude someone from a group
-otitis	noun	inflammation of the ear
-otology	noun	the branch of medicine concerned with the ear
-ousting	noun	the act of ejecting someone or forcing them out
-outlandish	adjective	conspicuously or grossly unconventional or unusual
-ovate	adjective	of a leaf shape; egg-shaped with the broader end at the base
-overblown	adjective	puffed up with vanity
-overstuffed	adjective	upholstered thickly and deeply
-oxidize	verb	enter into a combination with oxygen or become converted into an oxide
-oxygenation	noun	the process of providing or combining or treating with oxygen
-palliation	noun	easing the severity of a pain or a disease without removing the cause
-palliative	adjective	moderating pain or sorrow by making it easier to bear
-palpable	adjective	so intense it feels almost physical
-paragon	noun	a perfect example of a quality
-paranasal	adjective	adjacent to the nasal cavities
-pathogenesis	noun	the origination and development of a disease
-pathogenic	adjective	able to cause disease
-patois	noun	a characteristic language of a particular group
-paucity	noun	a shortage; too small an amount
-pedantic	adjective	overly concerned with minor rules and details
-peeved	adjective	aroused to impatience or anger
-penchant	noun	a strong liking for something
-penetrate	verb	pass into or through, often by overcoming resistance
-penetrative	adjective	having or demonstrating ability to recognize or draw fine distinctions
-pentathlon	noun	an athletic contest consisting of five different events
-perceivable	adjective	capable of being perceived especially by sight or hearing
-perfunctory	adjective	done without care, merely as a duty
-peristalsis	noun	the process of wavelike muscle contractions of the alimentary tract that moves food along
-permeate	verb	spread or diffuse through
-pernicious	adjective	causing harm in a gradual, hidden way
-perplex	verb	be a mystery or bewildering to
-perspicacious	adjective	having keen insight, especially into people
-persuasive	adjective	intended or having the power to induce action or belief
-pertinent	adjective	directly relevant
-perturbing	adjective	causing distress or worry or anxiety
-pertussis	noun	a disease of the respiratory mucous membrane
-pervasive	adjective	spreading widely through every part
-perversity	noun	deliberate and stubborn unruliness and resistance to guidance or discipline
-pervious	adjective	admitting of passage or entrance
-pessimism	noun	the feeling that things will turn out badly
-pestered	adjective	troubled persistently especially with petty annoyances
-petrology	noun	the branch of geology that studies rocks: their origin and formation and mineral composition and classification
-phoney	adjective	fraudulent; having a misleading appearance
-phony	adjective	fraudulent; having a misleading appearance
-photometry	noun	measurement of the properties of light
-pigeonhole	verb	place into a small compartment
-pimple	noun	a small inflamed elevation of the skin; a pustule or papule; common symptom in acne
-pious	adjective	having or showing or expressing reverence for a deity
-pithy	adjective	concise and full of meaning
-pizzazz	noun	the activeness of an energetic personality
-placate	verb	to calm someone's anger
-plaudits	noun	enthusiastic approval
-plausible	adjective	seeming reasonable, though possibly untrue
-plough	verb	move in a way resembling that of a plow cutting into or going through the soil
-plundered	adjective	wrongfully emptied or stripped of anything of value
-poaching	noun	cooking in simmering liquid
-polygamy	noun	the condition or practice of having more than one spouse at a time
-pompous	adjective	puffed up with vanity
-popery	noun	offensive terms for the practices and rituals of the Roman Catholic Church
-popularization	noun	an interpretation that easily understandable and acceptable
-postpartum	adjective	occurring immediately after birth
-powerlessness	noun	the quality of lacking strength or power; being weak and feeble
-pragmatic	adjective	dealing with things practically rather than ideally
-precarious	adjective	unstable; dependent on chance
-preclude	verb	to make impossible in advance
-preconceived	adjective	formed beforehand; especially without evidence or through prejudice
-predilection	noun	a natural preference for something
-presbyopia	noun	a reduced ability to focus on near objects caused by loss of elasticity of the crystalline lens after age 45
-prescient	adjective	knowing what will happen before it does
-priapism	noun	condition in which the penis is continually erect; usually painful and seldom with sexual arousal
-prick	verb	make a small hole into, as with a needle or a thorn
-prideful	adjective	having or showing arrogant superiority to and disdain of those one views as unworthy
-primal	adjective	serving as an essential component
-prissy	adjective	exaggeratedly proper
-pristine	adjective	in its original, unspoiled condition
-prodigal	adjective	wastefully extravagant
-prolapse	verb	slip or fall out of place, as of body parts
-prolific	adjective	producing a great deal
-prologue	noun	an introduction to a play
-promenade	verb	march in a procession
-propensity	noun	a natural inclination to behave a certain way
-prosaic	adjective	plain and unimaginative
-prosody	noun	the patterns of stress and intonation in a language
-prostatectomy	noun	surgical removal of part or all of the prostate gland
-prostrate	adjective	stretched out and lying at full length along the ground
-provable	adjective	capable of being demonstrated or proved
-providential	adjective	peculiarly fortunate or appropriate; as if by divine intervention
-provincial	adjective	narrow in outlook; of the regions rather than the capital
-prudent	adjective	acting with care for the future
-psychoactive	adjective	affecting the mind or mood or other mental processes
-ptosis	noun	drooping of the upper eyelid caused by muscle paralysis and weakness
-publicizing	noun	the business of drawing public attention to goods and services
-puffed	adjective	gathered for protruding fullness
-pugnacious	adjective	eager to argue or fight
-pukka	adjective	absolutely first class and genuine
-purview	noun	the range of interest or activity that can be anticipated
-putsch	noun	a sudden and decisive change of government illegally or by force
-qiang	noun	the Tibeto-Burman language spoken in Sichuan
-quack	adjective	medically unqualified
-quadratic	noun	an equation in which the highest power of an unknown quantity is a square
-queasy	adjective	causing or able to cause nausea
-quell	verb	to put an end to, usually by force
-querulous	adjective	habitually complaining
-quiescent	adjective	inactive or at rest for the time being
-quintessential	adjective	representing the purest example of its kind
-quixotic	adjective	idealistic to the point of being impractical
-rambunctious	adjective	noisy and lacking in restraint or discipline
-rampant	adjective	unrestrained and violent
-rancor	noun	long-held bitterness or resentment
-ransacked	adjective	wrongfully emptied or stripped of anything of value
-rationalization	noun	the cognitive process of making something seem consistent with or based on reason
-razorback	adjective	having a sharp narrow back
-reactionary	adjective	opposed to political or social liberalism or reform
-realisation	noun	a musical composition that has been completed or enriched by someone other than the composer
-reassign	verb	transfer somebody to a different position or location of work
-rebind	verb	provide with a new binding
-rebroadcast	noun	a broadcast that repeated at a later time
-rebuke	verb	to criticize sharply
-recalcitrant	adjective	stubbornly resisting authority
-recapture	noun	a legal seizure by the government of profits beyond a fixed amount
-receding	noun	a slow or gradual disappearance
-reciprocal	adjective	given and received in equal measure
-recluse	adjective	withdrawn from society; seeking solitude
-recompense	verb	make amends for; pay compensation for
-reconstructed	adjective	adapted to social or economic change
-redress	verb	make reparations or amends for
-redundant	adjective	more than is needed; superfluous
-reentry	noun	the act of entering again
-reflux	noun	an abnormal backward flow of body fluids
-refractory	adjective	not responding to treatment
-refute	verb	to prove a claim wrong with evidence
-regenerate	adjective	reformed spiritually or morally
-reissue	noun	a publication (such as a book) that is reprinted without changes or editing and offered again for sale
-relegate	verb	to consign to a lower rank or position
-relegation	noun	authorizing subordinates to make certain decisions
-remission	noun	an abatement in intensity or degree
-reorder	verb	assign a new order to
-repot	verb	put in a new, usually larger, pot
-reproach	verb	express criticism towards
-repudiate	verb	to reject or disown formally
-reschedule	verb	assign a new time and place for an event
-resilient	adjective	able to recover quickly from difficulty
-resuscitate	verb	cause to regain consciousness
-retaliate	verb	take revenge for a perceived wrong
-retard	verb	cause to move more slowly or operate at a slower rate
-rethink	noun	thinking again about a choice previously made
-reticent	adjective	unwilling to say much
-revel	noun	unrestrained merrymaking
-revere	verb	love unquestioningly and uncritically or to excess; venerate as an idol
-reversibility	noun	the quality of being reversible in either direction
-revert	verb	go back to a previous state
-revising	noun	editing that involves writing something again
-revitalizing	adjective	tending to impart new life and vigor to
-rhetoric	noun	the art of persuasive speech, or language empty of substance
-rhythmical	adjective	recurring with measured regularity
-riddled	adjective	damaged throughout by numerous perforations or holes
-rioting	noun	a state of disorder involving group violence
-ripping	adjective	resembling a sound of violent tearing as of something ripped apart or lightning splitting a tree
-riskiness	noun	a state of danger involving risk
-roaring	adjective	very lively and profitable
-rococo	adjective	having excessive asymmetrical ornamentation
-roughness	noun	a texture of a surface or edge that is not smooth but is irregular and uneven
-ruckus	noun	the act of making a noisy disturbance
-rudimentary	adjective	basic and undeveloped
-rumbling	adjective	continuous full and low-pitched throbbing sound
-ruminate	verb	to think something over at length
-rummy	adjective	beyond or deviating from the usual or expected
-rustle	verb	make a dry crackling sound
-sacredness	noun	the quality of being sacred
-sadistic	adjective	deriving pleasure or sexual gratification from inflicting pain on another
-sagacious	adjective	showing deep wisdom and good judgment
-salient	adjective	most noticeable or important
-salutary	adjective	tending to promote physical well-being; beneficial to health
-sameness	noun	the quality of being alike
-sanctioned	adjective	conforming to orthodox or recognized rules
-sanguine	adjective	cheerfully optimistic, especially in bad circumstances
-sarcastic	adjective	expressing or expressive of ridicule that wounds
-satanic	adjective	extremely evil or cruel; expressive of cruelty or befitting hell
-satanism	noun	a belief in and reverence for devils
-satiny	adjective	having a smooth, gleaming surface reflecting light
-satiric	adjective	exposing human folly to ridicule
-satisfiable	adjective	capable of being sated
-saucy	adjective	characterized by a lightly pert and exuberant quality
-savagery	noun	the property of being untamed and ferocious
-scoured	adjective	worn away as by water or ice or wind
-scourge	verb	punish severely; excoriate
-screwy	adjective	not behaving normally
-scrupulous	adjective	careful to do what is right, down to the detail
-scrutinise	verb	to look at critically or searchingly, or in minute detail
-scrutinize	verb	to examine closely and critically
-scurrying	adjective	moving with great haste
-seclusion	noun	the quality of being secluded from the presence or view of others
-sedentary	adjective	requiring sitting or little activity
-seductive	adjective	tending to entice into a desired action or state
-semitic	noun	a major branch of the Afro-Asiatic language family
-sensibility	noun	mental responsiveness and awareness
-servile	adjective	excessively submissive
-sesotho	noun	the dialect of Sotho spoken by the Basotho; an official language of Lesotho
-shackled	adjective	bound by chains fastened around the ankles
-shakeup	noun	the imposition of a new organization; organizing differently
-shambles	noun	a condition of great disorder
-sharpness	noun	a quick and penetrating intelligence
-shrinkage	noun	process or result of becoming less or smaller
-shuddering	adjective	shaking convulsively or violently
-sifting	noun	the act of separating grain from chaff
-sightedness	noun	normal use of the faculty of vision
-sinning	adjective	transgressing a moral or divine law
-skittles	noun	a bowling game that is played by rolling a bowling ball down a bowling alley at a target of nine wooden pins
-slithering	adjective	moving as on a slippery surface
-sloppy	adjective	lacking neatness or order
-sloth	noun	a disinclination to work or exert yourself
-slothful	adjective	disinclined to work or exertion
-slump	verb	assume a drooping posture or carriage
-smelt	verb	extract (metals) by heating
-smouldering	adjective	showing scarcely suppressed anger
-smutty	adjective	characterized by obscenity
-snoopy	adjective	offensively curious or inquisitive
-snooze	verb	sleep lightly or for a short period of time
-socialized	adjective	under group or government control
-socioeconomic	adjective	involving social as well as economic factors
-soldering	noun	fastening firmly together
-soporific	adjective	tending to induce sleep
-sorption	noun	the process in which one substance takes up or holds another
-sorrel	adjective	of a light brownish color
-spasmodic	adjective	affected by involuntary jerky muscular contractions; resembling a spasm
-specious	adjective	seeming right but actually false
-spiritualism	noun	any doctrine that asserts the separate existence of God
-sporadic	adjective	occurring at irregular intervals
-spurious	adjective	not genuine; based on false reasoning
-spurned	adjective	rebuffed (by a lover) without warning
-squander	verb	to waste something valuable
-stabilise	verb	support or hold steady and make steadfast, with or as if with a brace
-staccato	adverb	separating the notes; in music
-stagnant	adjective	not flowing or developing
-staunch	adjective	loyal and firm in commitment
-stead	noun	the post or function properly or customarily occupied or served by another
-stenosis	noun	abnormal narrowing of a bodily canal or passageway
-stifled	adjective	held in check with difficulty
-stink	verb	be extremely bad in quality or in one's performance
-stinky	adjective	having an unpleasant smell
-stint	verb	subsist on a meager allowance
-stocky	adjective	having a short and solid form or stature
-stoic	adjective	enduring pain or hardship without complaint
-straitjacket	noun	anything immaterial that severely hinders or confines
-stricken	adjective	grievously affected especially by disease
-strident	adjective	loud and harsh; forcefully insistent
-stupefied	adjective	as if struck dumb with astonishment and surprise
-subconscious	adjective	just below the level of consciousness
-subjugate	verb	to bring under domination
-subservient	adjective	compliant and obedient to authority
-subsumption	noun	the premise of a syllogism that contains the minor term
-succinct	adjective	expressed clearly in few words
-succor	verb	help in a difficult situation
-suffocation	noun	killing by depriving of oxygen
-sundanese	noun	the Indonesian language spoken on West Java
-superfluous	adjective	more than is needed; unnecessary
-supplant	verb	to take the place of something displaced
-surreptitious	adjective	done secretly to escape notice
-swagger	verb	to walk with a lofty proud gait, often in an attempt to impress others
-swanky	adjective	imposingly fashionable and elegant
-swart	adjective	naturally having skin of a dark color
-swashbuckling	adjective	flamboyantly adventurous
-swilling	noun	the drinking of large mouthfuls rapidly
-swish	adjective	elegant and fashionable
-sycophant	noun	a person who flatters the powerful for advantage
-synchronisation	noun	the relation that exists when things occur at the same time
-syncope	noun	a spontaneous loss of consciousness caused by insufficient blood to the brain
-synonymy	noun	the semantic relation that holds between two words that can (in a given context) express the same meaning
-taciturn	adjective	saying little by nature
-tangential	adjective	only loosely connected to the subject
-tangerine	adjective	of a strong reddish orange color
-tattered	adjective	worn to shreds; or wearing torn or ragged clothing
-tedious	adjective	so lacking in interest as to cause mental weariness
-temerity	noun	boldness that borders on recklessness
-tenacious	adjective	holding firmly; persistent
-tenderness	noun	a tendency to express warm and affectionate feeling
-tentative	adjective	provisional; done without confidence
-tenuous	adjective	very weak or slight
-terrify	verb	fill with terror; frighten greatly
-terse	adjective	brief to the point of curtness
-tewkesbury	noun	the final battle of the War of the Roses in 1471 in which Edward IV defeated the Lancastrians
-thawed	adjective	no longer frozen solid
-theoretic	adjective	concerned primarily with theories or hypotheses rather than practical considerations
-theosophy	noun	a system of belief based on mystical insight into the nature of God and the soul
-thrifty	adjective	careful and diligent in the use of resources
-throttling	noun	the act of suffocating (someone) by constricting the windpipe
-thwart	verb	to prevent someone from achieving something
-timorous	adjective	nervous and easily frightened
-tingling	adjective	exciting by touching lightly so as to cause laughter or twitching movements
-titillating	adjective	pleasantly and superficially exciting
-torpor	noun	sluggish inactivity
-tortuous	adjective	highly complex or intricate and occasionally devious
-totalitarian	adjective	characterized by a government in which the political authority exercises absolute and centralized control
-tractable	adjective	easy to control or manage
-transient	adjective	lasting only a short time
-transmissible	adjective	capable of being transmitted by infection
-tremble	verb	move or jerk quickly and involuntarily up and down or sideways
-trepidation	noun	anxiety about what is to come
-trite	adjective	dulled by overuse; lacking freshness
-trope	noun	language used in a figurative or nonliteral sense
-truculent	adjective	aggressively defiant
-truncate	adjective	terminating abruptly by having or as if having an end or point cut off
-truncated	adjective	cut short in duration
-trustworthiness	noun	the trait of deserving trust and confidence
-tumbling	noun	the gymnastic moves of an acrobat
-turbid	adjective	clouded as with sediment
-turkic	noun	a subfamily of Altaic languages
-twaddle	verb	speak (about unimportant matters) rapidly and incessantly
-twinkling	adjective	shining intermittently with a sparkling light
-ubiquitous	adjective	present everywhere at once
-unary	adjective	consisting of or involving a single element or component
-uncaring	adjective	lacking affection or warm feeling
-unceasing	adjective	continuing forever or indefinitely
-unchanging	adjective	conforming to the same principles or course of action over time
-unconsolidated	adjective	loose and unstratified
-uncritical	adjective	marked by disregard for critical standards or procedures
-unction	noun	excessive but superficial compliments given with affected charm
-underprivileged	adjective	lacking the rights and advantages of other members of society
-undeserved	adjective	not deserved or earned
-undiminished	adjective	not lessened or diminished
-undress	noun	partial or complete nakedness
-unemotional	adjective	unsusceptible to or destitute of or showing no emotion
-unequalled	adjective	radically distinctive and without equal
-unequivocal	adjective	leaving no doubt; admitting one meaning only
-unfaithful	adjective	not true to duty or obligation or promises
-unfilled	adjective	of purchase orders that have not been filled
-unformed	adjective	not having form or shape
-unfriendly	adjective	not easy to understand or use
-unhelpful	adjective	providing no assistance
-unicameral	adjective	composed of one legislative body
-unilateral	adjective	involving only one part or side
-unmanageable	adjective	difficult to use or handle or manage because of size or weight or shape
-unmentionable	adjective	unsuitable or forbidden as a topic of conversation
-unmoderated	adjective	not made less extreme
-unmodified	adjective	not changed in form or character
-unnerved	adjective	deprived of courage and strength
-unnoticeable	adjective	not noticeable; not drawing attention
-unordered	adjective	not arranged in order
-unpalatable	adjective	not pleasant or acceptable to the taste or mind
-unpersuasive	adjective	not capable of persuading
-unquestionable	adjective	incapable of being questioned
-unquestioning	adjective	not inclined to ask questions
-unranked	adjective	not arranged in order hierarchically
-unrecognised	adjective	not having a secure reputation
-unreliability	noun	the trait of not being dependable or reliable
-unrequited	adjective	not returned in kind
-unsanitary	adjective	not sanitary or healthful
-unsealed	adjective	not established or confirmed
-unserviceable	adjective	not ready for service
-unsubstantiated	adjective	unsupported by other evidence
-unsupervised	adjective	not supervised or under constant observation
-unsympathetic	adjective	not sympathetic or disposed toward
-untenable	adjective	impossible to defend against objection
-untold	adjective	too much to be measured
-unusable	adjective	not capable of being used
-unwholesome	adjective	detrimental to physical or moral well-being
-unwise	adjective	showing or resulting from lack of judgment or wisdom
-upbeat	adjective	pleasantly (even unrealistically) optimistic
-uplink	noun	a transmission from Earth to a spacecraft or the path of such a transmission
-uptick	noun	a transaction in the stock market at a price above the price of the preceding transaction
-urethritis	noun	inflammation of the urethra; results in painful urination
-usurp	verb	to seize a position or power wrongfully
-vaccinated	adjective	having been rendered unsusceptible to a disease
-vacillate	verb	to waver between choices
-vagueness	noun	unclearness by virtue of being poorly expressed or not coherent in meaning
-vapid	adjective	offering nothing of interest; flat
-vaporized	adjective	converted into a gas or vapor
-veering	noun	the act of turning aside suddenly
-vehement	adjective	showing strong, forceful feeling
-venerate	verb	to regard with deep respect
-ventilate	verb	expose to cool or cold air so as to cool or freshen
-veracity	noun	truthfulness; accuracy
-verbose	adjective	using more words than necessary
-vernal	adjective	suggestive of youth; vigorous and fresh
-vexed	adjective	troubled persistently especially with petty annoyances
-viable	adjective	capable of working or surviving
-vicarious	adjective	experienced indirectly, through someone else
-vigilant	adjective	watchful for danger
-vilify	verb	to speak about with abusive disparagement
-vindicate	verb	to clear of blame, or to justify
-virulent	adjective	bitterly hostile, or severely poisonous
-vociferous	adjective	expressing opinions loudly and insistently
-volatile	adjective	liable to change rapidly and unpredictably
-volley	noun	rapid simultaneous discharge of firearms
-vroom	verb	make a loud, roaring sound, as of a car engine, while moving
-warble	verb	sing or play with trills, alternating with the half note above or below
-wary	adjective	cautious about possible danger
-weaken	verb	lessen the strength of
-weepy	adjective	liable to weep easily
-weirdness	noun	strikingly out of the ordinary
-welter	verb	toss, roll, or rise and fall in an uncontrolled way
-whacked	adjective	exhausted or worn out
-whammy	noun	a serious or devastating setback
-whimsical	adjective	playfully odd; given to sudden fancies
-whiteness	noun	the quality or state of the achromatic color of greatest lightness
-whoosh	verb	move with a sibilant sound
-wistful	adjective	quietly longing for something lost
-wonky	adjective	turned or twisted toward one side
-woozy	adjective	having or causing a whirling sensation; liable to falling
-wraith	noun	a mental representation of some haunting experience
-wrangle	verb	to quarrel noisily, angrily or disruptively
-wrongness	noun	inappropriate conduct
-zealous	adjective	filled with intense enthusiasm for a cause
-zenith	noun	the highest point reached
-zillion	adjective	very large indeterminate number
-zinger	noun	a striking or amusing or caustic remark
+abate	verb	to become less intense or widespread; to reduce something	Old French	abatre to beat down, French abattre, Late Latin abatere, ab or ad + batere, battere (popular form for Latin…
+aberration	noun	a departure from what is normal or expected	Latin	aberratio
+abhor	verb	to regard with disgust and hatred	Latin	abhorrere, ab + horrere to bristle, shiver, shudder
+abounding	adjective	existing in abundance	Middle English	abounden, French abonder, from Latin abundare to overflow, abound, ab + unda wave
+absenteeism	noun	habitual absence from work		
+abstain	verb	to choose not to do or take something	Middle English	absteynen, abstenen, Old French astenir, abstenir, French abstenir, from Latin abstinere, abstentum, v. t. &…
+accolade	noun	an award, or an expression of praise	French	accolade, Italian accolata, from accollare to embrace, Latin ad + collum neck
+accusation	noun	a formal charge of wrongdoing brought against a person; the act of imputing blame or guilt	Old French	acusation, French accusation, Latin accusatio, from accusare
+accusative	noun	the case of nouns serving as the direct object of a verb	French	accusatif, Latin accusativus (in sense 2), from accusare
+accustom	verb	make psychologically or physically used	Old French	acostumer, acustumer, French accoutumer, (Latin ad) + Old French costume, French coutume, custom
+acrimonious	adjective	marked by strong resentment or cynicism	Latin	acrimonia, from acer, sharp
+acuity	noun	sharpness of vision; the visual ability to resolve fine detail	Late Latin	acuitas
+acumen	noun	sharp judgment and quick insight	Latin	acumen, from acuere to sharpen
+adamant	adjective	refusing to be persuaded; unshakably firm	Middle English	adamaunt, adamant, diamond, magnet, Old French adamant, Latin adamas, adamantis, the hardest metal, from…
+adenoma	noun	a benign epithelial tumor of glandular origin	New Latin	New Latin, adeno- + -oma
+adjoin	verb	lie adjacent to another or share a boundary	Middle English	ajoinen, Old French ajoindre, French adjoindre, from Latin adjungere, ad + jungere to join
+admiration	noun	a feeling of delighted approval and liking	French	French, from Latin admiratio
+admonish	verb	to warn or reprimand gently but firmly	Middle English	amonesten, Old French amonester, French admonester, from a supposed Late Latin admonesstrare, from Latin…
+adventitious	adjective	associated by chance and not an integral part	Latin	adventitius
+adversity	noun	a difficult or unpleasant situation	Middle English	adversite, French adversit, from Latin adversitas
+aerosolized	adjective	in the form of ultramicroscopic solid or liquid particles dispersed or suspended in air or gas		
+aesthetic	adjective	concerned with beauty, or with the appreciation of beauty	Greek	one who perceives
+affable	adjective	friendly and easy to talk to	French	affable, Latin affabilis, from affari to speak to, ad + fari to speak
+affective	adjective	characterized by emotion	Latin	affectus, past participle of afficere to affect by active agency, ad + facere to make
+afforestation	noun	the conversion of bare or cultivated land into forest		
+afield	adverb	far away from home or one's usual surroundings		
+alleviate	verb	to make pain or a problem less severe	Late Latin	alleviare, from Latin ad + levis light
+alliteration	noun	use of the same consonant at the beginning of each stressed syllable in a line of verse	Latin	ad + litera letter
+aloof	adjective	distant and uninvolved; emotionally cool	Dutch	Pref. a- + loof, from Dutch loef luff, and so meaning, as a nautical word, to the windward
+altruism	noun	unselfish concern for the welfare of others	French	altruisme (a word of Comte's), Italian altrui of or to others, from Latin alter another
+amateurish	adjective	lacking professional skill or expertise		
+ambiguous	adjective	open to more than one interpretation; unclear	Latin	ambiguus, from ambigere to wander about, waver, amb- + agere to drive
+ambivalent	adjective	having mixed or contradictory feelings about something		
+amenable	adjective	disposed or willing to conform	French	amener to lead, (Latin ad) = mener to lead, from Latin minare to drive animals (properly by threatening…
+amity	noun	a cordial disposition	French	amiti, Old French amisti, amist, from an assumed Late Latin amisitas, from Latin amicus friendly, from amare…
+ampersand	noun	a punctuation mark (&) used to represent conjunction		
+amplify	verb	increase in size, volume or significance	French	amplifier, Latin amplificare
+anachronism	noun	something placed in the wrong historical period	Greek	'anachronismo\`s, from 'anachroni\`zein to refer to a wrong time, to confound times, 'ana\` + chro\`nos time
+analgesic	adjective	capable of relieving pain	New Latin	New Latin, from Greek 'analghsi\`a, 'an priv. + 'a\`lghsis sense of pain
+analogous	adjective	comparable in some useful respect	Latin	analogous, Greek according to a due ratio, proportionate, + ratio, proportion
+anecdote	noun	a short personal story used to illustrate a point	French	anecdote, from Greek not published, 'an priv. + given out, to give out, to publish
+animatronics	noun	the construction of robots to look like animals		
+animosity	noun	strong hostility or ill will	French	animosit, from Latin animositas. t
+annexation	noun	incorporation by joining or uniting		
+anomaly	noun	something that deviates from the standard or expected	Latin	anomalia, Greek
+anonym	noun	a fictitious name used when the person performs a particular social role	French	anonyme
+anorectal	adjective	pertaining to the anus and rectum considered together		
+antipathy	noun	a deep-seated dislike	Latin	antipathia, Greek 'antipa\`qeia, 'anti\` against + paqei^n to suffer
+apathy	noun	lack of interest, enthusiasm, or concern	Latin	apathia, Greek, 'a priv. +, from, to suffer
+appease	verb	to pacify someone by giving in to their demands	Middle English	apesen, apaisen, Old French apaisier, apaissier, French apaiser, from a (Latin ad) + Old French pais peace…
+arbitrary	adjective	based on personal whim rather than reason or rule	Latin	arbitrarius, from arbiter
+arcane	adjective	understood by very few; mysteriously obscure	Latin	arcanus
+arduous	adjective	requiring great effort; strenuous	Latin	arduus steep, high. ard high, height
+armory	noun	a collection of resources	Old French	armaire, armarie, French armoire, from Latin armarium place for keeping arms, but confused with French…
+artful	adjective	not straightforward or candid; giving a false appearance of frankness		
+articulate	adjective	able to express thoughts clearly and fluently	Latin	articulatus
+ascetic	noun	a person who practices severe self-discipline and abstinence	Greek	Greek, from to exercise, to practice gymnastics
+assassinate	verb	murder; especially of socially prominent persons	Late Latin	assassinatus, past participle of assassinare
+assiduous	adjective	showing great care and persistent effort	Latin	assiduus, from assidre to sit near or close, ad + sedre to sit
+astride	adverb	with one leg on each side		
+astute	adjective	shrewd; quick to see an advantage	Latin	astutus, from astus craft, cunning, perhaps cognate with English acute
+atheistic	adjective	rejecting any belief in gods	Greek	without god, 'a priv. + god
+attest	verb	provide evidence for; stand as proof of; show by one's behavior, attitude, or external attributes	Latin	attestari, ad + testari to bear witness
+audacious	adjective	boldly daring, sometimes to the point of recklessness	French	audacieux, as if from Late Latin audaciosus (not found), from Latin audacia audacity, from audax, -acis…
+augment	verb	to make greater by adding to it	Latin	augmentare, from augmentum an increase, from augere to increase, perhaps., English wax, v., and eke, v
+auspicious	adjective	suggesting a favorable outcome; promising		
+austere	adjective	severely simple and plain; stern in manner	French	austre, Latin austerus, from Greek, from to parch, dry
+autoradiography	noun	producing a radiograph by means of the radiation emitted from the specimen being photographed		
+avocation	noun	an auxiliary activity	Latin	avocatio
+awkwardness	noun	unskillfulness resulting from a lack of training		
+baccalaureate	noun	a farewell sermon to a graduating class at their commencement ceremonies	New Latin	baccalaureatus, from Late Latin baccalaureus a bachelor of arts, from baccalarius, but as if from Latin bacca…
+bahasa	noun	the dialect of Malay used as the national language of the Republic of Indonesia or of Malaysia		
+baldness	noun	the condition of having no hair on the top of the head	Middle English	balled, ballid, perhaps the past participle of ball to reduce to the roundness or smoothness of a ball, by…
+baloney	noun	pretentious or silly talk or writing		
+bamboozle	verb	conceal one's true motives from especially by elaborately feigning good intentions so as to gain an end		
+banal	adjective	so unoriginal as to be boring	French	French, from ban an ordinance
+barricaded	adjective	preventing entry or exit or a course of action	French	barricade, from Spanish barricada, originally a barring up with casks, from barrica cask, perhaps from Late…
+battering	noun	the act of subjecting to strong attack	Middle English	bateren, Old French batre, French battre, from Late Latin battere, for Latin batuere to strike, beat, of…
+beatification	noun	a state of supreme happiness		
+belie	verb	to give a false impression of; to contradict	Middle English	bilien, bilien, Old English belegan, pref. be- + legan to lie
+benevolent	adjective	kind and generous toward others	Latin	benevolens, -entis, bene well (adv. of bonus good) + volens, p. pr. of volo I will, I wish
+berate	verb	censure severely or angrily		
+bibliomania	noun	preoccupation with the acquisition and possession of books	Greek	book + madness
+billet	noun	a short personal letter	French	billet, diminutive of an Old French bille bill
+bitterness	noun	a feeling of deep and bitter anger and ill-will	Old English	biternys, biter better + -nys = -ness
+blackness	noun	the quality or state of the achromatic color of least lightness	Middle English	blak, Old English blaec. blakkr dark, swarthy, Swedish blck ink, Danish blaek, Old High German blach, LGerman…
+blaring	adjective	unpleasantly loud and penetrating	Middle English	blaren, bloren, to cry, woop
+blister	noun	a flaw on a surface resulting when an applied substance does not adhere	Middle English	Middle English. bluyster, from the same root as blast, bladder, blow
+blurred	adjective	indistinct or hazy in outline		
+boldness	noun	the trait of being willing to undertake things that involve risk or danger	Middle English	bald, bold, Old English bald, beald. ballr, Old High German bald, Middle High German balt, Dutch boud, Gothic…
+bolster	verb	to support or strengthen	Old English	bolster. blstr, Swedish & Danish bolster, Old High German bolstar, polstar, German polster
+bonfire	noun	a large outdoor fire that is lighted as a signal or in celebration	Middle English	bonefire, banefire, originally a fire of bones, bone + fire
+boozing	noun	the act of drinking alcoholic beverages to excess	Dutch	buizen. bausen, and perhaps from Dutch buis tube, channel, bus box, jar
+botch	verb	make a mess of, destroy or ruin		
+bracing	adjective	imparting vitality and energy	Old French	brace, brasse, the two arms, embrace, fathom, French brasse fathom, from Latin bracchia the arms (stretched…
+braised	adjective	cooked by browning in fat and then simmering in a closed container	French	braiser, from braise coals
+breve	noun	a diacritical mark (U-shaped) placed over a vowel to indicate a short sound	Italian	& (in sense 2) Late Latin breve, from Latin brevis short
+brevity	noun	shortness of speech or writing; conciseness	Latin	brevitas, from brevis short
+brilliancy	noun	a quality that outshines the usual		
+bronchospasm	noun	a spasm of the bronchi that makes exhalation difficult and noisy; associated with asthma and bronchitis		
+bruit	verb	tell or spread rumors	Middle English	bruit, brut, noise, bruit, French bruit, from Late Latin brugitus
+buggery	noun	intercourse via the anus, committed by a man with a man or woman	Old French	bougrerie, bogrerie, heresy
+burnish	verb	polish and make shiny	Middle English	burnischen, burnissen, burnen, Old French burnir, brunir, to make brown, polish, French brunir, from French…
+burnup	noun	a high-speed motorcycle race on a public road		
+burping	noun	a reflex that expels gas noisily from the stomach through the mouth		
+cackle	noun	the sound made by a hen after laying an egg	Middle English	cakelen
+cacophony	noun	a harsh, discordant mixture of sounds	Greek	Greek, kako\`s bad + sound
+calorimetry	noun	measurement of quantities of heat		
+candid	adjective	truthful and straightforward, even when it is awkward	French	candide (. chand to shine
+capricious	adjective	given to sudden changes of mood or behavior	Latin	caper goat
+cardiomyopathy	noun	a disorder (usually of unknown origin) of the heart muscle		
+carelessness	noun	the quality of not being careful or taking pains	Old English	cearles
+caries	noun	soft decayed area in a tooth; progressive decay can lead to the death of a tooth	Latin	Latin, decay
+castigate	verb	to reprimand severely	Latin	castigatus, past participle of castigare to correct, punish, castus pure, chaste + agere to move, drive
+causation	noun	the act of causing something to happen		
+caustic	adjective	bitingly sarcastic; corrosive	Latin	caustucs, Ge., from to burn
+censure	verb	to express strong formal disapproval	Latin	censura from censere
+centralization	noun	the act of consolidating power under a central control		
+chafe	verb	become or make sore by or as if by rubbing	Middle English	chaufen to warm, Old French chaufer, French chauffer, from Latin calefacere, calfacere, to make warm, calere…
+chafed	adjective	painful from having the skin abraded	Middle English	chaufen to warm, Old French chaufer, French chauffer, from Latin calefacere, calfacere, to make warm, calere…
+charismatic	adjective	possessing an extraordinary ability to attract		
+cheapness	noun	a price below the standard price	Old English	cep bargain, sale, price. koop purchase, German kauf, Icelandic kaup bargain
+checkup	noun	a thorough physical examination; includes a variety of tests depending on the age and sex and health of the person		
+chequer	verb	mark into squares or draw squares on; draw crossed lines on		
+chicanery	noun	the use of tricks to deceive someone	French	chicanerie
+chilly	adjective	not characterized by emotion	Old English	cele, cyle, from the same root as celan, calan, to be cold. kil cold, coldness, Swedish kyla to chill, and…
+chock	adverb	as completely as possible	French	choquer
+cholestasis	noun	a condition in which little or no bile is secreted or the flow of bile into the digestive tract is obstructed		
+chomping	noun	the act of chewing noisily		
+circumference	noun	the size of something as given by the distance around it	Latin	circumferentia
+circumflex	noun	a diacritical mark (^) placed above a vowel in some languages to indicate a special phonetic quality	Latin	circumflexus a bending round, from circumflectere, circumflexum, to bend or turn about, circum + flectere to…
+circumspect	adjective	cautious; wary of risk and consequence	Latin	circumspectus, past participle of circumspicere to look about one's self, to observe, circum + spicere…
+civics	noun	the social science of municipal affairs		
+clandestine	adjective	kept secret, usually because it is improper	Latin	clandestinus, from clam secretly. conceal
+clang	noun	a loud resonant repeating noise	Latin	clangere. kla\`zein to clash, scream
+claptrap	noun	pompous or pretentious talk or writing		
+clayey	adjective	resembling or containing clay		
+cleave	verb	separate or cut with a tool, such as a sharp instrument	Middle English	cleovien, clivien, cliven, Old English cleofian, clifian. klibn, German kleben, LGerman kliven, Dutch kleven…
+cliffhanger	noun	a contest whose outcome is uncertain up to the very end		
+cloistered	adjective	of communal life sequestered from the world under religious vows	Old French	cloistre, French clotre, Latin claustrum, plural claustra, bar, bolt, bounds, from claudere, clausum, to…
+clotting	noun	the process of forming semisolid lumps in a liquid		
+coalesce	verb	to come together to form one whole	Latin	coalescere, coalitium, co- + alescere to grow up, incho. from alere to nourish
+coaxing	adjective	pleasingly persuasive or intended to persuade	French	, French coquin knave, rogue
+codex	noun	an official list of chemicals or medicines etc.		
+cogent	adjective	clear, logical, and convincing	Latin	cogens, p. pr. of cogere to drive together, to force, co- + agere to drive., and
+colonization	noun	the act of colonizing; the establishment of colonies		
+colostomy	noun	a surgical operation that creates an opening from the colon to the surface of the body to function as an anus		
+commemorate	verb	celebrate by some ceremony or observation	Latin	commemoratus, past participle of commemorare to remember, com- + memorare to mention, from memor mindful
+complacent	adjective	smugly satisfied, and so unaware of danger	Latin	complacens very pleasing, p. pr. of complacere, com- + placere to please
+conciliatory	adjective	intended to placate or win goodwill		
+conciseness	noun	terseness and economy in writing and speaking achieved by expressing a great deal in just a few words	Latin	concisus cut off, short, past participle of concidere to cut to pieces, con- + caedere to cut
+condone	verb	to accept or overlook behavior that is wrong	Latin	condonare, -donatum, to give up, remit, forgive, con- + donare to give
+confirmatory	adjective	serving to support or corroborate		
+constellation	noun	an arrangement of parts or elements	French	constellation, Latin constellatio
+contralateral	adjective	on or relating to the opposite side		
+contravention	noun	coming into conflict with		
+contusion	noun	an injury that doesn't break the skin but results in some discoloration	Latin	contusio
+conundrum	noun	a confusing and difficult problem		
+convalescent	adjective	returning to health after illness or debility	Latin	convalescens, -entis, p. pr
+conversant	adjective	well informed about or knowing thoroughly	Latin	conversans, p. pr. of conversari
+coronation	noun	the ceremony of installing a new monarch		
+corroborate	verb	to confirm with supporting evidence	Latin	corroboratus, past participle of corroborare to corroborate, cor- + roborare to strengthen, robur strength
+corrugated	adjective	shaped into alternating parallel grooves and ridges	Latin	corrugatus, past participle of corrugare, cor-+ rugare to wrinkle, ruga wrinkle
+corruptible	adjective	capable of being corrupted	Latin	corruptibilis
+cotillion	noun	a ball at which young ladies are presented to society	French	cotillon, from Old French cote coat, Late Latin cotta tunic
+crabs	noun	infestation of the pubic hair by crab lice		
+craggy	adjective	having hills and crags		
+craze	verb	cause to go crazy; cause to lose one's mind	Middle English	crasen to break, from Scand., perhaps through Old French
+credulous	adjective	too ready to believe things; easily deceived	Latin	credulus, from credere
+crinkled	adjective	uneven by virtue of having wrinkles or waves		
+croup	noun	a disease of infants and young children; harsh coughing and hoarseness and fever and difficult breathing	French	croupe hind quarters, croup, rump, of German or Icelandic origin
+cryptic	adjective	mysterious in meaning; deliberately obscure	Latin	crypticus, Greek kryptiko\`s, from kry\`ptein to hide
+cuddle	verb	move or arrange oneself in a comfortable and cozy position		
+culpable	adjective	deserving blame	Middle English	culpable, coulpable, coupable, French coupable, formerly also coupable, formerly also coulpable, culpable…
+cursive	adjective	having successive letter joined together	Late Latin	cursivus
+cursory	adjective	hasty and not thorough	Latin	cursorius, from cursor
+custodial	adjective	providing protective supervision; watching over or safeguarding	Latin	custodia, from custos guard, probably. to hide, and English hide. Seee Hide to cover
+dandruff	noun	a condition in which white scales of dead skin are shed by the scalp	Welsh	Prob. from Welsh toncrust, peel, skin + Old English drf dirty, draffy, or Welsh drwg bad
+daunted	adjective	caused to show discomposure	Old French	danter, French dompter to tame, subdue, from Latin domitare, v. intens. of domare to tame
+dazzling	adjective	amazingly impressive; suggestive of the flashing of lightning		
+deafened	adjective	caused to hear poorly or not at all		
+dearth	noun	a scarcity or lack of something	Middle English	derthe, from dere
+debatable	adjective	open to doubt or debate	Old French	debatre, French dbattre, Latin de + batuere to beat. t., and
+debauchery	noun	a wild gathering involving excessive drinking and promiscuity		
+debunk	verb	to expose the falseness of a claim or belief		
+deceptive	adjective	causing one to believe what is not true or fail to believe what is true		
+declarative	noun	a mood (grammatically unmarked) that represents the act or state as an objective fact	Latin	declarativus, from declarare
+decorum	noun	behavior that is proper and in good taste	Latin	decrum, from decrus
+deference	noun	polite respect, and submission to another's judgment	French	dfrence. See 3d Defer
+deferment	noun	act of putting off to a future time	Middle English	differren, French diffrer, from Latin differre to delay, bear different ways, dis- + ferre to bear
+defiance	noun	intentionally contemptuous behavior or attitude	Old French	defiance, desfiance, challenge, from desfier to challenge, French dfier
+deforestation	noun	the state of being clear of trees		
+deleterious	adjective	causing harm or damage	Late Latin	deleterius noxious, Greek dhlhth\`rios, from dhlei^sqai to hurt, damage, probably. delere to destroy
+delineate	verb	to describe or outline precisely	Latin	delineatus, past participle of delineare to delineate, de- + lineare to draw, from linea line
+deluge	verb	fill quickly beyond capacity; as with a liquid	French	dluge, Latin diluvium, from diluere wash away, di- = dis- + luere, equivalent to to lavare to wash
+demeaning	adjective	causing awareness of your shortcomings	Old French	demener to conduct, guide, manage, French se dmener to struggle, pref. d- (Latin de) + mener to lead, drive…
+demeanour	noun	the way a person behaves toward other people		
+densification	noun	an increase in the density of something		
+densitometry	noun	measuring the optical density of a substance by shining light on it and measuring its transmission		
+depleted	adjective	no longer sufficient	Latin	From Latin deplere to empty out, de- + plere to fill. Forined like replete, complete
+depopulation	noun	the condition of having reduced numbers of inhabitants	Latin	depopulatio pillaging
+deride	verb	to mock or ridicule with contempt	Latin	deridere, derisum, de- + ridre to laugh
+derogatory	adjective	expressive of low opinion		
+desiccated	adjective	thoroughly dried out	Latin	desiccatus, past participle of desiccare to dry up, de- + siccare to dry, siccus dry
+desolation	noun	the state of being decayed or destroyed	French	dsolation, Latin desolatio
+desperation	noun	a state in which all hope is lost or absent	Latin	desperatio
+destitute	adjective	poor enough to need help from others	Latin	destitutus, past participle of destituere to set away, leave alone, forsake, de + statuere to set
+desultory	adjective	lacking a plan or purpose; jumping from one thing to another	Latin	desultorius, from desultor a leaper, from desilire, desultum, to leap down, de + salire to leap
+detachable	adjective	designed to be unfastened or disconnected without damage	French	dtacher (, pref. d (Latin dis) + the root found also in English attach
+detente	noun	the easing of tensions or strained relations		
+deter	verb	to discourage someone from acting, usually by instilling doubt	Latin	deterrere, de + terrere to frighten, terrify
+deterrence	noun	a negative motivational influence		
+detested	adjective	treated with dislike or contempt	Latin	detestare, detestatum, and detestari, to curse while calling a deity to witness, to execrate, detest, de +…
+devious	adjective	indirect in departing from the accepted or proper way; misleading	Latin	devius, de + via way
+dialect	noun	the usage or vocabulary that is characteristic of a specific group of people	French	dialecte, Latin dialectus, from Greek, from to converse, discourse
+diatribe	noun	a bitter, forceful verbal attack	Latin	diatriba a learned discussion, Greek, properly, a wearing away of time, from to rub away, spend time, dia\`…
+didactic	adjective	intended to teach, often in a heavy-handed moral way	Greek	Greek, from to teach. docere to teach
+diffident	adjective	shy and lacking self-confidence	Latin	diffidens, -entis, p. pr. of diffidere, dif- = dis + fidere to trust
+digestibility	noun	the property of being easy to digest		
+digitalization	noun	the administration of digitalis for the treatment of certain heart disorders		
+digress	verb	to stray from the main subject	Latin	digressus, past participle of digredi to go apart, to deviate, di- = dis- + gradi to step, walk
+dilatory	adjective	slow to act; causing delay	Latin	dilatorius, from dilator a delayer, from dilatus, used as past participle of differe to defer, delay
+dinge	verb	make a dent or impression in		
+dingy	adjective	thickly covered with ingrained dirt or soot	Middle English	dingen, dengen. dencgan to knock, Icelandic dengja to beat, hammer, Swedish dnga, German dengeln
+dirge	noun	a song or hymn of mourning composed or performed as a memorial to a dead person		
+discoloration	noun	a soiled or discolored appearance		
+discontented	adjective	showing or experiencing dissatisfaction or restless longing		
+discrepant	adjective	not compatible with other facts	Latin	discrepans, -antis, p. pr. of discrepare to sound differently or discordantly, dis- + crepare to rattle, creak
+disenchantment	noun	freeing from false belief or illusions		
+disgusted	adjective	having a strong distaste from surfeit	Old French	desgouster, French dgoter, pref. des- (Latin dis-) + gouster to taste, French goter, from Latin gustare, from…
+disheartened	adjective	made less hopeful or enthusiastic		
+disparage	verb	to belittle or speak of slightingly	Old French	desparagier, French dparager, to marry unequally, pref. des- (Latin dis-) + French parage extraction…
+disparate	adjective	essentially different and unrelated	Latin	disparatus, past participle of disparare to part, separate, dis- + parare to make ready, prepare
+dispel	verb	force to go away; used both with concrete and metaphoric meanings	Latin	dispellere, dis- + pellere to push, drive
+dissemble	verb	to hide one's true motives or feelings	Old French	dissembler to be dissimilar, pref. dis- (Latin dis-) + French sembler to seem, Latin simulare to simulate
+distinctness	noun	the quality of being sharp and clear	Latin	distinctus, past participle of distinguere
+dizzy	adjective	having or causing a whirling sensation; liable to falling	Middle English	dusi, disi, desi, foolish, Old English dysig. dsig dizzy, ODutch deuzig, duyzig, Old High German tusig…
+docile	adjective	easily managed and willing to be taught	Latin	docilis,from docere to teach
+dogging	adjective	relentless and indefatigable in pursuit or as if in pursuit		
+dogmatic	adjective	asserting opinions as if they were beyond question	Latin	dogmaticus, Greek dogmatiko\`s, from do\`gma
+dower	verb	furnish with an endowment	French	douaire, Late Latin dotarium, from Latin dotare to endow, portion, from dos dower. gift, and to Latin dare to…
+dramatization	noun	conversion into dramatic form		
+drool	verb	be envious, desirous, eager for, or extremely happy about something		
+dubious	adjective	doubtful; questionable in quality or truth	Latin	dubius, dubiosus, from duo two
+dyslexia	noun	impaired ability to learn to read		
+ebullient	adjective	overflowing with enthusiasm and energy	Latin	ebulliens, -entis, p. pr. of ebullire to boil up, bubble up, e out, from + bullire to boil. See 1st Boil
+eccentricity	noun	strange and unconventional behavior	French	excentrique, formerly also spelled eccentrique, from Late Latin eccentros out of the center, eccentric, Greek…
+ecclesiology	noun	the branch of theology concerned with the nature and the constitution and the functions of a church		
+eclectic	adjective	drawing on a wide and varied range of sources	Greek	Greek, from to pick out, choose out
+econometrics	noun	the application of mathematics and statistics to the study of economic and financial data		
+efficacy	noun	the power to produce the intended result	Latin	efficacia, from efficax
+egoistic	adjective	limited to or caring only about yourself and your own needs	French	goste
+egregious	adjective	outstandingly bad; shockingly wrong	Latin	egregius, literally, separated or chosen from the herd, i. e., distinguished, excellent
+elaboration	noun	addition of extra material or illustration or clarifying detail	Latin	elaboratio
+eldritch	adjective	suggesting the operation of supernatural influences		
+electrifying	adjective	causing a surge of emotion or excitement		
+electrostatics	noun	the branch of physics that deals with static electricity		
+elicit	verb	to draw out a response or reaction	Latin	elictus, past participle of elicere to elicit, e + lacere to entice
+elope	verb	run away secretly with one's beloved	Dutch	ontloopen to run away, pref. ont- (. ent-, Old English and-
+eloquent	adjective	fluent and persuasive in speech or writing	French	loquent, Latin eloquens, -entis, p. pr. of eloqui to speak out, declaim, e + loqui to speak
+elucidate	verb	to make clear by explaining	Late Latin	elucidatus, past participle of elucidare, e + lucidus full of light, clear
+embargo	verb	ban the publication of (documents), as for security or copyright reasons	Spanish	Spanish, from embargar to arrest, restrain, pref. em- (Latin in) + Spanish barra bar. barre bar
+embed	verb	fix or set securely or deeply		
+embroiled	adjective	deeply involved especially in something complicated	French	embrouiller, pref. em- (Latin in) + brouiller. See 1st Broil, and
+emcee	verb	act as a master of ceremonies		
+empathetic	adjective	showing empathy or ready comprehension of others' states		
+emulate	verb	to imitate, especially in order to match or surpass	Latin	aemulatus, past participle of aemulari, from aemulus emulous, probably. imitate
+encompass	verb	include in scope; include as part of something broader; have as one's sphere or territory		
+encrypt	verb	convert ordinary language into code		
+endodontics	noun	the branch of dentistry dealing with diseases of the dental pulp		
+enervate	verb	to drain of energy and vitality	Latin	enervatus, past participle of enervare, from enervis nerveless, weak, e out + nervus nerve
+engender	verb	to give rise to; to bring about	French	engender, Latin ingenerare, in + generare to beget
+engorged	adjective	overfull as with blood		
+engrossment	noun	complete attention; intense mental effort	French	French, from pref. en- (Latin in) + gros gross, grosse, n., an engrossed document
+enigma	noun	a person or thing that is mysterious and hard to understand	Latin	aenigma, Greek a'i\`nigma, from a'ini\`ssesqai to speak darkly, from a'i^nos tale, fable
+enmity	noun	a state of deep-seated ill-will	Middle English	enemyte, from enemy
+enormity	noun	the quality of being outrageous	Latin	enormitas, from enormis enormous
+entailment	noun	something that is inferred	Middle English	entaile carving, Old French entaille, French, an incision, from entailler to cut away, pref. en- (Latin in) +…
+entreaty	noun	earnest or urgent request	Middle English	entreten to treat, request, Old French entraiter to treat of, pref. en- (Latin in) + traitier to treat
+ephemeral	adjective	lasting a very short time	New Latin	New Latin, from Greek a day fly, from daily, lasting but a day, over + day
+epitaph	noun	an inscription on a tombstone or monument in memory of the person buried there	French	pitaphe, Latin epitaphium a funeral oration, from Greek, originally an adj., over or at a tomb, 'epi\` upon +…
+epitomize	verb	embody the essential characteristics of or be a typical example of		
+equanimity	noun	calmness and composure under strain	Latin	aequanimitas, from aequanimus
+errand	noun	a short trip that is taken in the performance of a necessary task or mission	Middle English	erende, erande, message, business, Old English aerende, aerend. arundi, Old High German arunti, Icelandic…
+erudite	adjective	having or showing deep scholarly knowledge	Latin	eruditus, past participle of erudire to free from rudeness, to polish, instruct, e out + rudis rude
+esoteric	adjective	understood only by a small group with special knowledge	Greek	'eswteriko\`s, from 'esw\`teros inner, interior, comp. from 'e\`sw in, within, from 'es, e'is, into, from 'en in
+estrus	noun	applies to nonhuman mammals: a state or period of heightened sexual arousal and activity		
+eulogy	noun	a speech of high praise, especially for someone who has died	Greek	Greek, from well speaking, e'y^ well + to speak
+euphemism	noun	a mild word substituted for one thought harsh or blunt	Greek	from to use word of a good omen, e'y^ well + to speak
+evacuate	verb	move out of an unsafe location into safety		
+exacerbate	verb	to make a bad situation worse	Latin	exacerbatus, past participle of exacerbare, ex out (intens.) + acerbare
+exemplar	noun	something to be imitated	Latin	exemplar, exemplum
+exemplary	adjective	serving as a desirable model; outstandingly good	Latin	exemplaris, from exemplar
+exemplifying	adjective	clarifying by use of examples	Latin	exemplum example + -fy
+exhaustive	adjective	thorough and complete, leaving nothing out	Latin	exhaustus, past participle of exhaurire, ex out + haurire, haustum, to draw, esp. water
+exogenous	adjective	derived or originating externally		
+exonerate	verb	to clear of blame or accusation	Latin	exoneratus, past participle of exonerare to free from a burden, ex out, from onerare to load, onus load
+expelling	noun	any of several bodily processes by which substances go out of the body		
+expository	adjective	serving to expound or set forth		
+extenuating	adjective	partially excusing or justifying	Latin	extenuatus, past participle of extenuare to make thin, loosen, weaken, ex out + tenuare to make thin, tenuis…
+exterminated	adjective	destroyed completely	Latin	exterminatus, past participle of exterminare to abolish, destroy, drive out or away, ex out + terminus…
+extravagant	adjective	unrestrained, especially with regard to feelings	French	extravagant, from Latin extra on the outside + vagans, -antis, p. pr. of vagari to wander, from vagus…
+facetious	adjective	joking about something that deserves to be taken seriously	French	facette, diminutive of face face
+fallacious	adjective	based on faulty reasoning; misleading	Latin	fallaciosus, from fallacia
+fallow	adjective	left unplowed and unseeded during a growing season	Old English	fealu, fealo, pale yellow or red. vaal fallow, faded, Old High German falo, German falb, fahl, Icelandic flr…
+fanned	adjective	especially spread in a fan shape		
+fastened	adjective	firmly closed or secured	Old English	faestnian. festinn
+fastidious	adjective	very attentive to detail; hard to please	Latin	fastidiosus disdainful, from fastidium loathing, aversion, perhaps from fastus arrogance (of uncertain…
+fatness	noun	excess bodily weight		
+fervent	adjective	showing intense and passionate feeling	French	fervent, Latin fervens, -entis. p. pr. of fervere o the boiling hot, to boil, glow
+fester	verb	ripen and generate pus	Middle English	festern, from fester, n., or from Old French festrir, from festre, n
+festschrift	noun	a collection of writings published in honor of a scholar		
+fetching	adjective	very attractive; capturing interest	Middle English	fecchen, Old English feccan, perhaps the same word as fetian, or
+fibrous	adjective	having or resembling fibers especially fibers used in making cordage such as those of jute	French	fibre, Latin fibra
+fickle	adjective	changing loyalty or affection without good reason	Middle English	fikel untrustworthy, deceitful, Old English ficol, from fic, gefic, fraud, deceit
+fidgety	adjective	nervous and unable to relax		
+flaxen	adjective	of hair color; pale yellowish to yellowish brown		
+flexion	noun	the state of being flexed	Latin	flexio
+flout	verb	to openly disregard a rule or convention	Dutch	ODutch fluyten to play the flute, to jeer, Dutch fluiten, from fluit, from French
+foolhardy	adjective	marked by defiant disregard for danger or consequences	Old French	folhardi
+foolishness	noun	the trait of acting stupidly or rashly		
+foreground	noun	the part of a scene that is near the viewer		
+foreshadowing	adjective	indistinctly prophetic		
+fortify	verb	make strong or stronger	French	fortifier, Latin fortificare, fortis strong + -ficare (in comp.) to make
+fortuitous	adjective	happening by chance, often luckily	Latin	fortuitus., by chance, properly abl. of fors, fortis, chance
+frayed	adjective	worn away or tattered along the edges	Old French	freier, fraier, froier, to rub. Latin fricare
+frizzy	adjective	in small tight curls		
+frothing	adjective	producing or covered with lathery sweat or saliva from exhaustion or disease	Middle English	frothe, Icelandic froa. fraade, Swedish fradga, Old English freoan to froth
+frugal	adjective	sparing with money or resources	Latin	frugalis, from frugi, literally, for fruit, hence, fit for food, useful, proper, temperate, the dative of…
+fulfilment	noun	a feeling of satisfaction at having achieved your desires		
+furtive	adjective	done quietly to avoid being noticed	Latin	furtivus, from furtum theft, from fur thief
+futile	adjective	pointless; incapable of producing any result	Latin	futilis that easily pours out, that easily lets loose, vain, worthless, from the root of fundere to pour out
+galvanizing	adjective	affected by emotion as if by electricity; thrilling		
+gargantuan	adjective	of great mass; huge and bulky		
+garrulous	adjective	excessively talkative about trivial things	Latin	garrulus, from garrire to chatter, talk
+gasconade	noun	an instance of boastful talk	French	gasconnade, from Gascon an inhabitant of Gascony, the people of which were noted for boasting
+gasification	noun	the process of changing into gas		
+gayness	noun	a sexual attraction to (or sexual relations with) persons of the same sex		
+germane	adjective	genuinely relevant to the matter at hand		
+germinal	adjective	containing seeds of later development		
+gerontology	noun	the branch of medical science that deals with diseases and problems specific to old people		
+gestalt	noun	a configuration or pattern of elements so unified as a whole that it cannot be described merely as a sum of its parts		
+gibberish	noun	unintelligible talking		
+gilded	adjective	having the deep slightly brownish color of gold	Old English	gyldan, from gold gold. 234
+glaucous	adjective	having a frosted look from a powdery coating, as on plants	Latin	glaucus, Greek glayko\`s
+glimmering	noun	a slight suggestion or vague understanding	Swedish	. glimmer a faint, trembling light, mica, glimmern to glimmer, glimmen to shine faintly, glow, Swedish…
+googly	noun	a cricket ball bowled as if to break one way that actually breaks in the opposite way		
+graciousness	noun	excellence of manners or social conduct	French	gracieux, Latin gratiosus
+granular	adjective	composed of or covered with particles resembling meal in texture or consistency		
+grapevine	noun	gossip spread by spoken communication		
+grapple	verb	succeed in doing, achieving, or producing (something) with the limited or inadequate means available	French	grappiller, Old French graypil the grapple of a ship, from graper to pluck, properly, to seize, clutch, of…
+graven	adjective	cut into a desired shape		
+gregarious	adjective	sociable; fond of company	Latin	gregarius, from grex, gregis, herd
+grinning	noun	a facial expression characterized by turning up the corners of the mouth; usually shows pleasure or amusement		
+gripes	noun	acute abdominal pain		
+grumpy	adjective	annoyed and irritable		
+guile	noun	cunning used to deceive	Middle English	guile, gile, Old French guile, of German origin, and the same word as English wile
+habitability	noun	suitability for living in or on		
+hackneyed	adjective	worn out by overuse; unoriginal	Middle English	hakeney, hakenay
+handmaid	noun	in a subordinate position		
+handsewn	adjective	sewn by hand rather than machine		
+hankering	noun	a yearning for something or to do something		
+harangue	noun	a loud bombastic declamation expressed with strong emotion	French	harangue
+harbinger	noun	a sign of something about to happen	Middle English	herbergeour, Old French herbergeor one who provides lodging, from herbergier to provide lodging, French…
+harried	adjective	troubled persistently especially with petty annoyances	Middle English	harwen, herien, herien, Old English hergian to act as an army, to ravage, plunder, from here army. heer…
+haughty	adjective	arrogantly superior toward others	Middle English	hautein, French hautain, from haut high, Old French also halt, from Latin altus
+heartening	adjective	cheerfully encouraging		
+hedonism	noun	the pursuit of pleasure as a matter of ethical principle		
+helplessness	noun	powerlessness revealed by an inability to act		
+hepatoma	noun	carcinoma of the liver		
+heresy	noun	a belief that contradicts accepted doctrine	Middle English	heresie, eresie, Old French heresie, iresie, French hrsie, Latin haeresis, Greek a taking, a taking for one's…
+hermetic	adjective	completely sealed; completely airtight	French	hermtique
+hesitating	adjective	lacking decisiveness of character; unable to act or decide quickly or firmly	Latin	haesitatus, past participle of haesitare, intens. from haerere to hesitate, stick fast, to hang or hold fast
+heterosexuality	noun	a sexual attraction to (or sexual relations with) persons of the opposite sex		
+hiatus	noun	a pause or gap in continuity	Latin	Latin, from hiare, hiatum, to gape. yawn
+highbrow	adjective	highly cultured or educated		
+hoary	adjective	showing characteristics of age, especially having grey or white hair	Middle English	hor, har, Old English hr. hrr, and to Old High German hr illustrious, magnificent
+hubris	noun	excessive pride that invites downfall		
+huffing	noun	an act of forcible exhalation		
+hulking	adjective	of great size and bulk	Middle English	hulke a heavy ship, Old English hulc a light, swift ship. hulk a ship of burden, German holk, Old High German…
+hunch	verb	round one's back by bending forward and drawing the shoulders forward		
+hunched	adjective	having the back and shoulders rounded; not erect		
+hybridize	verb	breed animals or plants using parents of different races and varieties		
+hydrotherapy	noun	the internal and external use of water in the treatment of disease		
+hygienic	adjective	tending to promote or preserve health	French	hygine
+hyperbolic	adjective	enlarged beyond truth or reasonableness	Latin	hyperbolicus, Greek "yperboliko\`s
+hyperglycemia	noun	abnormally high blood sugar usually associated with diabetes		
+hypospadias	noun	an abnormal condition in males in which the urethra opens on the under surface of the penis	New Latin	New Latin, from Greek "ypo\` beneath + spa\`n to draw, tear
+iconoclast	noun	a person who attacks cherished beliefs or institutions	Greek	e'ikw\`n image + to break
+ideograph	noun	a graphic character that indicates the meaning of a thing without indicating the sounds used to say it		
+idiosyncrasy	noun	a peculiar habit or feature of one person	Greek	Greek, 'i\`dios proper, peculiar + a mixing together, from to mix together
+illiteracy	noun	ignorance resulting from not reading		
+illogical	adjective	lacking in correct logical relation		
+illuminating	adjective	tending to increase knowledge or dissipate ignorance	Latin	illuminatus, past participle of illuminare, pref. il- in + luminare to enlighten, from lumen light
+imbroglio	noun	an intricate and confusing interpersonal or political situation	Italian	See 1st Broil, and
+immunogenic	adjective	possessing the ability to elicit an immune response		
+immutable	adjective	unchanging and unable to be changed	Latin	immutabilis, pref. im- not + mutabilis mutable
+impair	verb	make worse or less effective	Middle English	empeiren, enpeiren, Old French empeirier, empirier, French empirer, Late Latin impejorare, Latin pref. im- in…
+impartiality	noun	an inclination to weigh both views or opinions equally		
+impassable	adjective	incapable of being passed		
+impatience	noun	a lack of patience; irritation with anything that causes delay	Middle English	impacience, French impatience, from Latin impatientia
+impeccable	adjective	flawless; without any fault	Latin	impeccabilis, pref. im- not + peccare to err, to sin
+impermanent	adjective	not permanent; not lasting		
+impersonation	noun	a representation of a person that is exaggerated for comic effect		
+impetuous	adjective	acting quickly without thought or care	French	impetueux, Latin impetuosus
+implacable	adjective	impossible to appease or soften	Latin	implacabilis, pref. im- not + placabilis
+impudent	adjective	marked by casual disrespect	Latin	impudens, -entis, pref. im- not + pudens ashamed, modest, p. pr. of pudere to feel shame
+inadvertent	adjective	unintentional; done without noticing		
+inaudible	adjective	impossible to hear; imperceptible by the ear	Latin	inaudibilis, pref. in- not + audire to hear
+incase	verb	enclose in, or as if in, a case	French	encaisser, pref. en- (Latin in) + caisse case
+incensed	adjective	angered at something unjust or wrong	Latin	incensus, past participle of incendere, pref. in- in + root of candere to glow
+incessant	adjective	continuing without pause	Latin	incessans, -antis, pref. in- not + cessare to cease
+incisive	adjective	showing sharp, clear thinking	Latin	incisus, past participle of incidere to incise
+incompleteness	noun	the state of being crude and incomplete and imperfect	Latin	incompletus
+incongruous	adjective	out of place; not in harmony with its surroundings	Latin	incongruus
+inconvenient	adjective	not suited to your comfort, purpose or needs	Latin	inconveniens unbefitting
+incubate	verb	grow under conditions that promote development	Latin	incubatus, past participle of incubare to lie on, pref. in- in, on + cubare to lie down
+incursion	noun	the act of entering some territory or domain	Latin	incursio
+indefensible	adjective	incapable of being defended or justified		
+indefinable	adjective	not capable of being precisely or readily described; not easily put into words		
+indifference	noun	unbiased impartial unconcern	Latin	indifferentia similarity, lack of difference
+indigenous	adjective	originating naturally in a particular place	Latin	indigenus, indigena, from Old Latin indu (from in in) + the root of Latin gignere to beget, bear
+indolent	adjective	habitually idle; averse to effort	Latin	Pref. in- not + Latin dolens, -entis, p. pr. of dolere to feel pain
+indomitable	adjective	impossible to subdue	Latin	indomitabilis, pref. in- not + domitare, intens. from domare to tame
+ineffable	adjective	too great to be put into words	Latin	ineffabilis
+inequity	noun	injustice by virtue of not conforming with rules or standards		
+inert	adjective	unable to move or resist motion	Latin	iners, inertis, unskilled, idle, pref. in- + ars art
+inexorable	adjective	impossible to stop or persuade	Latin	inexorabilis
+infarction	noun	localized necrosis resulting from obstruction of the blood supply		
+infective	adjective	able to cause disease	Latin	infectivus pertaining to dyeing
+infertile	adjective	incapable of reproducing	Latin	infertilis
+infraction	noun	a crime less serious than a felony	Latin	infractio
+ingenuous	adjective	innocent and unguarded; frank	Latin	ingenuus inborn, innate, freeborn, noble, frank, pref. in- in + the root of gignere to beget
+ingrown	adjective	growing abnormally into the flesh		
+inhibitory	adjective	restrictive of action	Late Latin	inhibitorius
+injurious	adjective	harmful to living things	Latin	injuriousus, injurius
+innocuous	adjective	harmless; unlikely to offend	Latin	innocuus, in- not + nocuus hurtful, from nocere to hurt
+inshore	adjective	coming from the sea toward the land		
+insidious	adjective	spreading harm gradually and unnoticed	Latin	insidiosus, from insidiae an ambush, from insidere to sit in, pref. in- + sedere to sit
+insipid	adjective	lacking flavour, interest, or vigour	Latin	insipidus, pref. in- not + sapidus savory, from sapere to taste
+insolation	noun	sudden prostration due to exposure to the sun or excessive heat	Latin	insolatio
+insolent	adjective	marked by casual disrespect	French	insolent, Latin insolens, -entis, pref. in- not + solens accustomed, p. pr. of solere to be accustomed
+instantiation	noun	a representation of an idea in the form of an instance of it		
+instillation	noun	the introduction of a liquid (by pouring or injection) drop by drop	Latin	instillatio
+insulting	adjective	expressing extreme contempt	Latin	insultus, from insilire to leap upon
+intermediation	noun	the act of intervening for the purpose of bringing about a settlement		
+internationale	noun	a revolutionary socialist anthem		
+intimidated	adjective	made timid or fearful as by threats	Late Latin	intimidatus, past participle of intimidare to frighten, pref. in- in + timidus fearful, timid
+intoxication	noun	the physiological state produced by a poison or other toxic substance		
+intractability	noun	the trait of being hard to influence or control		
+intransigent	adjective	refusing to compromise	French	intransigeant (, pref. in- not + Latin transigere to come to an agreement
+intrepid	adjective	fearless in the face of danger	Latin	intrepidus
+inundate	verb	to overwhelm, or to flood	Latin	inundatus, past participle of inundare to inundate, pref. in- in + undare to rise in waves, to overflow, from…
+inure	verb	cause to accept or become hardened to; habituate		
+invective	noun	abusive or venomous language used to express blame or censure or bitter deep-seated ill will	Latin	invectivus
+invertible	adjective	having an additive or multiplicative inverse	Latin	Pref. in- not + Latin vertere to turn + -ible
+investiture	noun	the ceremony of installing a new monarch	Late Latin	investitura
+invincible	adjective	incapable of being overcome or subdued	Latin	invincibilis
+inviolable	adjective	incapable of being transgressed or dishonored	Latin	inviolabilis
+invulnerable	adjective	immune to attack; impregnable	Latin	invulnerabilis
+irascible	adjective	easily provoked to anger	Latin	irascibilis, from irasci to be angry, ira anger
+irate	adjective	feeling or showing extreme anger	Latin	iratus, from irasci to be angry
+ironclad	adjective	sheathed in iron plates for protection		
+irreparable	adjective	impossible to repair, rectify, or amend	Latin	irreparabilis
+isomerization	noun	the conversion of a compound into an isomer of itself		
+jinxed	adjective	causing or accompanied by misfortune		
+judicious	adjective	showing good judgment and sense	French	judicieux, from Latin judicium judgment
+juxtapose	verb	to place side by side for contrast		
+juxtaposed	adjective	placed side by side often for comparison		
+kaleidoscopic	adjective	continually shifting or rapidly changing	Greek	beautiful + e'i^dos form + -scope
+kannada	noun	a Dravidian language spoken in southern India		
+knack	noun	a special way of doing something		
+knockout	adjective	very strong or vigorous		
+kudos	noun	an expression of approval and commendation	New Latin	New Latin, from Greek ky^dos glory
+kyphosis	noun	an abnormal backward curve to the vertebral column		
+lacklustre	adjective	lacking brilliance or vitality		
+laconic	adjective	using very few words	Latin	Laconicus Laconian, Greek, from a Laconian, Lacedaemonian, or Spartan
+ladin	noun	a Rhaeto-Romance dialect of Romansh spoken in southeastern Switzerland	Latin	From Latin Latinus Latin
+lamenting	adjective	vocally expressing grief or sorrow or resembling such expression	French	lamenter, Latin lamentari, from lamentum a lament
+languid	adjective	lacking energy; pleasantly slow	Latin	languidus, from languere to be faint or languid
+languor	noun	a relaxed comfortable feeling	Middle English	langour, Old French langour, French langueur, Latin languor
+lanky	adjective	tall and thin and having long slender limbs	Old English	hlanc
+laud	verb	to praise highly	Latin	laus, laudis. i
+laxative	adjective	stimulating evacuation of feces	Latin	laxativus mitigating, assuaging
+leafy	adjective	having or covered with leaves	Middle English	leef, lef, leaf, Old English lef. lf, OFries. laf, Dutch loof foliage, German laub, Old High German loub…
+leaky	adjective	permitting the unwanted passage of fluids or gases	German	. lek leaky, a leak, German leck, Icelandic lekr leaky, Danish laek leaky, a leak, Swedish lck
+lethargic	adjective	sluggish and lacking energy	Latin	lethargicus, Greek lhqargiko\`s
+levity	noun	lightness of manner, especially when seriousness is expected	Latin	levitas, from levis light in weight
+libertine	adjective	unrestrained by convention or morality	Latin	libertinus freedman, from libertus one made free, from liber free
+liege	adjective	owing or owed feudal allegiance and service	Middle English	lige, lege, French lige, Late Latin ligius, legius, liege, unlimited, complete, probably of German origin
+likening	noun	the act of comparing similarities	Middle English	liknen
+lineal	adjective	in a straight unbroken line of descent from parent to child	Latin	linealis belonging to a line, from linea line
+lipped	adjective	having a lip or lips		
+lithography	noun	a method of planographic printing from a metal or stone surface		
+loamy	adjective	consisting of or having the character of loam	Old English	lm. leem, German lehm, and English lime. See 4th Lime
+loath	adjective	unwillingness to do something contrary to your custom	Middle English	looth, loth, Old English l hostile, odious. l, German leid, Icelandic leir, Swedish led, German leiden to…
+loathing	noun	hate coupled with disgust	Middle English	looth, loth, Old English l hostile, odious. l, German leid, Icelandic leir, Swedish led, German leiden to…
+loathsome	adjective	causing or able to cause nausea		
+lofty	adjective	of high moral or intellectual value; elevated in nature or style	Icelandic	lopt air, heaven, loft, upper room. lyft air, German luft, Danish loft loft, Gothic luftus air
+loquacious	adjective	very talkative	Latin	loquax, -acis, talkative, from loqui to speak
+lossy	adjective	characterized by or causing dissipation of energy	Old English	los loss, losing, from lesan to lose. 127. t
+lowly	adjective	low or inferior in station or quality		
+lucid	adjective	clearly expressed, or clear-headed	Latin	lucidus, from lux, lucis, light
+luminescent	adjective	emitting light not caused by heat	Latin	luminare to illuminate + -escent
+lunge	verb	make a thrusting forward movement		
+magnanimous	adjective	generous and forgiving, especially toward a rival	Latin	magnanimus, magnus great + animus mind
+mahjong	noun	Chinese game played by 4 people with 144 tiles		
+maimed	adjective	having a part of the body crippled or disabled	Middle English	maimen, Old French mahaignier, mehaignier, meshaignier, perhaps of Celtic origin
+malevolent	adjective	wishing harm to others	Latin	malevolens, -entis, male ill + volens, p. pr. of velle to be willing or disposed, to wish
+malice	noun	feeling a need to see others suffer	French	malice, from Latin malitia, from malus bad, ill, evil, probably originally, dirty, black
+malleable	adjective	easily shaped, or easily influenced	French	mallable, from Late Latin malleare to hammer
+maneuver	verb	direct the course; determine the direction of travelling	French	manoeuvre, Old French manuevre, Late Latin manopera, literally, hand work, manual labor, Latin manus hand +…
+manly	adjective	possessing qualities befitting a man		
+manoeuvre	verb	act in order to achieve a certain goal	French	manoeuvre, Old French manuevre, Late Latin manopera, literally, hand work, manual labor, Latin manus hand +…
+masochism	noun	sexual pleasure obtained from receiving punishment		
+matinee	noun	a theatrical performance held during the daytime	French	French, from matin
+maximisation	noun	the act of raising to the highest possible point or condition or position		
+mediocre	adjective	moderate to inferior in quality	French	mdiocre, Latin mediocris, from medius middle
+mediocrity	noun	ordinariness as a consequence of being average and not outstanding	French	mdiocrit, Latin mediocritas
+mellowed	adjective	having a full and pleasing flavor through proper aging	Middle English	melwe
+melodious	adjective	having a musical sound; especially a pleasing tune	Middle English	melodie, French mlodie, Latin melodia, from Greek a singing, choral song, from musical, melodious, me\`los…
+mendacity	noun	the tendency to be untruthful	Latin	mendacitas
+menstruation	noun	the monthly discharge of blood from the uterus of nonpregnant women from puberty to menopause		
+merciless	adjective	having or showing no mercy		
+meticulous	adjective	showing great care over every detail	Latin	meticulosus, from metus fear
+metrical	adjective	based on the meter as a standard of measurement	Latin	metricus, Greek
+miscegenation	noun	reproduction by parents of different races	Latin	miscere to mix + the root of genus race
+misguided	adjective	poorly conceived or thought out		
+mitigate	verb	to make something bad less severe	Latin	mitigatus, past participle of mitigare to soften, mitigate, mitis mild, soft + the root of agere to do, drive
+mobilisation	noun	act of marshaling and organizing and making ready for use or action		
+mollify	verb	to soothe the anger of	French	mollifier, Latin mollificare, mollis soft + -ficare (in comp.) to make. t., and -fy
+momentary	adjective	lasting for a markedly brief time	Latin	momentarius
+monopolize	verb	have and control fully and exclusively		
+moony	adjective	lighted by moonlight	Middle English	mone, Old English mna. maan, OS. & Old High German mno, German mond, Icelandic mni, Danish maane, Swedish…
+moralizing	noun	indulgence in moral pronouncements; the exposition (often superficially) of a particular moral code		
+morose	adjective	gloomy and sullen	Latin	morosus, properly, excessively addicted to any particular way or habit, from mos, moris, manner, habit, way…
+motility	noun	ability to move spontaneously and independently		
+mountainous	adjective	having hills and crags	French	montagneux, Latin montaniosus
+multifaceted	adjective	having many aspects or qualities		
+multiplicity	noun	the property of being multiple		
+mummification	noun	a condition resembling that of a mummy		
+mundane	adjective	ordinary and dull; of the everyday world	Latin	mundanus, from mundus the world, an implement, toilet adornments, or dress
+munificent	adjective	extremely generous	Latin	munificus, munus service, gift + -ficare (in comp.) to make
+murmuring	adjective	making a low continuous indistinct sound	French	murmure
+mutilation	noun	an injury that causes disfigurement or that deprives you of a limb or other important body part	Latin	mutilatio
+myoclonus	noun	a clonic spasm of a muscle or muscle group		
+myriad	noun	a countless number of things	Greek	Greek, from numberless, plural ten thousand
+mystified	adjective	totally perplexed and mixed up	French	mystifier, from Greek + Latin -ficare (in comp.) to make. See 1st Mystery, and -fy
+mystifying	adjective	of an obscure nature	French	mystifier, from Greek + Latin -ficare (in comp.) to make. See 1st Mystery, and -fy
+nadir	noun	an extreme state of adversity; the lowest point of anything	French	French, Spanish, & Italian nadir, all from Arabic nazru's samt nadir, properly, the point opposite the zenith…
+narcolepsy	noun	a sleep disorder characterized by sudden and uncontrollable episodes of deep sleep		
+navigability	noun	the quality of being suitable for the passage of a ship or aircraft		
+nebulous	adjective	vague and ill-defined	Latin	nebulosus
+nefarious	adjective	wicked; criminal in intent	Latin	nefarius, from nefas crime, wrong, ne not + fas divine law
+negate	verb	be in contradiction with		
+neophyte	noun	a beginner at something	Latin	neophytis, Greek neo\`fytos, properly, newly planted, ne\`os new + fyto\`s grown, fyto\`n that which has grown, a…
+neoplasia	noun	the pathological process that results in the formation and growth of a tumor	New Latin	New Latin, from Greek ne\`os new + pla\`ssein to form, mold
+neuroticism	noun	a mental or personality disturbance not attributable to any known neurological or organic dysfunction	Greek	ney^ron nerve
+neutropenia	noun	leukopenia in which the decrease is primarily in number of neutrophils		
+nippy	adjective	a sharp biting taste		
+nociceptive	adjective	caused by or in response to pain		
+nonchalant	adjective	calmly unconcerned	French	French, from non not (Latin non) + chaloir to concern one's self for, from Latin calere to be warm, to be…
+nonconformist	adjective	not conforming to some norm or socially approved pattern of behavior or thought		
+nonconformity	noun	lack of harmony or correspondence		
+nonexistent	adjective	not having existence or being or actuality		
+nonionic	adjective	not converted into ions		
+nonsteroidal	adjective	not steroidal or not having the effects of steroid hormones		
+nontaxable	adjective	not subject to taxation		
+nuance	noun	a subtle difference in meaning or feeling		
+nudism	noun	going without clothes as a social practice		
+nullified	adjective	deprived of legal force	Latin	nullificare, nullus none + -ficare (in comp.) to make., and -fy
+nynorsk	noun	one of two official languages of Norway; based on rural dialects		
+oaken	adjective	consisting of or made of wood of the oak tree	Old English	cen
+obdurate	adjective	stubbornly refusing to change an opinion	Latin	obduratus, past participle of obdurare to harden, ob + durare to harden, durus hard
+obfuscate	verb	to make something unclear on purpose	Latin	obfuscatus, past participle of obfuscare to darken, ob + fuscare, fuscatum, to darken, from fuscus dark
+obliteration	noun	destruction by annihilating something	Latin	obliteratio
+oblivious	adjective	entirely unaware of what is happening	Latin	obliviosus
+obsequious	adjective	excessively eager to please or obey	Latin	obsequiosus, from obsequium compliance, from obsequi, from obsequi
+obsolete	adjective	no longer in use; out of date	Latin	obsoletus, past participle of obsolescere
+obstinacy	noun	the trait of being difficult to handle or overcome		
+obstinate	adjective	stubbornly refusing to change course	Latin	obstinatus, past participle of obstinare to set about a thing with firmness, to persist in, ob + a word from…
+obstruct	verb	hinder or prevent the progress or accomplishment of	Latin	obstructus, past participle of obstruere to build up before or against, to obstruct, ob + struere to pile up
+oedema	noun	swelling from excessive accumulation of watery fluid in cells, tissues, or serous cavities	New Latin	New Latin, from Greek a swelling, tumor, from to swell
+ominous	adjective	suggesting that something bad is coming	Latin	ominosus, from omen
+onshore	adjective	coming from the sea toward the land		
+opaque	adjective	impossible to see through, or hard to understand	French	French, from Latin opacus
+opinionated	adjective	obstinate in your opinions		
+opulent	adjective	luxurious and costly	Latin	opulens, opulentus, from ops, opis, power, wealth, riches, perhaps. apt
+ordeal	noun	a severe or trying experience	Old English	ordl, ordl, a judgment. oordeel, German urteil, urtheil
+orientalism	noun	the scholarly knowledge of Asian cultures and languages and people	Latin	orientalis
+orienting	adjective	positioning with respect to a reference system or determining your bearings physically or intellectually	French	French, from Latin oriens, -entis, p. pr. of oriri to rise
+orphaned	adjective	deprived of parents by death or desertion	Latin	orphanus, Greek. orbus
+oscillating	adjective	having periodic vibrations	Latin	oscillare to swing, from oscillum a swing, a little mask or puppet made to be hung from trees and swing in…
+ostentatious	adjective	designed to impress; showy		
+ostracize	verb	to exclude someone from a group	Greek	'ostraki\`zein, from 'o\`strakon a tile, a tablet used in voting, a shell
+otitis	noun	inflammation of the ear	New Latin	New Latin, from Greek o'y^s, 'wto\`s, the ear + -itis
+otology	noun	the branch of medicine concerned with the ear		
+ousting	noun	the act of ejecting someone or forcing them out	Old French	oster, French ter, probably from Latin obstare to oppose, hence, to forbid, take away
+outlandish	adjective	conspicuously or grossly unconventional or unusual	Old English	tlendisc foreign
+ovate	adjective	of a leaf shape; egg-shaped with the broader end at the base	Latin	ovatus, from ovum egg
+overblown	adjective	puffed up with vanity		
+overstuffed	adjective	upholstered thickly and deeply		
+oxidize	verb	enter into a combination with oxygen or become converted into an oxide		
+oxygenation	noun	the process of providing or combining or treating with oxygen		
+palliation	noun	easing the severity of a pain or a disease without removing the cause		
+palliative	adjective	moderating pain or sorrow by making it easier to bear	Latin	palliatus, from pallium a cloak
+palpable	adjective	so intense it feels almost physical	French	palpable, Latin palpabilis, from palpare to feel, stroke
+paragon	noun	a perfect example of a quality	Old French	paragon, French parangon
+paranasal	adjective	adjacent to the nasal cavities		
+pathogenesis	noun	the origination and development of a disease		
+pathogenic	adjective	able to cause disease	Greek	pa\`qos disease + the root of ge\`nos birth
+patois	noun	a characteristic language of a particular group		
+paucity	noun	a shortage; too small an amount	Latin	paucitas, from paucus few, little
+pedantic	adjective	overly concerned with minor rules and details	French	pdant, Italian pedante, from Greek paidey\`ein to instruct, from pai^s boy
+peeved	adjective	aroused to impatience or anger		
+penchant	noun	a strong liking for something	French	French, from pencher to bend, from (assumed) Late Latin pendicare, Latin pendere
+penetrate	verb	pass into or through, often by overcoming resistance	Latin	penetratus, past participle of penetrare to penetrate. to pens with, in the power of, penus store of food…
+penetrative	adjective	having or demonstrating ability to recognize or draw fine distinctions	Latin	penetratus, past participle of penetrare to penetrate. to pens with, in the power of, penus store of food…
+pentathlon	noun	an athletic contest consisting of five different events	New Latin	New Latin, from Greek, five + a contest
+perceivable	adjective	capable of being perceived especially by sight or hearing	Old French	percevoir, perceveir, Latin percipere, perceptum, per + capere to take, receive
+perfunctory	adjective	done without care, merely as a duty	Latin	perfunctorius, from perfunctus dispatched, past participle of perfungi to discharge, dispatch, per + fungi to…
+peristalsis	noun	the process of wavelike muscle contractions of the alimentary tract that moves food along		
+permeate	verb	spread or diffuse through	Latin	permeatus, past participle of permeare to permeate, per + meare to go, pass
+pernicious	adjective	causing harm in a gradual, hidden way	Latin	pernix, -icis
+perplex	verb	be a mystery or bewildering to	Latin	perplexari
+perspicacious	adjective	having keen insight, especially into people	Latin	perspicax, -acis, from perspicere to look through
+persuasive	adjective	intended or having the power to induce action or belief		
+pertinent	adjective	directly relevant	Latin	pertinens, -entis, p. pr. of pertinere
+perturbing	adjective	causing distress or worry or anxiety	Latin	perturbare, perturbatum, per + turbare to disturb, from turba a disorder
+pertussis	noun	a disease of the respiratory mucous membrane	New Latin	New Latin, from Latin per through, very + tussis cough
+pervasive	adjective	spreading widely through every part		
+perversity	noun	deliberate and stubborn unruliness and resistance to guidance or discipline	Latin	perversitas
+pervious	adjective	admitting of passage or entrance	Latin	pervis, per + via a way
+pessimism	noun	the feeling that things will turn out badly	Latin	pessimus worst, superlative of of pejor worse
+pestered	adjective	troubled persistently especially with petty annoyances	Old French	Abbrev. from impester, from Old French empaistrier, empestrer, to entangle the feet or legs, to embarrass…
+petrology	noun	the branch of geology that studies rocks: their origin and formation and mineral composition and classification		
+phoney	adjective	fraudulent; having a misleading appearance		
+phony	adjective	fraudulent; having a misleading appearance		
+photometry	noun	measurement of the properties of light		
+pigeonhole	verb	place into a small compartment		
+pimple	noun	a small inflamed elevation of the skin; a pustule or papule; common symptom in acne	Old English	ppelian to blister
+pious	adjective	having or showing or expressing reverence for a deity	Latin	pius
+pithy	adjective	concise and full of meaning	Old English	pia. pit pith, kernel, LGerman peddik
+pizzazz	noun	the activeness of an energetic personality		
+placate	verb	to calm someone's anger	Latin	placatus, past participle of placare to placate
+plaudits	noun	enthusiastic approval		
+plausible	adjective	seeming reasonable, though possibly untrue	Latin	plausibilis praiseworthy, from plaudere, plausum, to applaud, clap the hands, strike, beat
+plough	verb	move in a way resembling that of a plow cutting into or going through the soil	Middle English	plouh, plou, Old English plh. ploeg, German pflug, Old High German pfluog, pfluoh, Icelandic plgr, Swedish…
+plundered	adjective	wrongfully emptied or stripped of anything of value	German	plndern to plunder, plunder frippery, baggage
+poaching	noun	cooking in simmering liquid	French	pocher to place in a pocket, to poach eggs (the yolk of the egg being as it were pouched in the white), from…
+polygamy	noun	the condition or practice of having more than one spouse at a time		
+pompous	adjective	puffed up with vanity	French	pompeux, Latin pomposus
+popery	noun	offensive terms for the practices and rituals of the Roman Catholic Church		
+popularization	noun	an interpretation that easily understandable and acceptable		
+postpartum	adjective	occurring immediately after birth		
+powerlessness	noun	the quality of lacking strength or power; being weak and feeble		
+pragmatic	adjective	dealing with things practically rather than ideally	Latin	pragmaticus busy, active, skilled in business, especially in law and state affairs, systematic, Greek, from a…
+precarious	adjective	unstable; dependent on chance	Latin	precarius obtained by begging or prayer, depending on request or on the will of another, from precari to…
+preclude	verb	to make impossible in advance	Latin	praecludere, praeclusum, prae before + claudere to shut
+preconceived	adjective	formed beforehand; especially without evidence or through prejudice		
+predilection	noun	a natural preference for something	Latin	Pref. pre- + Latin dilectus, past participle of diligere to prefer
+presbyopia	noun	a reduced ability to focus on near objects caused by loss of elasticity of the crystalline lens after age 45	New Latin	New Latin, from Greek old, n., an old man +, the eye
+prescient	adjective	knowing what will happen before it does	Latin	praesciens, -entis, p. pr. of praescire to foreknow, prae before + scire to know
+priapism	noun	condition in which the penis is continually erect; usually painful and seldom with sexual arousal	Latin	priapismus, Greek, from Priapus the god of procreation, the penis, Greek
+prick	verb	make a small hole into, as with a needle or a thorn	Old English	prica, pricca, pricu. prick, pricke, Dutch prik, Danish prik, prikke, Swedish prick
+prideful	adjective	having or showing arrogant superiority to and disdain of those one views as unworthy		
+primal	adjective	serving as an essential component	Late Latin	primalis, from Latin primus the first
+prissy	adjective	exaggeratedly proper		
+pristine	adjective	in its original, unspoiled condition	Latin	pristinus
+prodigal	adjective	wastefully extravagant	Latin	prodigus, from prodigere to drive forth, to squander away, pro forward, forth + agere to drive
+prolapse	verb	slip or fall out of place, as of body parts	Latin	prolapsus, from prolapsus, past participle of prolabi to fall forward, pro forward + labi to glide, fall
+prolific	adjective	producing a great deal	French	prolifique, from Latin proles offspring (from pro for, forward + the root of alere to nourish) + facere to…
+prologue	noun	an introduction to a play	French	French, from Latin prologus, from Greek, from to say beforehand, before + to say
+promenade	verb	march in a procession	French	(with a foreign suffix), from promener to lead, take for a walk, se promener to walk, from Latin prominare to…
+propensity	noun	a natural inclination to behave a certain way	Latin	propensus, past participle of
+prosaic	adjective	plain and unimaginative	Latin	prosaius, from prosa prose
+prosody	noun	the patterns of stress and intonation in a language	Latin	prosodia the tone or accent of a syllable, Greek a song sung to, or with, an accompanying song, the accent…
+prostatectomy	noun	surgical removal of part or all of the prostate gland		
+prostrate	adjective	stretched out and lying at full length along the ground	Latin	prostratus, past participle of prosternere to prostrate, pro before, forward + sternere to spread out, throw…
+provable	adjective	capable of being demonstrated or proved	Middle English	prover, French prouver, from Latin probare to try, approve, prove, from probus good, proper
+providential	adjective	peculiarly fortunate or appropriate; as if by divine intervention	Latin	providens, -entis, p. pr. of providere
+provincial	adjective	narrow in outlook; of the regions rather than the capital	Latin	provincialis
+prudent	adjective	acting with care for the future	Latin	prudens, -entis, contracted from from providens
+psychoactive	adjective	affecting the mind or mood or other mental processes		
+ptosis	noun	drooping of the upper eyelid caused by muscle paralysis and weakness	New Latin	New Latin, from Greek ptw^sis a falling
+publicizing	noun	the business of drawing public attention to goods and services		
+puffed	adjective	gathered for protruding fullness	Swedish	. & Swedish puff a blow, Danish puf, Dutch pof, of imitative origin
+pugnacious	adjective	eager to argue or fight	Latin	pugnax, -acis, from pugnare to fight
+pukka	adjective	absolutely first class and genuine		
+purview	noun	the range of interest or activity that can be anticipated	Old French	purveu, pourveu, French pourvu, provided, past participle of Old French porveoir, French pourvoir
+putsch	noun	a sudden and decisive change of government illegally or by force		
+qiang	noun	the Tibeto-Burman language spoken in Sichuan		
+quack	adjective	medically unqualified		
+quadratic	noun	an equation in which the highest power of an unknown quantity is a square	French	quadrat, cadrat
+queasy	adjective	causing or able to cause nausea	Icelandic	kweisa pain
+quell	verb	to put an end to, usually by force	Middle English	quellen to kill, Old English cwellan, causative of cwelan to die. quellen to torment, Icelandic kvelja
+querulous	adjective	habitually complaining	Latin	querulus and querulosus, from queri to complain
+quiescent	adjective	inactive or at rest for the time being	Latin	quiescens, -entis, p. pr. of quiescere
+quintessential	adjective	representing the purest example of its kind		
+quixotic	adjective	idealistic to the point of being impractical		
+rambunctious	adjective	noisy and lacking in restraint or discipline		
+rampant	adjective	unrestrained and violent	French	French, p. pr. of ramper to creep
+rancor	noun	long-held bitterness or resentment	Middle English	rancour, Old French rancor, rancur, French rancune, from Latin rancor rancidity, rankness, tropically, an old…
+ransacked	adjective	wrongfully emptied or stripped of anything of value	Middle English	ransaken, Icelandic rannsaka to explore, examine, rann a house (. razn house, Old English raesn plank, beam)…
+rationalization	noun	the cognitive process of making something seem consistent with or based on reason		
+razorback	adjective	having a sharp narrow back		
+reactionary	adjective	opposed to political or social liberalism or reform		
+realisation	noun	a musical composition that has been completed or enriched by someone other than the composer		
+reassign	verb	transfer somebody to a different position or location of work		
+rebind	verb	provide with a new binding		
+rebroadcast	noun	a broadcast that repeated at a later time		
+rebuke	verb	to criticize sharply	Old French	rebouquier to dull, blunt, French reboucher, perhaps from pref. re- re- + bouche mouth, Old French also…
+recalcitrant	adjective	stubbornly resisting authority	Latin	recalcitrans, p. pr. of recalcitrare to kick back, pref. re- re- + calcitrare to kick, from calx heel
+recapture	noun	a legal seizure by the government of profits beyond a fixed amount		
+receding	noun	a slow or gradual disappearance	Latin	recedere, recessum, pref. re- re- + cedere to go, to go along
+reciprocal	adjective	given and received in equal measure	Latin	reciprocus, of unknown origin
+recluse	adjective	withdrawn from society; seeking solitude	French	reclus, Latin reclusus, from recludere, reclusum, to unclose, open, in Late Latin, to shut up
+recompense	verb	make amends for; pay compensation for	French	rcompenser, Late Latin recompensare, fromLatin pref. re- re- + compensare to compensate
+reconstructed	adjective	adapted to social or economic change		
+redress	verb	make reparations or amends for	French	redresser to straighten, pref. re- re- + dresser to raise, arrange
+redundant	adjective	more than is needed; superfluous	Latin	redundans, -antis, p. pr. of redundare
+reentry	noun	the act of entering again		
+reflux	noun	an abnormal backward flow of body fluids	French	reflux
+refractory	adjective	not responding to treatment	Latin	refractorius, from refringere
+refute	verb	to prove a claim wrong with evidence	French	rfuter, Latin refuteare to repel, refute
+regenerate	adjective	reformed spiritually or morally	Latin	regeneratus, past participle of regenerare to regenerate, pref. re- re- + generare to beget
+reissue	noun	a publication (such as a book) that is reprinted without changes or editing and offered again for sale		
+relegate	verb	to consign to a lower rank or position	Latin	relegatus, past participle of relegare, pref. re- re- + legare to send with a commission or charge
+relegation	noun	authorizing subordinates to make certain decisions	Latin	relegatio
+remission	noun	an abatement in intensity or degree	French	rmission, Latin remissio
+reorder	verb	assign a new order to		
+repot	verb	put in a new, usually larger, pot		
+reproach	verb	express criticism towards	French	reprocher, Old French reprochier, (assumed) Late Latin reproriare, Latin pref. re- again, against, back +…
+repudiate	verb	to reject or disown formally	Latin	repudiatus, past participle of repudiare to repudiate, reject, from repudium separation, divorce, pref. re-…
+reschedule	verb	assign a new time and place for an event		
+resilient	adjective	able to recover quickly from difficulty	Latin	resiliens, p. pr
+resuscitate	verb	cause to regain consciousness	Latin	resuscitatus, past participle of resuscitare, pref. re- re- + suscitare to raise, rouse
+retaliate	verb	take revenge for a perceived wrong	Latin	retaliatus, past participle of retaliare to retaliate, pref. re- re- + a word
+retard	verb	cause to move more slowly or operate at a slower rate	Latin	retardare, retardatum, pref. re- re- + tardare to make slow, to delay, from tardus slow
+rethink	noun	thinking again about a choice previously made		
+reticent	adjective	unwilling to say much	Latin	reticens, p. pr. of reticere to keep silence, re- + tacere to be silent
+revel	noun	unrestrained merrymaking	Old French	revel rebellion, disorder, feast, sport. i
+revere	verb	love unquestioningly and uncritically or to excess; venerate as an idol	Latin	revereri, pref. re- re- + vereri to fear, perhaps. wary
+reversibility	noun	the quality of being reversible in either direction		
+revert	verb	go back to a previous state	Latin	revertere, reversum, pref. re- re- + vertere to turn
+revising	noun	editing that involves writing something again	French	reviser, from Latin revidere, revisum, to see again, pref. re- re- + videre, visum, to see
+revitalizing	adjective	tending to impart new life and vigor to		
+rhetoric	noun	the art of persuasive speech, or language empty of substance	French	rhtorique, Latin rhetorica, Greek (sc. ), from rhetorical, oratorical, from orator, rhetorician, perhaps. word
+rhythmical	adjective	recurring with measured regularity		
+riddled	adjective	damaged throughout by numerous perforations or holes	Middle English	ridil, Old English hridder. reiter, Latin cribrum, and to Greek kri\`nein to distinguish, separate, and German…
+rioting	noun	a state of disorder involving group violence	Old French	riote, of uncertain origin
+ripping	adjective	resembling a sound of violent tearing as of something ripped apart or lightning splitting a tree		
+riskiness	noun	a state of danger involving risk	French	risque
+roaring	adjective	very lively and profitable	Middle English	roren, raren, Old English rrian. rhten, Old High German rrn. 112
+rococo	adjective	having excessive asymmetrical ornamentation	French	French, of uncertain etymology
+roughness	noun	a texture of a surface or edge that is not smooth but is irregular and uneven	Middle English	rou, rou, row, rugh, ruh, Old English rh. rug, Dutch rug, Dutch ruig, ruw, Old High German rh, German rauh…
+ruckus	noun	the act of making a noisy disturbance		
+rudimentary	adjective	basic and undeveloped	Latin	rudimentum, from rudis unwrought, ignorant, rude
+rumbling	adjective	continuous full and low-pitched throbbing sound	Middle English	romblen. rommelen, German rumpeln, Danish rumle
+ruminate	verb	to think something over at length	Latin	ruminatus, past participle of ruminari, ruminare, from rumen, -inis, throat., Old English roccettan
+rummy	adjective	beyond or deviating from the usual or expected		
+rustle	verb	make a dry crackling sound	Old English	hristlan to rustle, or
+sacredness	noun	the quality of being sacred	Middle English	Originally past participle of Middle English sacren to consecrate, French sacrer, from Latin sacrare, from…
+sadistic	adjective	deriving pleasure or sexual gratification from inflicting pain on another		
+sagacious	adjective	showing deep wisdom and good judgment	Latin	sagax, sagacis. seek
+salient	adjective	most noticeable or important	Latin	saliens, -entis, p. pr. of salire to leap
+salutary	adjective	tending to promote physical well-being; beneficial to health	Latin	salutaris, from salus, -utis, health, safety
+sameness	noun	the quality of being alike	Old English	same, adv. sama, samo, adv., Old High German sam, a., sama, adv., Icelandic samr, a., Swedish samme, samma…
+sanctioned	adjective	conforming to orthodox or recognized rules	Latin	sanctio, from sancire, sanctum to render sacred or inviolable, to fix unalterably
+sanguine	adjective	cheerfully optimistic, especially in bad circumstances	French	sanguin, Latin sanguineus, from sanguis blood
+sarcastic	adjective	expressing or expressive of ridicule that wounds		
+satanic	adjective	extremely evil or cruel; expressive of cruelty or befitting hell	Hebrew	stn an adversary, from stan to be adverse, to persecute
+satanism	noun	a belief in and reverence for devils	Hebrew	stn an adversary, from stan to be adverse, to persecute
+satiny	adjective	having a smooth, gleaming surface reflecting light	French	satin (, or possibly ultimately of Chinese origin
+satiric	adjective	exposing human folly to ridicule	Latin	satiricus
+satisfiable	adjective	capable of being sated	Old French	satisfier, Latin satis enough + -ficare (in comp.) to make
+saucy	adjective	characterized by a lightly pert and exuberant quality	French	French, from Old French sausse, Late Latin salsa, properly, salt pickle, from Latin salsus salted, salt, past…
+savagery	noun	the property of being untamed and ferocious	French	sauvagerie
+scoured	adjective	worn away as by water or ice or wind	Dutch	. schren, Dutch schuren, schueren, German scheuern, Danish skure, Swedish skura
+scourge	verb	punish severely; excoriate	French	escourge, from Latin excoriata (sc. scutica) a stripped off (lash or whip), from excoriare to strip, to skin
+screwy	adjective	not behaving normally	Middle English	scrue, Old French escroue, escroe, female screw, French crou, Latin scrobis a ditch, trench, in Late Latin…
+scrupulous	adjective	careful to do what is right, down to the detail	Latin	scrupulosus
+scrutinise	verb	to look at critically or searchingly, or in minute detail		
+scrutinize	verb	to examine closely and critically		
+scurrying	adjective	moving with great haste		
+seclusion	noun	the quality of being secluded from the presence or view of others		
+sedentary	adjective	requiring sitting or little activity	Latin	sedentarius, from sedere to sit
+seductive	adjective	tending to entice into a desired action or state		
+semitic	noun	a major branch of the Afro-Asiatic language family	Latin	Latin, a path
+sensibility	noun	mental responsiveness and awareness		
+servile	adjective	excessively submissive	Latin	servile, from servus a servant or slave
+sesotho	noun	the dialect of Sotho spoken by the Basotho; an official language of Lesotho		
+shackled	adjective	bound by chains fastened around the ankles		
+shakeup	noun	the imposition of a new organization; organizing differently		
+shambles	noun	a condition of great disorder		
+sharpness	noun	a quick and penetrating intelligence	Old English	scearpness
+shrinkage	noun	process or result of becoming less or smaller		
+shuddering	adjective	shaking convulsively or violently	Middle English	shoderen, schuderen. schuddern, Dutch schudden to shake, OS. skuddian, German schaudern to shudder, schtteln…
+sifting	noun	the act of separating grain from chaff	Old English	siftan, from sife sieve. 151a
+sightedness	noun	normal use of the faculty of vision		
+sinning	adjective	transgressing a moral or divine law		
+skittles	noun	a bowling game that is played by rolling a bowling ball down a bowling alley at a target of nine wooden pins		
+slithering	adjective	moving as on a slippery surface		
+sloppy	adjective	lacking neatness or order		
+sloth	noun	a disinclination to work or exert yourself	Middle English	slouthe, sleuthe, Old English slw, from slw slow
+slothful	adjective	disinclined to work or exertion		
+slump	verb	assume a drooping posture or carriage	Swedish	, also Swedish slumpa to bargain for the lump
+smelt	verb	extract (metals) by heating	Old English	smelt, smylt. smelt
+smouldering	adjective	showing scarcely suppressed anger	Middle English	smolderen
+smutty	adjective	characterized by obscenity		
+snoopy	adjective	offensively curious or inquisitive		
+snooze	verb	sleep lightly or for a short period of time		
+socialized	adjective	under group or government control		
+socioeconomic	adjective	involving social as well as economic factors		
+soldering	noun	fastening firmly together	French	Formerly soder, French soudure, Old French soudeure, from Old French & French souder to solder, Latin…
+soporific	adjective	tending to induce sleep	Latin	sopor a heavy sleep (
+sorption	noun	the process in which one substance takes up or holds another		
+sorrel	adjective	of a light brownish color	French	saur, saure, Old French sor, sore, probably of Teutonic origin
+spasmodic	adjective	affected by involuntary jerky muscular contractions; resembling a spasm	Greek	Greek, a convulsion + likeness
+specious	adjective	seeming right but actually false	Latin	speciosusgood-looking, beautiful, specious, from species look, show, appearance
+spiritualism	noun	any doctrine that asserts the separate existence of God	Latin	spiritualis
+sporadic	adjective	occurring at irregular intervals	Greek	scattered, from, scattered, from to sow seed, to scatter like seed
+spurious	adjective	not genuine; based on false reasoning	Latin	spurius
+spurned	adjective	rebuffed (by a lover) without warning	Middle English	spurnen to kick against, to stumble over, Old English spurnan to kick, offend. & Old High German spurnan to…
+squander	verb	to waste something valuable		
+stabilise	verb	support or hold steady and make steadfast, with or as if with a brace		
+staccato	adverb	separating the notes; in music	Italian	Italian, past participle of staccare, equivalent to distaccare
+stagnant	adjective	not flowing or developing	Latin	stagnans, -antis, p. pr. of stagnare
+staunch	adjective	loyal and firm in commitment		
+stead	noun	the post or function properly or customarily occupied or served by another	Middle English	stede place, Old English stede. & Dutch stede, OS. stad, stedi, Old High German stat, German statt, sttte…
+stenosis	noun	abnormal narrowing of a bodily canal or passageway	New Latin	New Latin, from Greek steno\`s narrow
+stifled	adjective	held in check with difficulty	Middle English	Freq. of Middle English stif stiff
+stink	verb	be extremely bad in quality or in one's performance	Old English	stinkan to have a smell (whether good or bad). stinchan, German & Dutch stinken to stink
+stinky	adjective	having an unpleasant smell	Old English	stinkan to have a smell (whether good or bad). stinchan, German & Dutch stinken to stink
+stint	verb	subsist on a meager allowance	Middle English	stinten, stenten, stunten, to cause to cease, Old English styntan (in comp.) to blunt, dull, from stunt dull…
+stocky	adjective	having a short and solid form or stature	Old English	stocc a stock, trunk, stick. stok, German stock, Old High German stoc, Icelandic stokkr, Swedish stock…
+stoic	adjective	enduring pain or hardship without complaint	Latin	stoicus, Greek, from, adj., literally, of or pertaining to a colonnade, from a roofed colonnade, a porch…
+straitjacket	noun	anything immaterial that severely hinders or confines		
+stricken	adjective	grievously affected especially by disease		
+strident	adjective	loud and harsh; forcefully insistent	Latin	stridens, -entis, p. pr. of stridere to make a grating or creaking noise
+stupefied	adjective	as if struck dumb with astonishment and surprise	French	stupfier, from Latin stupere to be stupefied + ficare (in comp.) to make
+subconscious	adjective	just below the level of consciousness		
+subjugate	verb	to bring under domination	Latin	subjugatus, past participle of subjugare to subjugate, sub under + jugum a yoke
+subservient	adjective	compliant and obedient to authority	Latin	subserviens, -entis, p. pr
+subsumption	noun	the premise of a syllogism that contains the minor term		
+succinct	adjective	expressed clearly in few words	Latin	succinctus, past participle of succingere to gird below or from below, to tuck up, sub + cingere to gird
+succor	verb	help in a difficult situation	Middle English	socouren, Old French sucurre, soucourre, secorre, French secourir, Latin succurrere, succursum, to run under…
+suffocation	noun	killing by depriving of oxygen	Latin	suffocatio
+sundanese	noun	the Indonesian language spoken on West Java		
+superfluous	adjective	more than is needed; unnecessary	Latin	superfluus overflowing, super over, above + fluere to flow
+supplant	verb	to take the place of something displaced	French	supplanter, Latin supplantare to trip up one's heels, to throw down, sub under + planta the sole of the foot…
+surreptitious	adjective	done secretly to escape notice	Latin	surreptitius, or subreptitius, from surripere, subripere, to snatch away, to withdraw privily, sub- under +…
+swagger	verb	to walk with a lofty proud gait, often in an attempt to impress others		
+swanky	adjective	imposingly fashionable and elegant		
+swart	adjective	naturally having skin of a dark color	Middle English	swart, Old English sweart black. & LGerman swart, Dutch zwart, German schwartz, Old High German swarz…
+swashbuckling	adjective	flamboyantly adventurous		
+swilling	noun	the drinking of large mouthfuls rapidly	Middle English	swilen to wash, Old English swilian
+swish	adjective	elegant and fashionable		
+sycophant	noun	a person who flatters the powerful for advantage	Latin	sycophanta a slanderer, deceiver, parasite, Greek a false accuser, false adviser, literally, a fig shower, a…
+synchronisation	noun	the relation that exists when things occur at the same time		
+syncope	noun	a spontaneous loss of consciousness caused by insufficient blood to the brain	Latin	syncope, syncopa, Greek a cutting up, a syncope
+synonymy	noun	the semantic relation that holds between two words that can (in a given context) express the same meaning	Latin	synonymia, Greek a synonym
+taciturn	adjective	saying little by nature	Latin	taciturnus
+tangential	adjective	only loosely connected to the subject	Latin	tangens, -entis, p. pr. of tangere to touch. having seized
+tangerine	adjective	of a strong reddish orange color		
+tattered	adjective	worn to shreds; or wearing torn or ragged clothing	Icelandic	ttur, tttur, plural ttrar, ttrar
+tedious	adjective	so lacking in interest as to cause mental weariness	Latin	taediosus, from taedium
+temerity	noun	boldness that borders on recklessness	Latin	temeritas, from temere by chance, rashly, perhaps. tamas darkness
+tenacious	adjective	holding firmly; persistent	Latin	tenax, -acis, from tenere to hold
+tenderness	noun	a tendency to express warm and affectionate feeling	French	tendre to stretch, stretch out, reach, Latin tendere
+tentative	adjective	provisional; done without confidence	Latin	tentare to try
+tenuous	adjective	very weak or slight	Latin	tenuis thin
+terrify	verb	fill with terror; frighten greatly	Latin	terrere to frighten + -fy
+terse	adjective	brief to the point of curtness	Latin	tersus, past participle of tergere to rub or wipe off
+tewkesbury	noun	the final battle of the War of the Roses in 1471 in which Edward IV defeated the Lancastrians		
+thawed	adjective	no longer frozen solid	Old English	wian, wan. dovijen, German tauen, thauen (
+theoretic	adjective	concerned primarily with theories or hypotheses rather than practical considerations		
+theosophy	noun	a system of belief based on mystical insight into the nature of God and the soul	Greek	knowledge of things divine, from wise in the things of God, God + wise
+thrifty	adjective	careful and diligent in the use of resources	Icelandic	rift
+throttling	noun	the act of suffocating (someone) by constricting the windpipe		
+thwart	verb	to prevent someone from achieving something	Middle English	wart, wert, a. and adv., Icelandic vert, neuter of verr athwart, transverse, across. weorh perverse…
+timorous	adjective	nervous and easily frightened	Late Latin	timorosus, from Latin timor fear
+tingling	adjective	exciting by touching lightly so as to cause laughter or twitching movements		
+titillating	adjective	pleasantly and superficially exciting	Latin	titillatus, past participle of titillare
+torpor	noun	sluggish inactivity	Latin	Latin, from torpere, to be torpid
+tortuous	adjective	highly complex or intricate and occasionally devious	Middle English	tortuos, Latin tortuosus, from tortus a twisting, winding, from torquere, tortum, to twist
+totalitarian	adjective	characterized by a government in which the political authority exercises absolute and centralized control		
+tractable	adjective	easy to control or manage	Latin	tractabilis, fr, tractare to draw violently, to handle, treat. t
+transient	adjective	lasting only a short time	Latin	transiens, -entis, p. pr. of transire, transitum, to go or pass over
+transmissible	adjective	capable of being transmitted by infection		
+tremble	verb	move or jerk quickly and involuntarily up and down or sideways	French	trembler, from Latin tremulus trembling, tremulous, from tremere to shake, tremble., Lith. trimti
+trepidation	noun	anxiety about what is to come	French	trpidation, Latin trepidatio, from trepidare to hurry with alarm, to tremble, from trepidus agitated…
+trite	adjective	dulled by overuse; lacking freshness	Latin	tritus, past participle of terere to rub, to wear out, probably. throw
+trope	noun	language used in a figurative or nonliteral sense	Latin	tropus, Greek, from to turn
+truculent	adjective	aggressively defiant	Latin	truculentus, from trux, genitive trucis, wild, fierce
+truncate	adjective	terminating abruptly by having or as if having an end or point cut off	Latin	truncatus, past participle of truncare to cut off, mutilate, from truncus maimed, mutilated, cut short
+truncated	adjective	cut short in duration	Latin	truncatus, past participle of truncare to cut off, mutilate, from truncus maimed, mutilated, cut short
+trustworthiness	noun	the trait of deserving trust and confidence		
+tumbling	noun	the gymnastic moves of an acrobat	Middle English	tumblen, Old English tumbian to turn heels over head, to dance violently. tuimelen to fall, Swedish tumla…
+turbid	adjective	clouded as with sediment	Latin	turbidus, from turba tumult, disturbance
+turkic	noun	a subfamily of Altaic languages	Persian	Turk, probably of Tartar origin
+twaddle	verb	speak (about unimportant matters) rapidly and incessantly		
+twinkling	adjective	shining intermittently with a sparkling light	Middle English	twinklen, Old English twinclian. twinken to blink, wink, German zwinken, zwinkern, and perhaps to English…
+ubiquitous	adjective	present everywhere at once	Latin	ubique everywhere, from ubi where, perhaps for cubi, quobi (
+unary	adjective	consisting of or involving a single element or component		
+uncaring	adjective	lacking affection or warm feeling		
+unceasing	adjective	continuing forever or indefinitely		
+unchanging	adjective	conforming to the same principles or course of action over time		
+unconsolidated	adjective	loose and unstratified		
+uncritical	adjective	marked by disregard for critical standards or procedures		
+unction	noun	excessive but superficial compliments given with affected charm	Middle English	unccioun, uncioun, Old French oncion, onction, French onction, from Latin unctio, from ungere, unctum, to…
+underprivileged	adjective	lacking the rights and advantages of other members of society		
+undeserved	adjective	not deserved or earned		
+undiminished	adjective	not lessened or diminished		
+undress	noun	partial or complete nakedness		
+unemotional	adjective	unsusceptible to or destitute of or showing no emotion		
+unequalled	adjective	radically distinctive and without equal		
+unequivocal	adjective	leaving no doubt; admitting one meaning only		
+unfaithful	adjective	not true to duty or obligation or promises		
+unfilled	adjective	of purchase orders that have not been filled		
+unformed	adjective	not having form or shape		
+unfriendly	adjective	not easy to understand or use		
+unhelpful	adjective	providing no assistance		
+unicameral	adjective	composed of one legislative body	Latin	Uni- + Latin camera vault
+unilateral	adjective	involving only one part or side		
+unmanageable	adjective	difficult to use or handle or manage because of size or weight or shape		
+unmentionable	adjective	unsuitable or forbidden as a topic of conversation		
+unmoderated	adjective	not made less extreme		
+unmodified	adjective	not changed in form or character		
+unnerved	adjective	deprived of courage and strength		
+unnoticeable	adjective	not noticeable; not drawing attention		
+unordered	adjective	not arranged in order		
+unpalatable	adjective	not pleasant or acceptable to the taste or mind		
+unpersuasive	adjective	not capable of persuading		
+unquestionable	adjective	incapable of being questioned		
+unquestioning	adjective	not inclined to ask questions		
+unranked	adjective	not arranged in order hierarchically		
+unrecognised	adjective	not having a secure reputation		
+unreliability	noun	the trait of not being dependable or reliable		
+unrequited	adjective	not returned in kind		
+unsanitary	adjective	not sanitary or healthful		
+unsealed	adjective	not established or confirmed		
+unserviceable	adjective	not ready for service		
+unsubstantiated	adjective	unsupported by other evidence		
+unsupervised	adjective	not supervised or under constant observation		
+unsympathetic	adjective	not sympathetic or disposed toward		
+untenable	adjective	impossible to defend against objection		
+untold	adjective	too much to be measured		
+unusable	adjective	not capable of being used		
+unwholesome	adjective	detrimental to physical or moral well-being		
+unwise	adjective	showing or resulting from lack of judgment or wisdom	Old English	unws
+upbeat	adjective	pleasantly (even unrealistically) optimistic		
+uplink	noun	a transmission from Earth to a spacecraft or the path of such a transmission		
+uptick	noun	a transaction in the stock market at a price above the price of the preceding transaction		
+urethritis	noun	inflammation of the urethra; results in painful urination		
+usurp	verb	to seize a position or power wrongfully	Latin	usurpare, usurpatum, to make use of, enjoy, get possession of, usurp, the first part of usurpare is.)
+vaccinated	adjective	having been rendered unsusceptible to a disease		
+vacillate	verb	to waver between choices	Latin	vacillare, vacillatum
+vagueness	noun	unclearness by virtue of being poorly expressed or not coherent in meaning	French	vague, or Latin vagus. i
+vapid	adjective	offering nothing of interest; flat	Latin	vapidus having lost its life and spirit, vapid
+vaporized	adjective	converted into a gas or vapor		
+veering	noun	the act of turning aside suddenly	French	virer (, perhaps from Latin vibrare to brandish, vibrate (
+vehement	adjective	showing strong, forceful feeling	Latin	vehemens, the first part of which is perhaps
+venerate	verb	to regard with deep respect	Latin	veneratus, past participle of venerari to venerate. van to like, to wish, and English winsome
+ventilate	verb	expose to cool or cold air so as to cool or freshen	Latin	ventilatus, past participle of ventilare to toss, brandish in the air, to fan, to winnow, from ventus wind.…
+veracity	noun	truthfulness; accuracy		
+verbose	adjective	using more words than necessary	Latin	verbosus, from verbum a word
+vernal	adjective	suggestive of youth; vigorous and fresh	Latin	vernalis, from vernus vernal, ver spring. 'e\`ar, Sanskrit vasanta, Icelandic vr, and English Easter, east
+vexed	adjective	troubled persistently especially with petty annoyances		
+viable	adjective	capable of working or surviving	French	French, from vie life, Latin vita
+vicarious	adjective	experienced indirectly, through someone else	Latin	vicarius, from vicis change, alternation, turn, the position, place, or office of one person as assumed by…
+vigilant	adjective	watchful for danger	Latin	vigilans, -antis, p. pr. of vigilare to watch, from vigil awake
+vilify	verb	to speak about with abusive disparagement	Latin	vilis vile + -fy
+vindicate	verb	to clear of blame, or to justify	Latin	vindicatus, past participle of vindicare to lay claim to, defend, avenge
+virulent	adjective	bitterly hostile, or severely poisonous	Latin	virulentus, from virus poison
+vociferous	adjective	expressing opinions loudly and insistently		
+volatile	adjective	liable to change rapidly and unpredictably	French	volatil, Latin volatilis, from volare to fly, perhaps. velocity
+volley	noun	rapid simultaneous discharge of firearms	French	vole, flight, a volley, or discharge of several guns, from voler to fly, Latin volare
+vroom	verb	make a loud, roaring sound, as of a car engine, while moving		
+warble	verb	sing or play with trills, alternating with the half note above or below	Middle English	werbelen, Old French werbler, of Teutonic origin
+wary	adjective	cautious about possible danger	Middle English	war, Old English waer. vrr, Danish & Swedish var, Gothic wars, German gewahr aware, Old High German wara…
+weaken	verb	lessen the strength of		
+weepy	adjective	liable to weep easily	Middle English	wepen, Old English wpan, from wp lamentation. wpa to lament, OS. wp lamentation, Old High German wuof…
+weirdness	noun	strikingly out of the ordinary	Middle English	wirde, werde, Old English wyrd fate, fortune, one of the Fates, from weoran to be, to become. wurd fate, Old…
+welter	verb	toss, roll, or rise and fall in an uncontrolled way	Middle English	Freq. of Middle English walten to roll over, Old English wealtan. weltern, German walzen to roll, to waltz…
+whacked	adjective	exhausted or worn out		
+whammy	noun	a serious or devastating setback		
+whimsical	adjective	playfully odd; given to sudden fancies		
+whiteness	noun	the quality or state of the achromatic color of greatest lightness	Old English	hwtness
+whoosh	verb	move with a sibilant sound		
+wistful	adjective	quietly longing for something lost	Middle English	For wishful, perhaps influenced by wistly, which is probably corrupted from Middle English wisly certainly…
+wonky	adjective	turned or twisted toward one side		
+woozy	adjective	having or causing a whirling sensation; liable to falling		
+wraith	noun	a mental representation of some haunting experience	Icelandic	Scot. wraith, warth, probably originally, a guardian angel, from Icelandic vrr a warden, guardian. ward
+wrangle	verb	to quarrel noisily, angrily or disruptively	Middle English	wranglen to wrestle
+wrongness	noun	inappropriate conduct	Middle English	wrong, wrang, a. & n., Old English wrang, n., originally, awry, wrung, from wringan to wring
+zealous	adjective	filled with intense enthusiasm for a cause	Late Latin	zelosus
+zenith	noun	the highest point reached	Middle English	senyth, Old French cenith, French znith, Spanish zenit, cenit, abbrev. from Arabic samt-urras way of the…
+zillion	adjective	very large indeterminate number		
+zinger	noun	a striking or amusing or caustic remark		
 `
 
 export const CORE_PACK: RawEntry[] = TSV.trim()
   .split('\n')
   .map((line) => {
-    const [word, pos, meaning] = line.split('\t')
-    return { word, pos: pos || undefined, meaning }
+    const [word, pos, meaning, originLang, origin] = line.split('\t')
+    return {
+      word,
+      pos: pos || undefined,
+      meaning,
+      originLang: originLang || undefined,
+      origin: origin || undefined,
+    }
   })
   .filter((e) => e.word && e.meaning)
 

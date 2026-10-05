@@ -267,7 +267,7 @@ export default function Player({ deckId, startIdx, settings, onPatch, onExit }: 
               {phase === 'meaning' ? (
                 <div key={entry.idx}>
                   <p className="meaning">{entry.meaning}</p>
-                  {parts && (
+                  {parts ? (
                     <p className="parts">
                       <span className="lang">{parts.lang}</span>
                       {parts.parts.map((p) => (
@@ -277,6 +277,17 @@ export default function Player({ deckId, startIdx, settings, onPatch, onExit }: 
                       ))}
                       {parts.note && <span className="part note">{parts.note}</span>}
                     </p>
+                  ) : (
+                    // No breakdown possible - "taciturn" is Latin taciturnus and
+                    // no table of roots will ever account for "-iturn" - but the
+                    // dictionary still knows where the word came from.
+                    settings.showParts &&
+                    entry.origin && (
+                      <p className="parts">
+                        {entry.originLang && <span className="lang">{entry.originLang}</span>}
+                        <span className="part origin">{entry.origin}</span>
+                      </p>
+                    )
                   )}
                   {relatives && (
                     <p className="family">

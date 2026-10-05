@@ -19,6 +19,7 @@
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { originFor, readEtymologies } from './etymology.mjs'
 
 const HERE = dirname(fileURLToPath(import.meta.url))
 const CACHE = join(HERE, '.cache')
@@ -223,8 +224,27 @@ async function main() {
 
   entries.sort((a, b) => a.word.localeCompare(b.word))
 
+  // Where the word came from, for the many words no morpheme table can explain.
+  // Optional: without the GCIDE files the deck simply ships without origins.
+  let origins = new Map()
+  try {
+    origins = readEtymologies(CACHE)
+  } catch {
+    console.log('no GCIDE in scripts/.cache - building without word origins.')
+    console.log('to include them: download https://ftp.gnu.org/gnu/gcide/gcide-0.53.tar.xz')
+    console.log('into scripts/.cache and run: python scripts/extract_gcide.py\n')
+  }
+  let withOrigin = 0
+  for (const entry of entries) {
+    const origin = originFor(entry.word.toLowerCase(), origins)
+    if (!origin) continue
+    entry.originLang = origin.language
+    entry.origin = origin.text
+    withOrigin++
+  }
+
   const tsv = entries
-    .map((e) => `${e.word}\t${e.pos ?? ''}\t${e.meaning}`)
+    .map((e) => `${e.word}\t${e.pos ?? ''}\t${e.meaning}\t${e.originLang ?? ''}\t${e.origin ?? ''}`)
     .join('\n')
     .replace(/\\/g, '\\\\')
     .replace(/`/g, '\\`')
@@ -245,6 +265,9 @@ async function main() {
  *
  * Word choice uses frequency ranks over the Google Web Trillion Word Corpus
  * (ranks ${MIN_RANK.toLocaleString()}-${MAX_RANK.toLocaleString()}): common enough to meet, uncommon enough to be worth learning.
+ *
+ * Origins (${withOrigin} of ${entries.length}) come from GCIDE, the GNU edition of Webster's
+ * Revised Unabridged Dictionary (1913), which is distributed under the GPL.
  */
 const TSV = \`
 ${tsv}
@@ -253,8 +276,14 @@ ${tsv}
 export const CORE_PACK: RawEntry[] = TSV.trim()
   .split('\\n')
   .map((line) => {
-    const [word, pos, meaning] = line.split('\\t')
-    return { word, pos: pos || undefined, meaning }
+    const [word, pos, meaning, originLang, origin] = line.split('\\t')
+    return {
+      word,
+      pos: pos || undefined,
+      meaning,
+      originLang: originLang || undefined,
+      origin: origin || undefined,
+    }
   })
   .filter((e) => e.word && e.meaning)
 

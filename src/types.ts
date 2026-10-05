@@ -19,6 +19,10 @@ export interface Entry {
   key: string
   pos?: string
   meaning: string
+  /** "Latin", "Greek" - where the word came from. */
+  originLang?: string
+  /** The derivation itself: "Latin taciturnus, from tacitus silent". */
+  origin?: string
   /** Root families this word belongs to, indexed for "words sharing this root". */
   roots?: string[]
 }

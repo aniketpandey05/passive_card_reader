@@ -45,6 +45,10 @@ export interface RawEntry {
   word: string
   pos?: string
   meaning: string
+  /** "Latin", "Greek" - where the word came from. */
+  originLang?: string
+  /** The derivation itself: "Latin taciturnus, from tacitus silent". */
+  origin?: string
 }
 
 export function sortKey(word: string): string {
@@ -71,7 +75,13 @@ export async function createDeck(
   opts: { sort?: boolean; license?: string } = {},
 ): Promise<number> {
   const cleaned = raw
-    .map((e) => ({ word: e.word?.trim() ?? '', pos: e.pos?.trim() || undefined, meaning: e.meaning?.trim() ?? '' }))
+    .map((e) => ({
+      word: e.word?.trim() ?? '',
+      pos: e.pos?.trim() || undefined,
+      meaning: e.meaning?.trim() ?? '',
+      originLang: e.originLang?.trim() || undefined,
+      origin: e.origin?.trim() || undefined,
+    }))
     .filter((e) => e.word && e.meaning)
   if (opts.sort !== false) cleaned.sort((a, b) => sortKey(a.word).localeCompare(sortKey(b.word)))
 
@@ -90,6 +100,8 @@ export async function createDeck(
     key: sortKey(e.word),
     pos: e.pos,
     meaning: e.meaning,
+    originLang: e.originLang,
+    origin: e.origin,
     roots: familiesOf(e.word),
   }))
   for (let i = 0; i < rows.length; i += 500) {

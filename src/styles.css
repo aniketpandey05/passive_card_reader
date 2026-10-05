@@ -532,3 +532,5 @@ input[type='range'] { accent-color: var(--accent); width: 150px; }
   .word, .meaning, .sheet, .scrim { animation: none !important; }
   * { transition-duration: 0.01ms !important; }
 }
+
+.parts .origin { font-style: italic; }

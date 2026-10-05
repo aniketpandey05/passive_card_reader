@@ -50,6 +50,32 @@ derivation in a comment: `mitigate` is *mitis* "mild", not *mittere* "send";
 way, giving the true story where an analyzer could never find it - `ephemeral`
 is *epi-* + *hemera*, lasting but a day.
 
+### Where the word came from
+
+A morpheme table can only explain words built from roots it knows. `taciturn`
+is Latin *taciturnus*, and an analyzer that knows `tac` still cannot account
+for `-iturn`, so the strict rules throw the whole thing away and the card says
+nothing. That is the single biggest reason words show no derivation, and no
+amount of extra roots fixes it.
+
+So where there is no breakdown, the card shows the origin instead - *LATIN ·
+taciturnus* - taken from the dictionary's own etymology. Coverage goes from
+**211 of 1,000** words with a breakdown to **586** that show where the word
+came from.
+
+`scripts/etymology.mjs` parses GCIDE (the GNU edition of Webster's 1913) and
+expands its abbreviations into English: `[L. taciturnus: cf. F. taciturne]`
+becomes *Latin taciturnus*. Cross references, cognates and literary notes are
+dropped. Words whose etymology lives on their base form are followed there,
+because Webster gives it once - `ephemeral` has none of its own, `ephemera`
+has it.
+
+> **Licence note:** GCIDE is distributed under the **GPL**, so the origin
+> strings in `src/data/core.ts` carry that licence, unlike the WordNet
+> definitions and the public-domain 1913 text underneath. If this project ever
+> takes a permissive licence, re-derive the origins from the Project Gutenberg
+> edition of Webster 1913, which is pure public domain.
+
 ### Word families
 
 Under the breakdown, the card prints the cross-reference a dictionary would:

@@ -196,7 +196,7 @@ export default function PdfImport({ file, onDone, onCancel }: Props) {
               {probe.withText === probe.sampled
                 ? 'All sampled pages have a text layer, so this will be quick and exact.'
                 : probe.withText === 0
-                  ? 'No text layer found — these pages are images, so they need to be recognised. That is slower, a few seconds a page.'
+                  ? 'No text layer found — these pages are images, so they need to be recognised. That downloads a language file once (about 5 MB), then takes a few seconds a page, longer on a phone.'
                   : `${probe.withText} of ${probe.sampled} sampled pages have a text layer. Pages without one will be recognised as images.`}
             </p>
 
@@ -378,7 +378,7 @@ export default function PdfImport({ file, onDone, onCancel }: Props) {
                       </button>
                     )}
                     <button
-                      className="icon drop"
+                      className="icon remove"
                       aria-label={`Remove ${entry.word}`}
                       onClick={() => setEntries((all) => all.filter((_, i) => i !== index))}
                     >

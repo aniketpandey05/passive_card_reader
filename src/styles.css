@@ -166,7 +166,13 @@ kbd {
   transition: border-color 0.15s, background 0.15s;
 }
 .drop.over { border-color: var(--accent); background: var(--accent-soft); color: var(--ink); }
-.drop label { color: var(--accent); text-decoration: underline; cursor: pointer; }
+.drop .choose { display: inline-block; cursor: pointer; padding: 12px 22px; font-size: 15.5px; }
+.drop-types { margin: 12px 0 0; font-size: 13px; color: var(--muted); }
+.drop-hint { margin: 2px 0 0; font-size: 13px; color: var(--muted); display: none; }
+/* Dragging needs a pointer; a touch screen only ever gets the button. */
+@media (hover: hover) and (pointer: fine) {
+  .drop-hint { display: block; }
+}
 
 textarea.paste {
   width: 100%;
@@ -279,7 +285,13 @@ h2.step {
 .editrow input { font-family: var(--serif); font-weight: 700; font-size: 16px; }
 .editrow .btn { justify-self: start; }
 
-.icon.drop { width: 34px; height: 34px; margin-top: 6px; font-size: 14px; flex: none; }
+/* Not ".drop": that is the file drop zone, and a shared class name gave every
+   remove button its dashed border. */
+.icon.remove { width: 34px; height: 34px; margin-top: 6px; font-size: 14px; flex: none; }
+/* A thumb needs more than a cursor does. */
+@media (hover: none) {
+  .icon.remove { width: 44px; height: 44px; }
+}
 
 /* ---------- player ---------- */
 

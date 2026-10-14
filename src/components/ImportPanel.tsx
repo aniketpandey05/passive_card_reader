@@ -41,7 +41,12 @@ export default function ImportPanel({ onDone, onCancel, onPdf }: Props) {
   }
 
   const takeFile = async (file: File) => {
-    if (/\.pdf$/i.test(file.name) || file.type === 'application/pdf') {
+    // Android pickers often hand over a file with no extension and an empty
+    // MIME type, so the bytes decide: every PDF begins "%PDF-". Without this a
+    // PDF picked from Downloads would be parsed as text and come out as noise.
+    const head = new Uint8Array(await file.slice(0, 5).arrayBuffer())
+    const looksPdf = String.fromCharCode(...head) === '%PDF-'
+    if (looksPdf || /\.pdf$/i.test(file.name) || file.type === 'application/pdf') {
       onPdf(file)
       return
     }
@@ -77,9 +82,10 @@ export default function ImportPanel({ onDone, onCancel, onPdf }: Props) {
           if (file) void takeFile(file)
         }}
       >
-        Drop a PDF, CSV, TSV, TXT or JSON file here, or{' '}
-        <label>
-          choose a file
+        {/* A label, not a link: on a phone this is the whole feature, and it
+            needs to be a thumb-sized target rather than underlined text. */}
+        <label className="btn primary choose">
+          Choose a file
           <input
             type="file"
             accept=".pdf,.csv,.tsv,.txt,.json,application/pdf,text/plain,text/csv,application/json"
@@ -90,6 +96,8 @@ export default function ImportPanel({ onDone, onCancel, onPdf }: Props) {
             }}
           />
         </label>
+        <p className="drop-types">PDF, CSV, TSV, text or JSON</p>
+        <p className="drop-hint">or drag one here</p>
       </div>
 
       <textarea

@@ -1,6 +1,15 @@
 import { useEffect, useState } from 'react'
 import type { Settings } from '../types'
-import { calmRate, cancelSpeech, listVoices, onVoicesChanged, speak, speechAvailable } from '../lib/speech'
+import {
+  calmRate,
+  cancelSpeech,
+  listVoices,
+  onVoicesChanged,
+  onlyLegacyVoices,
+  speak,
+  speechAvailable,
+  voiceQuality,
+} from '../lib/speech'
 import { useEscape } from '../lib/useEscape'
 
 interface Props {
@@ -100,18 +109,47 @@ export default function SettingsSheet({ settings, onPatch, onClose }: Props) {
           {!speechAvailable() && <span className="note">This browser has no built-in speech.</span>}
           {speechAvailable() && settings.voice && (
             <>
-              <select
-                value={settings.voiceURI ?? ''}
-                onChange={(e) => onPatch({ voiceURI: e.target.value || null })}
-                aria-label="Voice"
-              >
-                <option value="">{voices[0] ? `Recommended (${voices[0].name})` : 'Recommended'}</option>
-                {voices.map((v) => (
-                  <option key={v.voiceURI} value={v.voiceURI}>
-                    {v.name} ({v.lang})
-                  </option>
-                ))}
-              </select>
+              {/* A list rather than a dropdown, because which voice sounds
+                  good is entirely device-dependent and only the listener can
+                  judge it. Every row can be heard before it is chosen. */}
+              <ul className="voices">
+                {voices.map((v) => {
+                  const chosen = (settings.voiceURI ?? voices[0]?.voiceURI) === v.voiceURI
+                  const quality = voiceQuality(v)
+                  return (
+                    <li key={v.voiceURI} className={chosen ? 'chosen' : ''}>
+                      <button className="voice-pick" onClick={() => onPatch({ voiceURI: v.voiceURI })}>
+                        <span className="voice-name">{v.name.replace(/\s*\([^)]*\)\s*$/, '')}</span>
+                        <span className="voice-tag">
+                          {v.lang}
+                          {quality === 'good' && ' · natural'}
+                          {quality === 'legacy' && ' · older, robotic'}
+                        </span>
+                      </button>
+                      <button
+                        className="icon"
+                        aria-label={`Hear ${v.name}`}
+                        onClick={() => {
+                          cancelSpeech()
+                          void speak('taciturn. Saying little by nature.', {
+                            rate: calmRate(settings.speed),
+                            voiceURI: v.voiceURI,
+                          })
+                        }}
+                      >
+                        ▶
+                      </button>
+                    </li>
+                  )
+                })}
+              </ul>
+              {onlyLegacyVoices() && (
+                <span className="note warn-note">
+                  Every voice on this device is an older, robotic one, and no amount of tuning fixes that. Phones
+                  generally have far better voices than desktops; on Windows, Settings → Time &amp; language → Speech →
+                  Manage voices adds the natural ones.
+                </span>
+              )}
               <label className="switch" style={{ marginTop: 8 }}>
                 <input
                   type="checkbox"

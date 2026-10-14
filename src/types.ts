@@ -27,6 +27,8 @@ export interface Entry {
   related?: string[]
   /** Root families this word belongs to, indexed for "words sharing this root". */
   roots?: string[]
+  /** 1 when marked important. Numeric because IndexedDB cannot index booleans. */
+  starred?: 1
 }
 
 export interface Progress {

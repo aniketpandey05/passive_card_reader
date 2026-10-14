@@ -60,10 +60,7 @@ export default function Library({ settings, onPatch, onPlay, onPdf }: Props) {
         <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 12 }}>
           <div>
             <h1>WordFlow</h1>
-            <p>
-              Words on a timer. Each one appears on its own, pauses while you try to remember it, then shows the
-              meaning.
-            </p>
+            <p>One word at a time. A pause to remember it, then the meaning.</p>
           </div>
           <button className="icon" onClick={() => setShowSettings(true)} aria-label="Settings">
             ☰
@@ -71,31 +68,37 @@ export default function Library({ settings, onPatch, onPlay, onPdf }: Props) {
         </div>
       </header>
 
-      <div className="section-head">
-        <h2>Your decks</h2>
-        {!importing && rows?.length ? (
-          <button className="btn small" onClick={() => setImporting(true)}>
-            Import
-          </button>
-        ) : null}
-      </div>
+      {rows !== null && (rows.length > 0 || importing) && (
+        <div className="section-head">
+          <h2>Your decks</h2>
+          {!importing && rows.length > 0 && (
+            <button className="btn small" onClick={() => setImporting(true)}>
+              Add words
+            </button>
+          )}
+        </div>
+      )}
 
       {rows === null ? (
         <p className="hint">Loading…</p>
       ) : rows.length === 0 && !importing ? (
-        <div className="empty">
-          <p>
-            Nothing here yet. Start with the built-in {CORE_COUNT}-word deck, or bring your own: a dictionary
-            or word list as a PDF, CSV, TSV, text or JSON file.
-          </p>
-          <div style={{ display: 'flex', gap: 8, justifyContent: 'center', flexWrap: 'wrap' }}>
-            <button className="btn primary" onClick={() => void addStarter()}>
-              Add the built-in {CORE_COUNT}-word deck
-            </button>
-            <button className="btn" onClick={() => setImporting(true)}>
-              Import a file
-            </button>
-          </div>
+        // Two ways in, each a full-width target rather than a paragraph with
+        // buttons under it - this is the whole screen on a phone.
+        <div className="choices">
+          <button className="choice primary" onClick={() => void addStarter()}>
+            <span className="choice-title">Start with {CORE_COUNT.toLocaleString()} words</span>
+            <span className="choice-note">
+              Worth knowing, in alphabetical order, with where each word comes from and what it is related to.
+            </span>
+            <span className="choice-go">Begin →</span>
+          </button>
+          <button className="choice" onClick={() => setImporting(true)}>
+            <span className="choice-title">Use your own dictionary</span>
+            <span className="choice-note">
+              A PDF, CSV or word list from your phone. Scanned pages are read on the device, nothing is uploaded.
+            </span>
+            <span className="choice-go">Choose a file →</span>
+          </button>
         </div>
       ) : (
         rows.map((d) => {

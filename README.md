@@ -138,6 +138,15 @@ Root families are stored per entry and indexed (`*roots` in Dexie), so this
 works on an imported dictionary too, and existing decks are backfilled by a
 schema migration rather than needing a re-import.
 
+Tapping any related word opens a small card with its meaning, and pages through
+the rest of the set. Words in the deck come from the deck; the others come from
+a bundled glossary of 1,845 definitions (`npm run build:glossary`), loaded the
+first time a card is opened. Looking them up over the network would fail
+exactly when the app is most used - offline, on a commute.
+
+Words can be marked important with the star in the top bar, or `S`. Starred
+words are listed in "Start from…", so they can be found again.
+
 ```bash
 npm run check:parts
 ```

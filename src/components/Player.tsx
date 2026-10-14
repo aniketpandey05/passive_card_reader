@@ -1,10 +1,11 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
-import { db, familyWords, getEntry } from '../db'
+import { db, familyWords, getEntry, setStarred } from '../db'
 import type { Entry, Settings } from '../types'
 import { readMs, recallMs } from '../lib/timing'
-import { cancelSpeech, speak } from '../lib/speech'
+import { calmRate, cancelSpeech, speak } from '../lib/speech'
 import { analyze } from '../lib/morphology'
 import SettingsSheet from './SettingsSheet'
+import WordCard from './WordCard'
 
 interface Props {
   deckId: number
@@ -41,6 +42,8 @@ export default function Player({ deckId, startIdx, settings, onPatch, onExit }: 
   const [count, setCount] = useState(0)
   const [finished, setFinished] = useState(false)
   const [showSettings, setShowSettings] = useState(false)
+  /** Which related word is open in the mini card, if any. */
+  const [reading, setReading] = useState<{ words: string[]; at: number } | null>(null)
 
   const idxRef = useRef(idx)
   const countRef = useRef(0)
@@ -109,6 +112,13 @@ export default function Player({ deckId, startIdx, settings, onPatch, onExit }: 
 
   const reveal = useCallback(() => setPhase('meaning'), [])
 
+  const toggleStar = useCallback(() => {
+    if (!entry?.id) return
+    const next = entry.starred ? undefined : (1 as const)
+    setEntry({ ...entry, starred: next })
+    void setStarred(entry.id, !entry.starred)
+  }, [entry])
+
   const onStageClick = useCallback(() => {
     if (phase === 'word') reveal()
     else next()
@@ -135,7 +145,10 @@ export default function Player({ deckId, startIdx, settings, onPatch, onExit }: 
     const held = new Promise<void>((resolve) => {
       timer = setTimeout(resolve, dur)
     })
-    const spoken = settings.voice && toSay ? speak(toSay, { rate: settings.speed, voiceURI: settings.voiceURI }) : Promise.resolve()
+    const spoken =
+      settings.voice && toSay
+        ? speak(toSay, { rate: calmRate(settings.speed), voiceURI: settings.voiceURI })
+        : Promise.resolve()
 
     void Promise.all([held, spoken]).then(() => {
       if (cancelled) return
@@ -188,6 +201,10 @@ export default function Player({ deckId, startIdx, settings, onPatch, onExit }: 
           e.preventDefault()
           reveal()
           break
+        case 's':
+        case 'S':
+          toggleStar()
+          break
         case 'Escape':
           onExit()
           break
@@ -195,7 +212,7 @@ export default function Player({ deckId, startIdx, settings, onPatch, onExit }: 
     }
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
-  }, [next, prev, reveal, onExit])
+  }, [next, prev, reveal, onExit, toggleStar])
 
   useEffect(() => cancelSpeech, [])
 
@@ -227,6 +244,8 @@ export default function Player({ deckId, startIdx, settings, onPatch, onExit }: 
 
   // Words with no root the table knows still have relatives in the dictionary.
   const dictionaryRelated = !relatives && settings.showParts ? (entry?.related ?? []).slice(0, 6) : []
+  // One flat list, so the mini card can page through exactly what is on screen.
+  const relatedRow = relatives ? [...relatives.inDeck.map((w) => w.word), ...relatives.others] : []
 
   const jumpTo = useCallback((target: number) => {
     historyRef.current.push(idxRef.current)
@@ -249,6 +268,15 @@ export default function Player({ deckId, startIdx, settings, onPatch, onExit }: 
           <span className="sep">·</span>
           {count ? idx + 1 : 0} / {count}
         </div>
+        <button
+          className={entry?.starred ? 'icon starred' : 'icon'}
+          onClick={toggleStar}
+          aria-pressed={!!entry?.starred}
+          aria-label={entry?.starred ? 'Remove the star' : 'Mark as important'}
+          title="Mark as important (S)"
+        >
+          {entry?.starred ? '★' : '☆'}
+        </button>
         <button className="icon" onClick={() => setShowSettings(true)} aria-label="Settings">
           ☰
         </button>
@@ -300,33 +328,34 @@ export default function Player({ deckId, startIdx, settings, onPatch, onExit }: 
                       <span className="also">
                         also from <b>{relatives.root}</b>
                       </span>
-                      {relatives.inDeck.map((w) => (
+                      {relatedRow.map((w, i) => (
                         <button
-                          key={w.idx}
+                          key={w}
                           className="relative"
                           onClick={(e) => {
                             e.stopPropagation() // the stage itself advances the card
-                            jumpTo(w.idx)
+                            setReading({ words: relatedRow, at: i })
                           }}
-                          title={w.meaning}
                         >
-                          {w.word}
-                        </button>
-                      ))}
-                      {relatives.others.map((w) => (
-                        <span className="relative outside" key={w} title="not in this deck">
                           {w}
-                        </span>
+                        </button>
                       ))}
                     </p>
                   )}
-                  {dictionaryRelated.length > 0 && (
+                  {!relatives && dictionaryRelated.length > 0 && (
                     <p className="family">
                       <span className="also">related</span>
-                      {dictionaryRelated.map((w) => (
-                        <span className="relative outside" key={w} title="not in this deck">
+                      {dictionaryRelated.map((w, i) => (
+                        <button
+                          key={w}
+                          className="relative"
+                          onClick={(e) => {
+                            e.stopPropagation()
+                            setReading({ words: dictionaryRelated, at: i })
+                          }}
+                        >
                           {w}
-                        </span>
+                        </button>
                       ))}
                     </p>
                   )}
@@ -396,6 +425,16 @@ export default function Player({ deckId, startIdx, settings, onPatch, onExit }: 
           <i style={{ width: `${deckPct}%` }} />
         </div>
       </footer>
+
+      {reading && (
+        <WordCard
+          deckId={deckId}
+          words={reading.words}
+          startAt={reading.at}
+          onGoTo={jumpTo}
+          onClose={() => setReading(null)}
+        />
+      )}
 
       {showSettings && <SettingsSheet settings={settings} onPatch={onPatch} onClose={() => setShowSettings(false)} />}
     </div>

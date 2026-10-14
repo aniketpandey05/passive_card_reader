@@ -36,6 +36,14 @@ class WordFlowDB extends Dexie {
             entry.roots = familiesOf(entry.word)
           }),
       )
+    // v3 indexes starred words. No migration: entries without the field simply
+    // stay out of the index, which is exactly what a query for starred wants.
+    this.version(3).stores({
+      decks: '++id, name',
+      entries: '++id, deckId, [deckId+idx], [deckId+key], *roots, [deckId+starred]',
+      progress: 'deckId',
+      settings: 'id',
+    })
   }
 }
 
@@ -146,6 +154,25 @@ export async function familyWords(deckId: number, family: string, excludeIdx: nu
     .filter((e) => e.deckId === deckId && e.idx !== excludeIdx)
     .sort((a, b) => a.key.localeCompare(b.key))
     .slice(0, limit)
+}
+
+export async function setStarred(entryId: number, starred: boolean): Promise<void> {
+  // Deleting the key keeps unstarred entries out of the index entirely.
+  if (starred) await db.entries.update(entryId, { starred: 1 })
+  else await db.entries.update(entryId, { starred: undefined })
+}
+
+export function starredWords(deckId: number, limit = 200): Promise<Entry[]> {
+  return db.entries.where('[deckId+starred]').equals([deckId, 1]).limit(limit).toArray()
+}
+
+export function countStarred(deckId: number): Promise<number> {
+  return db.entries.where('[deckId+starred]').equals([deckId, 1]).count()
+}
+
+/** A single word by its spelling, for looking up a relative's meaning. */
+export function findByWord(deckId: number, word: string): Promise<Entry | undefined> {
+  return db.entries.where('[deckId+key]').equals([deckId, sortKey(word)]).first()
 }
 
 /** First entry at or after a letter, so A-Z jumps land somewhere sensible. */

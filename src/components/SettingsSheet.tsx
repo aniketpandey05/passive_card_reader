@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import type { Settings } from '../types'
-import { cancelSpeech, listVoices, onVoicesChanged, speak, speechAvailable } from '../lib/speech'
+import { calmRate, cancelSpeech, listVoices, onVoicesChanged, speak, speechAvailable } from '../lib/speech'
 import { useEscape } from '../lib/useEscape'
 
 interface Props {
@@ -88,7 +88,7 @@ export default function SettingsSheet({ settings, onPatch, onClose }: Props) {
                 onClick={() => {
                   cancelSpeech()
                   void speak('ephemeral. Lasting a very short time.', {
-                    rate: settings.speed,
+                    rate: calmRate(settings.speed),
                     voiceURI: settings.voiceURI,
                   })
                 }}
@@ -105,7 +105,7 @@ export default function SettingsSheet({ settings, onPatch, onClose }: Props) {
                 onChange={(e) => onPatch({ voiceURI: e.target.value || null })}
                 aria-label="Voice"
               >
-                <option value="">Default voice</option>
+                <option value="">{voices[0] ? `Recommended (${voices[0].name})` : 'Recommended'}</option>
                 {voices.map((v) => (
                   <option key={v.voiceURI} value={v.voiceURI}>
                     {v.name} ({v.lang})
@@ -121,8 +121,8 @@ export default function SettingsSheet({ settings, onPatch, onClose }: Props) {
                 <span>Read the meaning aloud too</span>
               </label>
               <span className="note">
-                Cards wait for the voice to finish, so they never get cut off. On phones, speech stops when the screen
-                locks.
+                Cards wait for the voice to finish, so they never get cut off. The voice keeps an unhurried pace even
+                at high card speeds. On phones, speech stops when the screen locks.
               </span>
             </>
           )}

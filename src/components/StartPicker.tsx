@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { firstEntryForLetter, searchEntries } from '../db'
+import { firstEntryForLetter, searchEntries, starredWords } from '../db'
 import type { Deck, Entry } from '../types'
 import { useEscape } from '../lib/useEscape'
 
@@ -17,6 +17,11 @@ export default function StartPicker({ deck, resumeIdx, onStart, onClose }: Props
 
   const [query, setQuery] = useState('')
   const [hits, setHits] = useState<Entry[]>([])
+  const [starred, setStarred] = useState<Entry[]>([])
+
+  useEffect(() => {
+    void starredWords(deck.id).then(setStarred)
+  }, [deck.id])
 
   useEffect(() => {
     let live = true
@@ -50,6 +55,21 @@ export default function StartPicker({ deck, resumeIdx, onStart, onClose }: Props
             Beginning
           </button>
         </div>
+
+        {starred.length > 0 && (
+          <>
+            <p className="meta" style={{ margin: '0 0 6px' }}>
+              ★ Marked important ({starred.length})
+            </p>
+            <div className="azrow starred-row">
+              {starred.map((w) => (
+                <button key={w.idx} className="relative" onClick={() => onStart(w.idx)} title={w.meaning}>
+                  {w.word}
+                </button>
+              ))}
+            </div>
+          </>
+        )}
 
         <div className="azrow">
           {LETTERS.map((l) => (

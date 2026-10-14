@@ -564,3 +564,56 @@ input[type='range'] { accent-color: var(--accent); width: 150px; }
 .install b { font-size: 14.5px; }
 .install p { margin: 4px 0 0; color: var(--ink-soft); font-size: 13.5px; line-height: 1.5; max-width: 46ch; }
 .install-actions { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+
+/* ---------- star ---------- */
+
+.icon.starred { color: var(--accent); }
+
+/* ---------- related word mini card ---------- */
+
+.wordcard { text-align: center; }
+.wordcard-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px; }
+.wordcard-word {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: clamp(1.9rem, 8vw, 2.6rem);
+  line-height: 1.1;
+  margin: 2px 0 2px;
+  overflow-wrap: anywhere;
+}
+.wordcard .pos { margin: 0 0 10px; }
+.wordcard-meaning { font-size: clamp(1rem, 4vw, 1.2rem); line-height: 1.5; color: var(--ink-soft); margin: 0 auto; max-width: 34ch; }
+.wordcard .parts, .wordcard .hint { justify-content: center; }
+.wordcard-nav {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+
+/* ---------- landing choices ---------- */
+
+.choices { display: grid; gap: 12px; }
+.choice {
+  display: grid;
+  gap: 6px;
+  text-align: left;
+  width: 100%;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: var(--shadow);
+  transition: border-color 0.15s, transform 0.1s;
+}
+.choice:active { transform: translateY(1px); }
+.choice:hover { border-color: var(--muted); }
+.choice.primary { border-color: var(--accent); background: var(--accent-soft); }
+.choice-title { font-family: var(--serif); font-weight: 700; font-size: 20px; line-height: 1.2; }
+.choice-note { color: var(--ink-soft); font-size: 14px; line-height: 1.5; }
+.choice-go { color: var(--accent); font-size: 14px; font-weight: 600; margin-top: 2px; }
+.azrow.starred-row { margin-bottom: 16px; }
+.azrow.starred-row button { width: auto; height: auto; padding: 4px 12px; font-size: 14px; text-transform: none; font-family: var(--serif); }

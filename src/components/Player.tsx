@@ -214,13 +214,19 @@ export default function Player({ deckId, startIdx, settings, onPatch, onExit }: 
     void familyWords(deckId, root.family, entry.idx, 4).then((inDeck) => {
       if (!live) return
       const taken = new Set([entry.word.toLowerCase(), ...inDeck.map((w) => w.word.toLowerCase())])
-      const others = (root.examples ?? []).filter((w) => !taken.has(w.toLowerCase())).slice(0, 6 - inDeck.length)
+      // The table's own examples first, then whatever the dictionary lists.
+      const others = [...(root.examples ?? []), ...(entry.related ?? [])]
+        .filter((w) => !taken.has(w.toLowerCase()) && !taken.has(w) && (taken.add(w.toLowerCase()), true))
+        .slice(0, 6 - inDeck.length)
       setRelatives(inDeck.length || others.length ? { root: root.form, inDeck, others } : null)
     })
     return () => {
       live = false
     }
   }, [deckId, entry, parts])
+
+  // Words with no root the table knows still have relatives in the dictionary.
+  const dictionaryRelated = !relatives && settings.showParts ? (entry?.related ?? []).slice(0, 6) : []
 
   const jumpTo = useCallback((target: number) => {
     historyRef.current.push(idxRef.current)
@@ -308,6 +314,16 @@ export default function Player({ deckId, startIdx, settings, onPatch, onExit }: 
                         </button>
                       ))}
                       {relatives.others.map((w) => (
+                        <span className="relative outside" key={w} title="not in this deck">
+                          {w}
+                        </span>
+                      ))}
+                    </p>
+                  )}
+                  {dictionaryRelated.length > 0 && (
+                    <p className="family">
+                      <span className="also">related</span>
+                      {dictionaryRelated.map((w) => (
                         <span className="relative outside" key={w} title="not in this deck">
                           {w}
                         </span>

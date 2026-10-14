@@ -534,3 +534,21 @@ input[type='range'] { accent-color: var(--accent); width: 150px; }
 }
 
 .parts .origin { font-style: italic; }
+
+/* ---------- install banner ---------- */
+
+.install {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--accent-soft);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 14px 16px;
+  margin-top: 18px;
+}
+.install b { font-size: 14.5px; }
+.install p { margin: 4px 0 0; color: var(--ink-soft); font-size: 13.5px; line-height: 1.5; max-width: 46ch; }
+.install-actions { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }

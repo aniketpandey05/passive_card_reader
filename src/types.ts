@@ -21,8 +21,10 @@ export interface Entry {
   meaning: string
   /** "Latin", "Greek" - where the word came from. */
   originLang?: string
-  /** The derivation itself: "Latin taciturnus, from tacitus silent". */
+  /** The derivation itself: "taciturnus" or "ad- toward + culture". */
   origin?: string
+  /** Words sharing this word's ancestry, from the dictionary. */
+  related?: string[]
   /** Root families this word belongs to, indexed for "words sharing this root". */
   roots?: string[]
 }

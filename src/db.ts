@@ -47,8 +47,10 @@ export interface RawEntry {
   meaning: string
   /** "Latin", "Greek" - where the word came from. */
   originLang?: string
-  /** The derivation itself: "Latin taciturnus, from tacitus silent". */
+  /** The derivation itself: "taciturnus" or "ad- toward + culture". */
   origin?: string
+  /** Words sharing this word's ancestry, from the dictionary. */
+  related?: string[]
 }
 
 export function sortKey(word: string): string {
@@ -81,6 +83,7 @@ export async function createDeck(
       meaning: e.meaning?.trim() ?? '',
       originLang: e.originLang?.trim() || undefined,
       origin: e.origin?.trim() || undefined,
+      related: e.related?.length ? e.related : undefined,
     }))
     .filter((e) => e.word && e.meaning)
   if (opts.sort !== false) cleaned.sort((a, b) => sortKey(a.word).localeCompare(sortKey(b.word)))
@@ -102,6 +105,7 @@ export async function createDeck(
     meaning: e.meaning,
     originLang: e.originLang,
     origin: e.origin,
+    related: e.related,
     roots: familiesOf(e.word),
   }))
   for (let i = 0; i < rows.length; i += 500) {

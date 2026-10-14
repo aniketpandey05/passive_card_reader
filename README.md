@@ -4,6 +4,21 @@ Hands-free vocabulary review. A word appears on its own, pauses while you try to
 remember it, then shows the meaning and moves on. Bring any dictionary or word
 list; nothing leaves your device.
 
+## On a phone
+
+Pushing to `main` builds and deploys to GitHub Pages
+(`.github/workflows/deploy.yml`), then the app installs to the home screen from
+the browser: Android and desktop Chrome get an **Install** button in the app
+itself, and iOS Safari gets the Share → Add to Home Screen instruction, since
+Safari has no install API. Installed, it opens full screen and works offline -
+decks, progress and settings are all on the device.
+
+One-time setup: **Settings → Pages → Source: GitHub Actions** in the repository.
+
+The first load is 118 KB gzipped. The 1,000-word deck is a separate 41 KB chunk
+fetched only when the deck is actually added, and PDF support (pdf.js and
+Tesseract, together far larger than the app) only when a PDF is opened.
+
 ## Run it
 
 ```bash
@@ -51,6 +66,36 @@ way, giving the true story where an analyzer could never find it - `ephemeral`
 is *epi-* + *hemera*, lasting but a day.
 
 ### Where the word came from
+
+Origins and related words come from **Wiktionary**, read through kaikki.org's
+machine-readable extracts (`scripts/fetch-wiktionary.mjs`, cached per word so a
+re-run costs nothing).
+
+| | with an origin | with related words |
+| --- | --- | --- |
+| Webster 1913 (GCIDE) | 586 / 1000 | — |
+| Wiktionary | **856 / 1000** | **689 / 1000** |
+
+Webster was the earlier source and it caps out, for a simple reason: it is a
+book from 1913 and has no entry for `absenteeism`, `acculturation` or anything
+coined since. Wiktionary is current, names the language in plain English, and
+already lists the related and derived forms the family row wants. It replaced
+GCIDE outright, which also retires the GPL dependency - Wiktionary text is
+CC BY-SA 3.0.
+
+Three things took the work. Some entries lead with a reconstruction tree
+(`Proto-Indo-European *h₂erk-…`) and put the readable prose last. Greek etymons
+are in Greek script with the romanization in parentheses - `ἐφήμερος
+(ephḗmeros)` - so the parenthetical is parsed and the romanization preferred,
+since `ἐφήμερος` on a card helps nobody. And Wiktionary files loose
+associations under "related terms", so `ephemeral` sits beside `unstable`;
+a relative now has to share word stock with the headword or its etymon.
+
+Where there is no language at all, a compound etymology still names the parts,
+which is the breakdown by another route: `acculturation` shows *ad- "toward" +
+culture + -ation "a process"*.
+
+### What the morpheme table adds on top
 
 A morpheme table can only explain words built from roots it knows. `taciturn`
 is Latin *taciturnus*, and an analyzer that knows `tac` still cannot account

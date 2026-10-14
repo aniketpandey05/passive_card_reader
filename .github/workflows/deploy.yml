@@ -30,6 +30,10 @@ jobs:
           # Pages serves the repository from a subdirectory.
           BASE_PATH: /passive_card_reader/
       - uses: actions/configure-pages@v5
+        with:
+          # Registers the Pages site through the API if it does not exist yet,
+          # so deployment does not depend on a setting being toggled by hand.
+          enablement: true
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist

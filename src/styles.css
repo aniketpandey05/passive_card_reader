@@ -305,8 +305,21 @@ h2.step {
 .player.playing .bar { opacity: 0.25; }
 .player.playing .bar:hover, .player .bar:focus-within { opacity: 1; }
 
-.crumb { flex: 1; text-align: center; color: var(--muted); font-size: 13px; }
-.crumb .sep { margin: 0 8px; opacity: 0.5; }
+/* One line, always. The deck name gives way before the position does: knowing
+   you are at 412 of 1,000 matters more than reading the name again. */
+.crumb {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: baseline;
+  color: var(--muted);
+  font-size: 13px;
+}
+.crumb-name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.crumb-count { flex: none; font-variant-numeric: tabular-nums; }
+.crumb-count::before { content: '·'; margin-right: 8px; opacity: 0.5; }
 
 .stage {
   display: grid;
@@ -636,3 +649,26 @@ input[type='range'] { accent-color: var(--accent); width: 150px; }
 .voice-tag { font-size: 12px; color: var(--muted); }
 .warn-note { color: #a3590f; }
 :root[data-theme='dark'] .warn-note { color: var(--accent); }
+
+/* ---------- touch ---------- */
+
+/* Vertical panning stays with the browser; sideways is the app's gesture. */
+.stage { touch-action: pan-y; }
+
+.hint-touch { display: none; }
+@media (hover: none) {
+  .hint-pointer { display: none; }
+  .hint-touch { display: inline; }
+  /* Thumb-sized transport controls, reachable at the bottom of the screen. */
+  .play { width: 68px; height: 68px; font-size: 23px; }
+  .buttons { gap: 14px; }
+  .buttons .icon { width: 52px; height: 52px; font-size: 21px; }
+  .bar .icon { width: 44px; height: 44px; }
+}
+@media (hover: none) {
+  /* The slider speaks for itself next to its value; the words cost a row. */
+  .speedrow span { display: none; }
+  .speedrow { gap: 14px; }
+  .speedrow input[type='range'] { width: min(62vw, 260px); }
+  .controls { gap: 12px; }
+}

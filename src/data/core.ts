@@ -1033,4 +1033,4 @@ export const CORE_PACK: RawEntry[] = TSV.trim()
   })
   .filter((e) => e.word && e.meaning)
 
-export const CORE_NAME = 'Core vocabulary (1000 words)'
+export const CORE_NAME = 'Core vocabulary'

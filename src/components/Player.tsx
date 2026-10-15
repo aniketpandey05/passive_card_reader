@@ -48,6 +48,8 @@ export default function Player({ deckId, startIdx, settings, onPatch, onExit }: 
   const idxRef = useRef(idx)
   const countRef = useRef(0)
   const historyRef = useRef<number[]>([])
+  const touchRef = useRef<{ x: number; y: number } | null>(null)
+  const swipedRef = useRef(false)
 
   useEffect(() => {
     idxRef.current = idx
@@ -120,9 +122,41 @@ export default function Player({ deckId, startIdx, settings, onPatch, onExit }: 
   }, [entry])
 
   const onStageClick = useCallback(() => {
+    // A swipe ends in a click too; the gesture has already been acted on.
+    if (swipedRef.current) {
+      swipedRef.current = false
+      return
+    }
     if (phase === 'word') reveal()
     else next()
   }, [phase, reveal, next])
+
+  /**
+   * Swipe to move between cards. Tapping reveals, so moving on needs its own
+   * gesture, and on a phone reaching the arrow buttons means moving your thumb
+   * across the screen.
+   */
+  const onTouchStart = useCallback((e: React.TouchEvent) => {
+    const touch = e.touches[0]
+    touchRef.current = { x: touch.clientX, y: touch.clientY }
+  }, [])
+
+  const onTouchEnd = useCallback(
+    (e: React.TouchEvent) => {
+      const start = touchRef.current
+      touchRef.current = null
+      if (!start) return
+      const touch = e.changedTouches[0]
+      const dx = touch.clientX - start.x
+      const dy = touch.clientY - start.y
+      // Clearly sideways, and far enough to be deliberate rather than a scroll.
+      if (Math.abs(dx) < 48 || Math.abs(dx) < Math.abs(dy) * 1.5) return
+      swipedRef.current = true
+      if (dx < 0) next()
+      else prev()
+    },
+    [next, prev],
+  )
 
   const restart = useCallback(() => {
     historyRef.current = []
@@ -264,9 +298,10 @@ export default function Player({ deckId, startIdx, settings, onPatch, onExit }: 
           ←
         </button>
         <div className="crumb">
-          {deckName}
-          <span className="sep">·</span>
-          {count ? idx + 1 : 0} / {count}
+          <span className="crumb-name">{deckName}</span>
+          <span className="crumb-count">
+            {count ? idx + 1 : 0} / {count}
+          </span>
         </div>
         <button
           className={entry?.starred ? 'icon starred' : 'icon'}
@@ -282,7 +317,7 @@ export default function Player({ deckId, startIdx, settings, onPatch, onExit }: 
         </button>
       </header>
 
-      <main className="stage" onClick={onStageClick}>
+      <main className="stage" onClick={onStageClick} onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
         {finished ? (
           <div className="done">
             <p>That's the end of the deck.</p>
@@ -362,7 +397,10 @@ export default function Player({ deckId, startIdx, settings, onPatch, onExit }: 
                 </div>
               ) : (
                 <p className="hint">
-                  tap, or press <kbd>↓</kbd>
+                  <span className="hint-pointer">
+                    tap, or press <kbd>↓</kbd>
+                  </span>
+                  <span className="hint-touch">tap to reveal · swipe to move on</span>
                 </p>
               )}
             </div>

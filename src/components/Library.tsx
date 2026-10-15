@@ -160,7 +160,9 @@ export default function Library({ settings, onPatch, onPlay, onPdf }: Props) {
         </>
       )}
 
-      {rows !== null && rows.length > 0 && !rows.some((r) => r.name === CORE_NAME) && !importing && (
+      {/* Keyed on the source, not the name: renaming the built-in deck should
+          not make the app offer it again alongside the copy already added. */}
+      {rows !== null && rows.length > 0 && !rows.some((r) => r.source === 'built in') && !importing && (
         <p className="hint" style={{ marginTop: 20 }}>
           <button className="btn small ghost" onClick={() => void addStarter()}>
             Add the built-in {CORE_COUNT}-word deck

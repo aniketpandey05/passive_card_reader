@@ -53,7 +53,8 @@ export interface Settings {
   /** Show the Latin/Greek breakdown under the meaning when one is known. */
   showParts: boolean
   order: Order
-  theme: 'light' | 'dark'
+  /** "system" follows the device, which is what a phone at night wants. */
+  theme: 'light' | 'dark' | 'system'
 }
 
 export const DEFAULT_SETTINGS: Settings = {
@@ -67,5 +68,5 @@ export const DEFAULT_SETTINGS: Settings = {
   speakMeaning: true,
   showParts: true,
   order: 'alpha',
-  theme: 'light',
+  theme: 'system',
 }

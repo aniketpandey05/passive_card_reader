@@ -223,6 +223,9 @@ export default function SettingsSheet({ settings, onPatch, onClose }: Props) {
           <div className="label">
             <b>Theme</b>
             <span className="segmented">
+              <button aria-pressed={settings.theme === 'system'} onClick={() => onPatch({ theme: 'system' })}>
+                Auto
+              </button>
               <button aria-pressed={settings.theme === 'light'} onClick={() => onPatch({ theme: 'light' })}>
                 Light
               </button>

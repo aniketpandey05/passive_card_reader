@@ -9,10 +9,32 @@
   --accent-soft: #e7eff6;
   /* Shadows tinted with the ink colour rather than neutral black: a grey
      shadow over a cool ground reads as dirt. */
+  --on-accent: #ffffff;
+  --warn: #8a5a12;
   --shadow: 0 1px 2px rgba(15, 23, 42, 0.04), 0 10px 28px rgba(15, 23, 42, 0.05);
   --serif: Georgia, 'Iowan Old Style', 'Palatino Linotype', Palatino, 'Times New Roman', serif;
   --sans: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   color-scheme: light;
+}
+
+/* Dark is defined twice on purpose: once for the device's own setting, once
+   for an explicit choice. Without the first, a phone in night mode opens a
+   bright white card. The :not() keeps a deliberate "light" winning over it. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --bg: #0b1017;
+    --surface: #141c25;
+    --ink: #e8eef6;
+    --ink-soft: #c3cedb;
+    --muted: #8496aa;
+    --line: #212c38;
+    --accent: #79b2db;
+    --accent-soft: #15212c;
+    --on-accent: #0b1017;
+    --warn: #e0b36a;
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 10px 28px rgba(0, 0, 0, 0.4);
+    color-scheme: dark;
+  }
 }
 
 :root[data-theme='dark'] {
@@ -24,6 +46,8 @@
   --line: #212c38;
   --accent: #79b2db;
   --accent-soft: #15212c;
+  --on-accent: #0b1017;
+  --warn: #e0b36a;
   --shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 10px 28px rgba(0, 0, 0, 0.4);
   color-scheme: dark;
 }
@@ -83,8 +107,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
 }
 .btn:hover { border-color: var(--muted); }
 .btn:active { transform: translateY(1px); }
-.btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
-:root[data-theme='dark'] .btn.primary { color: #14130f; }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
 .btn.ghost { background: transparent; }
 .btn.danger { color: #a33; border-color: transparent; background: transparent; }
 .btn:disabled { opacity: 0.45; cursor: not-allowed; }
@@ -201,8 +224,7 @@ textarea.paste {
 .row { display: flex; flex-wrap: wrap; gap: 12px; align-items: flex-end; margin-top: 14px; }
 .row > .field { flex: 1 1 130px; }
 
-.warn { color: #a3590f; font-size: 13.5px; line-height: 1.5; margin: 12px 0 0; }
-:root[data-theme='dark'] .warn { color: #e0a066; }
+.warn { color: var(--warn); font-size: 13.5px; line-height: 1.5; margin: 12px 0 0; }
 
 .preview { width: 100%; border-collapse: collapse; margin-top: 14px; font-size: 13.5px; }
 .preview th {
@@ -271,7 +293,6 @@ h2.step {
   font-weight: 600;
   white-space: nowrap;
 }
-:root[data-theme='dark'] .chip { color: var(--accent); }
 
 .editrow { flex: 1; display: grid; gap: 8px; padding: 10px 6px; }
 .editrow input, .editrow textarea {
@@ -468,13 +489,12 @@ h2.step {
   border-radius: 50%;
   border: 1px solid var(--line);
   background: var(--accent);
-  color: #fff;
+  color: var(--on-accent);
   font-size: 22px;
   display: grid;
   place-items: center;
   box-shadow: var(--shadow);
 }
-:root[data-theme='dark'] .play { color: #14130f; }
 
 .speedrow { display: flex; align-items: center; gap: 10px; color: var(--muted); font-size: 12.5px; }
 input[type='range'] { accent-color: var(--accent); width: 150px; }
@@ -649,8 +669,7 @@ input[type='range'] { accent-color: var(--accent); width: 150px; }
 .voice-pick { flex: 1; text-align: left; background: transparent; border: 0; padding: 8px 10px; display: grid; gap: 2px; }
 .voice-name { font-size: 14.5px; font-weight: 500; }
 .voice-tag { font-size: 12px; color: var(--muted); }
-.warn-note { color: #a3590f; }
-:root[data-theme='dark'] .warn-note { color: var(--accent); }
+.warn-note { color: var(--warn); }
 
 /* ---------- touch ---------- */
 
@@ -699,3 +718,19 @@ input[type='range'] { accent-color: var(--accent); width: 150px; }
 /* The empty dashed box was the loudest thing on the import screen. */
 .drop { border-style: solid; background: var(--surface); padding: 26px 20px; }
 .drop.over { border-style: dashed; }
+
+/* ---------- quieter while playing ---------- */
+
+/* The card is the point; the transport recedes until wanted. It stays fully
+   usable - this is opacity, not a hidden control. */
+.player.playing .controls { opacity: 0.5; transition: opacity 0.4s; }
+.player .controls { transition: opacity 0.25s; }
+.player.playing .controls:hover,
+.player .controls:focus-within,
+.player.playing .controls:active { opacity: 1; }
+
+/* Destructive actions should be findable, not the loudest thing on the card.
+   The confirmation step carries the warning colour instead. */
+.btn.danger { color: var(--muted); }
+.btn.danger:hover { color: #b3261e; }
+.actions .btn.small.danger:not(:hover) { border-color: transparent; }

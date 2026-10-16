@@ -22,7 +22,11 @@ export default function App() {
   }, [])
 
   useEffect(() => {
-    if (settings) document.documentElement.dataset.theme = settings.theme
+    if (!settings) return
+    // No attribute for "system": the stylesheet's prefers-color-scheme block
+    // then decides, and follows the device if it changes while open.
+    if (settings.theme === 'system') delete document.documentElement.dataset.theme
+    else document.documentElement.dataset.theme = settings.theme
   }, [settings])
 
   const patch = useCallback(async (p: Partial<Settings>) => {

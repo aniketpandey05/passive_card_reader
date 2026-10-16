@@ -152,6 +152,9 @@ export default function Player({ deckId, startIdx, settings, onPatch, onExit }: 
       // Clearly sideways, and far enough to be deliberate rather than a scroll.
       if (Math.abs(dx) < 48 || Math.abs(dx) < Math.abs(dy) * 1.5) return
       swipedRef.current = true
+      // A short tick confirms the gesture registered, which matters when the
+      // next word looks much like the last.
+      navigator.vibrate?.(8)
       if (dx < 0) next()
       else prev()
     },

@@ -1,28 +1,30 @@
 :root {
-  --bg: #faf9f7;
+  --bg: #f4f6f9;
   --surface: #ffffff;
-  --ink: #17150f;
-  --ink-soft: #46413a;
-  --muted: #7a7266;
-  --line: #e6e1d8;
-  --accent: #9c4221;
-  --accent-soft: #f4e6dc;
-  --shadow: 0 1px 2px rgba(23, 21, 15, 0.05), 0 8px 24px rgba(23, 21, 15, 0.06);
+  --ink: #0f172a;
+  --ink-soft: #334155;
+  --muted: #697a8f;
+  --line: #e1e7ef;
+  --accent: #2f6f95;
+  --accent-soft: #e7eff6;
+  /* Shadows tinted with the ink colour rather than neutral black: a grey
+     shadow over a cool ground reads as dirt. */
+  --shadow: 0 1px 2px rgba(15, 23, 42, 0.04), 0 10px 28px rgba(15, 23, 42, 0.05);
   --serif: Georgia, 'Iowan Old Style', 'Palatino Linotype', Palatino, 'Times New Roman', serif;
   --sans: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   color-scheme: light;
 }
 
 :root[data-theme='dark'] {
-  --bg: #14130f;
-  --surface: #1d1b16;
-  --ink: #f4eee3;
-  --ink-soft: #cfc7b8;
-  --muted: #968e80;
-  --line: #302c25;
-  --accent: #e0a066;
-  --accent-soft: #2b241b;
-  --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.35);
+  --bg: #0b1017;
+  --surface: #141c25;
+  --ink: #e8eef6;
+  --ink-soft: #c3cedb;
+  --muted: #8496aa;
+  --line: #212c38;
+  --accent: #79b2db;
+  --accent-soft: #15212c;
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 10px 28px rgba(0, 0, 0, 0.4);
   color-scheme: dark;
 }
 
@@ -368,8 +370,8 @@ h2.step {
   gap: 4px 10px;
   justify-content: center;
   align-items: baseline;
-  font-size: clamp(0.78rem, 2.9vw, 0.92rem);
-  line-height: 1.5;
+  font-size: clamp(0.95rem, 3.6vw, 1.05rem);
+  line-height: 1.55;
   color: var(--muted);
   animation: rise 0.5s ease-out;
 }
@@ -398,7 +400,7 @@ h2.step {
   gap: 4px 8px;
   justify-content: center;
   align-items: baseline;
-  font-size: clamp(0.76rem, 2.8vw, 0.88rem);
+  font-size: clamp(0.92rem, 3.4vw, 1rem);
   color: var(--muted);
 }
 .family .also { font-size: 0.95em; }
@@ -408,10 +410,10 @@ h2.step {
   background: var(--surface);
   color: var(--ink-soft);
   border-radius: 999px;
-  padding: 2px 10px;
+  padding: 5px 13px;
   font-family: var(--serif);
   font-size: 1em;
-  line-height: 1.6;
+  line-height: 1.5;
   transition: border-color 0.15s, color 0.15s;
 }
 .relative:hover { border-color: var(--accent); color: var(--accent); }
@@ -672,3 +674,28 @@ input[type='range'] { accent-color: var(--accent); width: 150px; }
   .speedrow input[type='range'] { width: min(62vw, 260px); }
   .controls { gap: 12px; }
 }
+
+/* ---------- minimal pass ---------- */
+
+/* Surfaces sit on the page rather than float above it: one hairline border
+   each, and shadows kept for things that genuinely overlay the page. */
+.deck,
+.import,
+.choice,
+.install,
+.voices li {
+  box-shadow: none;
+}
+.play { box-shadow: none; }
+
+/* Quieter progress: present when looked for, not competing with the word. */
+.phasebar { height: 2px; background: color-mix(in srgb, var(--line) 70%, transparent); }
+.track { height: 3px; background: color-mix(in srgb, var(--line) 70%, transparent); }
+
+.deck { padding: 18px 18px 16px; }
+.masthead { padding: 26px 0 4px; }
+.masthead p { font-size: 14.5px; }
+
+/* The empty dashed box was the loudest thing on the import screen. */
+.drop { border-style: solid; background: var(--surface); padding: 26px 20px; }
+.drop.over { border-style: dashed; }

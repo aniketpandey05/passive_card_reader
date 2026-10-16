@@ -181,7 +181,7 @@ export default function Player({ deckId, startIdx, settings, onPatch, onExit }: 
     })
     const spoken =
       settings.voice && toSay
-        ? speak(toSay, { rate: calmRate(settings.speed), voiceURI: settings.voiceURI })
+        ? speak(toSay, { rate: calmRate(settings.speed), pitch: settings.voicePitch, voiceURI: settings.voiceURI })
         : Promise.resolve()
 
     void Promise.all([held, spoken]).then(() => {

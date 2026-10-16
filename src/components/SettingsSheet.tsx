@@ -8,6 +8,7 @@ import {
   onlyLegacyVoices,
   speak,
   speechAvailable,
+  voiceGender,
   voiceQuality,
 } from '../lib/speech'
 import { useEscape } from '../lib/useEscape'
@@ -122,6 +123,8 @@ export default function SettingsSheet({ settings, onPatch, onClose }: Props) {
                         <span className="voice-name">{v.name.replace(/\s*\([^)]*\)\s*$/, '')}</span>
                         <span className="voice-tag">
                           {v.lang}
+                          {voiceGender(v) === 'male' && ' · male'}
+                          {voiceGender(v) === 'female' && ' · female'}
                           {quality === 'good' && ' · natural'}
                           {quality === 'legacy' && ' · older, robotic'}
                         </span>
@@ -133,6 +136,7 @@ export default function SettingsSheet({ settings, onPatch, onClose }: Props) {
                           cancelSpeech()
                           void speak('taciturn. Saying little by nature.', {
                             rate: calmRate(settings.speed),
+                            pitch: settings.voicePitch,
                             voiceURI: v.voiceURI,
                           })
                         }}
@@ -150,7 +154,25 @@ export default function SettingsSheet({ settings, onPatch, onClose }: Props) {
                   Manage voices adds the natural ones.
                 </span>
               )}
-              <label className="switch" style={{ marginTop: 8 }}>
+              <div className="label" style={{ marginTop: 14 }}>
+                <b>Depth</b>
+                <span className="val">{settings.voicePitch.toFixed(2)}</span>
+              </div>
+              <input
+                type="range"
+                min={0.5}
+                max={1.2}
+                step={0.05}
+                value={settings.voicePitch}
+                onChange={(e) => onPatch({ voicePitch: Number(e.target.value) })}
+                aria-label="Voice depth"
+              />
+              <span className="note">
+                Lower is deeper. Nothing in the browser reports whether a voice is male or female, so where a device
+                has no deep voice this is the lever that remains.
+              </span>
+
+              <label className="switch" style={{ marginTop: 12 }}>
                 <input
                   type="checkbox"
                   checked={settings.speakMeaning}

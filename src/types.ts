@@ -47,6 +47,8 @@ export interface Settings {
   wpm: number
   voice: boolean
   voiceURI: string | null
+  /** Speech pitch. Lower is deeper; the one lever every engine respects. */
+  voicePitch: number
   speakMeaning: boolean
   /** Show the Latin/Greek breakdown under the meaning when one is known. */
   showParts: boolean
@@ -61,6 +63,7 @@ export const DEFAULT_SETTINGS: Settings = {
   wpm: 140,
   voice: false,
   voiceURI: null,
+  voicePitch: 0.8,
   speakMeaning: true,
   showParts: true,
   order: 'alpha',

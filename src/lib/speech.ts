@@ -23,11 +23,89 @@ const GOOD_ENGINES = ['natural', 'neural', 'online', 'google', 'siri', 'premium'
 /** Legacy desktop voices, kept as a last resort rather than a preference. */
 const LEGACY_ENGINES = ['david', 'mark', 'zira', 'hazel', 'ravi', 'heera', 'george', 'susan', 'espeak', 'pico']
 
-/** Warmer, lower voices among the good engines, where the platform has them. */
-const WARM_NAMES = ['daniel', 'arthur', 'oliver', 'james', 'alex', 'rishi', 'guy', 'davis', 'ryan', 'aaron', 'male']
+/**
+ * The API exposes no gender, so the name is all there is to go on. These cover
+ * the voices Apple, Google, Microsoft and Android actually ship.
+ */
+const MALE_NAMES = [
+  'male', // "Google UK English Male" - tested after female, which contains it
+  'man',
+  'alex',
+  'daniel',
+  'fred',
+  'aaron',
+  'arthur',
+  'gordon',
+  'oliver',
+  'rishi',
+  'thomas',
+  'tom',
+  'reed',
+  'rocko',
+  'guy',
+  'davis',
+  'ryan',
+  'mark',
+  'david',
+  'james',
+  'george',
+  'william',
+  'liam',
+  'brian',
+  'christopher',
+  'eric',
+  'andrew',
+  'roger',
+  'steffan',
+  'ravi',
+  'prabhat',
+  'hemant',
+]
 
-/** Clearly not what was asked for, when there is a choice. */
-const OTHER_VOICE_NAMES = ['female', 'samantha', 'victoria', 'karen', 'moira', 'tessa', 'fiona', 'serena', 'catherine', 'zira', 'heera']
+const FEMALE_NAMES = [
+  'female',
+  'woman',
+  'samantha',
+  'victoria',
+  'karen',
+  'moira',
+  'tessa',
+  'fiona',
+  'serena',
+  'catherine',
+  'zira',
+  'heera',
+  'susan',
+  'allison',
+  'ava',
+  'joanna',
+  'kendra',
+  'kimberly',
+  'salli',
+  'nicole',
+  'emma',
+  'amy',
+  'aria',
+  'jenny',
+  'michelle',
+  'monica',
+  'sonia',
+  'libby',
+  'natasha',
+  'clara',
+  'nora',
+  'swara',
+  'kalpana',
+]
+
+/** 'male' | 'female' | null when the name gives nothing away. */
+export function voiceGender(voice: SpeechSynthesisVoice): 'male' | 'female' | null {
+  const name = voice.name.toLowerCase()
+  // Female first: "female" ends in "male", so the order decides correctness.
+  if (FEMALE_NAMES.some((hint) => name.includes(hint))) return 'female'
+  if (MALE_NAMES.some((hint) => name.includes(hint))) return 'male'
+  return null
+}
 
 export function voiceQuality(voice: SpeechSynthesisVoice): 'good' | 'plain' | 'legacy' {
   const name = voice.name.toLowerCase()
@@ -36,12 +114,17 @@ export function voiceQuality(voice: SpeechSynthesisVoice): 'good' | 'plain' | 'l
   return 'plain'
 }
 
+/**
+ * A male voice is what was asked for, so it outranks engine quality: a plain
+ * male voice beats a polished female one for this purpose, which the engine
+ * score alone would get backwards.
+ */
 function voiceScore(voice: SpeechSynthesisVoice): number {
-  const name = voice.name.toLowerCase()
   const quality = voiceQuality(voice)
-  let score = quality === 'good' ? 8 : quality === 'legacy' ? 0 : 4
-  if (WARM_NAMES.some((hint) => name.includes(hint))) score += 3
-  if (OTHER_VOICE_NAMES.some((hint) => name.includes(hint))) score -= 2
+  const gender = voiceGender(voice)
+  let score = quality === 'good' ? 4 : quality === 'legacy' ? 0 : 2
+  if (gender === 'male') score += 6
+  if (gender === 'female') score -= 5
   if (/^en-(gb|us|au|ie)/i.test(voice.lang)) score += 1
   return score
 }
@@ -83,15 +166,17 @@ export function calmRate(speed: number): number {
   return Math.min(Math.max(0.9 + (speed - 1) * 0.25, 0.75), 1.35)
 }
 
-export function speak(text: string, opts: { rate?: number; voiceURI?: string | null } = {}): Promise<void> {
+export function speak(
+  text: string,
+  opts: { rate?: number; pitch?: number; voiceURI?: string | null } = {},
+): Promise<void> {
   if (!speechAvailable() || !text.trim()) return Promise.resolve()
   return new Promise((resolve) => {
     const u = new SpeechSynthesisUtterance(text)
     u.rate = Math.min(Math.max(opts.rate ?? 1, 0.5), 2)
-    // Only a touch below default. Pushing pitch further down reads as muffled
-    // on the older engines rather than calm - they resample rather than
-    // resynthesise, so the artefacts get louder along with the warmth.
-    u.pitch = 0.95
+    // Depth is a setting because which voices a device has is out of the app's
+    // hands, and pitch is the one lever that works on all of them.
+    u.pitch = Math.min(Math.max(opts.pitch ?? 0.85, 0.5), 1.5)
     const chosen = opts.voiceURI
       ? window.speechSynthesis.getVoices().find((v) => v.voiceURI === opts.voiceURI)
       : preferredVoice()

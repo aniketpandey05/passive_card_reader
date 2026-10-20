@@ -330,6 +330,9 @@ export default function Player({ deckId, startIdx, settings, onPatch, onExit }: 
           </div>
         ) : entry ? (
           <>
+            {/* The idea a word sits under, in dictionaries grouped by concept
+                rather than alphabet. It is the reason to read Roget in order. */}
+            {entry.theme && <div className="theme">{entry.theme}</div>}
             {/* keyed so each new word replays the fade-in */}
             <div className="word" key={entry.idx}>
               {entry.word}

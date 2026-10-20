@@ -29,6 +29,8 @@ export interface Entry {
   synonyms?: string[]
   /** Words that mean the opposite. */
   antonyms?: string[]
+  /** The idea this word sits under, for dictionaries grouped by concept. */
+  theme?: string
   /** Root families this word belongs to, indexed for "words sharing this root". */
   roots?: string[]
   /** 1 when marked important. Numeric because IndexedDB cannot index booleans. */

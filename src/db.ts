@@ -63,6 +63,8 @@ export interface RawEntry {
   synonyms?: string[]
   /** Words that mean the opposite. */
   antonyms?: string[]
+  /** The idea this word sits under, for dictionaries grouped by concept. */
+  theme?: string
 }
 
 export function sortKey(word: string): string {
@@ -98,6 +100,7 @@ export async function createDeck(
       related: e.related?.length ? e.related : undefined,
       synonyms: e.synonyms?.length ? e.synonyms : undefined,
       antonyms: e.antonyms?.length ? e.antonyms : undefined,
+      theme: e.theme?.trim() || undefined,
     }))
     .filter((e) => e.word && e.meaning)
   if (opts.sort !== false) cleaned.sort((a, b) => sortKey(a.word).localeCompare(sortKey(b.word)))
@@ -122,6 +125,7 @@ export async function createDeck(
     related: e.related,
     synonyms: e.synonyms,
     antonyms: e.antonyms,
+    theme: e.theme,
     roots: familiesOf(e.word),
   }))
   for (let i = 0; i < rows.length; i += 500) {

@@ -1,7 +1,8 @@
 import { useCallback, useEffect, useState } from 'react'
 import { createDeck, db, deleteDeck } from '../db'
 import type { Deck, Settings } from '../types'
-import { CORE_COUNT, CORE_NAME } from '../data/core-meta'
+import type { Pack } from '../data/packs'
+import { PACKS } from '../data/packs'
 import ImportPanel from './ImportPanel'
 import InstallBanner from './InstallBanner'
 import SettingsSheet from './SettingsSheet'
@@ -23,6 +24,9 @@ export default function Library({ settings, onPatch, onPlay, onPdf }: Props) {
   const [showSettings, setShowSettings] = useState(false)
   const [confirmDelete, setConfirmDelete] = useState<number | null>(null)
 
+  const taken = new Set((rows ?? []).map((r) => r.source))
+  const missingPacks = PACKS.filter((p) => !taken.has(p.source))
+
   const load = useCallback(async () => {
     const decks = await db.decks.toArray()
     const progress = await db.progress.toArray()
@@ -39,13 +43,20 @@ export default function Library({ settings, onPatch, onPlay, onPdf }: Props) {
     void load()
   }, [load])
 
-  const addStarter = async () => {
-    // Loaded on demand: a thousand definitions should not be part of the first
-    // page load on a phone, when most sessions are just resuming a deck.
-    const { CORE_PACK } = await import('../data/core')
-    const id = await createDeck(CORE_NAME, 'built in', CORE_PACK)
-    await load()
-    onPlay(id, 0)
+  const [adding, setAdding] = useState<string | null>(null)
+
+  const addPack = async (pack: Pack) => {
+    setAdding(pack.id)
+    try {
+      // Loaded on demand: a dictionary should not be part of the first page
+      // load on a phone, when most sessions are just resuming a deck.
+      const entries = await pack.load()
+      const id = await createDeck(pack.name, pack.source, entries, { sort: pack.sort })
+      await load()
+      onPlay(id, 0)
+    } finally {
+      setAdding(null)
+    }
   }
 
   const remove = async (deckId: number) => {
@@ -82,16 +93,21 @@ export default function Library({ settings, onPatch, onPlay, onPdf }: Props) {
       {rows === null ? (
         <p className="hint">Loading…</p>
       ) : rows.length === 0 && !importing ? (
-        // Two ways in, each a full-width target rather than a paragraph with
+        // Each dictionary is a full-width target rather than a paragraph with
         // buttons under it - this is the whole screen on a phone.
         <div className="choices">
-          <button className="choice primary" onClick={() => void addStarter()}>
-            <span className="choice-title">Start with {CORE_COUNT.toLocaleString()} words</span>
-            <span className="choice-note">
-              Worth knowing, in alphabetical order, with where each word comes from and what it is related to.
-            </span>
-            <span className="choice-go">Begin →</span>
-          </button>
+          {PACKS.map((pack, i) => (
+            <button
+              key={pack.id}
+              className={i === 0 ? 'choice primary' : 'choice'}
+              disabled={adding !== null}
+              onClick={() => void addPack(pack)}
+            >
+              <span className="choice-title">{pack.name}</span>
+              <span className="choice-note">{pack.blurb}</span>
+              <span className="choice-go">{adding === pack.id ? 'Adding…' : 'Begin →'}</span>
+            </button>
+          ))}
           <button className="choice" onClick={() => setImporting(true)}>
             <span className="choice-title">Use your own dictionary</span>
             <span className="choice-note">
@@ -160,14 +176,23 @@ export default function Library({ settings, onPatch, onPlay, onPdf }: Props) {
         </>
       )}
 
-      {/* Keyed on the source, not the name: renaming the built-in deck should
-          not make the app offer it again alongside the copy already added. */}
-      {rows !== null && rows.length > 0 && !rows.some((r) => r.source === 'built in') && !importing && (
-        <p className="hint" style={{ marginTop: 20 }}>
-          <button className="btn small ghost" onClick={() => void addStarter()}>
-            Add the built-in {CORE_COUNT}-word deck
-          </button>
-        </p>
+      {/* Dictionaries not yet taken. Keyed on the source rather than the name,
+          so renaming a deck cannot make the app offer a second copy of it. */}
+      {rows !== null && rows.length > 0 && !importing && missingPacks.length > 0 && (
+        <>
+          <div className="section-head">
+            <h2>Dictionaries</h2>
+          </div>
+          <div className="choices">
+            {missingPacks.map((pack) => (
+              <button key={pack.id} className="choice" disabled={adding !== null} onClick={() => void addPack(pack)}>
+                <span className="choice-title">{pack.name}</span>
+                <span className="choice-note">{pack.blurb}</span>
+                <span className="choice-go">{adding === pack.id ? 'Adding…' : 'Add →'}</span>
+              </button>
+            ))}
+          </div>
+        </>
       )}
 
       {!importing && <InstallBanner />}

@@ -1,0 +1,53 @@
+MIT License
+
+Copyright (c) 2026 Aniket Pandey
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+THE DICTIONARY DATA IS NOT COVERED BY THE MIT LICENCE ABOVE.
+
+The generated files under src/data carry the terms of the sources they were
+built from. The MIT licence covers the code; these carry their own:
+
+  src/data/core.ts, roget.ts, webster.ts, glossary.ts
+
+* WordNet 3.0 - definitions, synonyms and antonyms.
+  Copyright 2006 by Princeton University. All rights reserved. Used under the
+  WordNet licence, which permits use, copying, modification and distribution
+  for any purpose, commercial or otherwise, provided its copyright notice and
+  terms travel with any copy.
+
+* Wiktionary - word origins and related words, via kaikki.org.
+  Licensed CC BY-SA 3.0. Redistribution requires attribution and that
+  derivative works of that content carry the same licence.
+
+* Webster's Revised Unabridged Dictionary (1913) - public domain.
+  This is the 1913 edition, not the modern Merriam-Webster dictionary, which
+  is copyrighted and is not used here.
+
+* Roget's Thesaurus (1911) - public domain.
+
+* Google Web Trillion Word Corpus frequency ranks - open data, used only to
+  decide which words are worth a card.
+
+Anyone redistributing this project, or reusing the generated data files,
+should carry these notices with them. The build scripts in scripts/ can
+regenerate every one of those files from their sources.

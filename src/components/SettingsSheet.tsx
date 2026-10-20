@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react'
+import Sources from './Sources'
+import YourData from './YourData'
 import type { Settings } from '../types'
 import {
   calmRate,
@@ -235,6 +237,9 @@ export default function SettingsSheet({ settings, onPatch, onClose }: Props) {
             </span>
           </div>
         </div>
+
+        <YourData onRestored={onClose} />
+        <Sources />
 
         <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: 18 }}>
           <button className="btn primary" onClick={onClose}>

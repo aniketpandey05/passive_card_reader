@@ -135,6 +135,54 @@ export async function createDeck(
   return deckId
 }
 
+/**
+ * Everything the app holds, as one file.
+ *
+ * All of it lives in this browser's storage and nowhere else, so clearing site
+ * data would take a dictionary that took an hour of recognition to import.
+ * This is the way out.
+ */
+export interface Backup {
+  version: 1
+  exportedAt: string
+  settings: Settings
+  decks: (Deck & { entries: Entry[] })[]
+}
+
+export async function exportBackup(): Promise<Backup> {
+  const decks = await db.decks.toArray()
+  const progress = new Map((await db.progress.toArray()).map((p) => [p.deckId, p.idx]))
+  const out: Backup['decks'] = []
+  for (const deck of decks) {
+    if (deck.id === undefined) continue
+    const entries = await db.entries.where('deckId').equals(deck.id).toArray()
+    out.push({ ...deck, resumeIdx: progress.get(deck.id) ?? 0, entries } as Deck & { entries: Entry[] })
+  }
+  return { version: 1, exportedAt: new Date().toISOString(), settings: await getSettings(), decks: out }
+}
+
+export async function importBackup(backup: Backup): Promise<{ decks: number; words: number }> {
+  if (backup?.version !== 1 || !Array.isArray(backup.decks)) {
+    throw new Error('That file is not a WordFlow backup.')
+  }
+  let words = 0
+  for (const deck of backup.decks) {
+    const { entries, id: _ignored, resumeIdx, ...rest } = deck as Deck & {
+      entries: Entry[]
+      resumeIdx?: number
+    }
+    // Restored as new decks rather than overwriting: a backup should never
+    // destroy what is already here.
+    const deckId = await db.decks.add({ ...rest, entryCount: entries.length })
+    const rows = entries.map(({ id: _entryId, ...entry }) => ({ ...entry, deckId }))
+    for (let i = 0; i < rows.length; i += 500) await db.entries.bulkAdd(rows.slice(i, i + 500))
+    await db.progress.put({ deckId, idx: Math.min(resumeIdx ?? 0, Math.max(rows.length - 1, 0)), updatedAt: Date.now() })
+    words += rows.length
+  }
+  if (backup.settings) await saveSettings({ ...backup.settings, id: 'app' })
+  return { decks: backup.decks.length, words }
+}
+
 export async function deleteDeck(deckId: number): Promise<void> {
   await db.entries.where('deckId').equals(deckId).delete()
   await db.progress.delete(deckId)

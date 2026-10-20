@@ -194,11 +194,29 @@ pass over 43 sampled breakdowns found four wrong - `satiric` is *satura*
 the real cost of this feature, and it is the right cost: the alternative is
 confidently teaching a false derivation.
 
-## Where the words come from
+## The dictionaries
+
+Three ship with the app, each a named book rather than one blended pile, so you
+can take Roget without going to find a copy of Roget. Adding a fourth is a
+registry entry in `src/data/packs.ts` and a build script. Each loads only when
+it is added: the first page load is 121 KB and a dictionary costs 30-50 KB on
+top, once.
+
+| | words | what it is |
+| --- | --- | --- |
+| **Core vocabulary** | 1,000 | A to Z, modern definitions, with origins and relatives |
+| **Webster's 1913** | 900 | The public-domain dictionary in its own 1913 voice |
+| **Roget's Thesaurus** | 1,203 | Grouped by idea rather than alphabet, in Roget's order |
 
 ```bash
-npm run build:deck     # regenerates src/data/core.ts
+npm run build:deck      # src/data/core.ts
+npm run build:webster   # src/data/webster.ts
+npm run build:roget     # src/data/roget.ts
+npm run build:origins   # word origins, from Wiktionary
+npm run build:glossary  # meanings for the related words
 ```
+
+### Core vocabulary
 
 1,000 words: 279 written by hand, the rest built by `scripts/build-deck.mjs`
 from open data.
@@ -215,21 +233,45 @@ from open data.
   with a topical domain are dropped as jargon. Compounds of two common words
   (`workbook`, `workload`) and participles of common verbs (`abused`) go too.
 
-### Webster 1913 was tried first, and rejected
-
-It is the obvious public-domain dictionary, and it does not work for this. Its
-first sense is usually obsolete - *abate: "To beat down; to overthrow. [Obs.]"*,
-*candid: "White. [Obs.]"* - definitions are circular (*accessibility: "the
-quality of being accessible"*), literary citations run into the text (*"Judg.
-v"*), and the prose is a century old. Even after writing the cleaner, the deck
-it produced was full of `workshop`, `writer` and `zero`. WordNet gives
+Webster 1913 was tried first for these definitions and rejected for them: its
+first sense is usually obsolete (*abate: "To beat down; to overthrow. [Obs.]"*),
+some are circular (*accessibility: "the quality of being accessible"*), and the
+deck it produced was full of `workshop`, `writer` and `zero`. WordNet gives
 `acrimonious: "marked by strong resentment or cynicism"` instead.
 
-Roget's Thesaurus has the same problem for definitions - it has none - though it
-would suit a future "similar words" feature.
+That is an argument about which dictionary should supply *these* definitions,
+not about the book - which is why Webster ships as a dictionary of its own.
 
-A quarter of the deck is the honest number: `thwart`, `wary` and `staunch` are
-Germanic and have no Latin or Greek parts to show, so the app says nothing.
+### Webster's 1913
+
+Not a modern dictionary with old spelling: a different voice. *adventurer - a
+social pretender on the lookout for advancement* is not a definition WordNet
+would write, and that is the reason to read it.
+
+Most of `scripts/build-webster.mjs` is sifting. Senses marked obsolete are
+skipped. The definition is the first sentence and whatever follows is a
+literary illustration, so *"formerly called fixed air. His sparkling sallies
+bubbled up. Carlyle."* keeps only the first clause. Senses opening with a
+subject label - *(Gr. Myth.)*, *(Bot.)* - are encyclopedia entries rather than
+vocabulary, which is what took Adonis and his wild boar out. And stripping a
+parenthetical can leave a sentence hanging, as in *"a univalve mollusk of the
+genus"*, so a definition ending mid-phrase is rejected.
+
+This is the 1913 edition, which is public domain. The modern Merriam-Webster
+dictionary is copyrighted and is not used here.
+
+### Roget's Thesaurus
+
+Roget is organised by concept, and keeping that order is the point: the words
+for one idea arrive together, with the concept printed above the word. Two
+filters make a 1911 book usable - every word must exist in WordNet, which
+quietly drops *pauciloquy* and *obmutescence*, and must sit in a frequency
+band, which drops the merely obscure. Definitions come from WordNet, since
+Roget supplies none.
+
+Roget was also tried as a *source of synonyms* and failed badly there, for the
+same reason it succeeds as a deck: concept indexing. See "Similar and opposite
+words" above.
 
 ## Importing text
 
@@ -308,9 +350,27 @@ characters are misread (`acumen` → `acume`, a lost space in `of praise`). That
 is the reason the review step exists, and why the flags point at the rows most
 likely to be wrong.
 
+## Your data
+
+Decks, progress, stars and settings live in this browser's storage and nowhere
+else - no account, no server, nothing uploaded. That is the privacy story and
+also the risk, so **Settings → Your decks and progress** writes the lot to one
+JSON file and reads it back. Restoring adds decks rather than replacing them,
+so a backup can never destroy what is already there.
+
 ## Keyboard
 
-`Space` play/pause · `←` `→` previous/next · `↓` reveal now · `Esc` back
+`Space` play/pause · `←` `→` previous/next · `↓` reveal now · `S` star · `Esc` back
+
+On a phone: tap to reveal, swipe to move between cards.
+
+## Licence
+
+The code is MIT. The dictionary data is not: each generated file under
+`src/data` carries the terms of the source it was built from - WordNet's
+licence, Wiktionary's CC BY-SA, and the public domain for Webster 1913 and
+Roget 1911. See [LICENSE](LICENSE), and **Settings → Where the words come
+from** in the app.
 
 ## Where this is going
 

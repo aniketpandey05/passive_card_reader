@@ -84,8 +84,25 @@ function readData(pos) {
     if (bar === -1) continue
     const head = line.slice(0, bar)
     const fields = head.trim().split(/\s+/)
+
+    // A synset is a set of synonyms by construction, which is what makes
+    // WordNet a better thesaurus here than an actual thesaurus.
+    const wordCount = parseInt(fields[3], 16)
+    const words = []
+    for (let i = 0; i < wordCount; i++) words.push(fields[4 + i * 2].replace(/_/g, ' ').toLowerCase())
+
+    const rest = fields.slice(4 + wordCount * 2)
+    const pointerCount = Number(rest[0])
+    const antonyms = []
+    for (let i = 0; i < pointerCount; i++) {
+      const at = 1 + i * 4
+      if (rest[at] === '!') antonyms.push({ offset: rest[at + 1], pos: rest[at + 2] })
+    }
+
     byOffset.set(fields[0], {
       lexFile: Number(fields[1]),
+      words,
+      antonyms,
       gloss: line.slice(bar + 1).trim(),
       // ";c" marks a topical domain - anatomy, grammar, religion and the like.
       // Those are jargon rather than vocabulary, however rare the word is.
@@ -234,6 +251,30 @@ async function main() {
     console.log('run: node scripts/fetch-wiktionary.mjs\n')
   }
 
+  // Synonyms and antonyms for every entry, curated ones included: a word is
+  // held better beside its neighbours and against its opposite.
+  let withSynonyms = 0
+  for (const entry of entries) {
+    const word = entry.word.toLowerCase()
+    for (const pos of ['a', 'v', 'n', 'r']) {
+      const offset = index[pos].get(word)
+      if (!offset) continue
+      const synset = data[pos].get(offset)
+      if (!synset) continue
+
+      const synonyms = synset.words.filter((w) => w !== word && /^[a-z][a-z' -]{2,20}$/.test(w)).slice(0, 5)
+      const antonyms = synset.antonyms
+        .map((a) => data[a.pos === 's' ? 'a' : a.pos]?.get(a.offset)?.words?.[0])
+        .filter((w) => w && /^[a-z][a-z' -]{2,20}$/.test(w))
+        .slice(0, 3)
+
+      if (synonyms.length) entry.synonyms = synonyms
+      if (antonyms.length) entry.antonyms = antonyms
+      if (synonyms.length || antonyms.length) withSynonyms++
+      break
+    }
+  }
+
   let withOrigin = 0
   let withRelated = 0
   for (const entry of entries) {
@@ -253,7 +294,8 @@ async function main() {
   const tsv = entries
     .map(
       (e) =>
-        `${e.word}\t${e.pos ?? ''}\t${e.meaning}\t${e.originLang ?? ''}\t${e.origin ?? ''}\t${(e.related ?? []).join(' ')}`,
+        `${e.word}\t${e.pos ?? ''}\t${e.meaning}\t${e.originLang ?? ''}\t${e.origin ?? ''}\t${(e.related ?? []).join(' ')}` +
+        `\t${(e.synonyms ?? []).join(' ')}\t${(e.antonyms ?? []).join(' ')}`,
     )
     .join('\n')
     .replace(/\\/g, '\\\\')
@@ -286,7 +328,7 @@ ${tsv}
 export const CORE_PACK: RawEntry[] = TSV.trim()
   .split('\\n')
   .map((line) => {
-    const [word, pos, meaning, originLang, origin, related] = line.split('\\t')
+    const [word, pos, meaning, originLang, origin, related, synonyms, antonyms] = line.split('\\t')
     return {
       word,
       pos: pos || undefined,
@@ -294,6 +336,8 @@ export const CORE_PACK: RawEntry[] = TSV.trim()
       originLang: originLang || undefined,
       origin: origin || undefined,
       related: related ? related.split(' ') : undefined,
+      synonyms: synonyms ? synonyms.split(' ') : undefined,
+      antonyms: antonyms ? antonyms.split(' ') : undefined,
     }
   })
   .filter((e) => e.word && e.meaning)

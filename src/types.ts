@@ -25,6 +25,10 @@ export interface Entry {
   origin?: string
   /** Words sharing this word's ancestry, from the dictionary. */
   related?: string[]
+  /** Words that mean nearly the same, from WordNet's synsets. */
+  synonyms?: string[]
+  /** Words that mean the opposite. */
+  antonyms?: string[]
   /** Root families this word belongs to, indexed for "words sharing this root". */
   roots?: string[]
   /** 1 when marked important. Numeric because IndexedDB cannot index booleans. */

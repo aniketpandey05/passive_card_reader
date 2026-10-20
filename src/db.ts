@@ -59,6 +59,10 @@ export interface RawEntry {
   origin?: string
   /** Words sharing this word's ancestry, from the dictionary. */
   related?: string[]
+  /** Words that mean nearly the same, from WordNet's synsets. */
+  synonyms?: string[]
+  /** Words that mean the opposite. */
+  antonyms?: string[]
 }
 
 export function sortKey(word: string): string {
@@ -92,6 +96,8 @@ export async function createDeck(
       originLang: e.originLang?.trim() || undefined,
       origin: e.origin?.trim() || undefined,
       related: e.related?.length ? e.related : undefined,
+      synonyms: e.synonyms?.length ? e.synonyms : undefined,
+      antonyms: e.antonyms?.length ? e.antonyms : undefined,
     }))
     .filter((e) => e.word && e.meaning)
   if (opts.sort !== false) cleaned.sort((a, b) => sortKey(a.word).localeCompare(sortKey(b.word)))
@@ -114,6 +120,8 @@ export async function createDeck(
     originLang: e.originLang,
     origin: e.origin,
     related: e.related,
+    synonyms: e.synonyms,
+    antonyms: e.antonyms,
     roots: familiesOf(e.word),
   }))
   for (let i = 0; i < rows.length; i += 500) {

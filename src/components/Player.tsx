@@ -382,6 +382,44 @@ export default function Player({ deckId, startIdx, settings, onPatch, onExit }: 
                       ))}
                     </p>
                   )}
+                  {(entry.synonyms?.length || entry.antonyms?.length) && settings.showParts ? (
+                    <p className="family">
+                      {entry.synonyms?.length ? (
+                        <>
+                          <span className="also">similar</span>
+                          {entry.synonyms.map((w, i) => (
+                            <button
+                              key={w}
+                              className="relative"
+                              onClick={(e) => {
+                                e.stopPropagation()
+                                setReading({ words: entry.synonyms as string[], at: i })
+                              }}
+                            >
+                              {w}
+                            </button>
+                          ))}
+                        </>
+                      ) : null}
+                      {entry.antonyms?.length ? (
+                        <>
+                          <span className="also opposite">opposite</span>
+                          {entry.antonyms.map((w, i) => (
+                            <button
+                              key={w}
+                              className="relative"
+                              onClick={(e) => {
+                                e.stopPropagation()
+                                setReading({ words: entry.antonyms as string[], at: i })
+                              }}
+                            >
+                              {w}
+                            </button>
+                          ))}
+                        </>
+                      ) : null}
+                    </p>
+                  ) : null}
                   {!relatives && dictionaryRelated.length > 0 && (
                     <p className="family">
                       <span className="also">related</span>

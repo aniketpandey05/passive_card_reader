@@ -94,12 +94,15 @@ async function main() {
   const block = /const TSV = `\n([\s\S]*?)\n`/.exec(deck)
   if (!block) throw new Error('no deck found; run build-deck.mjs first')
 
+  // Every word a card can offer: relatives, synonyms and opposites alike.
   const wanted = new Set()
   for (const line of block[1].trim().split('\n')) {
-    const related = line.split('\t')[5]
-    if (!related) continue
-    for (const w of related.split(' ')) {
-      if (/^[a-z]{3,20}$/.test(w)) wanted.add(w)
+    const columns = line.split('\t')
+    for (const column of [columns[5], columns[6], columns[7]]) {
+      if (!column) continue
+      for (const w of column.split(' ')) {
+        if (/^[a-z][a-z-]{2,19}$/.test(w)) wanted.add(w)
+      }
     }
   }
 

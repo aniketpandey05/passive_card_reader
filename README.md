@@ -121,6 +121,29 @@ has it.
 > takes a permissive licence, re-derive the origins from the Project Gutenberg
 > edition of Webster 1913, which is pure public domain.
 
+### Similar and opposite words
+
+Cards also carry synonyms and antonyms, tappable into the same small card:
+*laconic — similar: crisp, curt, terse*; *taciturn — opposite: voluble*.
+
+These come from **WordNet**, where a synset is a set of synonyms by
+construction and antonyms are an explicit pointer.
+
+**Roget's Thesaurus (1911) was tried first and rejected.** It is public domain
+and the obvious choice, but it is organised by concept rather than by word, so
+looking a word up lands in whichever concept block mentions it - often a
+different sense entirely:
+
+| word | Roget 1911 | WordNet |
+| --- | --- | --- |
+| `taciturn` | occultation, masquerade, cryptography, steganography | *(none, but opposite: voluble)* |
+| `candid` | argent, albification, etiolation, chalk, milk, lily | blunt, forthright, frank, outspoken |
+| `ephemeral` | evanescence, fugacity, caducity, nine days' wonder | passing, short-lived, transient, transitory |
+
+`candid` matched Roget's *whiteness* concept, through a sense the word no
+longer has. Add the 1911 vocabulary - *pauciloquy*, *obmutescence* - and it
+would teach the wrong word in the wrong century.
+
 ### Word families
 
 Under the breakdown, the card prints the cross-reference a dictionary would:

@@ -1,6 +1,7 @@
 import { Suspense, lazy, useCallback, useEffect, useState } from 'react'
 import { getSettings, saveSettings } from './db'
 import type { Settings } from './types'
+import Fault from './components/Fault'
 import Library from './components/Library'
 import Player from './components/Player'
 
@@ -15,10 +16,14 @@ type View =
 
 export default function App() {
   const [settings, setSettings] = useState<Settings | null>(null)
+  const [noStorage, setNoStorage] = useState(false)
   const [view, setView] = useState<View>({ name: 'library' })
 
   useEffect(() => {
-    void getSettings().then(setSettings)
+    getSettings().then(setSettings, (e: unknown) => {
+      console.error('Storage is unavailable:', e)
+      setNoStorage(true)
+    })
   }, [])
 
   useEffect(() => {
@@ -32,6 +37,19 @@ export default function App() {
   const patch = useCallback(async (p: Partial<Settings>) => {
     setSettings(await saveSettings(p))
   }, [])
+
+  // A private window, or site data switched off, makes IndexedDB throw the
+  // moment it is opened. Everything this app holds lives there, so the honest
+  // thing is to say so rather than sit on "Loading" for ever.
+  if (noStorage) {
+    return (
+      <Fault title="This browser will not let WordFlow save anything">
+        Your dictionaries, stars and progress are kept on the device, so WordFlow needs browser storage to work at
+        all. Private and incognito windows usually block it, as does switching off site data for this page. Opening
+        it in an ordinary window is normally all it takes.
+      </Fault>
+    )
+  }
 
   if (!settings) return <div className="boot">Loading…</div>
 

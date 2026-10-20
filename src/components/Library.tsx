@@ -23,19 +23,30 @@ export default function Library({ settings, onPatch, onPlay, onPdf }: Props) {
   const [picking, setPicking] = useState<Row | null>(null)
   const [showSettings, setShowSettings] = useState(false)
   const [confirmDelete, setConfirmDelete] = useState<number | null>(null)
+  const [loadError, setLoadError] = useState(false)
+  const [addError, setAddError] = useState<string | null>(null)
 
   const taken = new Set((rows ?? []).map((r) => r.source))
   const missingPacks = PACKS.filter((p) => !taken.has(p.source))
 
   const load = useCallback(async () => {
-    const decks = await db.decks.toArray()
-    const progress = await db.progress.toArray()
-    const at = new Map(progress.map((p) => [p.deckId, p.idx]))
-    const visible = decks
-      .filter((d): d is Deck & { id: number } => d.id !== undefined)
-      .sort((a, b) => b.createdAt - a.createdAt)
-    const starCounts = await Promise.all(visible.map((d) => countStarred(d.id)))
-    setRows(visible.map((d, i) => ({ ...d, resumeIdx: at.get(d.id) ?? 0, starred: starCounts[i] })))
+    setLoadError(false)
+    try {
+      const decks = await db.decks.toArray()
+      const progress = await db.progress.toArray()
+      const at = new Map(progress.map((p) => [p.deckId, p.idx]))
+      const visible = decks
+        .filter((d): d is Deck & { id: number } => d.id !== undefined)
+        .sort((a, b) => b.createdAt - a.createdAt)
+      const starCounts = await Promise.all(visible.map((d) => countStarred(d.id)))
+      setRows(visible.map((d, i) => ({ ...d, resumeIdx: at.get(d.id) ?? 0, starred: starCounts[i] })))
+    } catch (e) {
+      // A second tab still holding an older version of the database blocks the
+      // upgrade and nothing ever arrives. Left unsaid, that is a permanent
+      // "Loading", which reads as an app that is simply broken.
+      console.error('The library could not be read:', e)
+      setLoadError(true)
+    }
   }, [])
 
   useEffect(() => {
@@ -46,6 +57,7 @@ export default function Library({ settings, onPatch, onPlay, onPdf }: Props) {
 
   const addPack = async (pack: Pack) => {
     setAdding(pack.id)
+    setAddError(null)
     try {
       // Loaded on demand: a dictionary should not be part of the first page
       // load on a phone, when most sessions are just resuming a deck.
@@ -53,6 +65,12 @@ export default function Library({ settings, onPatch, onPlay, onPdf }: Props) {
       const id = await createDeck(pack.name, pack.source, entries, { sort: pack.sort })
       await load()
       onPlay(id, 0)
+    } catch (e) {
+      // Each dictionary is fetched the first time it is used, so a failure
+      // here is nearly always the connection. Without a word, the button just
+      // springs back and tapping it again looks equally dead.
+      console.error('The dictionary could not be added:', e)
+      setAddError(`${pack.name} could not be downloaded. It is fetched the first time you use it, so check your connection and try again.`)
     } finally {
       setAdding(null)
     }
@@ -89,7 +107,16 @@ export default function Library({ settings, onPatch, onPlay, onPdf }: Props) {
         </div>
       )}
 
-      {rows === null ? (
+      {loadError ? (
+        <div className="deck">
+          <p className="hint warn-note" style={{ margin: '0 0 12px' }}>
+            Your decks could not be read. If WordFlow is open in another tab, close it and try again.
+          </p>
+          <button className="btn" onClick={() => void load()}>
+            Try again
+          </button>
+        </div>
+      ) : rows === null ? (
         <p className="hint">Loading…</p>
       ) : rows.length === 0 && !importing ? (
         // Each dictionary is a full-width target rather than a paragraph with
@@ -107,6 +134,7 @@ export default function Library({ settings, onPatch, onPlay, onPdf }: Props) {
               <span className="choice-go">{adding === pack.id ? 'Adding…' : 'Begin →'}</span>
             </button>
           ))}
+          {addError && <p className="hint warn-note">{addError}</p>}
           <button className="choice" onClick={() => setImporting(true)}>
             <span className="choice-title">Use your own dictionary</span>
             <span className="choice-note">
@@ -188,6 +216,7 @@ export default function Library({ settings, onPatch, onPlay, onPdf }: Props) {
             <h2>Dictionaries</h2>
           </div>
           <div className="choices">
+            {addError && <p className="hint warn-note">{addError}</p>}
             {missingPacks.map((pack) => (
               <button key={pack.id} className="choice" disabled={adding !== null} onClick={() => void addPack(pack)}>
                 <span className="choice-title">{pack.name}</span>

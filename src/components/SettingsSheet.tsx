@@ -34,8 +34,10 @@ export default function SettingsSheet({ settings, onPatch, onClose }: Props) {
   return (
     <div className="scrim" onClick={onClose}>
       <div className="sheet" onClick={(e) => e.stopPropagation()} role="dialog" aria-label="Playback settings">
-        <h2>Playback</h2>
+        <h2>Settings</h2>
         <p className="sub">Everything here applies straight away, mid-session.</p>
+
+        <h3 className="group">Pacing</h3>
 
         <div className="setting">
           <div className="label">
@@ -87,6 +89,8 @@ export default function SettingsSheet({ settings, onPatch, onClose }: Props) {
             fair amount of time. Lower is slower.
           </span>
         </div>
+
+        <h3 className="group">Voice</h3>
 
         <div className="setting">
           <div className="label">
@@ -190,6 +194,8 @@ export default function SettingsSheet({ settings, onPatch, onClose }: Props) {
           )}
         </div>
 
+        <h3 className="group">Cards</h3>
+
         <div className="setting">
           <div className="label">
             <label className="switch">
@@ -240,6 +246,8 @@ export default function SettingsSheet({ settings, onPatch, onClose }: Props) {
           </div>
         </div>
 
+        <h3 className="group">Appearance</h3>
+
         <div className="setting">
           <div className="label">
             <b>Theme</b>
@@ -256,6 +264,8 @@ export default function SettingsSheet({ settings, onPatch, onClose }: Props) {
             </span>
           </div>
         </div>
+
+        <h3 className="group">Your data</h3>
 
         <YourData onRestored={onClose} />
         <Sources />

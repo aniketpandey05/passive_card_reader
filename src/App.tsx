@@ -10,7 +10,7 @@ const PdfImport = lazy(() => import('./components/PdfImport'))
 
 type View =
   | { name: 'library' }
-  | { name: 'player'; deckId: number; startIdx: number }
+  | { name: 'player'; deckId: number; startIdx: number; only?: 'starred' }
   | { name: 'pdf'; file: File }
 
 export default function App() {
@@ -40,6 +40,7 @@ export default function App() {
       <Player
         deckId={view.deckId}
         startIdx={view.startIdx}
+        only={view.only}
         settings={settings}
         onPatch={patch}
         onExit={() => setView({ name: 'library' })}
@@ -63,7 +64,7 @@ export default function App() {
     <Library
       settings={settings}
       onPatch={patch}
-      onPlay={(deckId, startIdx) => setView({ name: 'player', deckId, startIdx })}
+      onPlay={(deckId, startIdx, only) => setView({ name: 'player', deckId, startIdx, only })}
       onPdf={(file) => setView({ name: 'pdf', file })}
     />
   )

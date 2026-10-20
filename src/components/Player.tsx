@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
-import { db, familyWords, getEntry, setStarred } from '../db'
+import { db, familyWords, getEntry, setStarred, starredWords } from '../db'
 import type { Entry, Settings } from '../types'
 import { readMs, recallMs } from '../lib/timing'
 import { calmRate, cancelSpeech, speak } from '../lib/speech'
@@ -10,6 +10,8 @@ import WordCard from './WordCard'
 interface Props {
   deckId: number
   startIdx: number
+  /** 'starred' plays only the marked words. */
+  only?: 'starred'
   settings: Settings
   onPatch: (patch: Partial<Settings>) => void
   onExit: () => void
@@ -33,7 +35,7 @@ function SpeakerIcon({ on }: { on: boolean }) {
   )
 }
 
-export default function Player({ deckId, startIdx, settings, onPatch, onExit }: Props) {
+export default function Player({ deckId, startIdx, only, settings, onPatch, onExit }: Props) {
   const [idx, setIdx] = useState(startIdx)
   const [phase, setPhase] = useState<Phase>('word')
   const [playing, setPlaying] = useState(true)
@@ -44,10 +46,13 @@ export default function Player({ deckId, startIdx, settings, onPatch, onExit }: 
   const [showSettings, setShowSettings] = useState(false)
   /** Which related word is open in the mini card, if any. */
   const [reading, setReading] = useState<{ words: string[]; at: number } | null>(null)
+  /** Positions to walk, or null for the whole deck in order. */
+  const [sequence, setSequence] = useState<number[] | null>(null)
 
   const idxRef = useRef(idx)
   const countRef = useRef(0)
   const historyRef = useRef<number[]>([])
+  const sequenceRef = useRef<number[] | null>(null)
   const touchRef = useRef<{ x: number; y: number } | null>(null)
   const swipedRef = useRef(false)
 
@@ -57,6 +62,9 @@ export default function Player({ deckId, startIdx, settings, onPatch, onExit }: 
   useEffect(() => {
     countRef.current = count
   }, [count])
+  useEffect(() => {
+    sequenceRef.current = sequence
+  }, [sequence])
 
   useEffect(() => {
     void db.decks.get(deckId).then((deck) => {
@@ -65,6 +73,25 @@ export default function Player({ deckId, startIdx, settings, onPatch, onExit }: 
       setCount(deck.entryCount)
     })
   }, [deckId])
+
+  // Playing only the starred words walks a list of positions rather than
+  // counting upward, so everything below asks the sequence where "next" is.
+  useEffect(() => {
+    if (only !== 'starred') {
+      setSequence(null)
+      return
+    }
+    let live = true
+    void starredWords(deckId).then((words) => {
+      if (!live) return
+      const list = words.map((w) => w.idx).sort((a, b) => a - b)
+      setSequence(list)
+      if (list.length && !list.includes(idxRef.current)) setIdx(list[0])
+    })
+    return () => {
+      live = false
+    }
+  }, [deckId, only])
 
   useEffect(() => {
     let live = true
@@ -84,26 +111,43 @@ export default function Player({ deckId, startIdx, settings, onPatch, onExit }: 
     return () => clearTimeout(t)
   }, [deckId, idx])
 
+  /**
+   * A thousand words is not a session. Counting what has been seen today gives
+   * the run an end you can actually reach, instead of a number that only ever
+   * says you have barely started.
+   */
+  const countSeen = useCallback(() => {
+    const day = new Date().toISOString().slice(0, 10)
+    const seen = settings.sessionDate === day ? settings.sessionSeen + 1 : 1
+    onPatch({ sessionDate: day, sessionSeen: seen })
+  }, [settings.sessionDate, settings.sessionSeen, onPatch])
+
   const next = useCallback(() => {
-    const total = countRef.current
+    const sequence = sequenceRef.current
+    const total = sequence ? sequence.length : countRef.current
     const cur = idxRef.current
+    // Where we are in the run, which is the whole deck or only the starred.
+    const at = sequence ? sequence.indexOf(cur) : cur
+
     if (settings.order === 'shuffle' && total > 1) {
-      let n = cur
-      while (n === cur) n = Math.floor(Math.random() * total)
+      let n = at
+      while (n === at) n = Math.floor(Math.random() * total)
       historyRef.current.push(cur)
-      setIdx(n)
+      setIdx(sequence ? sequence[n] : n)
       setPhase('word')
+      countSeen()
       return
     }
-    if (cur + 1 >= total) {
+    if (at + 1 >= total) {
       setPlaying(false)
       setFinished(true)
       return
     }
     historyRef.current.push(cur)
-    setIdx(cur + 1)
+    setIdx(sequence ? sequence[at + 1] : cur + 1)
     setPhase('word')
-  }, [settings.order])
+    countSeen()
+  }, [settings.order, countSeen])
 
   const prev = useCallback(() => {
     const back = historyRef.current.pop()
@@ -111,6 +155,12 @@ export default function Player({ deckId, startIdx, settings, onPatch, onExit }: 
     setIdx(back ?? Math.max(0, idxRef.current - 1))
     setPhase('word')
   }, [])
+
+  const today = new Date().toISOString().slice(0, 10)
+  const seenToday = settings.sessionDate === today ? settings.sessionSeen : 0
+  // The limit is there to give an endless deck an end. A starred review is
+  // already a short, deliberate list, so it is exempt.
+  const sessionDone = only !== 'starred' && settings.sessionSize > 0 && seenToday >= settings.sessionSize
 
   const reveal = useCallback(() => setPhase('meaning'), [])
 
@@ -172,7 +222,7 @@ export default function Player({ deckId, startIdx, settings, onPatch, onExit }: 
   // The engine: hold the current phase for its duration (and until the voice
   // has finished, if it is on), then reveal the meaning or move to the next word.
   useEffect(() => {
-    if (!playing || !entry || finished) return
+    if (!playing || !entry || finished || sessionDone) return
     const isWord = phase === 'word'
     const dur = isWord ? recallMs(settings) : readMs(entry.meaning, settings)
     const toSay = isWord ? entry.word : settings.speakMeaning ? entry.meaning : ''
@@ -198,7 +248,7 @@ export default function Player({ deckId, startIdx, settings, onPatch, onExit }: 
       if (timer) clearTimeout(timer)
       cancelSpeech()
     }
-  }, [playing, entry, phase, settings, finished, reveal, next])
+  }, [playing, entry, phase, settings, finished, sessionDone, reveal, next])
 
   // Don't let the screen sleep mid-session.
   useEffect(() => {
@@ -303,8 +353,11 @@ export default function Player({ deckId, startIdx, settings, onPatch, onExit }: 
         <div className="crumb">
           <span className="crumb-name">{deckName}</span>
           <span className="crumb-count">
-            {count ? idx + 1 : 0} / {count}
+            {sequence ? sequence.indexOf(idx) + 1 : idx + 1} / {sequence ? sequence.length : count}
           </span>
+          {settings.sessionSize > 0 && (
+            <span className="crumb-today">{Math.min(seenToday, settings.sessionSize)}/{settings.sessionSize} today</span>
+          )}
         </div>
         <button
           className={entry?.starred ? 'icon starred' : 'icon'}
@@ -321,9 +374,29 @@ export default function Player({ deckId, startIdx, settings, onPatch, onExit }: 
       </header>
 
       <main className="stage" onClick={onStageClick} onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
-        {finished ? (
+        {sessionDone && !finished ? (
+          // A finishing point, rather than a counter that always reads "barely
+          // started". Carrying on is one tap away for anyone who wants it.
           <div className="done">
-            <p>That's the end of the deck.</p>
+            <p className="done-mark">✓</p>
+            <p>
+              That's {settings.sessionSize} words today{only === 'starred' ? ', from your starred list' : ''}.
+            </p>
+            <div className="row" style={{ justifyContent: 'center' }}>
+              <button className="btn primary" onClick={onExit}>
+                Done for today
+              </button>
+              <button
+                className="btn"
+                onClick={() => onPatch({ sessionSeen: 0, sessionDate: today })}
+              >
+                Keep going
+              </button>
+            </div>
+          </div>
+        ) : finished ? (
+          <div className="done">
+            <p>{only === 'starred' ? "That's every starred word." : "That's the end of the deck."}</p>
             <button className="btn primary" onClick={restart}>
               Start again
             </button>

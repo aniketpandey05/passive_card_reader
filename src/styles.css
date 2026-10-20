@@ -771,3 +771,5 @@ input[type='range'] { accent-color: var(--accent); width: 150px; }
 .sources b { font-size: 13.5px; }
 .sources span { color: var(--muted); }
 .sources .terms { font-size: 12.5px; opacity: 0.9; }
+.crumb-today { flex: none; font-variant-numeric: tabular-nums; color: var(--accent); }
+.done-mark { font-size: 34px; color: var(--accent); margin: 0 0 -6px; }

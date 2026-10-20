@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from 'react'
-import { createDeck, db, deleteDeck } from '../db'
+import { countStarred, createDeck, db, deleteDeck } from '../db'
 import type { Deck, Settings } from '../types'
 import type { Pack } from '../data/packs'
 import { PACKS } from '../data/packs'
@@ -11,11 +11,11 @@ import StartPicker from './StartPicker'
 interface Props {
   settings: Settings
   onPatch: (patch: Partial<Settings>) => void
-  onPlay: (deckId: number, startIdx: number) => void
+  onPlay: (deckId: number, startIdx: number, only?: 'starred') => void
   onPdf: (file: File) => void
 }
 
-type Row = Deck & { id: number; resumeIdx: number }
+type Row = Deck & { id: number; resumeIdx: number; starred: number }
 
 export default function Library({ settings, onPatch, onPlay, onPdf }: Props) {
   const [rows, setRows] = useState<Row[] | null>(null)
@@ -31,12 +31,11 @@ export default function Library({ settings, onPatch, onPlay, onPdf }: Props) {
     const decks = await db.decks.toArray()
     const progress = await db.progress.toArray()
     const at = new Map(progress.map((p) => [p.deckId, p.idx]))
-    setRows(
-      decks
-        .filter((d): d is Deck & { id: number } => d.id !== undefined)
-        .sort((a, b) => b.createdAt - a.createdAt)
-        .map((d) => ({ ...d, resumeIdx: at.get(d.id) ?? 0 })),
-    )
+    const visible = decks
+      .filter((d): d is Deck & { id: number } => d.id !== undefined)
+      .sort((a, b) => b.createdAt - a.createdAt)
+    const starCounts = await Promise.all(visible.map((d) => countStarred(d.id)))
+    setRows(visible.map((d, i) => ({ ...d, resumeIdx: at.get(d.id) ?? 0, starred: starCounts[i] })))
   }, [])
 
   useEffect(() => {
@@ -136,6 +135,11 @@ export default function Library({ settings, onPatch, onPlay, onPdf }: Props) {
                 <button className="btn" onClick={() => setPicking(d)}>
                   Start from…
                 </button>
+                {d.starred > 0 && (
+                  <button className="btn" onClick={() => onPlay(d.id, 0, 'starred')}>
+                    ★ {d.starred}
+                  </button>
+                )}
                 <span style={{ flex: 1 }} />
                 {confirmDelete === d.id ? (
                   <>

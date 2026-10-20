@@ -209,6 +209,25 @@ export default function SettingsSheet({ settings, onPatch, onClose }: Props) {
 
         <div className="setting">
           <div className="label">
+            <b>Words in a sitting</b>
+            <span className="val">{settings.sessionSize === 0 ? 'no limit' : settings.sessionSize}</span>
+          </div>
+          <input
+            type="range"
+            min={0}
+            max={100}
+            step={5}
+            value={settings.sessionSize}
+            onChange={(e) => onPatch({ sessionSize: Number(e.target.value) })}
+          />
+          <span className="note">
+            A thousand words is not a sitting. Stopping at a set number gives the run an end you can reach; drag to
+            nothing to let it simply go on.
+          </span>
+        </div>
+
+        <div className="setting">
+          <div className="label">
             <b>Order</b>
             <span className="segmented">
               <button aria-pressed={settings.order === 'alpha'} onClick={() => onPatch({ order: 'alpha' })}>

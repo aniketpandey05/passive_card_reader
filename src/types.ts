@@ -58,6 +58,12 @@ export interface Settings {
   speakMeaning: boolean
   /** Show the Latin/Greek breakdown under the meaning when one is known. */
   showParts: boolean
+  /** Words to aim for in a sitting. 0 turns the idea off. */
+  sessionSize: number
+  /** The day the count below belongs to, as YYYY-MM-DD. */
+  sessionDate: string
+  /** New words seen on that day. */
+  sessionSeen: number
   order: Order
   /** "system" follows the device, which is what a phone at night wants. */
   theme: 'light' | 'dark' | 'system'
@@ -73,6 +79,9 @@ export const DEFAULT_SETTINGS: Settings = {
   voicePitch: 0.8,
   speakMeaning: true,
   showParts: true,
+  sessionSize: 20,
+  sessionDate: '',
+  sessionSeen: 0,
   order: 'alpha',
   theme: 'system',
 }

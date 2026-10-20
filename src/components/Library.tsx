@@ -107,7 +107,7 @@ export default function Library({ settings, onPatch, onPlay, onPdf }: Props) {
             <div className="deck" key={d.id}>
               <h3>{d.name}</h3>
               <div className="meta">
-                {d.entryCount.toLocaleString()} words · from {d.source}
+                {d.entryCount.toLocaleString()} words · {d.source}
                 {d.resumeIdx > 0 && ` · at word ${d.resumeIdx + 1}`}
               </div>
               <div className="track">

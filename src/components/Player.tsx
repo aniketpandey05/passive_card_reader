@@ -335,7 +335,9 @@ export default function Player({ deckId, startIdx, settings, onPatch, onExit }: 
               {entry.word}
             </div>
             {entry.pos && <div className="pos">{entry.pos}</div>}
-            <div className="meaning-slot">
+            {/* Announced when it appears: the reveal is the whole point of the
+                card, and a screen reader would otherwise never hear it. */}
+            <div className="meaning-slot" aria-live="polite" aria-atomic="true">
               {phase === 'meaning' ? (
                 <div key={entry.idx}>
                   <p className="meaning">{entry.meaning}</p>

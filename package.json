@@ -13,7 +13,9 @@
     "check:parts": "esbuild fixtures/morphology-check.ts --bundle --platform=node --format=esm --packages=external --outfile=fixtures/.morph.mjs && node fixtures/.morph.mjs",
     "build:deck": "node scripts/build-deck.mjs 1000",
     "build:glossary": "node scripts/fetch-glossary.mjs",
-    "build:origins": "node scripts/fetch-wiktionary.mjs"
+    "build:origins": "node scripts/fetch-wiktionary.mjs",
+    "build:webster": "node scripts/build-webster.mjs 900",
+    "build:roget": "node scripts/build-roget.mjs 1200"
   },
   "type": "module",
   "dependencies": {

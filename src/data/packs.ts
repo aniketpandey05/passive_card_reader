@@ -1,6 +1,7 @@
 import type { RawEntry } from '../db'
 import { CORE_COUNT, CORE_NAME } from './core-meta'
 import { ROGET_COUNT, ROGET_NAME, ROGET_THEMES } from './roget-meta'
+import { WEBSTER_COUNT, WEBSTER_NAME } from './webster-meta'
 
 /**
  * The dictionaries that ship with the app.
@@ -31,6 +32,15 @@ export const PACKS: Pack[] = [
     source: 'built in',
     sort: true,
     load: async () => (await import('./core')).CORE_PACK,
+  },
+  {
+    id: 'webster',
+    name: WEBSTER_NAME,
+    blurb: `${WEBSTER_COUNT.toLocaleString()} entries in the words of 1913, from the public-domain dictionary that today's Merriam-Webster grew out of. The period voice is the reason to read it.`,
+    count: WEBSTER_COUNT,
+    source: "webster's 1913",
+    sort: true,
+    load: async () => (await import('./webster')).WEBSTER_PACK,
   },
   {
     id: 'roget',

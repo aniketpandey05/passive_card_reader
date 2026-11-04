@@ -13,16 +13,19 @@ interface Props {
   onPatch: (patch: Partial<Settings>) => void
   onPlay: (deckId: number, startIdx: number, only?: 'starred') => void
   onPdf: (file: File) => void
+  /** Pasted prose goes to the word-picking flow. */
+  onText: (text: string) => void
 }
 
 type Row = Deck & { id: number; resumeIdx: number; starred: number }
 
-export default function Library({ settings, onPatch, onPlay, onPdf }: Props) {
+export default function Library({ settings, onPatch, onPlay, onPdf, onText }: Props) {
   const [rows, setRows] = useState<Row[] | null>(null)
   const [importing, setImporting] = useState(false)
   const [picking, setPicking] = useState<Row | null>(null)
   const [showSettings, setShowSettings] = useState(false)
   const [confirmDelete, setConfirmDelete] = useState<number | null>(null)
+  const [menuFor, setMenuFor] = useState<number | null>(null)
   const [loadError, setLoadError] = useState(false)
   const [addError, setAddError] = useState<string | null>(null)
 
@@ -79,6 +82,7 @@ export default function Library({ settings, onPatch, onPlay, onPdf }: Props) {
   const remove = async (deckId: number) => {
     await deleteDeck(deckId)
     setConfirmDelete(null)
+    setMenuFor(null)
     await load()
   }
 
@@ -169,6 +173,9 @@ export default function Library({ settings, onPatch, onPlay, onPdf }: Props) {
                   </button>
                 )}
                 <span style={{ flex: 1 }} />
+                {/* Deleting a deck is the one thing here that cannot be undone,
+                    and it was sitting on every card beside the button people
+                    press daily. It now takes a deliberate look for it. */}
                 {confirmDelete === d.id ? (
                   <>
                     <span className="meta" style={{ margin: 0 }}>
@@ -181,9 +188,23 @@ export default function Library({ settings, onPatch, onPlay, onPdf }: Props) {
                       No
                     </button>
                   </>
+                ) : menuFor === d.id ? (
+                  <>
+                    <button className="btn small danger" onClick={() => setConfirmDelete(d.id)}>
+                      Delete deck
+                    </button>
+                    <button className="btn small ghost" onClick={() => setMenuFor(null)}>
+                      Close
+                    </button>
+                  </>
                 ) : (
-                  <button className="btn small danger" onClick={() => setConfirmDelete(d.id)}>
-                    Delete
+                  <button
+                    className="icon small"
+                    onClick={() => setMenuFor(d.id)}
+                    aria-label={`More for ${d.name}`}
+                    title="More"
+                  >
+                    ⋯
                   </button>
                 )}
               </div>
@@ -199,6 +220,7 @@ export default function Library({ settings, onPatch, onPlay, onPdf }: Props) {
           </div>
           <ImportPanel
             onPdf={onPdf}
+            onText={onText}
             onCancel={() => setImporting(false)}
             onDone={(id) => {
               setImporting(false)

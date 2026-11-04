@@ -66,6 +66,40 @@ export default function Player({ deckId, startIdx, only, settings, onPatch, onEx
     sequenceRef.current = sequence
   }, [sequence])
 
+  /**
+   * The controls behave like a video player's: there while paused, gone a few
+   * seconds into playing, back the moment the screen is touched. They used to
+   * fade to half and stay there, because the rule bringing them back was
+   * :hover - and a phone has no hover, so on the device this is built for they
+   * were simply dimmed for ever.
+   */
+  const [chrome, setChrome] = useState(true)
+  useEffect(() => {
+    if (!playing || reading || showSettings) {
+      setChrome(true)
+      return
+    }
+    let timer = 0
+    const hideSoon = () => {
+      window.clearTimeout(timer)
+      timer = window.setTimeout(() => setChrome(false), 2600)
+    }
+    const wake = () => {
+      setChrome(true)
+      hideSoon()
+    }
+    hideSoon()
+    window.addEventListener('pointerdown', wake)
+    window.addEventListener('pointermove', wake)
+    window.addEventListener('keydown', wake)
+    return () => {
+      window.clearTimeout(timer)
+      window.removeEventListener('pointerdown', wake)
+      window.removeEventListener('pointermove', wake)
+      window.removeEventListener('keydown', wake)
+    }
+  }, [playing, reading, showSettings])
+
   useEffect(() => {
     void db.decks.get(deckId).then((deck) => {
       if (!deck) return
@@ -342,10 +376,9 @@ export default function Player({ deckId, startIdx, only, settings, onPatch, onEx
   }, [])
 
   const phaseMs = entry ? (phase === 'word' ? recallMs(settings) : readMs(entry.meaning, settings)) : 0
-  const deckPct = count ? ((idx + 1) / count) * 100 : 0
 
   return (
-    <div className={playing ? 'player playing' : 'player'}>
+    <div className={`player${playing ? ' playing' : ''}${chrome ? '' : ' quiet'}`}>
       <header className="bar">
         <button className="icon" onClick={onExit} aria-label="Back to library" title="Back (Esc)">
           ←
@@ -563,24 +596,6 @@ export default function Player({ deckId, startIdx, only, settings, onPatch, onEx
           </button>
         </div>
 
-        <div className="speedrow">
-          <span>slower</span>
-          <input
-            type="range"
-            min={0.5}
-            max={2.5}
-            step={0.1}
-            value={settings.speed}
-            onChange={(e) => onPatch({ speed: Number(e.target.value) })}
-            aria-label="Speed"
-          />
-          <span>faster</span>
-          <b>{settings.speed.toFixed(1)}×</b>
-        </div>
-
-        <div className="track" style={{ width: 'min(560px, 100%)', margin: 0 }}>
-          <i style={{ width: `${deckPct}%` }} />
-        </div>
       </footer>
 
       {reading && (

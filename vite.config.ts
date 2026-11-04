@@ -25,6 +25,17 @@ export default defineConfig({
         // blank page: it would look for the start URL at the domain root.
         scope: base,
         start_url: base,
+        // Puts WordFlow in the system share sheet, so a passage from a browser
+        // or a reader can be sent straight here. The action is the start URL
+        // rather than a path of its own: this is a static host with no router,
+        // and anything else would be a 404 the moment someone shared to it.
+        // GET, because a POST target needs a service worker route that the
+        // generated worker has no way to add.
+        share_target: {
+          action: base,
+          method: 'GET',
+          params: { title: 'title', text: 'text', url: 'url' },
+        },
         icons: [
           { src: 'icon-192.png', sizes: '192x192', type: 'image/png' },
           { src: 'icon-512.png', sizes: '512x512', type: 'image/png' },

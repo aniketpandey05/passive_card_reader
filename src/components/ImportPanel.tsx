@@ -2,12 +2,15 @@ import { useEffect, useMemo, useState } from 'react'
 import { createDeck } from '../db'
 import type { Mapping } from '../lib/parse'
 import { applyMapping, autoParse } from '../lib/parse'
+import { looksLikeProse } from '../lib/text'
 
 interface Props {
   onDone: (deckId: number) => void
   onCancel: () => void
   /** PDFs go to their own flow: pages, columns and a review step. */
   onPdf: (file: File) => void
+  /** Prose goes to its own flow: the words worth knowing are picked out. */
+  onText: (text: string) => void
 }
 
 const FORMAT_LABEL: Record<string, string> = {
@@ -17,7 +20,7 @@ const FORMAT_LABEL: Record<string, string> = {
   empty: '',
 }
 
-export default function ImportPanel({ onDone, onCancel, onPdf }: Props) {
+export default function ImportPanel({ onDone, onCancel, onPdf, onText }: Props) {
   const [text, setText] = useState('')
   const [filename, setFilename] = useState('')
   const [deckName, setDeckName] = useState('')
@@ -25,6 +28,7 @@ export default function ImportPanel({ onDone, onCancel, onPdf }: Props) {
   const [busy, setBusy] = useState(false)
 
   const parsed = useMemo(() => autoParse(text, filename), [text, filename])
+  const prose = useMemo(() => looksLikeProse(text), [text])
   const [mapping, setMapping] = useState<Mapping | null>(null)
   useEffect(() => setMapping(parsed.mapping), [parsed])
 
@@ -110,7 +114,25 @@ export default function ImportPanel({ onDone, onCancel, onPdf }: Props) {
         }}
       />
 
-      {parsed.format !== 'empty' && (
+      {/* Paragraphs rather than entries. Rather than reporting that nothing
+          could be read, offer the thing that does work on prose. */}
+      {prose && (
+        <>
+          <p className="hint" style={{ marginTop: 14 }}>
+            That reads as writing rather than a list of entries, so there is nothing here to split into cards directly.
+          </p>
+          <div className="row" style={{ marginTop: 10 }}>
+            <button className="btn primary" onClick={() => onText(text)}>
+              Find the words worth knowing →
+            </button>
+            <button className="btn ghost" onClick={onCancel}>
+              Cancel
+            </button>
+          </div>
+        </>
+      )}
+
+      {parsed.format !== 'empty' && !prose && (
         <>
           <p className="warn" style={{ color: 'var(--muted)' }}>
             Read as {FORMAT_LABEL[parsed.format]} · <b>{entries.length}</b> entries found
@@ -191,18 +213,22 @@ export default function ImportPanel({ onDone, onCancel, onPdf }: Props) {
         </table>
       )}
 
-      <div className="row">
-        <label className="field" style={{ flex: '1 1 220px' }}>
-          Deck name
-          <input type="text" value={deckName} placeholder="My dictionary" onChange={(e) => setDeckName(e.target.value)} />
-        </label>
-        <button className="btn primary" disabled={!entries.length || busy} onClick={() => void create()}>
-          {busy ? 'Adding…' : `Add ${entries.length || ''} words`}
-        </button>
-        <button className="btn ghost" onClick={onCancel}>
-          Cancel
-        </button>
-      </div>
+      {/* Prose has its own screen and its own pair of buttons above; a second
+          "Add 1 words" under it would only offer to make a deck of rubbish. */}
+      {!prose && (
+        <div className="row">
+          <label className="field" style={{ flex: '1 1 220px' }}>
+            Deck name
+            <input type="text" value={deckName} placeholder="My dictionary" onChange={(e) => setDeckName(e.target.value)} />
+          </label>
+          <button className="btn primary" disabled={!entries.length || busy} onClick={() => void create()}>
+            {busy ? 'Adding…' : `Add ${entries.length || ''} words`}
+          </button>
+          <button className="btn ghost" onClick={onCancel}>
+            Cancel
+          </button>
+        </div>
+      )}
     </div>
   )
 }

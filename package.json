@@ -15,7 +15,8 @@
     "build:glossary": "node scripts/fetch-glossary.mjs",
     "build:origins": "node scripts/fetch-wiktionary.mjs",
     "build:webster": "node scripts/build-webster.mjs 900",
-    "build:roget": "node scripts/build-roget.mjs 1200"
+    "build:roget": "node scripts/build-roget.mjs 1200",
+    "build:common": "node scripts/build-common.mjs 10000"
   },
   "type": "module",
   "dependencies": {

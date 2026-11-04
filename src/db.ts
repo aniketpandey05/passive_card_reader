@@ -230,6 +230,29 @@ export function countStarred(deckId: number): Promise<number> {
   return db.entries.where('[deckId+starred]').equals([deckId, 1]).count()
 }
 
+/**
+ * Meanings for a batch of words, from whichever deck already has them.
+ *
+ * One query per deck rather than one per word: picking the words out of an
+ * article means a hundred-odd lookups, and a hundred round trips to the
+ * database is a visible pause on a phone.
+ */
+export async function definitionsFor(words: string[]): Promise<Map<string, Entry>> {
+  const keys = [...new Set(words.map(sortKey))].filter(Boolean)
+  const out = new Map<string, Entry>()
+  if (!keys.length) return out
+  for (const deck of await db.decks.toArray()) {
+    const deckId = deck.id
+    if (deckId === undefined) continue
+    const rows = await db.entries
+      .where('[deckId+key]')
+      .anyOf(keys.map((k) => [deckId, k]))
+      .toArray()
+    for (const row of rows) if (!out.has(row.key)) out.set(row.key, row)
+  }
+  return out
+}
+
 /** A single word by its spelling, for looking up a relative's meaning. */
 export function findByWord(deckId: number, word: string): Promise<Entry | undefined> {
   return db.entries.where('[deckId+key]').equals([deckId, sortKey(word)]).first()

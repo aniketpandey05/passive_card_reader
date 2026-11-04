@@ -3,6 +3,7 @@ import { getSettings, saveSettings } from './db'
 import type { Settings } from './types'
 import Fault from './components/Fault'
 import Library from './components/Library'
+import TextImport from './components/TextImport'
 import Player from './components/Player'
 
 // pdf.js and Tesseract are most of this app's weight, and most sessions are
@@ -13,6 +14,22 @@ type View =
   | { name: 'library' }
   | { name: 'player'; deckId: number; startIdx: number; only?: 'starred' }
   | { name: 'pdf'; file: File }
+  | { name: 'text'; text: string; title?: string; source: string }
+
+/**
+ * Text handed over by the system share sheet, which arrives as query
+ * parameters on the start URL - see share_target in the manifest.
+ *
+ * Sharing a link rather than a selection is common and sends only a URL.
+ * Nothing can be done with that here, so it is passed through as the text and
+ * the import screen explains why it is not enough.
+ */
+function sharedText(): { text: string; title?: string } | null {
+  const params = new URLSearchParams(window.location.search)
+  const title = params.get('title')?.trim() || undefined
+  const text = (params.get('text') ?? '').trim() || (params.get('url') ?? '').trim()
+  return text ? { text, title } : null
+}
 
 export default function App() {
   const [settings, setSettings] = useState<Settings | null>(null)
@@ -24,6 +41,15 @@ export default function App() {
       console.error('Storage is unavailable:', e)
       setNoStorage(true)
     })
+  }, [])
+
+  useEffect(() => {
+    const shared = sharedText()
+    if (!shared) return
+    // Cleared from the address bar straight away, so that a reload - or the
+    // app being reopened from the recents list - does not import it again.
+    window.history.replaceState(null, '', window.location.pathname)
+    setView({ name: 'text', ...shared, source: 'shared text' })
   }, [])
 
   useEffect(() => {
@@ -78,12 +104,25 @@ export default function App() {
     )
   }
 
+  if (view.name === 'text') {
+    return (
+      <TextImport
+        text={view.text}
+        title={view.title}
+        source={view.source}
+        onCancel={() => setView({ name: 'library' })}
+        onDone={(deckId) => setView({ name: 'player', deckId, startIdx: 0 })}
+      />
+    )
+  }
+
   return (
     <Library
       settings={settings}
       onPatch={patch}
       onPlay={(deckId, startIdx, only) => setView({ name: 'player', deckId, startIdx, only })}
       onPdf={(file) => setView({ name: 'pdf', file })}
+      onText={(text) => setView({ name: 'text', text, source: 'pasted text' })}
     />
   )
 }

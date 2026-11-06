@@ -155,8 +155,35 @@ async function main() {
     }
   }
 
+  // Origins, from the same Wiktionary pass the other two decks use. Roget
+  // gives none - he was grouping ideas, not tracing words - but a card is a
+  // card, and a reader meeting "perpendicular" deserves the Latin under it
+  // whichever book it arrived in.
+  const origins = existsSync(join(CACHE, 'wiktionary.json'))
+    ? JSON.parse(readFileSync(join(CACHE, 'wiktionary.json'), 'utf8'))
+    : {}
+  if (!Object.keys(origins).length) {
+    console.log('no scripts/.cache/wiktionary.json - building without origins.')
+    console.log('run: npm run build:origins\n')
+  }
+
+  // The theme moves to the end so the first eight columns line up with the
+  // other decks: same order everywhere, one less thing to get wrong.
   const tsv = entries
-    .map((e) => `${e.word}\t${e.pos ?? ''}\t${e.meaning}\t${e.theme}`)
+    .map((e) => {
+      const from = origins[e.word.toLowerCase()]
+      return [
+        e.word,
+        e.pos ?? '',
+        e.meaning,
+        from?.language ?? '',
+        from?.origin ?? '',
+        (from?.related ?? []).join(' '),
+        '',
+        '',
+        e.theme,
+      ].join('\t')
+    })
     .join('\n')
     .replace(/\\/g, '\\\\')
     .replace(/`/g, '\\`')
@@ -184,8 +211,18 @@ ${tsv}
 export const ROGET_PACK: RawEntry[] = TSV.trim()
   .split('\\n')
   .map((line) => {
-    const [word, pos, meaning, theme] = line.split('\\t')
-    return { word, pos: pos || undefined, meaning, theme: theme || undefined }
+    const [word, pos, meaning, originLang, origin, related, synonyms, antonyms, theme] = line.split('\\t')
+    return {
+      word,
+      pos: pos || undefined,
+      meaning,
+      originLang: originLang || undefined,
+      origin: origin || undefined,
+      related: related ? related.split(' ') : undefined,
+      synonyms: synonyms ? synonyms.split(' ') : undefined,
+      antonyms: antonyms ? antonyms.split(' ') : undefined,
+      theme: theme || undefined,
+    }
   })
   .filter((e) => e.word && e.meaning)
 `,

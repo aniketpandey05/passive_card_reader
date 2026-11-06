@@ -262,10 +262,10 @@ async function main() {
       const synset = data[pos].get(offset)
       if (!synset) continue
 
-      const synonyms = synset.words.filter((w) => w !== word && /^[a-z][a-z' -]{2,20}$/.test(w)).slice(0, 5)
+      const synonyms = synset.words.filter((w) => w !== word && /^[a-z][a-z]{2,20}$/.test(w)).slice(0, 5)
       const antonyms = synset.antonyms
         .map((a) => data[a.pos === 's' ? 'a' : a.pos]?.get(a.offset)?.words?.[0])
-        .filter((w) => w && /^[a-z][a-z' -]{2,20}$/.test(w))
+        .filter((w) => w && /^[a-z][a-z]{2,20}$/.test(w))
         .slice(0, 3)
 
       if (synonyms.length) entry.synonyms = synonyms

@@ -42,7 +42,26 @@ export default defineConfig({
           { src: 'icon-512.png', sizes: '512x512', type: 'image/png', purpose: 'maskable' },
         ],
       },
-      workbox: { globPatterns: ['**/*.{js,css,html,png,svg,woff2}'] },
+      workbox: {
+        globPatterns: ['**/*.{js,css,html,png,svg,woff2}'],
+        // The PDF reader is the one thing here that was never going to work
+        // offline: its engine is a .mjs worker the precache does not match,
+        // so installing the screen without it only ever bought a spinner.
+        // Both are fetched when a PDF is actually opened - which is a
+        // deliberate act, usually online - and kept from then on.
+        globIgnores: ['**/PdfImport-*.js'],
+        runtimeCaching: [
+          {
+            urlPattern: /\/assets\/(PdfImport|pdf\.worker)[^/]*$/,
+            handler: 'CacheFirst',
+            options: {
+              cacheName: 'wordflow-pdf',
+              expiration: { maxEntries: 8 },
+              cacheableResponse: { statuses: [0, 200] },
+            },
+          },
+        ],
+      },
     }),
   ],
 })

@@ -89,7 +89,15 @@ function guessPos(definition) {
   return undefined
 }
 
-/** WordNet again, purely for synonyms and opposites. */
+/**
+ * WordNet again, purely for synonyms and opposites.
+ *
+ * Single words only. The field is space-separated and the app splits it back
+ * on spaces, so a multi-word synonym does not survive the round trip: WordNet
+ * offers "common wormwood", "old man" and "lad's love" under absinthe, and
+ * the card was showing common, wormwood, old, man and love as six separate
+ * words to go and look up.
+ */
 function readSynsets() {
   const data = {}
   const index = {}
@@ -155,10 +163,10 @@ async function main() {
       const synset = data[pos].get(offset)
       if (!synset) continue
       return {
-        synonyms: synset.words.filter((w) => w !== word && /^[a-z][a-z' -]{2,20}$/.test(w)).slice(0, 5),
+        synonyms: synset.words.filter((w) => w !== word && /^[a-z][a-z]{2,20}$/.test(w)).slice(0, 5),
         antonyms: synset.antonyms
           .map((a) => data[a.pos === 's' ? 'a' : a.pos]?.get(a.offset)?.words?.[0])
-          .filter((w) => w && /^[a-z][a-z' -]{2,20}$/.test(w))
+          .filter((w) => w && /^[a-z][a-z]{2,20}$/.test(w))
           .slice(0, 3),
       }
     }

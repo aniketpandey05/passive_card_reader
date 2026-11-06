@@ -10,906 +10,906 @@ import type { RawEntry } from '../db'
  * Synonyms and opposites are WordNet 3.0 (Princeton).
  */
 const TSV = `
-aberrant		wandering; straying from the right way				deviant deviate	
-abound	verb	to be in great plenty; to be very prevalent					
-abra	noun	a narrow pass or defile; a break in a mesa					
-absinthe	noun	a strong spirituous liqueur made from wormwood and brandy or alcohol				common wormwood old man lad's love artemisia absinthium	
+aberrant		wandering; straying from the right way	Latin	aberrāns		deviant deviate	
+abound	verb	to be in great plenty; to be very prevalent	Latin	abundāre "overflow"	abundance abundant bountiful		
+abra	noun	a narrow pass or defile; a break in a mesa	Spanish	abra			
+absinthe	noun	a strong spirituous liqueur made from wormwood and brandy or alcohol	Greek	apsínthion "wormwood"			
 abstracted		separated or disconnected; withdrawn				absent absentminded scatty	
-abutment		that on or against which a body abuts or presses					
-acclamation	noun	a shout of approbation, favor, or assent; eager expression of approval				acclaim plaudits plaudit eclat	
+abutment		that on or against which a body abuts or presses	Old French	aboutement			
+acclamation	noun	a shout of approbation, favor, or assent; eager expression of approval	Latin	acclāmātiō		acclaim plaudits plaudit eclat	
 adjoin	verb	to lie or be next, or in contact; to be contiguous	Latin	adiungō		border edge abut march butt	
-affable		easy to be spoken to or addressed; receiving others kindly and conversing with them in a free and friendly manner	Latin	affābilis	fable ineffable	amiable cordial genial	
-aftertaste	noun	a taste which remains in the mouth after eating or drinking					
-agama	noun	a genus of lizards, one of the few which feed upon vegetable substances					
+affable		easy to be spoken to or addressed; receiving others kindly and conversing with them in a free and friendly manner	Latin	affābilis	ineffable	amiable cordial genial	
+aftertaste	noun	a taste which remains in the mouth after eating or drinking		after- + taste			
+agama	noun	a genus of lizards, one of the few which feed upon vegetable substances		Borrowed from Sranan Tongo agama ("lizard"), borrowed from a Gbe language	agamid		
 ageless		without old age limits of duration				aeonian eonian eternal everlasting perpetual	
-agog		in eager desire; eager					
-agonize	verb	to writhe with agony; to suffer violent anguish				agonise	
-akimbo		with a crook or bend; with the hand on the hip and elbow turned outward					
-albatross	noun	a web-footed bird, of the genus Diomedea, of which there are several species				millstone	
+agog		in eager desire; eager	Middle English	agogge			
+agonize	verb	to writhe with agony; to suffer violent anguish	Greek	agōnízomai "to fight, contend"	agony	agonise	
+akimbo		with a crook or bend; with the hand on the hip and elbow turned outward	Old Norse	kengr "bent"			
+albatross	noun	a web-footed bird, of the genus Diomedea, of which there are several species	Greek	kádos "pail, jar"		millstone	
 alexandrian		applied to a kind of heroic verse					
-allegory	noun	a figurative sentence or discourse, in which the principal subject is described by another subject resembling it in its properties and circumstances				fable parable apologue	
-alternation	noun	the reciprocal succession of things in time or place					
-altimeter	noun	an instrument for taking altitudes, as a quadrant, sextant, etc					
-altimetry	noun	the art of measuring altitudes, or heights					
-altruism		regard for others, both natural and moral; devotion to the interests of others	Latin	alteri	antialtruism hyperaltruism nonaltruism	selflessness	egoism
-altruistic		regardful of others; beneficent				selfless	egoistic
-amble	verb	to move somewhat like an ambling horse; to go easily or without hard shocks				mosey	
-ament	noun	a species of inflorescence; a catkin				catkin	
+allegory	noun	a figurative sentence or discourse, in which the principal subject is described by another subject resembling it in its properties and circumstances	Greek	ăllēgorĭ́ā "figurative or metaphorical language"	category tautegorical metaphor tautegory	fable parable apologue	
+alternation	noun	the reciprocal succession of things in time or place	Latin	alternatio			
+altimeter	noun	an instrument for taking altitudes, as a quadrant, sextant, etc	Latin	altus "high"			
+altimetry	noun	the art of measuring altitudes, or heights		From alti(tude) + -metry			
+altruism		regard for others, both natural and moral; devotion to the interests of others	Latin	alteri		selflessness	egoism
+altruistic		regardful of others; beneficent		altruist + -ic	altruism	selfless	egoistic
+amble	verb	to move somewhat like an ambling horse; to go easily or without hard shocks	Latin	ambulō "to walk"	ambulate ambulance ambulatory amblingly	mosey	
+ament	noun	a species of inflorescence; a catkin	Latin	āmentum "thong, string"		catkin	
 americanism	noun	a custom peculiar to the United States or to America					
 amic		related to, or derived, ammonia; -- used chiefly as a suffix					
-amorous		inclined to love; having a propensity to love, or to sexual enjoyment				amative	
+amorous		inclined to love; having a propensity to love, or to sexual enjoyment	Latin	amor "love"		amative	
 amphitheater	noun	an oval or circular building with rising tiers of seats about an open space called the arena				amphitheatre	
-amphora		among the ancients, a two-handled vessel, tapering at the bottom, used for holding wine, oil, etc					
-anaconda	noun	a large South American snake of the Boa family , which lives near rivers, and preys on birds and small mammals				eunectes murinus	
-aneroid		containing no liquid; -- said of kind of barometer					
-angelus	noun	a form of devotion in which three Ave Marias are repeated				angelus bell	
-angiosperm	noun	a plant which has its seeds inclosed in a pericarp				flowering plant	
+amphora		among the ancients, a two-handled vessel, tapering at the bottom, used for holding wine, oil, etc	Greek	amphoreús "two-handled pitcher, Greek units of liquid measure"			
+anaconda	noun	a large South American snake of the Boa family , which lives near rivers, and preys on birds and small mammals	Latin	anacandaia "python"			
+aneroid		containing no liquid; -- said of kind of barometer	French	anéroïde			
+angelus	noun	a form of devotion in which three Ave Marias are repeated					
+angiosperm	noun	a plant which has its seeds inclosed in a pericarp	Greek	angeîon "receptacle"	gymnosperm		
 anglicanism	noun	the principles of the established church of England					
-anise	noun	the fruit or seeds of this plant				anise plant pimpinella anisum	
-annular		pertaining to, or having the form of, a ring; forming a ring				annulate annulated circinate ringed ring-shaped	
-answerable		obliged to answer; liable to be called to account					
-antecedent		going before in time; prior					subsequent
-anthroposophy		knowledge of the nature of man; hence, human wisdom					
-antipodes		those who live on the side of the globe diametrically opposite					
-antiquity	noun	the quality of being ancient; ancientness					
-anus	noun	the posterior opening of the alimentary canal, through which the excrements are expelled					
-aorta	noun	the great artery which carries the blood from the heart to all parts of the body except the lungs					
-apatite		native phosphate of lime, occurring usually in six-sided prisms, color often pale green, transparent or translucent					
+anise	noun	the fruit or seeds of this plant	Greek	ánison	anisic anisole		
+annular		pertaining to, or having the form of, a ring; forming a ring	Latin	ānulāris "ring-shaped"	annual	annulate annulated circinate ringed	
+answerable		obliged to answer; liable to be called to account		answer + -able			
+antecedent		going before in time; prior	Latin	antecēdēns "going before"	postcedent precedence		subsequent
+anthroposophy		knowledge of the nature of man; hence, human wisdom	Latin	anthroposophia			
+antipodes		those who live on the side of the globe diametrically opposite	Greek	antípodes			
+antiquity	noun	the quality of being ancient; ancientness	Latin	antiquitas	antic antiquarian antiquary antiquated antique		
+anus	noun	the posterior opening of the alimentary canal, through which the excrements are expelled	Latin	ānus "ring, anus"			
+aorta	noun	the great artery which carries the blood from the heart to all parts of the body except the lungs	Greek	aortḗ "the arteries springing from the heart"	aortic aortitis aortography aortoplasty aortorrhaphy		
+apatite		native phosphate of lime, occurring usually in six-sided prisms, color often pale green, transparent or translucent	Greek	ăpắtē "deceit, fraud"			
 aramaic		pertaining to Aram, or to the territory, inhabitants, language, or literature of Syria and Mesopotamia					
-archangel	noun	a chief angel; one high in the celestial hierarchy					
-architectonic		pertaining to a master builder, or to architecture				tectonic	
-argot	noun	a secret language or conventional slang peculiar to thieves, tramps, and vagabonds				slang cant jargon lingo patois	
+archangel	noun	a chief angel; one high in the celestial hierarchy	Greek	arkhángelos	angelic angelical angelically angelologist angelology		
+architectonic		pertaining to a master builder, or to architecture	Greek	arkhitektonikós		tectonic	
+argot	noun	a secret language or conventional slang peculiar to thieves, tramps, and vagabonds	French	argot		slang cant jargon lingo patois	
 armory	noun	a place where arms and instruments of war are deposited for safe keeping				armoury inventory	
-arraignment	noun	a calling to an account to faults; accusation					
-artifice		workmanship; a skillfully contrived work				ruse	
-artificer	noun	an artistic worker; a mechanic or manufacturer				inventor discoverer	
-ascend	verb	to move upward; to mount				go up	descend
-assai	noun	a direction equivalent to very					
-assail	verb	to attack with violence, or in a vehement and hostile manner				assault set on attack	
-assessable		liable to be assessed or taxed					
-atheistic		disbelieving the existence of a God; impious		atheist + -ic	antiatheistic atheize nonatheistic unatheistic	atheistical unbelieving	
-athenaeum	noun	a temple of Athene, at Athens, in which scholars and poets were accustomed to read their works and instruct students				atheneum	
+arraignment	noun	a calling to an account to faults; accusation			indictment		
+artifice		workmanship; a skillfully contrived work	Latin	artificium		ruse	
+artificer	noun	an artistic worker; a mechanic or manufacturer	Latin	artificiarius	opificer	inventor discoverer	
+ascend	verb	to move upward; to mount	Latin	ascendō "to go up, climb up to"	transcend climb		descend
+assai	noun	a direction equivalent to very	Italian	assai			
+assail	verb	to attack with violence, or in a vehement and hostile manner	Latin	assalīre	assault	assault attack	
+assessable		liable to be assessed or taxed	Middle English	assessen "to assess"			
+atheistic		disbelieving the existence of a God; impious		atheist + -ic	atheize	atheistical unbelieving	
+athenaeum	noun	a temple of Athene, at Athens, in which scholars and poets were accustomed to read their works and instruct students	Greek	Ăthḗnaion		atheneum	
 atheneum	noun	a school founded at Rome by				athenaeum	
-atomization	noun	the act of reducing to atoms, or very minute particles				atomisation fragmentation	
-atrocity		enormous wickedness; extreme heinousness or cruelty				atrociousness barbarity barbarousness heinousness	
-attar	noun	a fragrant essential oil; esp., a volatile and highly fragrant essential oil obtained from the petals of roses				atar athar ottar	
-autocracy		independent or self-derived power; absolute or controlling authority				autarchy	
-averse		having a repugnance or opposition of mind; disliking				antipathetic antipathetical	
-avocado	noun	the pulpy fruit of Persea gratissima, a tree of tropical					
-ayuntamiento		in Spain and Spanish America, a corporation or body of magistrates in cities and towns, corresponding to mayor and aldermen					
-backwoods	noun	the forests or partly cleared grounds on the frontiers				back country boondocks hinterland	
-ballistics	noun	the science or art of hurling missile weapons by the use of an engine				ballistic trajectory	
-baneful		having poisonous qualities; deadly				deadly pernicious pestilent	
+atomization	noun	the act of reducing to atoms, or very minute particles		atom + -ization	atomize	atomisation fragmentation	
+atrocity		enormous wickedness; extreme heinousness or cruelty	Latin	atrōcitās		atrociousness barbarity barbarousness heinousness	
+attar	noun	a fragrant essential oil; esp., a volatile and highly fragrant essential oil obtained from the petals of roses	Arabic	ʕiṭr "perfume"		atar athar ottar	
+autocracy		independent or self-derived power; absolute or controlling authority	Greek	autokratía "A system of government by one person with absolute power."		autarchy	
+averse		having a repugnance or opposition of mind; disliking	Latin	aversus	avert	antipathetic antipathetical	
+avocado	noun	the pulpy fruit of Persea gratissima, a tree of tropical	Latin	American	crabocado tunacado		
+ayuntamiento		in Spain and Spanish America, a corporation or body of magistrates in cities and towns, corresponding to mayor and aldermen	Spanish	ayuntamiento			
+backwoods	noun	the forests or partly cleared grounds on the frontiers		back + woods	blackwood	boondocks hinterland	
+ballistics	noun	the science or art of hurling missile weapons by the use of an engine	Latin	ballistica	biolistics		
+baneful		having poisonous qualities; deadly			baleful	deadly pernicious pestilent	
 banishment	noun	the act of banishing, or the state of being banished				ostracism coventry	
-bankrupt	noun	a trader who becomes unable to pay his debts; an insolvent trader					
-barbarian	noun	a man in a rule, savage, or uncivilized state				barbaric savage uncivilized uncivilised wild	
-barberry	noun	a shrub of the genus Berberis, common along roadsides and in neglected fields					
-barranca	noun	a ravine caused by heavy rains or a watercourse. [Texas &					
-bask	verb	to lie in warmth; to be exposed to genial heat				enjoy relish savor savour	
-bate	verb	to lessen by retrenching, deducting, or reducing					
-bayberry	noun	the fruit of the bay tree or Laurus nobilis. A tree of the West Indies related to the myrtle . The fruit of Myrica cerifera				bay-rum tree jamaica bayberry wild cinnamon pimenta acris	
-beadle	noun	a messenger or crier of a court; a servitor					
-bearable		capable of being borne or endured; tolerable. -- Bear"a*bly, adv				endurable sufferable supportable	
-beatitude		felicity of the highest kind; consummate bliss				blessedness beatification	
-beckon	verb	to make a significant sign to; hence, to summon, as by a motion of the hand				wave	
-bedclothes		blankets, sheets, coverlets, etc., for a bed				bed clothing bedding	
-beehive	noun	a hive for a swarm of bees					
-befriend	verb	to act as a friend to; to favor					
-bellow	verb	to make a hollow, loud noise, as an enraged bull				bawl	
-benne	noun	the name of two plants , originally Asiatic; -- also called oil plant				sesame benni benny sesamum indicum	
-benthos	noun	the bottom of the sea, esp. of the deep oceans				benthic division benthonic zone	
-bequeath	verb	to give or leave by will; to give by testament				will leave	disinherit
-bestow	verb	to lay up in store; to deposit for safe keeping				confer	
-biannual		occurring twice a year; half-yearly				semiannual biyearly half-yearly	
-bibler	noun	a great drinker; a tippler					
-biogenesis	noun	a doctrine that the genesis or production of living organisms can take place only through the agency of living germs or parents				biosynthesis	
-birdcage	noun	a cage for confining birds					
-blain	noun	an inflammatory swelling or sore; a bulla, pustule, or blister					
-blight		hence: To destroy the happiness of; to ruin				plague	
-blindly		without sight, discernment, or understanding; without thought, investigation, knowledge, or purpose of one's own					
-bluestone	noun	a grayish blue building stone, as that commonly used in the eastern					
+bankrupt	noun	a trader who becomes unable to pay his debts; an insolvent trader	Italian	bancarotta "a broken bench"	wankrupt		
+barbarian	noun	a man in a rule, savage, or uncivilized state	Greek	bárbaros "foreign, non-Greek, strange"	barbary rhubarb	barbaric savage uncivilized uncivilised wild	
+barberry	noun	a shrub of the genus Berberis, common along roadsides and in neglected fields	Latin	berberis			
+barranca	noun	a ravine caused by heavy rains or a watercourse. [Texas &	Spanish	barranca			
+bask	verb	to lie in warmth; to be exposed to genial heat	Middle English	basken		enjoy relish savor savour	
+bate	verb	to lessen by retrenching, deducting, or reducing	Old French	abatre "to knock down"			
+bayberry	noun	the fruit of the bay tree or Laurus nobilis. A tree of the West Indies related to the myrtle . The fruit of Myrica cerifera		bay + berry			
+beadle	noun	a messenger or crier of a court; a servitor	Old English	bydel "warrant officer, apparitor"			
+bearable		capable of being borne or endured; tolerable. -- Bear"a*bly, adv	Middle English	berable		endurable sufferable supportable	
+beatitude		felicity of the highest kind; consummate bliss	Latin	beātitūdō "happiness, blessedness"		blessedness beatification	
+beckon	verb	to make a significant sign to; hence, to summon, as by a motion of the hand	Old English	bēacnian		wave	
+bedclothes		blankets, sheets, coverlets, etc., for a bed	Old English	bedclāþ		bedding	
+beehive	noun	a hive for a swarm of bees	Middle English	beehyve	beyhive		
+befriend	verb	to act as a friend to; to favor		* West Frisian befreone ("befriended")	friendly		
+bellow	verb	to make a hollow, loud noise, as an enraged bull	Old English	belgan		bawl	
+benne	noun	the name of two plants , originally Asiatic; -- also called oil plant		From Malay bene, or possibly from Wolof or Eastern Maninkakan		sesame benni benny	
+benthos	noun	the bottom of the sea, esp. of the deep oceans	Greek	bénthos "the depths"			
+bequeath	verb	to give or leave by will; to give by testament	Old English	becweþan	bequest	will leave	disinherit
+bestow	verb	to lay up in store; to deposit for safe keeping	Middle English	bestowen	misstowed stowable stowage stowaway stower stowing unstow	confer	
+biannual		occurring twice a year; half-yearly		bi- + annual		semiannual biyearly	
+bibler	noun	a great drinker; a tippler		See bib (transitive verb)			
+biogenesis	noun	a doctrine that the genesis or production of living organisms can take place only through the agency of living germs or parents	Greek	bĭ́os "life"		biosynthesis	
+birdcage	noun	a cage for confining birds		bird + cage	birdhouse		
+blain	noun	an inflammatory swelling or sore; a bulla, pustule, or blister	French	bleime "an inflammation of a horse's hoof"			
+blight		hence: To destroy the happiness of; to ruin	Old English	blīcan "to shine, sparkle"		plague	
+blindly		without sight, discernment, or understanding; without thought, investigation, knowledge, or purpose of one's own	Old English	blindlīċe "in a blind manner; blindly; rashly"			
+bluestone	noun	a grayish blue building stone, as that commonly used in the eastern		blue + stone	stonehenge		
 bobsleigh	noun	a short sled, mostly used as one of a pair connected by a reach or coupling				bobsled	
-bodyguard	noun	a guard to protect or defend the person; a lifeguard				escort	
-bollworm	noun	the larva of a moth which devours the bolls or unripe pods of the cotton plant, often doing great damage to the crops					
-bonnet	noun	a covering for the head, worn by women, usually protecting more or less the back and sides of the head, but no part of the forehead					
-bony		consisting of bone, or of bones; full of bones				scraggy scraggly boney scrawny skinny	
-bookbinding	noun	the art, process, or business of binding books					
-bookkeeper	noun	one who keeps accounts; one who has the charge of keeping the books and accounts in an office					
-bookmaker	noun	one who writes and publishes books; especially, one who gathers his materials from other books					
-braze	verb	to solder with hard solder, esp. with an alloy of copper and zinc					
-breadfruit	noun	the fruit of a tree found in the islands of the Pacific, esp. the South Sea islands				breadfruit tree artocarpus communis artocarpus altilis	
-breakneck	noun	a fall that breaks the neck					
+bodyguard	noun	a guard to protect or defend the person; a lifeguard		body + guard		escort	
+bollworm	noun	the larva of a moth which devours the bolls or unripe pods of the cotton plant, often doing great damage to the crops		boll + worm			
+bonnet	noun	a covering for the head, worn by women, usually protecting more or less the back and sides of the head, but no part of the forehead	Latin	abbonis			
+bony		consisting of bone, or of bones; full of bones	Middle English	bony		scraggy scraggly boney scrawny skinny	
+bookbinding	noun	the art, process, or business of binding books		book + binding	bookbinder		
+bookkeeper	noun	one who keeps accounts; one who has the charge of keeping the books and accounts in an office		book + keeper			
+bookmaker	noun	one who writes and publishes books; especially, one who gathers his materials from other books	Middle English	bokmakere	sportsbook bookbinding		
+braze	verb	to solder with hard solder, esp. with an alloy of copper and zinc	Old English	brasian			
+breadfruit	noun	the fruit of a tree found in the islands of the Pacific, esp. the South Sea islands		Calque of taxonomic name Artocarpus			
+breakneck	noun	a fall that breaks the neck		break + neck	breakbone		
 breton		of or relating to Brittany, or Bretagne, in France. -- n					
-brewhouse	noun	a house or building appropriated to brewing; a brewery					
-briar	noun	a plant with a slender woody stem bearing stout prickles				sweetbrier sweetbriar brier eglantine rosa eglanteria	
-brigand	noun	a lawless fellow who lives by plunder; one of a band of robbers				bandit	
-brightly		brilliantly; splendidly					
-brogue	noun	a stout, coarse shoe; a brogan				brogan clodhopper work shoe	
-brooch	noun	an ornament, in various forms, with a tongue, pin, or loop for attaching it to a garment				clasp	
-brothel	noun	a house of lewdness or ill fame; a house frequented by prostitutes				whorehouse bordello bagnio house of prostitution house of ill repute	
-brownstone	noun	a dark variety of sandstone, much used for building purposes					
-brusque		rough and prompt in manner; blunt				brusk curt	
-buckling		wavy; curling, as hair					
-bufo	noun	a genus of Amphibia including various species of toads					
-bugle	noun	a sort of wild ox; a buffalo					
-burdock	noun	a genus of coarse biennial herbs , bearing small burs which adhere tenaciously to clothes, or to the fur or wool of animals				clotbur	
-businesslike		in the manner of one transacting business wisely and by right methods					
-caber	noun	a pole or beam used in Scottish games for tossing as a trial of strength					
-cachet	noun	a seal, as of a letter				seal seal of approval	
-cackle	verb	to make a sharp, broken noise or cry, as a hen or goose does	Old English	cahhetan	hen-cackle		
+brewhouse	noun	a house or building appropriated to brewing; a brewery	Middle English	brewhous	brewer brewpub		
+briar	noun	a plant with a slender woody stem bearing stout prickles	Old French	bruiere "heather"		sweetbrier sweetbriar brier eglantine	
+brigand	noun	a lawless fellow who lives by plunder; one of a band of robbers	Old French	brigand "foot soldier"		bandit	
+brightly		brilliantly; splendidly	Old English	beorhtlice			
+brogue	noun	a stout, coarse shoe; a brogan	Old Norse	brók "breeches"		brogan clodhopper	
+brooch	noun	an ornament, in various forms, with a tongue, pin, or loop for attaching it to a garment		Variant of broach		clasp	
+brothel	noun	a house of lewdness or ill fame; a house frequented by prostitutes		Short for brothel-house ("house of prostitution"), from brothel ("a wretch	prostitute	whorehouse bordello bagnio bawdyhouse cathouse	
+brownstone	noun	a dark variety of sandstone, much used for building purposes		brown + stone			
+brusque		rough and prompt in manner; blunt	French	brusque		brusk curt	
+buckling		wavy; curling, as hair		buckle + -ing			
+bufo	noun	a genus of Amphibia including various species of toads	Latin	būfō "toad"			
+bugle	noun	a sort of wild ox; a buffalo	Latin	būculus "young ox, steer"			
+burdock	noun	a genus of coarse biennial herbs , bearing small burs which adhere tenaciously to clothes, or to the fur or wool of animals		From Middle English *bury dokke (attested as plural bury dokkis), equivalent to bur(ry) + dock		clotbur	
+businesslike		in the manner of one transacting business wisely and by right methods		business + -like			
+caber	noun	a pole or beam used in Scottish games for tossing as a trial of strength		From Scottish Gaelic cabar ("spar, pole")			
+cachet	noun	a seal, as of a letter	French	cachet		seal	
+cackle	verb	to make a sharp, broken noise or cry, as a hen or goose does	Old English	cahhetan			
 cackling	noun	the broken noise of a goose or a hen					
-caddie	noun	a Scotch errand boy, porter, or messenger. Every Scotchman, from the peer to the cadie				caddy	
+caddie	noun	a Scotch errand boy, porter, or messenger. Every Scotchman, from the peer to the cadie	Latin	capitettum		caddy	
 caged		confined in, or as in, a cage; like a cage or prison					
-campion	noun	a plant of the Pink family , bearing berries regarded as poisonous				silene catchfly	
-cancan	noun	a rollicking French dance, accompanied by indecorous or extravagant postures and gestures					
-candlestick	noun	an instrument or utensil for supporting a candle				candle holder	
-cannibalism	noun	the act or practice of eating human flesh by mankind					
-capitalization	noun	the act or process of capitalizing				capitalisation	
-capper	noun	one whose business is to make or sell caps					
-caramel	noun	a kind of confectionery, usually a small cube or square of tenacious paste, or candy, of varying composition and flavor				caramel brown	
-carbonite	noun	an explosive consisting essentially of nitroglycerin, wood meal, and some nitrate, as that of sodium					
-caribe	noun	a south American fresh water fish of the genus Serrasalmo of many species, remakable for its voracity				piranha pirana	
-carlock	noun	a sort of Russian isinglass, made from the air bladder of the sturgeon, and used in clarifying wine					
-carpentry	noun	the art of cutting, framing, and joining timber, as in the construction of buildings				woodworking woodwork	
+campion	noun	a plant of the Pink family , bearing berries regarded as poisonous	Middle English	campion		silene catchfly	
+cancan	noun	a rollicking French dance, accompanied by indecorous or extravagant postures and gestures	French	cancan			
+candlestick	noun	an instrument or utensil for supporting a candle	Old English	candelsticca "candlestick"			
+cannibalism	noun	the act or practice of eating human flesh by mankind		cannibal + -ism			
+capitalization	noun	the act or process of capitalizing		capitalize + -ation		capitalisation	
+capper	noun	one whose business is to make or sell caps	Middle English	capper			
+caramel	noun	a kind of confectionery, usually a small cube or square of tenacious paste, or candy, of varying composition and flavor	Latin	calamellus			
+carbonite	noun	an explosive consisting essentially of nitroglycerin, wood meal, and some nitrate, as that of sodium		carbon + -ite			
+caribe	noun	a south American fresh water fish of the genus Serrasalmo of many species, remakable for its voracity	Spanish	caribe		piranha pirana	
+carlock	noun	a sort of Russian isinglass, made from the air bladder of the sturgeon, and used in clarifying wine	French	carlock			
+carpentry	noun	the art of cutting, framing, and joining timber, as in the construction of buildings	Anglo-Norman	carpenterie		woodworking woodwork	
 cassiopeia	noun	a constellation of the northern hemisphere, situated between Capheus and Perseus					
-catapult	noun	a forked stick with elasti band for throwing small stones, etc					
-catastrophe	noun	an event producing a subversion of the order or system of things				calamity disaster tragedy cataclysm	
-catawba	noun	a well known light red variety of American grape					
-catechism	noun	a form of instruction by means of questions answers					
-catechist	noun	one who instructs by question and answer, especially in religions matters					
-catharsis	noun	a natural or artificial purgation of any passage, as of the mouth, bowels, etc				katharsis abreaction	
-cathodic	noun	a term applied to the centrifugal, or efferent course of the nervous infuence					anodic
-caviar	noun	the roes of the sturgeon, prepared and salted				caviare	
-cavy	noun	a rodent of the genera cavia and Dolichotis, as the guinea pig					
-centerpiece	noun	an ornament to be placed in the center, as of a table, ceiling, atc				centrepiece	
-centroid	noun	the center of mass, inertia, or gravity of a body or system of bodies					
+catapult	noun	a forked stick with elasti band for throwing small stones, etc	Greek	katapéltēs	catapeltic		
+catastrophe	noun	an event producing a subversion of the order or system of things	Greek	katastrophḗ	anastrophe apostrophe cataclysm metastrophe castrophony catastroscope climatastrophe cowtastrophe	calamity disaster tragedy cataclysm	
+catawba	noun	a well known light red variety of American grape		From Catawba catawba ("catalpa tree")			
+catechism	noun	a form of instruction by means of questions answers	Latin	catechismus	catechesis catechetical catechumen		
+catechist	noun	one who instructs by question and answer, especially in religions matters		See catechize	catechesis catechetics		
+catharsis	noun	a natural or artificial purgation of any passage, as of the mouth, bowels, etc	Greek	kátharsis "cleansing, purging"	cathartic	katharsis abreaction	
+cathodic	noun	a term applied to the centrifugal, or efferent course of the nervous infuence		cathode + -ic			anodic
+caviar	noun	the roes of the sturgeon, prepared and salted	Middle French	caviar		caviare	
+cavy	noun	a rodent of the genera cavia and Dolichotis, as the guinea pig	Dutch	naturalist			
+centerpiece	noun	an ornament to be placed in the center, as of a table, ceiling, atc		center + piece		centrepiece	
+centroid	noun	the center of mass, inertia, or gravity of a body or system of bodies		centre + -oid	barycentre barycenter		
 chafing	noun	the act of rubbing, or wearing by friction; making by rubbing					
-chandelier	noun	a candlestick, lamp, stand, gas fixture, or the like, having several branches				pendant pendent	
-chastise	verb	to inflict pain upon, by means of stripes, or in any other manner, for the purpose of punishment or reformation				castigate objurgate chasten correct	
-chaussure	noun	a foot covering of any kind					
+chandelier	noun	a candlestick, lamp, stand, gas fixture, or the like, having several branches	Latin	candelabrum	candela candelabrum candid candidate candle candlepower candlestick chandler	pendant pendent	
+chastise	verb	to inflict pain upon, by means of stripes, or in any other manner, for the purpose of punishment or reformation	Latin	castīgō	unchastising	castigate objurgate chasten correct	
+chaussure	noun	a foot covering of any kind	French	chaussure			
 cheaply		at a small price; at a low value					
-checkerboard	noun	a board with sixty-four squares of alternate color, used for playing checkers or draughts				checker board	
-checkered		marked with alternate squares or checks of different color or material				checked chequered	
-chemotaxis	noun	the sensitiveness exhibited by small free-swimming organisms, as bacteria, zoöspores of algæ, etc., to chemical substances held in solution					
-chessboard	noun	the board used in the game of chess, having eight rows of alternate light and dark squares, eight in each row				chess board	
-chiffon		any merely ornamental adjunct of a woman's dress, as a bunch of ribbon, lace, etc					
-chilly		moderately cold; cold and raw or damp so as to cause shivering		chill + -y	unchilly		
-chine	noun	the backbone or spine of an animal; the back					
-chintz		cotton cloth, printed with flowers and other devices, in a number of different colors, and often glazed					
-chlorination	noun	the act or process of subjecting anything to the action of chlorine					
-chock	verb	to stop or fasten, as with a wedge, or block; to scotch	Old French	çouche	dousing-chock		
-choke	verb	to render unable to breathe by filling, pressing upon, or squeezing the windpipe					
-chopin	noun	a liquid measure formerly used in France and Great Britain, varying from half a pint to a wine quart					
-cider	noun	the expressed juice of apples				cyder	
-circumvent	verb	to gain advantage over by arts, stratagem, or deception				besiege beleaguer surround hem in	
-clank	noun	a sharp, brief, ringing sound, made by a collision of metallic or other sonorous bodies					
-clasp	verb	to inclose and hold in the hand or with the arms					unclasp
-clatter	verb	to make a rattling sound by striking hard bodies together				clack brattle	
+checkerboard	noun	a board with sixty-four squares of alternate color, used for playing checkers or draughts		checker + board			
+checkered		marked with alternate squares or checks of different color or material			checked chequered	checked chequered	
+chemotaxis	noun	the sensitiveness exhibited by small free-swimming organisms, as bacteria, zoöspores of algæ, etc., to chemical substances held in solution		chemo- + taxis	chemotactic odortaxis		
+chessboard	noun	the board used in the game of chess, having eight rows of alternate light and dark squares, eight in each row		chess + board	checkerboard chequerboard draughtboard draughtsboard gameboard		
+chiffon		any merely ornamental adjunct of a woman's dress, as a bunch of ribbon, lace, etc	Old French	chipe "rag"			
+chilly		moderately cold; cold and raw or damp so as to cause shivering		chill + -y			
+chine	noun	the backbone or spine of an animal; the back	Old English	ċine	chink		
+chintz		cotton cloth, printed with flowers and other devices, in a number of different colors, and often glazed	Hindi	chī̃ṭ			
+chlorination	noun	the act or process of subjecting anything to the action of chlorine		chlorinate + -ion			
+chock	verb	to stop or fasten, as with a wedge, or block; to scotch	Old French	çouche			
+choke	verb	to render unable to breathe by filling, pressing upon, or squeezing the windpipe	Old English	āċēocian "to choke"	chokable choky chokily chokingly		
+chopin	noun	a liquid measure formerly used in France and Great Britain, varying from half a pint to a wine quart	French	chopine			
+cider	noun	the expressed juice of apples	Greek	síkera "fermented liquor, strong drink"		cyder	
+circumvent	verb	to gain advantage over by arts, stratagem, or deception	Latin	circumveniō		besiege beleaguer surround	
+clank	noun	a sharp, brief, ringing sound, made by a collision of metallic or other sonorous bodies		Onomatopoeic			
+clasp	verb	to inclose and hold in the hand or with the arms	Old English	clyppan "clasp"			unclasp
+clatter	verb	to make a rattling sound by striking hard bodies together	Middle English	clatren "to make a rattling sound"		clack brattle	
 cleverness	noun	the quality of being clever; skill				inventiveness ingeniousness ingenuity	
-clinker	noun	a mass composed of several bricks run together by the action of the fire in the kiln					
-clipping	noun	the act of cutting off, curtailing, or diminishing				newspaper clipping press clipping cutting press cutting	
-clique	noun	a narrow circle of persons associated by common interests or for the accomplishment of a common purpose				coterie ingroup inner circle pack camp	
-coalescent		growing together; cohering, as in the organic cohesion of similar parts				coalescing	
-coerce	verb	to restrain by force, especially by law or authority				hale squeeze pressure force	
-colander	noun	a utensil with a bottom perforated with little holes for straining liquids, mashed vegetable pulp, etc				cullender	
-coliseum	noun	the amphitheater of Vespasian at Rome, the largest in the world				amphitheater amphitheatre	
-colloid		resembling glue or jelly; characterized by a jellylike appearance					
-colonnade	noun	a series or range of columns placed at regular intervals with all the adjuncts, as entablature, stylobate, roof, etc					
-coma	noun	a state of profound insensibility from which it is difficult or impossible to rouse a person				comatoseness	
-commendation	noun	the act of commending; praise				citation	
-commensurate	verb	to reduce to a common measure					incommensurate
-commotion	noun	a popular tumult; public disturbance				disturbance disruption flutter hurly burly to-do	
-commutator	noun	a piece of apparatus used for reversing the direction of an electrical current					
-compassionate		having a temper or disposition to pity; sympathetic					uncompassionate
-compulsion	noun	the act of compelling, or the state of being compelled				irresistible impulse	
+clinker	noun	a mass composed of several bricks run together by the action of the fire in the kiln	Dutch	klinkaerd			
+clipping	noun	the act of cutting off, curtailing, or diminishing				cutting	
+clique	noun	a narrow circle of persons associated by common interests or for the accomplishment of a common purpose	French	clique		coterie ingroup pack camp	
+coalescent		growing together; cohering, as in the organic cohesion of similar parts	Latin	coalēscēns		coalescing	
+coerce	verb	to restrain by force, especially by law or authority	Latin	coërceō "to surround, encompass, restrain, control, curb"		hale squeeze pressure force	
+colander	noun	a utensil with a bottom perforated with little holes for straining liquids, mashed vegetable pulp, etc	Latin	cōlātōrium	percolate	cullender	
+coliseum	noun	the amphitheater of Vespasian at Rome, the largest in the world	Greek	kolossiaîos		amphitheater amphitheatre	
+colloid		resembling glue or jelly; characterized by a jellylike appearance	Greek	kólla "glue"			
+colonnade	noun	a series or range of columns placed at regular intervals with all the adjuncts, as entablature, stylobate, roof, etc	French	colonnade			
+coma	noun	a state of profound insensibility from which it is difficult or impossible to rouse a person	Greek	kôma "deep sleep"		comatoseness	
+commendation	noun	the act of commending; praise	Latin	commendatio "recommendation, commendation"		citation	
+commensurate	verb	to reduce to a common measure	Latin	commēnsūrātus			incommensurate
+commotion	noun	a popular tumult; public disturbance	Latin	commōtiōnem		disturbance disruption flutter kerfuffle	
+commutator	noun	a piece of apparatus used for reversing the direction of an electrical current		Back-formation from commutation (in the late 19th century), as is commutate (verb) too			
+compassionate		having a temper or disposition to pity; sympathetic	Latin	form	uncompassionating		uncompassionate
+compulsion	noun	the act of compelling, or the state of being compelled	Latin	compulsiō	compulsory		
 compulsively		by compulsion; by force					
-conceal	verb	to hide or withdraw from observation; to cover				hide	show
-concede	verb	to yield or suffer; to surrender				profess confess	
-concertino	noun	a piece for one or more solo instruments with orchestra					
-concessionaire	noun	the beneficiary of a concession or grant				concessioner	
+conceal	verb	to hide or withdraw from observation; to cover	Latin	concēlō		hide	show
+concede	verb	to yield or suffer; to surrender	Latin	concēdō "give way, yield"	unconceding	profess confess	
+concertino	noun	a piece for one or more solo instruments with orchestra	Italian	concertino			
+concessionaire	noun	the beneficiary of a concession or grant	French	concessionnaire		concessioner	
 conclusively		in the way of conclusion; decisively					
-concordant		agreeing; correspondent				accordant agreeable conformable consonant	
-confess	verb	to make acknowledgment or avowal in a matter pertaining to one's self				squeal fink	
-conformable		corresponding in form, character, opinions, etc					
-conformation	noun	the act of conforming; the act of producing conformity					
-conjunctivitis		inflammation of the conjunctiva				pinkeye	
-constrict	verb	to draw together; to render narrower or smaller				compress squeeze compact contract press	
-consumable		capable of being consumed; that may be destroyed, dissipated, wasted, or spent					
-contradict	verb	to assert the contrary of; to oppose in words				belie negate	
-controllability		capability of being controlled; controllableness					
+concordant		agreeing; correspondent	Latin	concordans		accordant agreeable conformable consonant	
+confess	verb	to make acknowledgment or avowal in a matter pertaining to one's self	Latin	confessus		squeal fink	
+conformable		corresponding in form, character, opinions, etc	Latin	conformabilis			
+conformation	noun	the act of conforming; the act of producing conformity	Latin	confōrmātiō	conformity configuration		
+conjunctivitis		inflammation of the conjunctiva		conjunctiva + -itis		pinkeye	
+constrict	verb	to draw together; to render narrower or smaller	Latin	cōnstrictus "compressed, contracted"	constraint restrict	compress squeeze compact contract press	
+consumable		capable of being consumed; that may be destroyed, dissipated, wasted, or spent		consume + -able			
+contradict	verb	to assert the contrary of; to oppose in words	Latin	contrādictus "contradicted"		belie negate	
+controllability		capability of being controlled; controllableness		controllable + -ity			
 convertibility	noun	the condition or quality of being convertible					inconvertibility
-cooter	noun	a fresh-water tortoise of Florida. The box tortoise				river cooter pseudemys concinna	
-cornflower	noun	a conspicuous wild flower , growing in grainfields				strawflower uvularia grandiflora	
-corporeal		having a body; consisting of, or pertaining to, a material body or substance				material	incorporeal
-corregidor	noun	the chief magistrate of a Spanish town				bataan	
-corsair	noun	a pirate; one who cruises about without authorization from any government, to seize booty on sea or land				barbary pirate	
-coss	noun	a Hindoo measure of distance, varying from one and a half to two English miles				kos	
-coterie	noun	a set or circle of persons who meet familiarly, as for social, literary, or other purposes				clique ingroup inner circle pack camp	
-coterminous		bordering; conterminous				coextensive conterminous	
-countenance		appearance or expression of the face; look				permit allow let	forbid forbid
-covey	noun	a brood or hatch of birds; an old bird with her brood of young					
-cramp		that which confines or contracts; a restraint					
+cooter	noun	a fresh-water tortoise of Florida. The box tortoise		Borrowed from Gullah cootuh ("turtle"), from an African language, e.g			
+cornflower	noun	a conspicuous wild flower , growing in grainfields		corn + flower		strawflower	
+corporeal		having a body; consisting of, or pertaining to, a material body or substance	Latin	corporeus		material	incorporeal
+corregidor	noun	the chief magistrate of a Spanish town	Spanish	corregidor "corrector"	corregimiento	bataan	
+corsair	noun	a pirate; one who cruises about without authorization from any government, to seize booty on sea or land	Latin	cursārius "pirate"			
+coss	noun	a Hindoo measure of distance, varying from one and a half to two English miles		Borrowed from Hindustani کوس / कोस (kos)		kos	
+coterie	noun	a set or circle of persons who meet familiarly, as for social, literary, or other purposes	French	coterie		clique ingroup pack camp	
+coterminous		bordering; conterminous	Latin	conterminus	contiguous	coextensive conterminous	
+countenance		appearance or expression of the face; look	Latin	continentia		permit allow let	forbid forbid
+covey	noun	a brood or hatch of birds; an old bird with her brood of young	Latin	cubāre			
+cramp		that which confines or contracts; a restraint	Old French	crampe "cramp"			
 creme		cream; -- a term used esp. in cookery, names of liqueurs, etc					
-cress	noun	a plant of various species, chiefly cruciferous				cress plant	
-crick	noun	a painful, spasmodic affection of the muscles of some part of the body, as of the neck or back, rendering it difficult to move the part					
-crone	noun	an old woman; -- usually in contempt				hag beldam beldame witch	
-crossbones	noun	a representation of two of the leg bones or arm bones of a skeleton, laid crosswise, often surmounted with a skull, and serving as a symbol of death					
-croton	noun	a genus of euphorbiaceous plants belonging to tropical countries				codiaeum variegatum	
-crucify	verb	to fasten to a cross; to put to death by nailing the hands and feet to a cross or gibbet					
-cruet	noun	a bottle or vessel; esp., aviai or small glass bottle for holding vinegar, oil, pepper, or the like, for the table				crewet	
-crusade		any enterprise undertaken with zeal and enthusiasm				fight press campaign push agitate	
-cubit	noun	a measure of length, being the distance from the elbow to the extremity of the middle finger					
-cuckold	noun	a man whose wife is unfaithful; the husband of an adulteress				cheat on cheat betray wander	
-cuddy		hence: A blockhead; a lout					
-cystitis		inflammation of the bladder					
-daffodil	noun	a plant of the genus Asphodelus. A plant of the genus Narcissus (N					
-dainty		that which is delicious or delicate; a delicacy				exquisite	
-dampen	verb	to make damp or moist; to make slightly wet				stifle	stimulate
-damsel	noun	a young unmarried woman; a gerl				demoiselle damoiselle damosel damozel	
-darken	verb	to make dark or black; to deprite of light					lighten
+cress	noun	a plant of various species, chiefly cruciferous	Old English	cressa			
+crick	noun	a painful, spasmodic affection of the muscles of some part of the body, as of the neck or back, rendering it difficult to move the part	Middle English	crike			
+crone	noun	an old woman; -- usually in contempt	Old French	charogne "carrion, carcass, old sheep, hag"	croning	hag beldam beldame witch	
+crossbones	noun	a representation of two of the leg bones or arm bones of a skeleton, laid crosswise, often surmounted with a skull, and serving as a symbol of death		cross + bones			
+croton	noun	a genus of euphorbiaceous plants belonging to tropical countries	Greek	krotṓn "tick"			
+crucify	verb	to fasten to a cross; to put to death by nailing the hands and feet to a cross or gibbet	Latin	crucificō			
+cruet	noun	a bottle or vessel; esp., aviai or small glass bottle for holding vinegar, oil, pepper, or the like, for the table	Old French	crue "an earthen pot"		crewet	
+crusade		any enterprise undertaken with zeal and enthusiasm	Latin	cruciāta	crucial crucifer crucifixion crucify excruciate excruciation	fight press campaign push agitate	
+cubit	noun	a measure of length, being the distance from the elbow to the extremity of the middle finger	Latin	cubitum "elbow, cubit"	qubit		
+cuckold	noun	a man whose wife is unfaithful; the husband of an adulteress	Latin	cucus	cuckquean cuckcake cucky	cheat betray wander	
+cuddy		hence: A blockhead; a lout	Dutch	kajuit "cabin"			
+cystitis		inflammation of the bladder		cyst + -itis			
+daffodil	noun	a plant of the genus Asphodelus. A plant of the genus Narcissus (N	Greek	asphódelos			
+dainty		that which is delicious or delicate; a delicacy	Latin	dignitātem	undainteous	exquisite	
+dampen	verb	to make damp or moist; to make slightly wet		damp + -en		stifle	stimulate
+damsel	noun	a young unmarried woman; a gerl	Latin	domina "mistress, lady"		demoiselle damoiselle damosel damozel	
+darken	verb	to make dark or black; to deprite of light	Middle English	derkenen			lighten
 dasher	noun	a dashboard or splashboard. [U					
 dastardly		meanly timid; cowardly					
-dauphin	noun	the title of the eldest son of the king of France, and heir to the crown					
-debenture	noun	a writing acknowledging a debt; a writing or certificate signed by a public officer, as evidence of a debt due to some person				unsecured bond debenture bond	secured bond
-debonair		characterized by courteousness, affability, or gentleness				debonaire debonnaire suave	
+dauphin	noun	the title of the eldest son of the king of France, and heir to the crown	Greek	delphís	delphinal delphinate		
+debenture	noun	a writing acknowledging a debt; a writing or certificate signed by a public officer, as evidence of a debt due to some person	Latin	debentur "they are owing"			
+debonair		characterized by courteousness, affability, or gentleness	Middle English	debonaire		debonaire debonnaire suave	
 decomposed		separated or broken up; -- said of the crest of birds when the feathers are divergent					
-defer	verb	to put off; to postpone to a future time				postpone prorogue hold over put over table	
-deform	verb	to spoil the form of; to mar in form					
-degenerate		having become worse than one's kind, or one's former state				debauched degraded dissipated dissolute libertine	
-dehydrate	verb	to deprive of water; to render free from water				desiccate	
-demonology	noun	a treatise on demons; a supposititious science which treats of demons and their manifestations					
-depolarization	noun	the act of depriving of polarity, or the result of such action				depolarisation	
-deprecation		entreaty for pardon; petitioning					
-depress	verb	to press down; to cause to sink				deject cast down get down dismay dispirit	elate
-descend	verb	to pass from a higher to a lower place; to move downwards				fall go down come down	rise ascend
-developable		capable of being developed					
-dewy		pertaining to dew; resembling, consisting of, or moist with, dew				bedewed	
-dibble	noun	a pointed implement used to make holes in the ground in which no set out plants or to plant seeds					
-dictum	noun	an authoritative statement; a dogmatic saying				pronouncement say-so	
+defer	verb	to put off; to postpone to a future time	Latin	differō	differ	postpone prorogue table shelve remit	
+deform	verb	to spoil the form of; to mar in form	Greek	morphḗ "form, shape; appearance; outline; kind, type"			
+degenerate		having become worse than one's kind, or one's former state	Latin	degenerō	regenerate ungenerate neurodegenerating undegenerating	debauched degraded dissipated dissolute libertine	
+dehydrate	verb	to deprive of water; to render free from water		de- + hydrate	diedrate	desiccate	
+demonology	noun	a treatise on demons; a supposititious science which treats of demons and their manifestations		demono- + -logy			
+depolarization	noun	the act of depriving of polarity, or the result of such action		de- + polarization	prepolarization repolarization	depolarisation	
+deprecation		entreaty for pardon; petitioning	Latin	dēprecātiōnem	imprecation		
+depress	verb	to press down; to cause to sink	Latin	dēpressus		deject dismay dispirit demoralize demoralise	elate
+descend	verb	to pass from a higher to a lower place; to move downwards	Latin	dēscendere	ascend transcend	fall	rise ascend
+developable		capable of being developed		develop + -able			
+dewy		pertaining to dew; resembling, consisting of, or moist with, dew	Old English	dēawiġ		bedewed	
+dibble	noun	a pointed implement used to make holes in the ground in which no set out plants or to plant seeds		dib "to dab lightly" + -le	dibber		
+dictum	noun	an authoritative statement; a dogmatic saying	Latin	dictum "proverb, maxim"		pronouncement	
 diggers	noun	a degraded tribe of California Indians; -- so called from their practice of digging roots for food					
-dilute	verb	to make thinner or more liquid by admixture with something				diluted	undiluted
-dime	noun	a silver coin of the United States, of the value of ten cents					
-diopter	noun	an optical instrument, invented by Hipparchus, for taking altitudes, leveling, etc				dioptre	
+dilute	verb	to make thinner or more liquid by admixture with something	Latin	dīlūtus	diluent diluvium haemodiluting	diluted	undiluted
+dime	noun	a silver coin of the United States, of the value of ten cents	Latin	decima			
+diopter	noun	an optical instrument, invented by Hipparchus, for taking altitudes, leveling, etc	Greek	dióptra		dioptre	
 disablement		deprivation of ability; incapacity				disability handicap impairment	
-disaggregate	verb	to destroy the aggregation of; to separate into component parts, as an aggregate mass					
-disarray	verb	to take off the dress of; to unrobe				disorder	order
-discontinuance	noun	the act of discontinuing, or the state of being discontinued				discontinuation	continuance continuance
-discrepant		discordant; at variance	Latin	discrepāns	nondiscrepant serodiscrepant	incompatible	
+disaggregate	verb	to destroy the aggregation of; to separate into component parts, as an aggregate mass		dis- + aggregate			
+disarray	verb	to take off the dress of; to unrobe	Old French	desareer		disorder	order
+discontinuance	noun	the act of discontinuing, or the state of being discontinued	Old French	descontinuer		discontinuation	continuance continuance
+discrepant		discordant; at variance	Latin	discrepāns		incompatible	
 discriminative		marking a difference; distinguishing				discriminatory	
-dishonest		wanting in honesty; void of integrity				dishonorable	honest
-disjunctive		tending to disjoin; separating					conjunctive
-dismal		gloomy to the eye or ear; sorrowful and depressing to the feelings				blue dark dingy disconsolate gloomy	
-dissipation	noun	a dissolute course of life, in which health, money, etc., are squandered in pursuit of pleasure					
-distillation	noun	the act of falling in drops, or the act of pouring out in drops				distillment	
+dishonest		wanting in honesty; void of integrity	Latin	dehonestus		dishonorable	honest
+disjunctive		tending to disjoin; separating	Latin	disjunctīvus "placed in opposition"			conjunctive
+dismal		gloomy to the eye or ear; sorrowful and depressing to the feelings	Latin	diēs		blue dark dingy disconsolate gloomy	
+dissipation	noun	a dissolute course of life, in which health, money, etc., are squandered in pursuit of pleasure	Latin	dissipātiō			
+distillation	noun	the act of falling in drops, or the act of pouring out in drops	Latin	distīllātiōnem		distillment	
 divertissement	noun	a short ballet, or other entertainment, between the acts of a play					
-doggerel		low in style, and irregular in measure				doggerel verse jingle	
+doggerel		low in style, and irregular in measure		dog + -rel "pejorative suffix"		jingle	
 dominator	noun	a ruler or ruling power					
-donator	noun	one who makes a gift; a donor					
-dormouse	noun	a small European rodent of the genus Myoxus, of several species					
-doubly		in twice the quantity; to twice the degree					
+donator	noun	one who makes a gift; a donor	Latin	dōnātor			
+dormouse	noun	a small European rodent of the genus Myoxus, of several species	Old French	dormir "to sleep"			
+doubly		in twice the quantity; to twice the degree	Middle English	dowbly			
 doubting		that is uncertain; that distrusts or hesitates				questioning skeptical sceptical	
-downfall	noun	a sudden fall; a body of things falling				ruin ruination	
-downpour	noun	a pouring or streaming downwards; esp., a heavy or continuous shower				cloudburst deluge waterspout torrent pelter	
-dragoon		formerly, a soldier who was taught and armed to serve either on horseback or on foot				sandbag railroad	
-drier	noun	one who, or that which, dries; that which may expel or absorb moisture				desiccant drying agent siccative	
-dryness	noun	the state of being dry				waterlessness xerotes	wetness
-duckweed	noun	a genus of small plants, seen floating in great quantity on the surface of stagnant pools fresh water, and supposed to furnish food for ducks					
-ductile		capable of being elongated or drawn out, as into wire or threads				malleable	
-eagerness	noun	the state or quality of being eager; ardent desire				avidity avidness keenness	
-earache		ache or pain in the ear				otalgia	
-efflux	noun	the act or process of flowing out, or issuing forth				outflow effluence	inflow inflow
-egregious		surpassing; extraordinary	Latin	ēgregius	unegregious	flagrant glaring gross rank	
-elastically		in an elastic manner; by an elastic power					
+downfall	noun	a sudden fall; a body of things falling		down- + fall		ruin ruination	
+downpour	noun	a pouring or streaming downwards; esp., a heavy or continuous shower		down- + pour		cloudburst deluge waterspout torrent pelter	
+dragoon		formerly, a soldier who was taught and armed to serve either on horseback or on foot	Greek	drắkōn "dragon; serpent"		sandbag railroad	
+drier	noun	one who, or that which, dries; that which may expel or absorb moisture	Middle English	driere		desiccant siccative	
+dryness	noun	the state of being dry	Middle English	dryenesse		waterlessness xerotes	wetness
+duckweed	noun	a genus of small plants, seen floating in great quantity on the surface of stagnant pools fresh water, and supposed to furnish food for ducks	Middle English	dokemete "duckweed"			
+ductile		capable of being elongated or drawn out, as into wire or threads	Latin	ductilis "easily led"		malleable	
+eagerness	noun	the state or quality of being eager; ardent desire	Middle English	egernesse		avidity avidness keenness	
+earache		ache or pain in the ear		ear + ache		otalgia	
+efflux	noun	the act or process of flowing out, or issuing forth	Latin	effluxus		outflow effluence	inflow inflow
+egregious		surpassing; extraordinary	Latin	ēgregius		flagrant glaring gross rank	
+elastically		in an elastic manner; by an elastic power		elastic + -ally			
 eldest		oldest; longest in duration				firstborn	
 embankment	noun	the act of surrounding or defending with a bank					
-embarrassment	noun	a state of being embarrassed; perplexity					
-embouchure	noun	the mouth of a river; also, the mouth of a cannon				mouthpiece	
-emeritus		honorably discharged from the performance of public duty on account of age, infirmity, or long and faithful services					
-emollient		softening; making supple				demulcent salving softening	
-emplacement	noun	a putting in, or assigning to, a definite place					
-employable		capable of being employed; capable of being used					unemployable
-empress	noun	the consort of an emperor					
-emptiness	noun	the state of being empty; absence of contents					fullness
-empyrean	noun	the highest heaven, where the pure element of fire was supposed by the ancients to subsist				empyreal	
-enablement	noun	the act of enabling, or the state of being enabled					
-enclave	noun	a tract of land or a territory inclosed within another territory of which it is independent					
-enliven	verb	to give life, action, or motion to; to make vigorous or active				inspire animate invigorate exalt	
-entailment	noun	the act of entailing or of giving, as an estate, and directing the mode of descent		entail + -ment		deduction implication	
-entomological		of or relating to entomology. -- En\`to*mo*log"ic*al*ly, adv				entomologic	
-enviable		fitted to excite envy; capable of awakening an ardent desire to posses or to resemble					
-epicurean		given to luxury; adapted to luxurious tastes					
-equipage		furniture or outfit, whether useful or ornamental				materiel	
-erode	verb	to eat into or away; to corrode				gnaw gnaw at eat at wear away	
-eruption		that which bursts forth				volcanic eruption	
-ethene		ethylene; olefiant gas				ethylene	
+embarrassment	noun	a state of being embarrassed; perplexity			embarrassingness		
+embouchure	noun	the mouth of a river; also, the mouth of a cannon	Latin	bucca "cheek"		mouthpiece	
+emeritus		honorably discharged from the performance of public duty on account of age, infirmity, or long and faithful services	Latin	ēmeritus			
+emollient		softening; making supple	Latin	emolliēns	mollify	demulcent salving softening	
+emplacement	noun	a putting in, or assigning to, a definite place	French	emplacement			
+employable		capable of being employed; capable of being used		employ + -able			unemployable
+empress	noun	the consort of an emperor	Latin	imperatrix			
+emptiness	noun	the state of being empty; absence of contents	Old English	ǣmtiġnes			fullness
+empyrean	noun	the highest heaven, where the pure element of fire was supposed by the ancients to subsist	Greek	empúrios		empyreal	
+enablement	noun	the act of enabling, or the state of being enabled	Middle English	enhablement			
+enclave	noun	a tract of land or a territory inclosed within another territory of which it is independent	Latin	clavis "key"	conclave		
+enliven	verb	to give life, action, or motion to; to make vigorous or active		life + en-		inspire animate invigorate exalt	
+entailment	noun	the act of entailing or of giving, as an estate, and directing the mode of descent				deduction implication	
+entomological		of or relating to entomology. -- En\`to*mo*log"ic*al*ly, adv		entomology + -ical		entomologic	
+enviable		fitted to excite envy; capable of awakening an ardent desire to posses or to resemble		envy + -able	envy unenviably		
+epicurean		given to luxury; adapted to luxurious tastes		From Epicurean ("follower of Epicureanism")	epicurious		
+equipage		furniture or outfit, whether useful or ornamental	Latin	equus "horse"		materiel	
+erode	verb	to eat into or away; to corrode	Latin	ērōdō	erodable erodible noneroding	gnaw	
+eruption		that which bursts forth	Latin	eruptio			
+ethene		ethylene; olefiant gas			polythene	ethylene	
 etruscan		of or relating to Etruria. -- n					
-euthanasia	noun	an easy death; a mode of dying to be desired				mercy killing	
-evaporate	verb	to pass off in vapor, as a fluid; to escape and be dissipated, either in visible vapor, or in practice too minute to be visible				vaporize vaporise	
-evasion	noun	the act of eluding or avoiding, particularly the pressure of an argument, accusation, charge, or interrogation				equivocation	
-eventuality	noun	the coming as a consequence; contingency				contingency contingence	
-ewer	noun	a kind of widemouthed pitcher or jug; esp., one used to hold water for the toilet				pitcher	
+euthanasia	noun	an easy death; a mode of dying to be desired	Greek	euthanasía	electrothanasia euthanatise euthanatize euthanise euthaniser euthanize ruthanasia zoothanasia		
+evaporate	verb	to pass off in vapor, as a fluid; to escape and be dissipated, either in visible vapor, or in practice too minute to be visible	Latin	ēvapōrātus	vapour nonevaporating	vaporize vaporise	
+evasion	noun	the act of eluding or avoiding, particularly the pressure of an argument, accusation, charge, or interrogation	Latin	evasionem	avoision	equivocation	
+eventuality	noun	the coming as a consequence; contingency	French	éventualité		contingency contingence	
+ewer	noun	a kind of widemouthed pitcher or jug; esp., one used to hold water for the toilet	Latin	aquārium		pitcher	
 exceedingly	verb	to a very great degree; beyond what is usual					
 excepting		but properly a participle					
-excusable		that may be excused, forgiven, justified, or acquitted of blame					inexcusable
-expel	verb	to drive or force out from that within which anything is contained, inclosed, or situated				throw out kick out	
-expound	verb	to lay open the meaning of; to explain				elaborate lucubrate expatiate exposit enlarge	abridge
-eyeglass	noun	a lens of glass to assist the sight				monocle	
-eyelet	noun	a small hole or perforation to receive a cord or fastener, as in garments, sails, etc				eyehole	
-factotum	noun	a person employed to do all kinds of work or business					
-facture	noun	the act or manner of making or doing anything					
-faintness	noun	the state of being faint; loss of strength, or of consciousness, and self-control					
-familiarize	verb	to make acquainted, or skilled, by practice or study				familiarise acquaint	
-farthing	noun	the fourth of a penny; a small copper coin of Great Britain, being a cent in United States currency					
-faucet	noun	a fixture for drawing a liquid, as water, molasses, oil, etc., from a pipe, cask, or other vessel, in such quantities as may be desired				spigot	
-faun	noun	a god of fields and shipherds, diddering little from the satyr					
-fecal		relating to, or containing, dregs, feces, or ordeure				faecal	
-fecund		fruitful in children; prolific					
-felicity	noun	the state of being happy; blessedness				felicitousness	infelicity
-feria	noun	a week day, esp. a day which is neither a festival nor a fast					
-ferocity		savage wildness or fierceness; fury				fierceness furiousness fury vehemence violence	
-festoon	noun	a garland or wreath hanging in a depending curve, used in decoration for festivals, etc					
-fiend	noun	an implacable or malicious foe; one who is diabolically wicked or cruel				monster devil demon ogre	
-fillet	noun	a little band, especially one intended to encircle the hair of the head				filet	
-finesse		subtilty of contrivance to gain a point; artifice				delicacy diplomacy discreetness	
-fireside	noun	a place near the fire or hearth; home				hearth	
-firstborn		first brought forth; first in the order of nativity				eldest	
-firth	noun	an arm of the sea; a frith				john rupert firth	
-fissile		capable of being split, cleft, or divided in the direction of the grain, like wood, or along natural planes of cleavage, like crystals				fissionable	nonfissionable
-flatter	verb	to raise hopes in; to encourage or favorable, but sometimes unfounded or deceitful, representations				blandish	disparage
-flaxseed	noun	the seed of the flax; linseed				linseed	
-flexor	noun	a muscle which bends or flexes any part; -- opposed to extensor				flexor muscle	extensor muscle
-florescent		expanding into flowers; blossoming					
-flugel	noun	a grand piano or a harpsichord, both being wing-shaped					
-foothold	noun	a holding with the feet; firm				bridgehead	
-foray	noun	a sudden or irregular incursion in border warfare				plunder despoil loot reave strip	
-foreboding		presage of coming ill; expectation of misfortune				fateful portentous	
-forego	verb	to quit; to relinquish				predate precede forgo antecede antedate	postdate
-foreskin	noun	the fold of skin which covers the glans of the penis				prepuce	
-formalist		one overattentive to forms, or too much confined to them					
-formidable		exciting fear or apprehension; impressing dread					
-fortieth		following the thirty-ninth, or preceded by thirty-nine units, things, or parts					
-foundling	noun	a deserted or exposed infant; a child found without a parent or owner				abandoned infant	
-fraternal		pf, pertaining to, or involving, brethren; becoming to brothers					
+excusable		that may be excused, forgiven, justified, or acquitted of blame	Latin	excusabilis			inexcusable
+expel	verb	to drive or force out from that within which anything is contained, inclosed, or situated	Latin	expellere			
+expound	verb	to lay open the meaning of; to explain	Latin	exponere	exponent expose exposition	elaborate lucubrate expatiate exposit enlarge	abridge
+eyeglass	noun	a lens of glass to assist the sight		eye + glass		monocle	
+eyelet	noun	a small hole or perforation to receive a cord or fastener, as in garments, sails, etc	Old French	oil "eye"		eyehole	
+factotum	noun	a person employed to do all kinds of work or business	Latin	domine			
+facture	noun	the act or manner of making or doing anything	Latin	factura "a making"			
+faintness	noun	the state of being faint; loss of strength, or of consciousness, and self-control	Middle English	faintnesse	giddiness		
+familiarize	verb	to make acquainted, or skilled, by practice or study		familiar + -ize		familiarise acquaint	
+farthing	noun	the fourth of a penny; a small copper coin of Great Britain, being a cent in United States currency	Old English	fēorþing			
+faucet	noun	a fixture for drawing a liquid, as water, molasses, oil, etc., from a pipe, cask, or other vessel, in such quantities as may be desired	Latin	falsāre "to falsify"		spigot	
+faun	noun	a god of fields and shipherds, diddering little from the satyr	Latin	faunus			
+fecal		relating to, or containing, dregs, feces, or ordeure	Latin	faex		faecal	
+fecund		fruitful in children; prolific	Latin	fēcundus "fertile"			
+felicity	noun	the state of being happy; blessedness	Latin	fēlīcitātem		felicitousness	infelicity
+feria	noun	a week day, esp. a day which is neither a festival nor a fast	Latin	fēria			
+ferocity		savage wildness or fierceness; fury	Latin	ferocitas		fierceness furiousness fury vehemence violence	
+festoon	noun	a garland or wreath hanging in a depending curve, used in decoration for festivals, etc	French	feston			
+fiend	noun	an implacable or malicious foe; one who is diabolically wicked or cruel	Old English	fēond "enemy"		monster devil demon ogre	
+fillet	noun	a little band, especially one intended to encircle the hair of the head	Latin	fīlum "thread"		filet	
+finesse		subtilty of contrivance to gain a point; artifice	Latin	fīnis "an end"		delicacy diplomacy discreetness	
+fireside	noun	a place near the fire or hearth; home		fire + side		hearth	
+firstborn		first brought forth; first in the order of nativity	Middle English	first	nextborn	eldest	
+firth	noun	an arm of the sea; a frith	Old English	ford			
+fissile		capable of being split, cleft, or divided in the direction of the grain, like wood, or along natural planes of cleavage, like crystals	Latin	fissilis	fissban	fissionable	nonfissionable
+flatter	verb	to raise hopes in; to encourage or favorable, but sometimes unfounded or deceitful, representations	Old French	flater		blandish	disparage
+flaxseed	noun	the seed of the flax; linseed		flax + seed		linseed	
+flexor	noun	a muscle which bends or flexes any part; -- opposed to extensor	Latin	flexor			
+florescent		expanding into flowers; blossoming	Latin	florescens			
+flugel	noun	a grand piano or a harpsichord, both being wing-shaped	German	Flügel			
+foothold	noun	a holding with the feet; firm		foot + hold	toehold	bridgehead	
+foray	noun	a sudden or irregular incursion in border warfare	Old French	forrier		plunder despoil loot reave strip	
+foreboding		presage of coming ill; expectation of misfortune	Middle English	forbodyng		fateful portentous	
+forego	verb	to quit; to relinquish	Old English	foregān		predate precede forgo antecede antedate	postdate
+foreskin	noun	the fold of skin which covers the glans of the penis	Latin	praepūtium		prepuce	
+formalist		one overattentive to forms, or too much confined to them		formal + -ist			
+formidable		exciting fear or apprehension; impressing dread	Latin	formīdābilis "formidable, terrible"			
+fortieth		following the thirty-ninth, or preceded by thirty-nine units, things, or parts	Middle English	fourtithe			
+foundling	noun	a deserted or exposed infant; a child found without a parent or owner	Middle English	foundlyng	changeling		
+fraternal		pf, pertaining to, or involving, brethren; becoming to brothers	Latin	frāternālis "fraternal"	fratery fratricidal fratricide fratry		
 freshness	noun	the state of being fresh					staleness
-fright	noun	a state of terror excited by the sudden appearance of danger				frighten scare affright	
-fritter	noun	a small quantity of batter, fried in boiling lard or in a frying pan				frivol away dissipate shoot fritter away fool	
-frush	noun	a discharge of a fetid or ichorous matter from the frog of a horse's foot					
-furze	noun	a thorny evergreen shrub , with beautiful yellow flowers, very common upon the plains and hills of Great Britain				gorse whin irish gorse ulex europaeus	
+fright	noun	a state of terror excited by the sudden appearance of danger	Old English	fryhtu		frighten scare affright	
+fritter	noun	a small quantity of batter, fried in boiling lard or in a frying pan	Latin	frīgō "to fry"		dissipate shoot fool	
+frush	noun	a discharge of a fetid or ichorous matter from the frog of a horse's foot	Latin	frustum "bit, fragment"			
+furze	noun	a thorny evergreen shrub , with beautiful yellow flowers, very common upon the plains and hills of Great Britain	Old English	fyrs "furze, gorse, bramble"	furzy	gorse whin	
 gadwall	noun	a large duck , valued as a game bird, found in the northern parts of Europe and America					
-gallium	noun	a rare metallic element, found in certain zinc ores					
-galvanize	verb	to plate, as with gold, silver, etc., by means of electricity				startle galvanise	
-gardenia	noun	a genus of plants, some species of which produce beautiful and fragrant flowers					
-gavage		forced feeding by means of a tube passed through the mouth down to the stomach				forced feeding	
-geest		alluvial matter on the surface of land, not of recent origin					
-gibbet	noun	the projecting arm of a crane, from which the load is suspended					
-gist	noun	the main point, as of a question; the point on which an action rests				effect essence burden core	
-glaciation		that which is formed by freezing; ice					
-glut	verb	to swallow, or to swallow greedlly; to gorge				gorge ingurgitate overindulge englut stuff	
+gallium	noun	a rare metallic element, found in certain zinc ores	Latin	Gallia "Gaul"	gallane gallate lumogallion		
+galvanize	verb	to plate, as with gold, silver, etc., by means of electricity	French	galvaniser	galvanneal	startle galvanise	
+gardenia	noun	a genus of plants, some species of which produce beautiful and fragrant flowers		Borrowed from translingual Gardenia, named after Scottish naturalist Dr			
+gavage		forced feeding by means of a tube passed through the mouth down to the stomach	French	gavage			
+geest		alluvial matter on the surface of land, not of recent origin	Middle Dutch	geest			
+gibbet	noun	the projecting arm of a crane, from which the load is suspended	Latin	gibbus "hunchbacked"			
+gist	noun	the main point, as of a question; the point on which an action rests	Latin	iacēre		effect essence burden core	
+glaciation		that which is formed by freezing; ice	French	glaciation			
+glut	verb	to swallow, or to swallow greedlly; to gorge	Latin	gluttiō		gorge ingurgitate overindulge englut stuff	
 gobbler	noun	a turkey cock; a bubbling					
-godsend		something sent by God; an unexpected acquisiton or piece of good fortune				boom bonanza gold rush gravy manna from heaven	
-gossypium	noun	a genus of plants which yield the cotton of the arts				genus gossypium	
-gracious		abounding in grace or mercy; manifesting love,. or bestowing mercy					ungracious
-grackle		one of several American blackbirds, of the family Icteridæ				hill myna indian grackle gracula religiosa	
-granulation	noun	the act or process of forming or crystallizing into grains				granulation tissue	
-grapple	noun	a seizing or seizure; close hug in contest	Old English	ġegræppian "to seize"	ungrapple	cope get by make out make do contend	
-grating	noun	a partition, covering, or frame of parallel or cross bars				gravelly rasping raspy rough scratchy	
-graystone	noun	a grayish or greenish compact rock, composed of feldspar and augite, and allied to basalt					
-greengrocer	noun	a retailer of vegetables or fruits in their fresh or green state					
-grindstone	noun	a flat, circular stone, revolving on an axle, for grinding or sharpening tools, or shaping or smoothing objects					
-groat	noun	an old English silver coin, equal to four pence				fourpence	
-grout		coarse meal; ground malt					
-guarana	noun	a preparation from the seeds of Paullinia sorbilis, a woody climber of Brazil, used in making an astringent drink, and also in the cure of headache					
-guilder	noun	a Dutch silver coin worth about forty cents; -- called also florin and gulden				gulden florin	
-guildhall	noun	the hall where a guild or corporation usually assembles					
-hangman	noun	one who hangs another; esp., one who makes a business of hanging					
+godsend		something sent by God; an unexpected acquisiton or piece of good fortune		God + -		boom bonanza gravy windfall bunce	
+gossypium	noun	a genus of plants which yield the cotton of the arts					
+gracious		abounding in grace or mercy; manifesting love,. or bestowing mercy	Latin	gratiosus	graceful		ungracious
+grackle		one of several American blackbirds, of the family Icteridæ	Latin	graculus "jackdaw"			
+granulation	noun	the act or process of forming or crystallizing into grains	Latin	grānulum "granule"	granular granularity granulate granulatory granule		
+grapple	noun	a seizing or seizure; close hug in contest	Old English	ġegræppian "to seize"		cope contend deal manage	
+grating	noun	a partition, covering, or frame of parallel or cross bars		From grat(e) + -ing	grate	gravelly rasping raspy rough scratchy	
+graystone	noun	a grayish or greenish compact rock, composed of feldspar and augite, and allied to basalt		gray + stone	brownstone		
+greengrocer	noun	a retailer of vegetables or fruits in their fresh or green state		green + grocer			
+grindstone	noun	a flat, circular stone, revolving on an axle, for grinding or sharpening tools, or shaping or smoothing objects	Middle English	grind-ston			
+groat	noun	an old English silver coin, equal to four pence	Old English	grot	grotty	fourpence	
+grout		coarse meal; ground malt	Old English	grūt "dregs; coarse meal"			
+guarana	noun	a preparation from the seeds of Paullinia sorbilis, a woody climber of Brazil, used in making an astringent drink, and also in the cure of headache	Portuguese	guaraná			
+guilder	noun	a Dutch silver coin worth about forty cents; -- called also florin and gulden	Middle Dutch	gulden "golden"		gulden florin	
+guildhall	noun	the hall where a guild or corporation usually assembles		guild + hall			
+hangman	noun	one who hangs another; esp., one who makes a business of hanging	Middle English	hangman	hanging hangwoman		
 harbinger	noun	a forerunner; a precursor	Old French	herbergeor		announce annunciate foretell herald	
-hasp	noun	an instrument for cutting the surface of grass land					
-havelock	noun	a light cloth covering for the head and neck, used by soldiers as a protection from sunstroke					
-headboard	noun	a board or boarding which marks or forms the head of anything					
-heave	verb	to cause to move upward or onward by a lifting effort					
-heaving	noun	a lifting or rising; a swell				heave	
-heed	verb	to mind; to regard with care				mind listen	
-hematology	noun	the science which treats of the blood				haematology	
-hemiptera	noun	an order of hexapod insects having a jointed proboscis, including four sharp stylets , for piercing				order hemiptera	
-hemorrhage		any discharge of blood from the blood vessels				shed blood bleed	
-herbalist		one skilled in the knowledge of plants; a collector of, or dealer in, herbs, especially medicinal herbs				herb doctor	
-heriot		formerly, a payment or tribute of arms or military accouterments, or the best beast, or chattel, due to the lord on the death of a tenant					
+hasp	noun	an instrument for cutting the surface of grass land	Old English	hæsp			
+havelock	noun	a light cloth covering for the head and neck, used by soldiers as a protection from sunstroke		From Havelock, after Sir Henry Havelock			
+headboard	noun	a board or boarding which marks or forms the head of anything		head + board	footboard bedhead bedboard headstone		
+heave	verb	to cause to move upward or onward by a lifting effort	Greek	káptō "to gulp down"	heavy upheaval		
+heaving	noun	a lifting or rising; a swell	Middle English	hevynge		heave	
+heed	verb	to mind; to regard with care	Old English	hēdan		mind listen	
+hematology	noun	the science which treats of the blood	Latin	combining	hemopathology	haematology	
+hemiptera	noun	an order of hexapod insects having a jointed proboscis, including four sharp stylets , for piercing					
+hemorrhage		any discharge of blood from the blood vessels	Greek	haimorrhagía "a violent bleeding"	haemorrhagic	bleed	
+herbalist		one skilled in the knowledge of plants; a collector of, or dealer in, herbs, especially medicinal herbs		herbal + -ist			
+heriot		formerly, a payment or tribute of arms or military accouterments, or the best beast, or chattel, due to the lord on the death of a tenant	Old English	hereġeatwa "military equipment, army gear"			
 heritability	noun	the state of being heritable					
-heterodox		contrary to, or differing from, some acknowledged standard, as the Bible, the creed of a church, the decree of a council, and the like				dissident heretical	
-hewn		felled, cut, or shaped as with an ax; roughly squared				hand-hewn	
-hiatus	noun	an opening; an aperture	Latin	hiātus "opening"	hiatal hiatic prehiatus	suspension respite reprieve abatement	
-hierarch	noun	one who has high and controlling authority in sacred things					
-hinder		of or belonging to that part or end which is in the rear, or which follows					
-hogshead	noun	a large cask or barrel, of indefinite contents					
-homological		pertaining to homology; having a structural affinity proceeding from, or base upon, that kind of relation termed homology. -- Ho\`mo*log"ic*al*ly, adv				homologic	
-honeydew	noun	a sweet, saccharine substance, found on the leaves of trees and other plants in small drops, like dew				honeydew melon	
+heterodox		contrary to, or differing from, some acknowledged standard, as the Bible, the creed of a church, the decree of a council, and the like	Greek	heteródoxos		dissident heretical	
+hewn		felled, cut, or shaped as with an ax; roughly squared		hew + -n			
+hiatus	noun	an opening; an aperture	Latin	hiātus "opening"	hiatal hiatic	suspension respite reprieve abatement	
+hierarch	noun	one who has high and controlling authority in sacred things	Greek	hierárkhēs	patriarch patriarchy		
+hinder		of or belonging to that part or end which is in the rear, or which follows	Latin	contra "back, against"	underfoot hindrance		
+hogshead	noun	a large cask or barrel, of indefinite contents	Middle English	hogshead			
+homological		pertaining to homology; having a structural affinity proceeding from, or base upon, that kind of relation termed homology. -- Ho\`mo*log"ic*al*ly, adv	Greek	homós "same"		homologic	
+honeydew	noun	a sweet, saccharine substance, found on the leaves of trees and other plants in small drops, like dew		honey + dew			
 hoosier	noun	a nickname given to an inhabitant of the State of Indiana				indianan	
-hornblower	noun	one who, or that which, blows a horn					
-husk	noun	the external covering or envelope of certain fruits or seeds				shell	
-hussar		originally, one of the national cavalry of Hungary and Croatia					
-hydroplane	noun	a projecting plane or fin on a gliding boat to lift the moving boat on top of the water				seaplane	
-idleness	noun	the condition or quality of being idle ; uselessness				idling loafing	
-immediacy	noun	the relation of freedom from the interventionof a medium				immediateness	mediacy
-immodest		not modest; wanting in the reserve or restraint which decorum and decency require					modest
-impartial		not partial; not favoring one more than another					partial
-impede	verb	to hinder; to stop in progress				hinder	
-imperforate		not perforated; having no opening or aperture					
-impoverishment	noun	the act of impoverishing, or the state of being impoverished				poverty poorness	wealth
-impressionable		liable or subject to impression; capable of being molded				waxy impressible	unimpressionable
-impropriety	noun	the quality of being improper; unfitness or unsuitableness to character, time place, or circumstances				improperness	propriety propriety
-imprudent		not prudent; wanting in prudence or discretion					prudent
-impugn	verb	to attack by words or arguments; to contradict					
+hornblower	noun	one who, or that which, blows a horn	Old English	hornblāwere			
+husk	noun	the external covering or envelope of certain fruits or seeds	Middle English	huske		shell	
+hussar		originally, one of the national cavalry of Hungary and Croatia	Latin	cursārius "pirate"			
+hydroplane	noun	a projecting plane or fin on a gliding boat to lift the moving boat on top of the water		hydro- + plane		seaplane	
+idleness	noun	the condition or quality of being idle ; uselessness	Old English	īdelnes	idledom idlehood idleship	idling loafing	
+immediacy	noun	the relation of freedom from the interventionof a medium		From immedi(ate) + -acy		immediateness	mediacy
+immodest		not modest; wanting in the reserve or restraint which decorum and decency require		im- + modest			modest
+impartial		not partial; not favoring one more than another	Middle French	impartial			partial
+impede	verb	to hinder; to stop in progress	Latin	impediō "to shackle"	expede expedite	hinder	
+imperforate		not perforated; having no opening or aperture		im- + perforate	perforation		
+impoverishment	noun	the act of impoverishing, or the state of being impoverished	Old French	verb		poverty poorness	wealth
+impressionable		liable or subject to impression; capable of being molded	French	impressionnable		waxy impressible	unimpressionable
+impropriety	noun	the quality of being improper; unfitness or unsuitableness to character, time place, or circumstances	Latin	improprietās		improperness	propriety propriety
+imprudent		not prudent; wanting in prudence or discretion	Latin	imprūdens "not foreseeing, ignorant"			prudent
+impugn	verb	to attack by words or arguments; to contradict	Latin	impugnō			
 inaudible		not audible; incapable of being heard		in- + audible		unhearable	audible
-inauspicious		not auspicious; ill-omened				unfortunate	auspicious
+inauspicious		not auspicious; ill-omened		in- + auspicious		unfortunate	auspicious
 incessantly		unceasingly; continually					
-inclement		not clement; destitute of a mild and kind temper					clement
-incomparable		not comparable; admitting of no comparison with others				uncomparable	comparable
-inconceivable		not conceivable; incapable of being conceived by the mind				impossible out of the question unimaginable	
-inconspicuous		not conspicuous or noticeable; hardly discernible. -- In\`con*spic u*ous*ness, n				invisible	conspicuous
-indecisive		not decisive; not bringing to a final or ultimate issue					decisive
-indefinite		not definite; not limited, defined, or specified					definite
-indentation	noun	the act of indenting or state of being indented				indenture	
-indestructible		not destructible; incapable of decomposition or of being destroyed. -- In\`de*struc ti*bly, adv					destructible
-indifferent		neither particularly good, not very bad; of a middle state or quality				apathetic	
-inelegant		not elegant; deficient in beauty, polish, refinement, grave, or ornament					elegant
-inessential		having no essence or being				unessential	essential
-inexcusable		not excusable; not admitting excuse or justification					excusable
-injurious		causing injury or harm; hurtful	Latin	iniūriōsus	non-injurious noninjurious preinjurious self-injurious subinjurious uninjurious	deleterious hurtful	
-innumerable		not capable of being counted, enumerated, or numbered, for multitude				countless infinite innumerous multitudinous myriad	
-inscription	noun	the act or process of inscribing				lettering	
-insurrection	noun	a rising against civil or political authority, or the established government				rebellion revolt rising uprising	
-interminable		without termination; admitting no limit				endless eternal	
-interregnum	noun	the time during which a throne is vacant between the death or abdication of a sovereign and the accession of his successor					
-intervene	verb	to come between, or to be between, persons or things				step in interfere interpose	
-intrust	verb	to deliver to another in trust; to deliver to something in trust				entrust trust confide commit	
-intubation	noun	the introduction of a tube into an organ to keep it open, as into the larynx in croup				cannulation canulation cannulization cannulisation canulization	
-inulin	noun	a substance of very wide occurrence					
-invade	verb	to enter with hostile intentions; to enter with a view to conquest or plunder				occupy	
-investiture	noun	the act or ceremony of investing, or the of being invested, as with an office	Latin	investītūra	disinvestiture	coronation enthronement enthronization enthronisation	
-iota	noun	the ninth letter of the Greek alphabet corresponding with the English i				shred scintilla whit tittle smidgen	
+inclement		not clement; destitute of a mild and kind temper	Latin	inclēmēns "unmerciful, severe"			clement
+incomparable		not comparable; admitting of no comparison with others	Latin	incomparābilis		uncomparable	comparable
+inconceivable		not conceivable; incapable of being conceived by the mind		in- + conceivable		impossible unimaginable	
+inconspicuous		not conspicuous or noticeable; hardly discernible. -- In\`con*spic u*ous*ness, n	Latin	incōnspicuus	inconspicuity	invisible	conspicuous
+indecisive		not decisive; not bringing to a final or ultimate issue		in- + decisive			decisive
+indefinite		not definite; not limited, defined, or specified	Latin	indēfīnītus	indeterminate indeffed		definite
+indentation	noun	the act of indenting or state of being indented		indent + -ation	dedentation	indenture	
+indestructible		not destructible; incapable of decomposition or of being destroyed. -- In\`de*struc ti*bly, adv		in- + destructible			destructible
+indifferent		neither particularly good, not very bad; of a middle state or quality	Latin	indifferens		apathetic	
+inelegant		not elegant; deficient in beauty, polish, refinement, grave, or ornament	Latin	inēlegāns			elegant
+inessential		having no essence or being		in- + essential		unessential	essential
+inexcusable		not excusable; not admitting excuse or justification	Latin	inexcusabilis			excusable
+injurious		causing injury or harm; hurtful	Latin	iniūriōsus		deleterious hurtful	
+innumerable		not capable of being counted, enumerated, or numbered, for multitude	Latin	innumerābilis	innumeracy innumerate incalculable indescribable	countless infinite innumerous multitudinous myriad	
+inscription	noun	the act or process of inscribing	Latin	īnscrīptiō		lettering	
+insurrection	noun	a rising against civil or political authority, or the established government	Latin	īnsurrēctiōnem	insurrecto fauxsurrection fedsurrection insurrectory	rebellion revolt rising uprising	
+interminable		without termination; admitting no limit	Latin	interminābilis		endless eternal	
+interregnum	noun	the time during which a throne is vacant between the death or abdication of a sovereign and the accession of his successor	Latin	interrēgnum	interreign		
+intervene	verb	to come between, or to be between, persons or things	Latin	interveniō "come between"		interfere interpose	
+intrust	verb	to deliver to another in trust; to deliver to something in trust		in- + trust		entrust trust confide commit	
+intubation	noun	the introduction of a tube into an organ to keep it open, as into the larynx in croup		Probably coined in 1880–1884 by Joseph O'Dwyer, M.D.	intubate tubage	cannulation canulation cannulization cannulisation canulization	
+inulin	noun	a substance of very wide occurrence		inula + -in	inuloid		
+invade	verb	to enter with hostile intentions; to enter with a view to conquest or plunder	Latin	invādō "enter, invade"	noninvading	occupy	
+investiture	noun	the act or ceremony of investing, or the of being invested, as with an office	Latin	investītūra		coronation enthronement enthronization enthronisation	
+iota	noun	the ninth letter of the Greek alphabet corresponding with the English i	Greek	iôta		shred scintilla whit tittle smidgen	
 jerker	noun	one who jerks or moves with a jerk				yanker	
-jetty		made of jet, or like jet in color				breakwater groin groyne mole bulwark	
-jonquil	noun	a bulbous plant of the genus Narcissus (N				narcissus jonquilla	
+jetty		made of jet, or like jet in color	Latin	iectāre	jettage jettied	breakwater groin groyne mole bulwark	
+jonquil	noun	a bulbous plant of the genus Narcissus (N	French	jonquille			
 joyful		full of joy; having or causing joy					sorrowful
-juggler	noun	one who practices or exhibits tricks by sleight of hand					
-juglans	noun	a genus of valuable trees, including the true walnut of Europe, and the America black walnut, and butternut				genus juglans	
-juror	noun	a member of any jury for awarding prizes, etc				juryman jurywoman	
+juggler	noun	one who practices or exhibits tricks by sleight of hand	Old French	jongleur "juggler"	joggler		
+juglans	noun	a genus of valuable trees, including the true walnut of Europe, and the America black walnut, and butternut	Latin	iūglāns "walnut, walnut tree"			
+juror	noun	a member of any jury for awarding prizes, etc	Latin	iūrātor		juryman jurywoman	
 jutting		projecting, as corbels, cornices, etc. -- Jut"ting*ly, adv				projected projecting protruding relieved	
-kage	noun	a chantry chapel inclosed with lattice or screen work					
-kicker	noun	one who, or that which, kicks					
-kidderminster	noun	a kind of ingrain carpeting, named from the English town where formerly most of it was manufactured					
-kier	noun	a large tub or vat in which goods are subjected to the action of hot lye or bleaching liquor					
-kinsman	noun	a man of the same race or family; one related by blood					
-knitter	noun	one who, or that which, knits, joins, or unites					
-knuckle	noun	the joint of a finger, particularly when made prominent by the closing of the fingers					
-labret	noun	a piece of wood, shell, stone, or other substance, worn in a perforation of the lip or cheek by many savages					
-labyrinth	noun	an edifice or place full of intricate passageways which render it difficult to find the way from the interior to the entrance				maze	
-laparotomy	noun	a cutting through the walls of the abdomen, as in the Cæsarean section					
-larch	noun	a genus of coniferous trees, having deciduous leaves, in fascicles					
-lash	noun	the thong or braided cord of a whip, with which the blow is given				flog welt whip lather slash	
-latigo	noun	a strap for tightening a saddle girth. [Western					
+kage	noun	a chantry chapel inclosed with lattice or screen work		Variant of cage, q.v			
+kicker	noun	one who, or that which, kicks		The southern-U.S			
+kidderminster	noun	a kind of ingrain carpeting, named from the English town where formerly most of it was manufactured		From Kidderminster, the English town where they were once manufactured			
+kier	noun	a large tub or vat in which goods are subjected to the action of hot lye or bleaching liquor	Old Norse	ker "tub"			
+kinsman	noun	a man of the same race or family; one related by blood	Middle English	kynnesman			
+knitter	noun	one who, or that which, knits, joins, or unites	Middle English	knytter			
+knuckle	noun	the joint of a finger, particularly when made prominent by the closing of the fingers	Old English	cnucel "the juncture of two bones; knuckle; joint"			
+labret	noun	a piece of wood, shell, stone, or other substance, worn in a perforation of the lip or cheek by many savages	Latin	labrum "lip"			
+labyrinth	noun	an edifice or place full of intricate passageways which render it difficult to find the way from the interior to the entrance	Greek	lăbúrĭnthos "a maze"		maze	
+laparotomy	noun	a cutting through the walls of the abdomen, as in the Cæsarean section		laparo- + -tomy	laparoscopy		
+larch	noun	a genus of coniferous trees, having deciduous leaves, in fascicles	Greek	lárix			
+lash	noun	the thong or braided cord of a whip, with which the blow is given	Middle English	lashe		flog welt whip lather slash	
+latigo	noun	a strap for tightening a saddle girth. [Western	Old English	lāttēh			
 leaded		fitted with lead; set in lead					
-ledge	noun	a shelf, ridge, or reef, of rocks				shelf	
+ledge	noun	a shelf, ridge, or reef, of rocks	Old English	leċġ "bar, crossbeam"	ledgment ledgy	shelf	
 legibility	noun	the quality of being legible; legibleness				discernability	
-legislator	noun	a lawgiver; one who makes laws for a state or community					
-lewd		given to the promiscuous indulgence of lust; dissolute				obscene raunchy salacious	
-liar	noun	a person who knowingly utters falsehood; one who lies				prevaricator	square shooter
-lier	noun	one who lies down; one who rests or remains, as in concealment					
-lifeboat	noun	a strong, buoyant boat especially designed for saving the lives of shipwrecked people					
-liveliness	noun	the quality or state of being lively or animated				animation	
-loaf		any thick lump, mass, or cake; especially, a large regularly shaped or molded mass, as of bread, sugar, or cake				bum bum around bum about arse around arse about	
-locomotive		moving from place to place; changing place, or able to change place				locomotor	
-lodestar	noun	a star that leads; a guiding star				loadstar	
-lofty		lifted high up; having great height	Middle English	lofty	aloft loftily loftiness overlofty unlofty	exalted elevated sublime grand high-flown	
-longboat		formerly, the largest boat carried by a merchant vessel, corresponding to the launch of a naval vessel					
-longe	noun	the training ground for a horse					
+legislator	noun	a lawgiver; one who makes laws for a state or community	Latin	lēgislātor			
+lewd		given to the promiscuous indulgence of lust; dissolute	Greek	laïkós		obscene raunchy salacious	
+liar	noun	a person who knowingly utters falsehood; one who lies	Old English	lēgere		prevaricator	
+lier	noun	one who lies down; one who rests or remains, as in concealment	Middle English	lier			
+lifeboat	noun	a strong, buoyant boat especially designed for saving the lives of shipwrecked people		life + boat			
+liveliness	noun	the quality or state of being lively or animated		lively + -ness		animation	
+loaf		any thick lump, mass, or cake; especially, a large regularly shaped or molded mass, as of bread, sugar, or cake		* (brain or head): Rhyming slang, ellipsis of loaf of bread		bum loll	
+locomotive		moving from place to place; changing place, or able to change place	Latin	mōtivus "moving"		locomotor	
+lodestar	noun	a star that leads; a guiding star	Middle English	lode "journey, course"		loadstar	
+lofty		lifted high up; having great height	Middle English	lofty	aloft loftily loftiness	exalted elevated sublime grand rarefied	
+longboat		formerly, the largest boat carried by a merchant vessel, corresponding to the launch of a naval vessel		long + boat	longship		
+longe	noun	the training ground for a horse	Latin	longa "long"			
 looped		bent, folded, or tied, so as to make a loop					
-loveless		void of love; void of tenderness or kindness					
-lowly		not high; not elevated in place	Middle English	lowly	lowlihead lowlihood lowlily lowliness unlowly	humble low modest small	
-lozenge	noun	a figure with four equal sides, having two acute and two obtuse angles					
-lucifer	noun	the planet Venus, when appearing as the morning star				satan old nick devil beelzebub the tempter	
-lute	noun	a packing ring, as of rubber, for fruit jars, etc				luting	
-maggiore		greater, in respect to scales, intervals, etc., when used in opposition to minor					
+loveless		void of love; void of tenderness or kindness	Middle English	loveles	lovelace		
+lowly		not high; not elevated in place	Middle English	lowly	lowlihead lowlihood lowlily lowliness	humble low modest small	
+lozenge	noun	a figure with four equal sides, having two acute and two obtuse angles	Old French	losenge "rhombus"			
+lucifer	noun	the planet Venus, when appearing as the morning star				satan devil beelzebub	
+lute	noun	a packing ring, as of rubber, for fruit jars, etc	Old French	leüt		luting	
+maggiore		greater, in respect to scales, intervals, etc., when used in opposition to minor	Italian	maggiore			
 maha	noun	a kind of baboon; the wanderoo				omaha	
-maia	noun	a genus of spider crabs, including the common European species . A beautiful American bombycid moth				maja genus maja genus maia	
-maim	verb	to deprive of the use of a limb, so as to render a person on fighting less able either to defend himself or to annoy his adversary					
-manhole	noun	a hole through which a man may descend or creep into a drain, sewer, steam boiler, parts of machinery, etc., for cleaning or repairing					
-manifestation	noun	the act of manifesting or disclosing, or the state of being manifested					
-mantilla	noun	a lady's light cloak of cape of silk, velvet, lace, or the like					
-mantissa	noun	the decimal part of a logarithm, as distinguished from the integral part, or characteristic				fixed-point part	
-marque	noun	a license to pass the limits of a jurisdiction, or boundary of a country, for the purpose of making reprisals				trade name brand name brand	
-mash	noun	a mass of mixed ingredients reduced to a soft pulpy state by beating or pressure				squash crush squelch squeeze	
+maia	noun	a genus of spider crabs, including the common European species . A beautiful American bombycid moth				maja	
+maim	verb	to deprive of the use of a limb, so as to render a person on fighting less able either to defend himself or to annoy his adversary	Anglo-Norman	maheimer			
+manhole	noun	a hole through which a man may descend or creep into a drain, sewer, steam boiler, parts of machinery, etc., for cleaning or repairing		man + hole			
+manifestation	noun	the act of manifesting or disclosing, or the state of being manifested	Latin	manifestātiō			
+mantilla	noun	a lady's light cloak of cape of silk, velvet, lace, or the like	Spanish	mantilla "large veil; small cape"			
+mantissa	noun	the decimal part of a logarithm, as distinguished from the integral part, or characteristic	Greek	mántissa			
+marque	noun	a license to pass the limits of a jurisdiction, or boundary of a country, for the purpose of making reprisals	French	marque		brand	
+mash	noun	a mass of mixed ingredients reduced to a soft pulpy state by beating or pressure	Old English	miscian "to mix"		squash crush squelch squeeze	
 matelasse		ornamented by means of an imitation or suggestion of quilting, the surface being marked by depressed lines which form squares or lozenges in relief					
 mayan		designating, or pertaining to, an American Indian linguistic stock occupying the Mexican States of Veracruz, Chiap				maya	
-mazurka	noun	a Polish dance, or the music which accompanies it, usually in 3-4 or 3-8 measure, with a strong accent on the second beat					
+mazurka	noun	a Polish dance, or the music which accompanies it, usually in 3-4 or 3-8 measure, with a strong accent on the second beat	Latin	Mazovia			
 measureless		without measure; unlimited				illimitable limitless unmeasured	
-meetinghouse	noun	a house used as a place of worship; a church				conventicle	
-melodious		containing, or producing, melody; musical	Middle French	melodieus	immelodious nonmelodious unmelodious	tuneful	tuneless
-metamorphosis		change of form, or structure; transformation				metabolism	
-methodical		arranged with regard to method; disposed in a suitable manner, or in a manner to illustrate a subject, or to facilitate practical observation					
-mico	noun	a small South American monkey , allied to the marmoset					
-microbicide		any agent detrimental to, or destructive of, the life of microbes or bacterial organisms					
-micrometer	noun	an instrument, used with a telescope or microscope, for measuring minute distances, or the apparent diameters of objects which subtend minute angles				micron	
-microscopical		able to see extremely minute objects				microscopic	
-microscopically		by the microscope; with minute inspection					
+meetinghouse	noun	a house used as a place of worship; a church		meeting + house		conventicle	
+melodious		containing, or producing, melody; musical	Middle French	melodieus		tuneful	tuneless
+metamorphosis		change of form, or structure; transformation	Greek	metamórphōsis	metamorphic metamorphism metramorphosis	metabolism	
+methodical		arranged with regard to method; disposed in a suitable manner, or in a manner to illustrate a subject, or to facilitate practical observation	Greek	methodikós "going to work by rule, systematic, crafty"	methodological		
+mico	noun	a small South American monkey , allied to the marmoset	Portuguese	mico			
+microbicide		any agent detrimental to, or destructive of, the life of microbes or bacterial organisms		microbe + -cide	microbe		
+micrometer	noun	an instrument, used with a telescope or microscope, for measuring minute distances, or the apparent diameters of objects which subtend minute angles	French	micromètre		micron	
+microscopical		able to see extremely minute objects		microscope + -ical		microscopic	
+microscopically		by the microscope; with minute inspection		microscopic + -ally			
 midas	noun	a genus of longeared South American monkeys, including numerous species of marmosets					
-midwifery	noun	the art or practice of assisting women in childbirth				obstetrics tocology	
-migratory		removing regularly or occasionally from one region or climate to another					nonmigratory
-milady		lit., my lady; hence , an English noblewoman or gentlewoman					
+midwifery	noun	the art or practice of assisting women in childbirth	Middle English	medewifry		obstetrics tocology	
+migratory		removing regularly or occasionally from one region or climate to another	Latin	migrātōrius	migration		nonmigratory
+milady		lit., my lady; hence , an English noblewoman or gentlewoman	French	milady			
 milled		having been subjected to some process of milling				polished	
-mindful		bearing in mind; regardful				aware	unmindful
-mineralogy	noun	a treatise or book on this science					
+mindful		bearing in mind; regardful	Old English	ġemyndful "of good memory"		aware	unmindful
+mineralogy	noun	a treatise or book on this science	Latin	minera "mineral"	gemology		
 minerva	noun	the goddess of wisdom, of war, of the arts and sciences, of poetry, and of spinning and weaving					
-ministration	noun	the act of ministering; service				relief succor succour	
-mintage	noun	the coin, or other production, made in a mint				coinage specie metal money	
-miscarriage		unfortunate event or issue of an undertaking; failure to attain a desired result or reach a destination				abortion	
-mistreat	verb	to treat amiss; to abuse				maltreat abuse ill-use step ill-treat	
+ministration	noun	the act of ministering; service	Latin	ministrātio		relief succor succour	
+mintage	noun	the coin, or other production, made in a mint		mint + -age		coinage specie	
+miscarriage		unfortunate event or issue of an undertaking; failure to attain a desired result or reach a destination		mis- + carriage		abortion	
+mistreat	verb	to treat amiss; to abuse		mis- + treat	maltreat	maltreat abuse step	
 molder	noun	one who, or that which, molds or forms into shape				decompose rot moulder	
-moline	noun	the crossed iron that supports the upper millstone by resting on the spindle					
-molluscum	noun	a cutaneous disease characterized by numerous tumors, of various forms, filled with a thick matter					
-monograph	noun	a written account or description of a single thing, or class of things					
-monstrous		having the qualities of a monster; deviating greatly from the natural form or character					
-moot	verb	to argue for and against; to debate					
+moline	noun	the crossed iron that supports the upper millstone by resting on the spindle	Latin	molinum "mill"			
+molluscum	noun	a cutaneous disease characterized by numerous tumors, of various forms, filled with a thick matter	Latin	molluscum			
+monograph	noun	a written account or description of a single thing, or class of things		mono- "one" + -graph "write"	minigraph		
+monstrous		having the qualities of a monster; deviating greatly from the natural form or character	Latin	mōnstrōsus			
+moot	verb	to argue for and against; to debate	Middle English	mōt			
 motionless		without motion; being at rest				inactive static still	
-mouldy		overgrown with, or containing, mold				moldy musty	
-muck		dung in a moist state; manure					
-muckraker	verb	to seek for, expose, or charge, esp. habitually, corruption, real or alleged, on the part of public men and corporations				mudslinger	
-mucous		of, pertaining to, or resembling, mucus; slimy, ropy, or stringy, and lubricous				mucose	
-muffin	noun	a light, spongy, cylindrical cake, used for breakfast and tea				gem	
-mugwort	noun	a somewhat aromatic composite weed , at one time used medicinally					
-mutuality	noun	the quality of correlation; reciprocation				mutualness	
-mycological		of or relating to mycology, or the fungi					
-myopia		nearsightedness; shortsightedness				nearsightedness shortsightedness	hyperopia
-mystify	verb	to involve in mystery; to make obscure or difficult to understand				perplex vex stick get puzzle	
+mouldy		overgrown with, or containing, mold		mould + -y		moldy musty	
+muck		dung in a moist state; manure	Greek	múxa "mucus, lamp wick"			
+muckraker	verb	to seek for, expose, or charge, esp. habitually, corruption, real or alleged, on the part of public men and corporations		muck + raker	buckraker	mudslinger	
+mucous		of, pertaining to, or resembling, mucus; slimy, ropy, or stringy, and lubricous	Latin	mūcōsus	mucosal	mucose	
+muffin	noun	a light, spongy, cylindrical cake, used for breakfast and tea	German	Muffe "small cake"	bruffin buffin cruffin duffin scuffin	gem	
+mugwort	noun	a somewhat aromatic composite weed , at one time used medicinally	Old English	mucgwyrt			
+mutuality	noun	the quality of correlation; reciprocation		mutual + -ity		mutualness	
+mycological		of or relating to mycology, or the fungi		mycology + -ical			
+myopia		nearsightedness; shortsightedness	Greek	muōpía "shortsightedness"	emmetropia myope	nearsightedness shortsightedness	hyperopia
+mystify	verb	to involve in mystery; to make obscure or difficult to understand	Greek	mustikós "secret, mystic"	mysterious mystery	perplex vex stick get puzzle	
 narrowing	noun	the act of contracting, or of making or becoming less in breadth or extent				tapered tapering	
 neatly		in a neat manner; tidily					
-neckband	noun	a band which goes around the neck; often, the part at the top of a garment					
-nefarious		wicked in the extreme; abominable	Greek	phēmí "to say"	unnefarious	villainous	
-neologism	noun	the introduction of new words, or the use of old words in a new sense				neology coinage	
-neroli	noun	an essential oil obtained by distillation from the flowers of the orange					
+neckband	noun	a band which goes around the neck; often, the part at the top of a garment		neck + band			
+nefarious		wicked in the extreme; abominable	Greek	phēmí "to say"		villainous	
+neologism	noun	the introduction of new words, or the use of old words in a new sense	Greek	néos "new"	neology protologism	neology coinage	
+neroli	noun	an essential oil obtained by distillation from the flowers of the orange	French	néroli "neroli"			
 nettles	noun	the halves of yarns in the unlaid end of a rope twisted for pointing or grafting. Small lines used to sling hammocks under the deck beams. Reef points					
-nitride	noun	a binary compound of nitrogen with a more metallic element or radical					
-nocturnal		of, pertaining to, done or occuring in, the night					diurnal
-nonchalance		indifference; carelessness				unconcern indifference	
-nonpayment		neglect or failure to pay				default nonremittal	
-nonperformance		neglect or failure to perform				negligence carelessness neglect	
+nitride	noun	a binary compound of nitrogen with a more metallic element or radical		From nitr(ogen) + -ide			
+nocturnal		of, pertaining to, done or occuring in, the night	Greek	núx	noctophobia		diurnal
+nonchalance		indifference; carelessness	French	nonchalance		unconcern indifference	
+nonpayment		neglect or failure to pay	Middle English	nonpayement		default nonremittal	
+nonperformance		neglect or failure to perform		non- + performance	noncompliance nonperforming	negligence carelessness neglect	
 nosing		that part of the treadboard of a stair which projects over the riser					
 nothingness		nihility; nonexistence				void nullity nihility	
-nubile		of an age suitable for marriage; marriageable				marriageable	
-numero		number; -- often abbrev					
-nuncio	noun	the permanent official representative of the pope at a foreign court or seat of government				papal nuncio	
+nubile		of an age suitable for marriage; marriageable	Greek	númphē "bride, young wife, nymph"	connubial	marriageable	
+numero		number; -- often abbrev	Latin	numerō			
+nuncio	noun	the permanent official representative of the pope at a foreign court or seat of government	Latin	nūntius "envoy"			
 nutting	noun	the act of gathering nuts					
 obstinacy	noun	a fixedness in will, opinion, or resolution that can not be shaken at all, or only with great difficulty		obstinate + -cy	determination	stubbornness obstinance mulishness	
-octroi	noun	a privilege granted by the sovereign authority, as the exclusive right of trade granted to a guild or society					
-oddly		in a peculiar manner; strangely					
-odorous		having or emitting an odor or scent, esp. a sweet odor					odorless
-ogre	noun	an imaginary monster, or hideous giant of fairy tales, who lived on human beings				monster fiend devil demon	
-olay		palm leaves, prepared for being written upon with a style pointed with steel. Balfour					
-omer	noun	a Hebrew measure, the tenth of an ephah					
-opacity	noun	the state of being opaque; the quality of a body which renders it impervious to the rays of light					transparency
-ophthalmic		of, pertaining to, or in the region of, the eye					
-oration	noun	an elaborate discourse, delivered in public, treating an important subject in a formal and dignified manner					
-organically		in an organic manner; by means of organs or with reference to organic functions					
-ossification	noun	the state of being changed into a bony substance					
-outbid	verb	to exceed or surpass in bidding					
-outing	noun	the act of going out; an airing				excursion jaunt junket pleasure trip expedition	
-outlive	verb	to live beyond, or longer than; to survive				outlast survive	
-overboard		over the side of a ship; hence, from on board of a ship, into the water					
-overheat	verb	to heat to excess; to superheat					
-overthrow	verb	to throw over; to overturn				subvert overturn bring down	
-ovulate		containing an ovule or ovules					
+octroi	noun	a privilege granted by the sovereign authority, as the exclusive right of trade granted to a guild or society	Latin	auctōrizāre			
+oddly		in a peculiar manner; strangely	Middle English	oddely			
+odorous		having or emitting an odor or scent, esp. a sweet odor	Latin	odōrōsus			odorless
+ogre	noun	an imaginary monster, or hideous giant of fairy tales, who lived on human beings	Greek	Hórkos		monster fiend devil demon	
+olay		palm leaves, prepared for being written upon with a style pointed with steel. Balfour		From Tamil ஓலை (ōlai)			
+omer	noun	a Hebrew measure, the tenth of an ephah		From Biblical Hebrew עומר / עֹמֶר ('ómer, "sheaf")			
+opacity	noun	the state of being opaque; the quality of a body which renders it impervious to the rays of light	Latin	opācitās			transparency
+ophthalmic		of, pertaining to, or in the region of, the eye	Greek	ophthălmĭkós "of or for the eyes"			
+oration	noun	an elaborate discourse, delivered in public, treating an important subject in a formal and dignified manner	Latin	ōrātiō	orate orator oratory oratrix		
+organically		in an organic manner; by means of organs or with reference to organic functions		organic + -ally			
+ossification	noun	the state of being changed into a bony substance		ossis "bone" + -ification	ossiferous ossified ossifier ossify		
+outbid	verb	to exceed or surpass in bidding		out- + bid			
+outing	noun	the act of going out; an airing	Old English	yting "outing, journey"		excursion jaunt junket expedition sashay	
+outlive	verb	to live beyond, or longer than; to survive	Middle English	outliven		outlast survive	
+overboard		over the side of a ship; hence, from on board of a ship, into the water	Middle English	overbord			
+overheat	verb	to heat to excess; to superheat	Middle English	overheten			
+overthrow	verb	to throw over; to overturn	Old English	oferweorpan "to overthrow"		subvert overturn	
+ovulate		containing an ovule or ovules	French	ovuler	nonovulating		
 paging	noun	the marking or numbering of the pages of a book					
-painless		free from pain; without pain. -- Pain less*ness, n					
-palaver		in Africa, a parley with the natives; a talk				chatter piffle prate tittle-tattle twaddle	
-pallor		paleness; want of color				lividness lividity luridness paleness pallidness	
-pander		hence, one who ministers to the evil designs and passions of another				gratify indulge	
-papilla		any minute nipplelike projection					
-paraclete	noun	an advocate; one called to aid or support				holy ghost holy spirit	
-parenchyma	noun	the soft celluar substance of the tissues of plants and animals, like the pulp of leaves, to soft tissue of glands, and the like					
-partite		divided nearly to the base					
-passim		here and there; everywhere					
-pasture		specifically: Grass growing for the food of cattle				crop graze	
-patency	noun	the condition of being open, enlarged, or spread					
-patera	noun	a saucerlike vessel of earthenware or metal, used by the Greeks and Romans in libations and sacrificies					
-paternoster	noun	the Lord's prayer, so called from the first two words of the Latin version					
-pathetic		affecting or moving the tender emotions, esp. pity or grief				hapless miserable misfortunate piteous pitiable	
-patrimony	noun	a right or estate inherited from one's father					
-pave		fig.: To make smooth, easy, and safe; to prepare, as a path or way					
-peaked		pointed; ending in a point				ailing indisposed sickly unwell under the weather	
-peevish		habitually fretful; easily vexed or fretted				cranky fractious irritable nettlesome peckish	
-pendulum	noun	a body so suspended from a fixed point as to swing freely to and fro by the alternate action of gravity and momentum					
-penna	noun	a perfect, or normal, feather					
-penthouse	noun	a shed or roof sloping from the main wall or building, as over a door or window					
-peppermint	noun	a volatile oil distilled from the fresh herb; also, a well-known essence or spirit obtained from it				mentha piperita	
-perpetuation	noun	the act of making perpetual, or of preserving from extinction through an endless existence, or for an indefinite period of time				prolongation protraction lengthening	
+painless		free from pain; without pain. -- Pain less*ness, n	Middle English	paynles			
+palaver		in Africa, a parley with the natives; a talk	Latin	parabola "parable, speech"		chatter piffle prate twaddle clack	
+pallor		paleness; want of color	Latin	pallor		lividness lividity luridness paleness pallidness	
+pander		hence, one who ministers to the evil designs and passions of another	Greek	Pándaros	pandress pandy	gratify indulge	
+papilla		any minute nipplelike projection	Latin	papilla "a nipple, teat"			
+paraclete	noun	an advocate; one called to aid or support		See Paraclete			
+parenchyma	noun	the soft celluar substance of the tissues of plants and animals, like the pulp of leaves, to soft tissue of glands, and the like	Greek	parénkhŭma "anything poured in beside"	chyme pleurenchyma		
+partite		divided nearly to the base	Latin	partītus			
+passim		here and there; everywhere	Latin	passim "everywhere, here and there"			
+pasture		specifically: Grass growing for the food of cattle	Latin	pastūra	grassture	crop graze	
+patency	noun	the condition of being open, enlarged, or spread		patent + -cy			
+patera	noun	a saucerlike vessel of earthenware or metal, used by the Greeks and Romans in libations and sacrificies	Latin	patera			
+paternoster	noun	the Lord's prayer, so called from the first two words of the Latin version	Latin	Pater			
+pathetic		affecting or moving the tender emotions, esp. pity or grief	Greek	pathētikós "subject to feeling, capable of feeling, impassioned"	pathos	hapless miserable misfortunate piteous pitiable	
+patrimony	noun	a right or estate inherited from one's father	Latin	patrimōnium			
+pave		fig.: To make smooth, easy, and safe; to prepare, as a path or way	Latin	pavīre "to beat, strike, ram, tread down"			
+peaked		pointed; ending in a point		See peak (Etymology 2)		ailing indisposed sickly unwell seedy	
+peevish		habitually fretful; easily vexed or fretted	Latin	perversus "corrupted, perverted, subverted; overthrown"	peeve	cranky fractious irritable nettlesome peckish	
+pendulum	noun	a body so suspended from a fixed point as to swing freely to and fro by the alternate action of gravity and momentum	Latin	pendulus "hanging"	pendant		
+penna	noun	a perfect, or normal, feather	Latin	penna "feather"			
+penthouse	noun	a shed or roof sloping from the main wall or building, as over a door or window	Latin	appendō "to append"			
+peppermint	noun	a volatile oil distilled from the fresh herb; also, a well-known essence or spirit obtained from it		pepper + mint			
+perpetuation	noun	the act of making perpetual, or of preserving from extinction through an endless existence, or for an indefinite period of time			perpetual perpetuate perpetuity	prolongation protraction lengthening	
 perplexing		embarrassing; puzzling				confusing puzzling	
-perron	noun	an out-of-door flight of steps, as in a garden, leading to a terrace or to an upper story					
+perron	noun	an out-of-door flight of steps, as in a garden, leading to a terrace or to an upper story	Middle French	pierre "stone"			
 persuaded		prevailed upon; influenced by argument or entreaty					
-peruse	verb	to read through; to read carefully					
-perverse		turned aside; hence, specifically, turned away from the right					
-phlegm		one of the four humors of which the ancients supposed the blood to be composed				emotionlessness impassivity impassiveness indifference stolidity	
-picturesque		forming, or fitted to form, a good or pleasing picture					
-piety		veneration or reverence of the Supreme Being, and love of his character				piousness	impiety
+peruse	verb	to read through; to read carefully	Latin	perūtor			
+perverse		turned aside; hence, specifically, turned away from the right	Latin	perversum "thoroughly turned"			
+phlegm		one of the four humors of which the ancients supposed the blood to be composed	Greek	phlégma "flame; inflammation; clammy humor in the body"		emotionlessness impassivity impassiveness indifference stolidity	
+picturesque		forming, or fitted to form, a good or pleasing picture	French	pittoresque			
+piety		veneration or reverence of the Supreme Being, and love of his character	Latin	pietās	pietism pietist	piousness	impiety
 pinchers	noun	an instrument having two handles and two grasping jaws working on a pivot					
-pizzicato	noun	a direction to violinists to pluck the string with the finger, instead of using the bow					
-planter	noun	a colonist in a new or uncultivated territory				plantation owner	
-plead	verb	to argue in support of a claim, or in defense against the claim of another					
-plectrum	noun	a small instrument of ivory, wood, metal, or quill, used in playing upon the lyre and other stringed instruments				pick plectron	
-plenum		that state in which every part of space is supposed to be full of matter					
-pliable		capable of being plied, turned, or bent; easy to be bent				fictile	
-plod	verb	to travel slowly but steadily; to trudge				slog footslog trudge pad tramp	
+pizzicato	noun	a direction to violinists to pluck the string with the finger, instead of using the bow	Italian	pizzicato			
+planter	noun	a colonist in a new or uncultivated territory					
+plead	verb	to argue in support of a claim, or in defense against the claim of another	Latin	placitum	pleasant please pleasurable pleasure		
+plectrum	noun	a small instrument of ivory, wood, metal, or quill, used in playing upon the lyre and other stringed instruments	Latin	plēctrum		pick plectron	
+plenum		that state in which every part of space is supposed to be full of matter	Latin	plēnum	plenary		
+pliable		capable of being plied, turned, or bent; easy to be bent	Old French	ploiable	pliancy pliant	fictile	
+plod	verb	to travel slowly but steadily; to trudge	Dutch	plodden		slog footslog trudge pad tramp	
 plotter	noun	one who plots or schemes; a contriver				schemer	
-plough	noun	a well-known implement, drawn by horses, mules, oxen, or other power, for turning up the soil to prepare it for bearing crops	Old English	plōh "hide of land, ploughland"	breastplough fire-plough gangplough pulley-plough snowplough trench-plough turnplough	plow	
-ployment	noun	the act or movement of forming a column from a line of troops on some designated subdivision					
-pluck		especially, to pull with sudden force or effort, or to pull off or out from something, with a twitch				tweak pull off pick off	
+plough	noun	a well-known implement, drawn by horses, mules, oxen, or other power, for turning up the soil to prepare it for bearing crops	Old English	plōh "hide of land, ploughland"		plow	
+ployment	noun	the act or movement of forming a column from a line of troops on some designated subdivision		Back-formation from deployment			
+pluck		especially, to pull with sudden force or effort, or to pull off or out from something, with a twitch	Latin	pilāre "deprive of hair, make bald, depilate"		tweak	
 plugging	noun	the act of stopping with a plug					
-plumage	noun	the entire clothing of a bird				feather plume	
-plunge	verb	to thrust into water, or into any substance that is penetrable				immerse	
-plutocracy	noun	a form of government in which the supreme power is lodged in the hands of the wealthy classes					
+plumage	noun	the entire clothing of a bird	Latin	plūma "feather, plume"	deplume plume plumelet plumose plumule plumy	feather plume	
+plunge	verb	to thrust into water, or into any substance that is penetrable	Latin	frequentative		immerse	
+plutocracy	noun	a form of government in which the supreme power is lodged in the hands of the wealthy classes	Greek	ploutokratía "rule of the wealthy"	plutodemocracy plutonomy lootocracy		
 polarimetry	noun	the art or process of measuring the polarization of light					
-polemic	noun	one who writes in support of one opinion, doctrine, or system, in opposition to another				polemical	
-politic		pertaining to, or promoting, a policy, especially a national policy					impolitic
-pollute	verb	to make foul, impure, or unclean; to defile				foul contaminate	
-polyhedral		having many sides, as a solid body					
-polymerization	noun	the act or process of changing to a polymeric form				polymerisation	
-pongo		any large ape; especially, the chimpanzee and the orang-outang				genus pongo	
-poppy		any plant or species of the genus Papaver, herbs with showy polypetalous flowers and a milky juice					
-postpone	verb	to defer to a future or later time; to put off				prorogue hold over put over table shelve	
-precaution		previous caution or care; caution previously employed to prevent mischief or secure good				safeguard guard	
-preen	noun	a forked tool used by clothiers in dressing cloth				plume	
-premeditation	noun	the act of meditating or contriving beforehand				forethought	
-presage		something which foreshows or portends a future event				bode portend auspicate prognosticate omen	
-priestess	noun	a woman who officiated in sacred rites among pagans					
-princesse	noun	a term applied to a lady's long, close-fitting dress made with waist and skirt in one					
-proclamation	noun	the act of proclaiming; official or general notice				announcement annunciation declaration	
-procreate	verb	to generate and produce; to beget				reproduce multiply	
-prolong	verb	to extend in space or length				protract extend draw out	
-pronounce	verb	to utter articulately; to speak out or distinctly				articulate enounce sound out enunciate say	
-prostration	noun	the act of falling down, or of bowing in humility or adoration				collapse	
-prudent		sagacious in adapting means to ends; circumspect in action, or in determining any line of conduct	Latin	prūdēns	jurisprudence provident ultraprudent unprudent		imprudent
-puffer	noun	one who puffs; one who praises with noisy or extravagant commendation				blowfish sea squab pufferfish	
-puffing		a. & n. from Puff, v. i. & t					
-pulsation	noun	a single beat or throb of a series				pulsing pulse impulse	
-punchy		short and thick, or fat					
-puree	noun	a dish made by boiling any article of food to a pulp and rubbing it through a sieve				strain	
-purgatory		tending to cleanse; cleansing					
-pursuance	noun	the act of pursuing or prosecuting; a following out or after				pursuit quest	
+polemic	noun	one who writes in support of one opinion, doctrine, or system, in opposition to another	Greek	polemikós "of war"		polemical	
+politic		pertaining to, or promoting, a policy, especially a national policy	Greek	politikós	police policy		impolitic
+pollute	verb	to make foul, impure, or unclean; to defile	Latin	pollūtum		foul contaminate	
+polyhedral		having many sides, as a solid body		poly- + -hedral			
+polymerization	noun	the act or process of changing to a polymeric form		polymerize + -ation	polymerize	polymerisation	
+pongo		any large ape; especially, the chimpanzee and the orang-outang		From Kongo mpongo ("gorilla")			
+poppy		any plant or species of the genus Papaver, herbs with showy polypetalous flowers and a milky juice	Latin	papāver "poppy"	poppied		
+postpone	verb	to defer to a future or later time; to put off	Latin	postpōnō "to put after; to postpone"		prorogue table shelve defer remit	
+precaution		previous caution or care; caution previously employed to prevent mischief or secure good	Latin	praecautio	prevention	safeguard guard	
+preen	noun	a forked tool used by clothiers in dressing cloth	Old English	prēon		plume	
+premeditation	noun	the act of meditating or contriving beforehand	Latin	praemeditātiō		forethought	
+presage		something which foreshows or portends a future event	Latin	praesāgium	unpresaging	bode portend auspicate prognosticate omen	
+priestess	noun	a woman who officiated in sacred rites among pagans	Middle English	preesteresse "priestess"	abbatess abbotess prioress		
+princesse	noun	a term applied to a lady's long, close-fitting dress made with waist and skirt in one	French	princesse			
+proclamation	noun	the act of proclaiming; official or general notice	Latin	proclāmātiō	proclaim	announcement annunciation declaration	
+procreate	verb	to generate and produce; to beget	Latin	prōcreātus	nonprocreating	reproduce multiply	
+prolong	verb	to extend in space or length	Latin	prōlongō		protract extend	
+pronounce	verb	to utter articulately; to speak out or distinctly	Latin	prōnūntiō	pronunciation unpronouncing	articulate enounce enunciate say	
+prostration	noun	the act of falling down, or of bowing in humility or adoration	Latin	prōstrātiō		collapse	
+prudent		sagacious in adapting means to ends; circumspect in action, or in determining any line of conduct	Latin	prūdēns	jurisprudence provident		imprudent
+puffer	noun	one who puffs; one who praises with noisy or extravagant commendation		The cellular automata definition is a clipping of puffer train		blowfish pufferfish	
+puffing		a. & n. from Puff, v. i. & t			puffery		
+pulsation	noun	a single beat or throb of a series	Latin	pulsātiō	pulsate pulse	pulsing pulse impulse	
+punchy		short and thick, or fat		punch + -y			
+puree	noun	a dish made by boiling any article of food to a pulp and rubbing it through a sieve	French	purée		strain	
+purgatory		tending to cleanse; cleansing	Latin	purgātōrium "cleansing"			
+pursuance	noun	the act of pursuing or prosecuting; a following out or after		pursue + -ance		pursuit quest	
 quaker		one of a religious sect founded by George Fox, of Leicestershire, England, about 1650, -- the members of which call themselves				friend	
-quickstep	noun	a lively, spirited march; also, a lively style of dancing					
-racemic		pertaining to, or designating, an acid found in many kinds of grapes					
+quickstep	noun	a lively, spirited march; also, a lively style of dancing		quick + step			
+racemic		pertaining to, or designating, an acid found in many kinds of grapes	Latin	racēmus "cluster or bunch of grapes"			
 rammer	noun	one who, or that which, rams or drives					
-rapt		imp. & p. p. of Rap, to snatch away				ecstatic enraptured rapturous rhapsodic	
-rebuttable		capable of being rebutted					
-reclaim	verb	to claim back; to demand the return of as a right				repossess	
-recommendable		suitable to be recommended; worthy of praise					
-rectilinear		straight; consisting of a straight line or lines				rectilineal	
-recur	verb	to come back; to return again or repeatedly				repeat	
-redan	noun	a step or vertical offset in a wall on uneven ground, to keep the parts level					
-redeye	noun	the rudd. Same as Redfish. . The goggle-eye, or fresh-water rock bass				redeye flight	
-redfish	noun	the blueback salmon of the North Pacific; -- called also nerka				rosefish ocean perch	
-reentrant		reëntering; pointing or directed inwardds				re-entrant	salient
-regimen		orderly government; system of order				regime	
-relegate	verb	to remove, usually to an inferior position; to consign	Latin	relēgātus	misrelegate	pass on submit	
-rennet	noun	a name of many different kinds of apples					
-repellent		driving back; able or tending to repel				rebarbative repellant	
-resemblance	noun	the quality or state of resembling; likeness					
-resettlement		act of settling again, or state of being settled again				relocation	
-resilient		leaping back; rebounding	Latin	resiliēns	resile cyberresilient irresilient nonresilient ultraresilient unresilient		
-resorption	noun	the act of resorbing; also, the act of absorbing again				reabsorption	
-reticule	noun	a little bag, originally of network; a woman's workbag, or a little bag to be carried in the hand					
-retrace	verb	to trace back, as a line				trace	
-reviewable		capable of being reviewed					
-revoke		hence, to annul, by recalling or taking back; to repeal					
-rhodium	noun	a rare element of the light platinum group					
-rightful		consonant to justice; just					
+rapt		imp. & p. p. of Rap, to snatch away	Latin	raptus		ecstatic enraptured rapturous rhapsodic	
+rebuttable		capable of being rebutted		rebut + -able			
+reclaim	verb	to claim back; to demand the return of as a right	Latin	reclāmō		repossess	
+recommendable		suitable to be recommended; worthy of praise		recommend + -able			
+rectilinear		straight; consisting of a straight line or lines		rectus "straight" + līnea "line"	rectangle rectangular	rectilineal	
+recur	verb	to come back; to return again or repeatedly	Latin	recurrō "to hurry or run back; to return, revert"		repeat	
+redan	noun	a step or vertical offset in a wall on uneven ground, to keep the parts level	French	redan			
+redeye	noun	the rudd. Same as Redfish. . The goggle-eye, or fresh-water rock bass					
+redfish	noun	the blueback salmon of the North Pacific; -- called also nerka		red + fish	rosefish	rosefish	
+reentrant		reëntering; pointing or directed inwardds		re- + entrant			salient
+regimen		orderly government; system of order	Latin	regimen "guidance, direction, government, rule"		regime	
+relegate	verb	to remove, usually to an inferior position; to consign	Latin	relēgātus		submit	
+rennet	noun	a name of many different kinds of apples	Old English	ġerennan "to coagulate"	rennase rennin		
+repellent		driving back; able or tending to repel	Latin	repellēns		rebarbative repellant	
+resemblance	noun	the quality or state of resembling; likeness	Anglo-Norman	resemblance			
+resettlement		act of settling again, or state of being settled again		re- + settlement		relocation	
+resilient		leaping back; rebounding	Latin	resiliēns	resile		
+resorption	noun	the act of resorbing; also, the act of absorbing again		resorb + -tion		reabsorption	
+reticule	noun	a little bag, originally of network; a woman's workbag, or a little bag to be carried in the hand	Latin	rēticulum			
+retrace	verb	to trace back, as a line	Middle French	retracier		trace	
+reviewable		capable of being reviewed		review + -able			
+revoke		hence, to annul, by recalling or taking back; to repeal	Latin	revocare	advoke avoke convoke invoke provoke nonrevoking irrevocable irrevokable		
+rhodium	noun	a rare element of the light platinum group	Greek	rhódon "rose"	rhodonite rhodate		
+rightful		consonant to justice; just	Middle English	rightful			
 rimmer	noun	an implement for cutting, trimming, or ornamenting the rim of anything, as the edges of pies, etc					
-romp	verb	to play rudely and boisterously; to leap and frisk about in play				frolic lark rollick skylark disport	
-roost	noun	the pole or other support on which fowls rest at night				perch rest	
-roseate		resembling a rose in color or fragrance; esp., tinged with rose color				rose rosaceous	
-rouleau	noun	a little roll; a roll of coins put up in paper, or something resembling such a roll					
-rowen	noun	a stubble field left unplowed till late in the autumn, that it may be cropped by cattle					
-ruinous		causing, or tending to cause, ruin; destructive				catastrophic	
-rung		one of the rounds of a ladder				round stave	
-saccade	noun	a sudden, violent check of a horse by drawing or twitching the reins on a sudden and with one pull					
-sacrilege	noun	the sin or crime of violating or profaning sacred things				profanation desecration blasphemy	
+romp	verb	to play rudely and boisterously; to leap and frisk about in play		Probably a variant of ramp		frolic lark rollick skylark disport	
+roost	noun	the pole or other support on which fowls rest at night	Old English	hrōst "wooden framework of a roof; roost"		perch rest	
+roseate		resembling a rose in color or fragrance; esp., tinged with rose color	Latin	roseātus		rose rosaceous	
+rouleau	noun	a little roll; a roll of coins put up in paper, or something resembling such a roll	French	rouleau			
+rowen	noun	a stubble field left unplowed till late in the autumn, that it may be cropped by cattle	Old French	regain "an increase"			
+ruinous		causing, or tending to cause, ruin; destructive	Latin	ruīnōsus		catastrophic	
+rung		one of the rounds of a ladder	Old English	hrung		round stave	
+saccade	noun	a sudden, violent check of a horse by drawing or twitching the reins on a sudden and with one pull	French	saccade			
+sacrilege	noun	the sin or crime of violating or profaning sacred things	Latin	sacrilegium		profanation desecration blasphemy	
 sacs	noun	a tribe of Indians, which, together with the Foxes, formerly occupied the region about Green Bay, Wisconsin					
 sadr	noun	a plant of the genus Ziziphus ; -- so called by the Arabs of Barbary, who use its berries for food					
-saleswoman	noun	a woman whose occupation is to sell goods or merchandise				salesgirl saleslady	
-salutation	noun	the act of saluting, or paying respect or reverence, by the customary words or actions				salute	
-salvia	noun	a genus of plants including the sage				sage	
-samovar	noun	a metal urn used in Russia for making tea					
-sanction		solemn or ceremonious ratification; an official act of a superior by which he ratifies and gives validity to the act of some other person or body				approve okay	disapprove
-sard	noun	a variety of carnelian, of a rich reddish yellow or brownish red color				sardine sardius	
+saleswoman	noun	a woman whose occupation is to sell goods or merchandise		sales + -woman		salesgirl saleslady	
+salutation	noun	the act of saluting, or paying respect or reverence, by the customary words or actions	Latin	salutatio "a greeting, a wishing health to"	salutatorian salutatory valediction	salute	
+salvia	noun	a genus of plants including the sage	Latin	salvia "sage"		sage	
+samovar	noun	a metal urn used in Russia for making tea	Russian	samovár "self-boiler"			
+sanction		solemn or ceremonious ratification; an official act of a superior by which he ratifies and gives validity to the act of some other person or body	Latin	sānctiō	condemnation	approve okay	disapprove
+sard	noun	a variety of carnelian, of a rich reddish yellow or brownish red color	Latin	sarda		sardine sardius	
 saree	noun	the principal garment of a Hindoo woman				sari	
-saunter	verb	to wander or walk about idly and in a leisurely or lazy manner				stroll	
-sawdust		dust or small fragments of wood 9or of stone, etc.) made by the cutting of a saw					
+saunter	verb	to wander or walk about idly and in a leisurely or lazy manner	Old French	sentier "path"		stroll	
+sawdust		dust or small fragments of wood 9or of stone, etc.) made by the cutting of a saw		saw + dust			
 sayer	noun	one who says; an utterer					
-scab	noun	an incrustation over a sore, wound, vesicle, or pustule, formed by the drying up of the discharge from the diseased part					
-scalpel	noun	a small knife with a thin, keen blade, -- used by surgeons, and in dissecting					
-scavenge	verb	to cleanse, as streets, from filth					
+scab	noun	an incrustation over a sore, wound, vesicle, or pustule, formed by the drying up of the discharge from the diseased part	Latin	scabies "scab, itch, mange"			
+scalpel	noun	a small knife with a thin, keen blade, -- used by surgeons, and in dissecting	Latin	scalpellum			
+scavenge	verb	to cleanse, as streets, from filth		Back-formation from scavenger			
 scavenging		act or process of expelling the exhaust gases from the cylinder by some special means,					
-schoolroom	noun	a room in which pupils are taught				classroom	
-scurvy		covered or affected with scurf or scabs; scabby				abject low low-down miserable scummy	
-secede	verb	to withdraw from fellowship, communion, or association				splinter break away	
-seclusion	noun	the act of secluding, or the state of being secluded	Latin	seclusio	seclude secluse secluseness nonseclusion	privacy privateness	
-secularization	noun	the act of rendering secular, or the state of being rendered secular				secularisation	
-seminal		pertaining to, containing, or consisting of, seed or semen					
-semitone		half a tone; -- the name commonly applied to the smaller intervals of the diatonic scale				half step	
-sentry		guard; watch, as by a sentinel				lookout lookout man sentinel watch spotter	
-seraph		one of an order of celestial beings, each having three pairs of wings					
-seventeenth		next in order after the sixteenth; coming after sixteen others					
+schoolroom	noun	a room in which pupils are taught		school + room		classroom	
+scurvy		covered or affected with scurf or scabs; scabby	French	scorbut	ascorbic scorbic scorbutic	abject low miserable scummy	
+secede	verb	to withdraw from fellowship, communion, or association	Latin	secedere	secession	splinter	
+seclusion	noun	the act of secluding, or the state of being secluded	Latin	seclusio	seclude secluse secluseness	privacy privateness	
+secularization	noun	the act of rendering secular, or the state of being rendered secular		secularize + -ation	secularizable secularize secularizer	secularisation	
+seminal		pertaining to, containing, or consisting of, seed or semen	Latin	sēminālis			
+semitone		half a tone; -- the name commonly applied to the smaller intervals of the diatonic scale		semi- + tone	hemitonic		
+sentry		guard; watch, as by a sentinel	Latin	semitarius "a path"	sentinel	lookout sentinel watch spotter scout	
+seraph		one of an order of celestial beings, each having three pairs of wings	Latin	seraphim			
+seventeenth		next in order after the sixteenth; coming after sixteen others	Old English	seofontēoþa			
 shadrach	noun	a mass of iron on which the operation of smelting has failed of its intended effect					
 shastra	noun	a treatise for authoritative instruction among the Hindoos					
-shearwater		any one of numerous species of long-winged oceanic birds of the genus Puffinus and related genera					
-shim	noun	a kind of shallow plow used in tillage to break the ground, and clear it of weeds					
-shipbuilding		naval architecturel the art of constructing ships and other vessels				ship building	
-shoal	noun	a great multitude assembled; a crowd				shallow	
-shopgirl	noun	a girl employed in a shop					
-sida	noun	a genus of malvaceous plants common in the tropics				genus sida	
-signification	noun	the act of signifying; a making known by signs or other means				meaning significance import	
-silene	noun	a genus of caryophyllaceous plants, usually covered with a viscid secretion by which insects are caught				campion catchfly	
-silhouette	noun	a representation of the outlines of an object filled in with a black color					
-silverfish	noun	the tarpum. A white variety of the goldfish				lepisma saccharina	
-simpleton	noun	a person of weak intellect; a silly person				simple	
-sixfold		six times repeated; six times as much or as many				sextuple six-fold	
-sixteenth		sixth after the tenth; next in order after the fifteenth					
-skirmish	noun	a slight fight in war; a light or desultory combat between detachments from armies, or between detached and small bodies of troops					
-slat	noun	a thin, narrow strip or bar of wood or metal					
-slaughterhouse	noun	a house where beasts are butchered for the market				abattoir butchery shambles	
-slippery		having the quality opposite to adhesiveness; allowing or causing anything to slip or move smoothly, rapidly, and easily upon the surface				slippy	nonslippery
+shearwater		any one of numerous species of long-winged oceanic birds of the genus Puffinus and related genera		shear + water			
+shim	noun	a kind of shallow plow used in tillage to break the ground, and clear it of weeds		she + him			
+shipbuilding		naval architecturel the art of constructing ships and other vessels		ship + building	shipbuilder boatbuilding		
+shoal	noun	a great multitude assembled; a crowd	Old English	sċeald "shallow"		shallow	
+shopgirl	noun	a girl employed in a shop		shop + girl			
+sida	noun	a genus of malvaceous plants common in the tropics		From the genus name, translingual Sida			
+signification	noun	the act of signifying; a making known by signs or other means	Latin	significātiō		meaning significance import	
+silene	noun	a genus of caryophyllaceous plants, usually covered with a viscid secretion by which insects are caught		Borrowed from Translingual Silene		campion catchfly	
+silhouette	noun	a representation of the outlines of an object filled in with a black color		The verb is derived from the noun			
+silverfish	noun	the tarpum. A white variety of the goldfish		silver + fish			
+simpleton	noun	a person of weak intellect; a silly person	French	simplet		simple	
+sixfold		six times repeated; six times as much or as many	Old English	sixfeald		sextuple	
+sixteenth		sixth after the tenth; next in order after the fifteenth	Old English	sixtēoþa			
+skirmish	noun	a slight fight in war; a light or desultory combat between detachments from armies, or between detached and small bodies of troops	Old French	escarmouche "skirmish"	squirmish		
+slat	noun	a thin, narrow strip or bar of wood or metal	Old French	esclat "piece broken or split off, shiver, splinter"			
+slaughterhouse	noun	a house where beasts are butchered for the market		slaughter + house	slaughterer slaughterous	abattoir butchery shambles	
+slippery		having the quality opposite to adhesiveness; allowing or causing anything to slip or move smoothly, rapidly, and easily upon the surface	Old English	slipor "slippery"	sloppery	slippy	nonslippery
 slouching		hanging down at the side; limp					
-snapdragon	noun	a play in which raisins are snatched from a vessel containing burning brandy, and eaten					
-snare	noun	a contrivance, often consisting of a noose of cord, or the like, by which a bird or other animal may be entangled and caught				trap entrap ensnare trammel	
-snowplow	noun	an implement operating like a plow, but on a larger scale, for clearing away the snow from roads, railways, etc				snowplough	
-snub	verb	to check, stop, or rebuke, with a tart, sarcastic reply or remark					
+snapdragon	noun	a play in which raisins are snatched from a vessel containing burning brandy, and eaten	Old English	hundeshéafod "dog's head"			
+snare	noun	a contrivance, often consisting of a noose of cord, or the like, by which a bird or other animal may be entangled and caught	Old English	sneare "snare, noose"	snarl snary	trap entrap ensnare trammel	
+snowplow	noun	an implement operating like a plow, but on a larger scale, for clearing away the snow from roads, railways, etc		snow + plow	snowblower	snowplough	
+snub	verb	to check, stop, or rebuke, with a tart, sarcastic reply or remark	Middle English	snubben			
 soaring		from Soar. -- Soar"ing*ly, adv					
-soiree	noun	an evening party; -- distinguished from levee, and matinée					
-sojourn	verb	to dwell for a time; to dwell or live in a place as a temporary resident or as a stranger, not considering the place as a permanent habitation					
+soiree	noun	an evening party; -- distinguished from levee, and matinée	French	soirée "evening activity"			
+sojourn	verb	to dwell for a time; to dwell or live in a place as a temporary resident or as a stranger, not considering the place as a permanent habitation	Latin	diurnus "lasting for a day"			
 soldiering	noun	the act of feigning to work				soldiership	
-solidification		act of solidifying, or state of being solidified				hardening solidifying set curing	
-solitary		living or being by one's self; having no companion present					
+solidification		act of solidifying, or state of being solidified	French	solidification		hardening solidifying set curing	
+solitary		living or being by one's self; having no companion present	Latin	sōlitārius	soliton		
 sonoran		pertaining to or designating the arid division of the Austral zone, including the warmer parts of the western United States and central					
-soprano	noun	the treble; the highest vocal register				treble	
+soprano	noun	the treble; the highest vocal register	Latin	super "above"		treble	
 sorter	noun	one who, or that which, sorts					
-spade		etym: [Sp. espada, literally, a sword; -- so caused because these cards among the Spanish bear the figure of a sword					
+spade		etym: [Sp. espada, literally, a sword; -- so caused because these cards among the Spanish bear the figure of a sword	Old English	spada	spaddle spadish		
 spanner	noun	one who, or that which, spans				wrench	
-spatula	noun	an implement shaped like a knife, flat, thin, and somewhat flexible, used for spreading paints, fine plasters, drugs in compounding prescriptions, etc					
-spay	verb	to remove or extirpate the ovaries of, as a sow or a bitch				alter neuter castrate	
-speedwell		any plant of the genus Veronica, mostly low herbs with pale blue coroll				veronica	
-sporran	noun	a large purse or pouch made of skin with the hair or fur on, worn in front of the kilt by Highlanders when in full dress					
-spotty		full of spots; marked with spots				patched spotted	
+spatula	noun	an implement shaped like a knife, flat, thin, and somewhat flexible, used for spreading paints, fine plasters, drugs in compounding prescriptions, etc	Greek	spáthē "a broad wood or metal blade"			
+spay	verb	to remove or extirpate the ovaries of, as a sow or a bitch	Old French	espeer "to cut with a sword"		alter neuter castrate	
+speedwell		any plant of the genus Veronica, mostly low herbs with pale blue coroll		speed + well		veronica	
+sporran	noun	a large purse or pouch made of skin with the hair or fur on, worn in front of the kilt by Highlanders when in full dress	Greek	búrsa "leather, hide"			
+spotty		full of spots; marked with spots	Middle English	spotty		patched spotted	
 spreader	noun	a machine for combining and drawing fibers of flax to form a sliver preparatory to spinning					
-sprinkle	verb	to scatter in small drops or particles, as water, seed, etc				scatter dot dust disperse	
-spurt	verb	to gush or issue suddenly or violently out in a stream, as liquor from a cask				spirt gush spout	
-squabble	verb	to contend for superiority in an unseemly maner				quibble niggle pettifog bicker brabble	
-squalid		dirty through neglect; foul				seamy seedy sleazy sordid	
-starred		adorned or studded with stars; bespangled				asterisked	
-stator	noun	a stationary part in or about which another part revolves, esp. when both are large. The case inclosing a turbine wheel				stator coil	rotor
-stepfather	noun	the husband of one's mother by a subsequent marriage					
-stepson	noun	a son of one's husband or wife by a former marriage					
-stich	noun	a verse, of whatever measure or number of feet					
-stockholder	noun	one who is a holder or proprietor of stock in the public funds, or in the funds of a bank or other stock company				shareholder shareowner	
-stoic		hence, a person not easily excited; an apathetic person	Greek	Stōïkós	unstoic	stoical	
-stowaway	noun	one who conceals himself board of a vessel about to leave port, or on a railway train, in order to obtain a free passage					
-strangely		in the manner of one who does not know another					
-streamer	noun	an ensign, flag, or pennant, which floats in the wind					
-stroll	verb	to wander on foot; to ramble idly or leisurely				saunter	
-studentship	noun	the state of being a student					
-stupendous		astonishing; wonderful				colossal prodigious	
-subdue	verb	to bring under; to conquer by force or the exertion of superior power, and bring into permanent subjection				repress quash keep down subjugate reduce	
+sprinkle	verb	to scatter in small drops or particles, as water, seed, etc	Middle English	sprenkelen		scatter dot dust disperse	
+spurt	verb	to gush or issue suddenly or violently out in a stream, as liquor from a cask	Old English	spryttan		spirt gush spout	
+squabble	verb	to contend for superiority in an unseemly maner	German	dialectal	squaffle	quibble niggle pettifog bicker brabble	
+squalid		dirty through neglect; foul	Latin	squālidus		seamy seedy sleazy sordid	
+starred		adorned or studded with stars; bespangled		See the etymology of the corresponding lemma form		asterisked	
+stator	noun	a stationary part in or about which another part revolves, esp. when both are large. The case inclosing a turbine wheel	Latin	stātor "stander"			rotor
+stepfather	noun	the husband of one's mother by a subsequent marriage	Old English	stēopfæder	stepaunt stepbrother stepchild stepdaughter stepfamily stepmother stepnephew stepniece		
+stepson	noun	a son of one's husband or wife by a former marriage	Old English	stēopsunu "stepson"	stepbrother stepdaughter stepfather stepmother		
+stich	noun	a verse, of whatever measure or number of feet	Greek	stíkhos "line, row, verse"			
+stockholder	noun	one who is a holder or proprietor of stock in the public funds, or in the funds of a bank or other stock company		stock + holder	stuckholder	shareholder shareowner	
+stoic		hence, a person not easily excited; an apathetic person	Greek	Stōïkós		stoical	
+stowaway	noun	one who conceals himself board of a vessel about to leave port, or on a railway train, in order to obtain a free passage		From stow away, from stow and away			
+strangely		in the manner of one who does not know another	Middle English	straungely "strangely, aloofly, intricately"			
+streamer	noun	an ensign, flag, or pennant, which floats in the wind	Middle English	stremer			
+stroll	verb	to wander on foot; to ramble idly or leisurely	German	strollen		saunter	
+studentship	noun	the state of being a student		student + -ship	freeship		
+stupendous		astonishing; wonderful	Latin	stupendus "stunning, amazing"	stupid stupor	colossal prodigious	
+subdue	verb	to bring under; to conquer by force or the exertion of superior power, and bring into permanent subjection	Latin	subdūcō "to draw away"		repress quash subjugate reduce	
 subdued		conquered; overpowered				hushed muted quiet	
-subordinate		placed in a lower order, class, or rank; holding a lower or inferior position				low-level	dominant
-substructure	noun	an under structure; a foundation				infrastructure	
-subvert	verb	to overturn from the foundation; to overthrow				overthrow overturn bring down	
+subordinate		placed in a lower order, class, or rank; holding a lower or inferior position	Latin	subōrdinātus	nonsubordinating		dominant
+substructure	noun	an under structure; a foundation		sub- + structure	superstructure	infrastructure	
+subvert	verb	to overturn from the foundation; to overthrow	Latin	subvertō "to overthrow"		overthrow overturn	
 sufficiency		qualification for any purpose; ability					
-supportable		capable of being supported, maintained, or endured				bearable endurable sufferable	
-surfeit		excess in eating and drinking				cloy	
-surpass	verb	to go beyond in anything good or bad; to exceed				excel stand out	
-survivorship	noun	the state of being a survivor					
+supportable		capable of being supported, maintained, or endured	Middle French	supportable		bearable endurable sufferable	
+surfeit		excess in eating and drinking	Old French	sorfet		cloy	
+surpass	verb	to go beyond in anything good or bad; to exceed	Middle French	surpasser "to pass beyond"		excel	
+survivorship	noun	the state of being a survivor		survivor + -ship			
 suttle	noun	the weight when the tare has been deducted, and tret is yet to be allowed					
-swill		etym: [Properly, to drink like a pig				slop	
-sylvan		abounding in forests or in trees; woody				silvan	
-synchronism	noun	the concurrence of events in time; simultaneousness				synchrony synchronicity synchroneity synchronization synchronisation	asynchronism asynchronism asynchronism
-tallow	noun	the suet or fat of animals of the sheep and ox kinds, separated from membranous and fibrous matter by melting					
-tally		originally, a piece of wood on which notches or scores were cut, as the marks of number				match fit correspond check jibe	disagree
-tamarin		any one of several species of small squirrel-like South American monkeys of the genus Mid. ursulus				lion monkey lion marmoset leoncita	
-tapioca	noun	a coarsely granular substance obtained by heating, and thus partly changing, the moistened starch obtained from the roots of the cassava					
-tarnish	verb	to soil, or change the appearance of, especially by an alternation induced by the air, or by dust, or the like				stain maculate sully defile	
-taskmaster	noun	one who imposes a task, or burdens another with labor					
-teacup	noun	a small cup from which to drink tea				teacupful	
+swill		etym: [Properly, to drink like a pig	Old English	swillan		slop	
+sylvan		abounding in forests or in trees; woody	Greek	hū́lē "wood, matter"	silvanus sylvester sylvia sylvie	silvan	
+synchronism	noun	the concurrence of events in time; simultaneousness		syn- + chron- + -ism	synchresis	synchrony synchronicity synchroneity synchronization synchronisation	asynchronism asynchronism asynchronism
+tallow	noun	the suet or fat of animals of the sheep and ox kinds, separated from membranous and fibrous matter by melting	Old English	tælg			
+tally		originally, a piece of wood on which notches or scores were cut, as the marks of number	Latin	taliare	tallier untallied	match fit correspond check jibe	disagree
+tamarin		any one of several species of small squirrel-like South American monkeys of the genus Mid. ursulus	Spanish	tamarín "tamarin"		leoncita	
+tapioca	noun	a coarsely granular substance obtained by heating, and thus partly changing, the moistened starch obtained from the roots of the cassava	Portuguese	tapioca			
+tarnish	verb	to soil, or change the appearance of, especially by an alternation induced by the air, or by dust, or the like	Middle English	ternysshen		stain maculate sully defile	
+taskmaster	noun	one who imposes a task, or burdens another with labor		task + master			
+teacup	noun	a small cup from which to drink tea		tea + cup		teacupful	
 technics	noun	the doctrine of arts in general; such branches of learning as respect the arts					
-tedium		irksomeness; wearisomeness				boredom ennui	
-temper	verb	to mingle in due proportion; to prepare by combining				anneal normalize	
-tendon	noun	a tough insensible cord, bundle, or band of fibrous connective tissue uniting a muscle with some other part				sinew	
-tenon	noun	a projecting member left by cutting away the wood around it, and made to insert into a mortise, and in this way secure together the parts of a frame					
-tether	noun	a long rope or chain by which an animal is fastened, as to a stake, so that it can range or feed only within certain limits					
-tetrahedral		having, or composed of, four sides					
-tetrahedron	noun	a solid figure inclosed or bounded by four triangles					
-thaler	noun	a German silver coin worth about three shillings sterling, or about 73 cents					
-theodicy	noun	a vindication of the justice of God in ordaining or permitting natural and moral evil					
-thermodynamics	noun	the science which treats of the mechanical action or relations of heat					
-thicket	noun	a wood or a collection of trees, shrubs, etc., closely set				brush brushwood coppice copse	
-thoroughgoing		going through, or to the end or bottom; very thorough				exhaustive thorough	
-thunderhead	noun	a rounded mass of cloud, with shining white edges					
-thwack	verb	to strike with something flat or heavy; to bang, or thrash: to thump				smack	
-tigress	noun	the female of the tiger					
-titter	verb	to laugh with the tongue striking against the root of the upper teeth				giggle	
-toco	noun	a toucan having a very large beak					
-tole	verb	to draw, or cause to follow, by displaying something pleasing or desirable					
-tortilla	noun	an unleavened cake, as of maize flour, baked on a heated iron or stone					
-totem	noun	a rude picture, as of a bird, beast, or the like, used by the Nord American Indians as a symbolic designation, as of a family or a clan					
-traitor	noun	one who violates his allegiance and betrays his country				treasonist	
-tram	noun	a four-wheeled truck running on rails, and used in a mine, as for carrying coal or ore					
-treatise	noun	a written composition on a particular subject, in which its principles are discussed or explained					
-trellis	noun	a structure or frame of crossbarred work, or latticework, used for various purposes, as for screens or for supporting plants					
-trench	verb	to cut; to form or shape by cutting				impinge encroach entrench	
-tripe	noun	the large stomach of ruminating animals, when prepared for food					
-triticum	noun	a genus of grasses including the various species of wheat				genus triticum	
-trophic		of or connected with nutrition; nitritional					
-trot	verb	to proceed by a certain gait peculiar to quadrupeds				jog clip	
-trumpets	noun	a plant with long, hollow leaves				huntsman's horn huntsman's horns yellow trumpet yellow pitcher plant sarracenia flava	
-tubby		resembling a tub; specifically sounding dull and without resonance, like a tub				dumpy podgy pudgy roly-poly	
-tucan	noun	the Mexican pocket gopher					
-tuckahoe	noun	a curious vegetable production of the Southern Atlantic United States, growing under ground like a truffle and often attaining immense size				green arrow arum peltandra virginica	
-tutelage	noun	the act of guarding or protecting; guardianship				tuition tutorship	
-twining		winding around something; twisting					
-typography	noun	the art of printing with types; the use of types to produce impressions on paper, vellum, etc					
-umbrage	noun	the feeling of being overshadowed; jealousy of another, as standing in one's light or way				offense offence	
-unaccountable		not accountable or responsible; free from control				unexplainable	
-uncared		not cared for; not heeded					
-unconditional		not conditional limited, or conditioned; made without condition				unconditioned	conditional
-undeniable		not deniable; incapable of denial					deniable
-undine		one of a class of fabled female water spirits who might receive a human soul by intermarrying with a mortal					
-ungrateful		not grateful; not thankful for favors				thankless unthankful	grateful
+tedium		irksomeness; wearisomeness	Latin	taedium	tedious	boredom ennui	
+temper	verb	to mingle in due proportion; to prepare by combining	Latin	temperō		anneal normalize	
+tendon	noun	a tough insensible cord, bundle, or band of fibrous connective tissue uniting a muscle with some other part	Greek	ténōn "sinew, tendon"	tendinopathy	sinew	
+tenon	noun	a projecting member left by cutting away the wood around it, and made to insert into a mortise, and in this way secure together the parts of a frame	Old French	tenon			
+tether	noun	a long rope or chain by which an animal is fastened, as to a stake, so that it can range or feed only within certain limits	Middle English	tether			
+tetrahedral		having, or composed of, four sides		tetra- + -hedral			
+tetrahedron	noun	a solid figure inclosed or bounded by four triangles	Greek	tetráedron "triangle-based pyramid"			
+thaler	noun	a German silver coin worth about three shillings sterling, or about 73 cents	German	Thaler			
+theodicy	noun	a vindication of the justice of God in ordaining or permitting natural and moral evil	Greek	theós "god"	anthropodicy cosmodicy goalodicy sociodicy theology theosophy		
+thermodynamics	noun	the science which treats of the mechanical action or relations of heat		thermo- + dynamics	endothermic exothermic		
+thicket	noun	a wood or a collection of trees, shrubs, etc., closely set	Latin	dūmus		brush brushwood coppice copse	
+thoroughgoing		going through, or to the end or bottom; very thorough		thorough + going	thoroughgoer	exhaustive thorough	
+thunderhead	noun	a rounded mass of cloud, with shining white edges		thunder + head			
+thwack	verb	to strike with something flat or heavy; to bang, or thrash: to thump	Latin	tangō "touch"		smack	
+tigress	noun	the female of the tiger	French	tigresse			
+titter	verb	to laugh with the tongue striking against the root of the upper teeth	Middle English	titering "hesitation, vacillation"		giggle	
+toco	noun	a toucan having a very large beak	Hindi	ṭhoko			
+tole	verb	to draw, or cause to follow, by displaying something pleasing or desirable	Latin	tabula			
+tortilla	noun	an unleavened cake, as of maize flour, baked on a heated iron or stone	Spanish	tortilla			
+totem	noun	a rude picture, as of a bird, beast, or the like, used by the Nord American Indians as a symbolic designation, as of a family or a clan		Borrowed from Ojibwe (o)doodem(an)			
+traitor	noun	one who violates his allegiance and betrays his country	Latin	trāditor		treasonist	
+tram	noun	a four-wheeled truck running on rails, and used in a mine, as for carrying coal or ore	Latin	terminus			
+treatise	noun	a written composition on a particular subject, in which its principles are discussed or explained	Old French	traitis "treatise, account"	treaty		
+trellis	noun	a structure or frame of crossbarred work, or latticework, used for various purposes, as for screens or for supporting plants	Latin	trichila "arbor"			
+trench	verb	to cut; to form or shape by cutting	Old French	trenche	tranche	impinge encroach entrench	
+tripe	noun	the large stomach of ruminating animals, when prepared for food	Old French	tripe "entrails"	tripy		
+triticum	noun	a genus of grasses including the various species of wheat	Latin	trīticum	secalotricum		
+trophic		of or connected with nutrition; nitritional	Greek	trophikós "pertaining to food or nourishment"	atrophy tropic tropical		
+trot	verb	to proceed by a certain gait peculiar to quadrupeds	Old French	trotter		jog clip	
+trumpets	noun	a plant with long, hollow leaves					
+tubby		resembling a tub; specifically sounding dull and without resonance, like a tub		tub + -y	tubbily tubbiness tubbo	dumpy podgy pudgy	
+tucan	noun	the Mexican pocket gopher		Native to Mexico, from Nahuatl tuçan, togan			
+tuckahoe	noun	a curious vegetable production of the Southern Atlantic United States, growing under ground like a truffle and often attaining immense size		From Powhatan tockawhoughe			
+tutelage	noun	the act of guarding or protecting; guardianship	Latin	tūtēla "a watching, guardianship, protection"	tuition tutee	tuition tutorship	
+twining		winding around something; twisting			twinning		
+typography	noun	the art of printing with types; the use of types to produce impressions on paper, vellum, etc	Greek	tupográphos "certified copy"	typology		
+umbrage	noun	the feeling of being overshadowed; jealousy of another, as standing in one's light or way	Latin	umbrāticus "in the shade"		offense offence	
+unaccountable		not accountable or responsible; free from control		un- + accountable		unexplainable	
+uncared		not cared for; not heeded		un- + cared			
+unconditional		not conditional limited, or conditioned; made without condition		un- + conditional		unconditioned	conditional
+undeniable		not deniable; incapable of denial		un- + deny + -able	indisputable nondeniable undisputable unquestionable		deniable
+undine		one of a class of fabled female water spirits who might receive a human soul by intermarrying with a mortal	Latin	undīna			
+ungrateful		not grateful; not thankful for favors		un- + grateful	ingrateful	thankless unthankful	grateful
 unicity	noun	the condition of being united; quality of the unique					
-unkempt		not combed; disheveled					
-unravel		hence, to clear from complication or difficulty				unknot unscramble untangle unpick	ravel ravel
-unseat	verb	to throw from one's seat; to deprive of a seat					
-unturned		not turned; not revolved or reversed					turned
-unwarranted		not warranted; being without warrant, authority, or guaranty				indefensible insupportable unjustifiable unwarrantable	
-utensil		that which is used; an instrument					
-valedictory		bidding farewell; suitable or designed for an occasion of leave-taking					
-valiant		intrepid in danger; courageous				valorous	
-veering		shifting. -- Veer"ing*ly, adv			unveering	swerve swerving	
-venerate	verb	to regard with reverential respect; to honor with mingled respect and awe	Latin	venerātus	misvenerate overvenerate	reverence fear revere	
-verily		in very truth; beyond doubt or question					
+unkempt		not combed; disheveled	Middle English	unkempt "uncombed"			
+unravel		hence, to clear from complication or difficulty	Dutch	ontrafelen "to unravel"		unknot unscramble untangle unpick	ravel ravel
+unseat	verb	to throw from one's seat; to deprive of a seat		From un- (suffix meaning 'not') + seat ("to provide with a place to sit")	beseat reseat		
+unturned		not turned; not revolved or reversed		un- + turned			turned
+unwarranted		not warranted; being without warrant, authority, or guaranty		un- + warranted	warrantless	indefensible insupportable unjustifiable unwarrantable	
+utensil		that which is used; an instrument	Latin	ūtēnsilis "useful, usable"			
+valedictory		bidding farewell; suitable or designed for an occasion of leave-taking	Latin	valedictum	valediction salutatory		
+valiant		intrepid in danger; courageous	Latin	valēre "to have value; to be worth; to be strong; to have influence or power"		valorous	
+veering		shifting. -- Veer"ing*ly, adv				swerve swerving	
+venerate	verb	to regard with reverential respect; to honor with mingled respect and awe	Latin	venerātus		reverence fear revere	
+verily		in very truth; beyond doubt or question	Middle English	verraily			
 versicolor		having various colors; changeable in color					
-vesicular		containing, or composed of, vesicles or vesiclelike structures					
-vielle	noun	an old stringed instrument played upon with a wheel					
-virulence		extreme bitterness or malignity of disposition				virulency	
-vitals		organs that are necessary for life; more especially, the heart, lungs, and brain				vital organ	
-vivisection	noun	the dissection of an animal while alive, for the purpose of making physiological investigations					
-vociferous		making a loud outcry; clamorous	Latin	vōcifer	vociferation unvociferous	blatant clamant clamorous strident	
-volant		passing through the air upon wings, or as if upon wings					
-volition	noun	the act of willing or choosing; the act of forming a purpose				will	
-voluntariness	noun	the quality or state of being voluntary; spontaneousness					
-wafer	noun	an adhesive disk of dried paste, made of flour, gelatin, isinglass, or the like, and coloring matter, -- used in sealing letters and other documents					
-wamp	noun	the common American eider					
-watchman		specifically, one who guards a building, or the streets of a city, by night				watcher security guard	
-watermark	noun	a mark indicating the height to which water has risen, or at which it has stood				water line	
-wench	noun	a low, vicious young woman; a drab					
-wheelhouse	noun	a small house on or above a vessel's deck, containing the steering wheel. A paddle box				pilothouse	
-whim	noun	a sudden turn or start of the mind; a temporary eccentricity				caprice impulse	
+vesicular		containing, or composed of, vesicles or vesiclelike structures		vesicula + -ar			
+vielle	noun	an old stringed instrument played upon with a wheel	Old French	viele			
+virulence		extreme bitterness or malignity of disposition	Latin	virulentia	pestilence viruliferous virulome	virulency	
+vitals		organs that are necessary for life; more especially, the heart, lungs, and brain					
+vivisection	noun	the dissection of an animal while alive, for the purpose of making physiological investigations	Latin	vīvus "alive"			
+vociferous		making a loud outcry; clamorous	Latin	vōcifer	vociferation	blatant clamant clamorous strident	
+volant		passing through the air upon wings, or as if upon wings	Latin	volāre			
+volition	noun	the act of willing or choosing; the act of forming a purpose	Latin	volitiō "will, volition"		will	
+voluntariness	noun	the quality or state of being voluntary; spontaneousness		voluntary + -ness			
+wafer	noun	an adhesive disk of dried paste, made of flour, gelatin, isinglass, or the like, and coloring matter, -- used in sealing letters and other documents	Old French	gaufre			
+wamp	noun	the common American eider		Probably from Massachusett wompi ("white")			
+watchman		specifically, one who guards a building, or the streets of a city, by night	Middle English	waccheman	watchdog watchout watchwoman	watcher	
+watermark	noun	a mark indicating the height to which water has risen, or at which it has stood		water + mark			
+wench	noun	a low, vicious young woman; a drab	Old English	wenċel			
+wheelhouse	noun	a small house on or above a vessel's deck, containing the steering wheel. A paddle box		wheel + house		pilothouse	
+whim	noun	a sudden turn or start of the mind; a temporary eccentricity		Clipping of whim-wham		caprice impulse	
 whipper	noun	one who raises coal or merchandise with a tackle from a chip's hold				switcher	
 whitening	noun	the act or process of making or becoming white				lightening	
-whiting		chalk prepared in an impalpable powder by pulverizing and repeated washing, used as a pigment, as an ingredient in putty, for cleaning silver, etc					
-widowhood	noun	the state of being a widow; the time during which a woman is widow					
-wield	verb	to direct or regulate by influence or authority				exert maintain	
-windage	noun	the sudden compression of the air caused by a projectile in passing close to another body					
-windward	noun	the point or side from which the wind blows; -- opposed to Ant: leeward					leeward
-wintergreen	noun	a plant which keeps its leaves green through the winter				pyrola	
+whiting		chalk prepared in an impalpable powder by pulverizing and repeated washing, used as a pigment, as an ingredient in putty, for cleaning silver, etc		white + -ing			
+widowhood	noun	the state of being a widow; the time during which a woman is widow	Middle English	widwehede	widowed widower widowerhood		
+wield	verb	to direct or regulate by influence or authority	Old English	wealdan "to control, rule"		exert maintain	
+windage	noun	the sudden compression of the air caused by a projectile in passing close to another body		wind + -age			
+windward	noun	the point or side from which the wind blows; -- opposed to Ant: leeward		wind + -ward			leeward
+wintergreen	noun	a plant which keeps its leaves green through the winter		winter + green		pyrola	
 wishful		having desire, or ardent desire; longing				desirous	undesirous
-woad	noun	a blue dyestuff, or coloring matter, consisting of the powdered and fermented leaves of the Isatis tinctoria					
-woolly		resembling wool; of the nature of wool				flocculent wooly	
-workbench	noun	a bench on which work is performed, as in a carpenter's shop				work bench bench	
-workmanship	noun	the art or skill of a workman; the execution or manner of making anything				craft craftsmanship	
-wrest	verb	to turn from truth; to twist from its natural or proper use or meaning by violence					
-yachtsman	noun	one who owns or sails a yacht; a yachter				yachtswoman	
+woad	noun	a blue dyestuff, or coloring matter, consisting of the powdered and fermented leaves of the Isatis tinctoria	French	guède			
+woolly		resembling wool; of the nature of wool	Middle English	wolly		flocculent wooly	
+workbench	noun	a bench on which work is performed, as in a carpenter's shop		work + bench		bench	
+workmanship	noun	the art or skill of a workman; the execution or manner of making anything	Middle English	werkmanschipe		craft craftsmanship	
+wrest	verb	to turn from truth; to twist from its natural or proper use or meaning by violence	Old English	wrǣstan "to twist forcibly, wrench"	restharrow		
+yachtsman	noun	one who owns or sails a yacht; a yachter		yacht + -s- + -man	yachtsperson yachtswoman	yachtswoman	
 yahweh	noun	a modern transliteration of the Hebrew word translated Jehovah in the Bible				yhwh yahwe yahveh yhvh yahve	
-yoke	noun	a bar or frame of wood by which two oxen are joined at the heads or necks for working together					
-zealous		filled with, or characterized by, zeal; warmly engaged, or ardent, in behalf of an object	Greek	zêlos "zeal, jealousy"	jealous zeal miszealous nonzealous overzealous superzealous ultrazealous unzealous	avid	
-zeitgeist	noun	the spirit of the time; the general intellectual and moral state or temper characteristic of any period of time					
-zest	noun	a piece of orange or lemon peel, or the aromatic oil which may be squeezed from such peel, used to give flavor to liquor, etc				spice spice up	
+yoke	noun	a bar or frame of wood by which two oxen are joined at the heads or necks for working together	Greek	zygós "even; twin"			
+zealous		filled with, or characterized by, zeal; warmly engaged, or ardent, in behalf of an object	Greek	zêlos "zeal, jealousy"	jealous	avid	
+zeitgeist	noun	the spirit of the time; the general intellectual and moral state or temper characteristic of any period of time	German	Zeitgeist "spirit of the age"			
+zest	noun	a piece of orange or lemon peel, or the aromatic oil which may be squeezed from such peel, used to give flavor to liquor, etc	French	zeste		spice	
 `
 
 export const WEBSTER_PACK: RawEntry[] = TSV.trim()

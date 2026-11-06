@@ -149,7 +149,10 @@ const NOT_AN_ORIGIN = /^(first attested|attested|unknown|uncertain|origin unknow
  * interesting because it is Latin tacitus "silent", not because the trail runs
  * through Middle English on the way.
  */
-export function readOrigin(etymology) {
+/** Endings an English reader can already see on the word in front of them. */
+const PLAIN_SUFFIX = /^(ed|ing|ness|ish|ly|er|est|s|es|ment|ful|less)$/
+
+export function readOrigin(etymology, word = '') {
   if (!etymology) return null
   let text = tidy(etymology)
 
@@ -179,7 +182,17 @@ export function readOrigin(etymology) {
     ]
       .filter(([form]) => form)
       .map(([form, gloss]) => (gloss ? `${form} "${gloss}"` : form))
-    if (parts.length >= 2) return { language: null, text: parts.join(' + ') }
+    if (parts.length >= 2) {
+      // "missing: miss + -ing" is not an etymology, it is the word read back
+      // out. Only where nothing is glossed, so "aden- + -oma" survives: that
+      // one is telling a reader something they could not already see.
+      const stems = parts.map((p) => p.replace(/[-"]/g, '').split(' ')[0].toLowerCase())
+      const bare = !parts.some((p) => p.includes('"'))
+      if (bare && word && word.toLowerCase().startsWith(stems[0]) && PLAIN_SUFFIX.test(stems[stems.length - 1])) {
+        return null
+      }
+      return { language: null, text: parts.join(' + ') }
+    }
   }
 
   const first = text.split(/(?<=[.;])\s/)[0].replace(/[.;]$/, '')
@@ -208,9 +221,21 @@ export function readRelated(entry, word, etymon = '') {
   for (const list of [entry.related, entry.derived]) {
     for (const item of list ?? []) {
       const candidate = (item.word ?? '').trim().toLowerCase()
-      if (!/^[a-z][a-z-]{2,18}$/.test(candidate) || seen.has(candidate)) continue
+      if (!/^[a-z][a-z]{2,18}$/.test(candidate) || seen.has(candidate)) continue
       // Skip forms that are just this word with an ending glued on.
       if (candidate.startsWith(word.slice(0, Math.max(5, word.length - 2)))) continue
+      // ...and with a prefix glued on the front, which the test above misses.
+      // Roget's "truth" was offering post-truth, antitruth, biotruth,
+      // countertruth and mistruth: five words that teach nothing a reader of
+      // "truth" does not already have. Containment either way catches them,
+      // and takes "bate" out from under "abate" while it is there.
+      //
+      // The worry with testing every length was losing react under act. It
+      // is not a real loss: a word built from a root with an affix is what
+      // the morpheme table's own family row is for, and it says why the
+      // affix matters, which a bare list never does. Leaving it in only
+      // brought compounds - deck was offering holodeck and afterdeck.
+      if (candidate.includes(word) || word.includes(candidate)) continue
       // Wiktionary files loose associations under "related terms" too -
       // "unstable" sits beside "ephemeral" - so require shared word stock.
       if (!sharesStem(candidate, stemSource)) continue
@@ -232,7 +257,7 @@ function extract(text, word) {
       continue
     }
     if (entry.lang_code !== 'en') continue
-    const origin = readOrigin(entry.etymology_text)
+    const origin = readOrigin(entry.etymology_text, word)
     const related = readRelated(entry, word, origin?.text ?? '')
     const score = (origin ? 2 : 0) + (related.length ? 1 : 0)
     if (!best || score > best.score) best = { score, origin, related }
@@ -247,14 +272,23 @@ function extract(text, word) {
 
 async function main() {
   mkdirSync(WORD_CACHE, { recursive: true })
-  const deck = readFileSync(join(HERE, '..', 'src', 'data', 'core.ts'), 'utf8')
-  const block = /const TSV = `\n([\s\S]*?)\n`/.exec(deck)
-  if (!block) throw new Error('could not read the deck; run build-deck.mjs first')
-  const words = block[1]
-    .trim()
-    .split('\n')
-    .map((line) => line.split('\t')[0])
-    .filter((w) => /^[a-z]{3,20}$/.test(w))
+  // Every deck, not just the core one. Webster and Roget were being built
+  // against a file of a thousand core words, so a Webster card could only
+  // show an origin for one of the twenty-five words the two decks happen to
+  // share - which read, on the phone, as the feature simply not being there.
+  const wanted = new Set()
+  for (const name of ['core.ts', 'webster.ts', 'roget.ts']) {
+    const path = join(HERE, '..', 'src', 'data', name)
+    if (!existsSync(path)) continue
+    const block = /const TSV = `\n([\s\S]*?)\n`/.exec(readFileSync(path, 'utf8'))
+    if (!block) continue
+    for (const line of block[1].trim().split('\n')) {
+      const word = line.split('\t')[0]
+      if (/^[a-z]{3,20}$/.test(word)) wanted.add(word)
+    }
+  }
+  if (!wanted.size) throw new Error('could not read any deck; run build-deck.mjs first')
+  const words = [...wanted].sort()
 
   console.log(`${words.length} words to look up\n`)
   const result = {}

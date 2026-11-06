@@ -27,7 +27,7 @@ export const PACKS: Pack[] = [
   {
     id: 'core',
     name: CORE_NAME,
-    blurb: `${CORE_COUNT.toLocaleString()} words worth knowing, A to Z, with where each one comes from and what it is related to.`,
+    blurb: `${CORE_COUNT.toLocaleString()} words worth knowing, A to Z, with roots and origins.`,
     count: CORE_COUNT,
     source: 'built in',
     sort: true,
@@ -36,7 +36,7 @@ export const PACKS: Pack[] = [
   {
     id: 'webster',
     name: WEBSTER_NAME,
-    blurb: `${WEBSTER_COUNT.toLocaleString()} entries in the words of 1913, from the public-domain dictionary that today's Merriam-Webster grew out of. The period voice is the reason to read it.`,
+    blurb: `${WEBSTER_COUNT.toLocaleString()} entries in the voice of 1913, from the dictionary Merriam-Webster grew out of.`,
     count: WEBSTER_COUNT,
     source: "webster's 1913",
     sort: true,
@@ -45,7 +45,7 @@ export const PACKS: Pack[] = [
   {
     id: 'roget',
     name: ROGET_NAME,
-    blurb: `${ROGET_COUNT.toLocaleString()} words from ${ROGET_THEMES} of Roget's ideas, kept in his order rather than alphabetical, so the words for one idea arrive together.`,
+    blurb: `${ROGET_COUNT.toLocaleString()} words grouped by idea rather than alphabet, ${ROGET_THEMES} ideas in all.`,
     count: ROGET_COUNT,
     source: "roget's thesaurus 1911",
     sort: false,

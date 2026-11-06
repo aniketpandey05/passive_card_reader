@@ -88,12 +88,17 @@ export default function Library({ settings, onPatch, onPlay, onPdf, onText }: Pr
 
   return (
     <div className="library">
-      <header className="masthead">
-        <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 12 }}>
-          <div>
-            <h1>WordFlow</h1>
-            <p>One word at a time. A pause to remember it, then the meaning.</p>
-          </div>
+      {/* An app bar, not a masthead. The line about what WordFlow is belongs
+          on the screen of somebody who has never used it, not above the decks
+          of somebody opening it for the ninetieth morning in a row. */}
+      <header className="appbar">
+        <h1>WordFlow</h1>
+        <div className="appbar-actions">
+          {rows !== null && rows.length > 0 && !importing && (
+            <button className="icon" onClick={() => setImporting(true)} aria-label="Add words">
+              +
+            </button>
+          )}
           <button className="icon" onClick={() => setShowSettings(true)} aria-label="Settings">
             ☰
           </button>
@@ -103,11 +108,6 @@ export default function Library({ settings, onPatch, onPlay, onPdf, onText }: Pr
       {rows !== null && (rows.length > 0 || importing) && (
         <div className="section-head">
           <h2>Your decks</h2>
-          {!importing && rows.length > 0 && (
-            <button className="btn small" onClick={() => setImporting(true)}>
-              Add words
-            </button>
-          )}
         </div>
       )}
 
@@ -126,6 +126,7 @@ export default function Library({ settings, onPatch, onPlay, onPdf, onText }: Pr
         // Each dictionary is a full-width target rather than a paragraph with
         // buttons under it - this is the whole screen on a phone.
         <div className="choices">
+          <p className="welcome">One word at a time. A pause to remember it, then the meaning.</p>
           {PACKS.map((pack, i) => (
             <button
               key={pack.id}
@@ -133,18 +134,20 @@ export default function Library({ settings, onPatch, onPlay, onPdf, onText }: Pr
               disabled={adding !== null}
               onClick={() => void addPack(pack)}
             >
+              <span className="choice-mark" aria-hidden="true">{pack.name[0]}</span>
               <span className="choice-title">{pack.name}</span>
               <span className="choice-note">{pack.blurb}</span>
-              <span className="choice-go">{adding === pack.id ? 'Adding…' : 'Begin →'}</span>
+              <span className="choice-go">{adding === pack.id ? 'Adding…' : '›'}</span>
             </button>
           ))}
           {addError && <p className="hint warn-note">{addError}</p>}
           <button className="choice" onClick={() => setImporting(true)}>
+            <span className="choice-mark" aria-hidden="true">+</span>
             <span className="choice-title">Use your own dictionary</span>
             <span className="choice-note">
               A PDF, CSV or word list from your phone. Scanned pages are read on the device, nothing is uploaded.
             </span>
-            <span className="choice-go">Choose a file →</span>
+            <span className="choice-go">›</span>
           </button>
         </div>
       ) : (
@@ -241,9 +244,10 @@ export default function Library({ settings, onPatch, onPlay, onPdf, onText }: Pr
             {addError && <p className="hint warn-note">{addError}</p>}
             {missingPacks.map((pack) => (
               <button key={pack.id} className="choice" disabled={adding !== null} onClick={() => void addPack(pack)}>
+                <span className="choice-mark" aria-hidden="true">{pack.name[0]}</span>
                 <span className="choice-title">{pack.name}</span>
                 <span className="choice-note">{pack.blurb}</span>
-                <span className="choice-go">{adding === pack.id ? 'Adding…' : 'Add →'}</span>
+                <span className="choice-go">{adding === pack.id ? 'Adding…' : '›'}</span>
               </button>
             ))}
           </div>

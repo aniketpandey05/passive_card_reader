@@ -17,8 +17,10 @@ export default defineConfig({
         name: 'WordFlow - passive vocabulary review',
         short_name: 'WordFlow',
         description: 'Hands-free flashcards from any dictionary.',
-        theme_color: '#faf9f7',
-        background_color: '#faf9f7',
+        // The palette went cool a while back; these two stayed warm, so the
+        // splash and the task switcher were a different off-white to the app.
+        theme_color: '#f4f6f9',
+        background_color: '#f4f6f9',
         display: 'standalone',
         orientation: 'portrait',
         // Both must sit under the deployed path or the installed app opens a

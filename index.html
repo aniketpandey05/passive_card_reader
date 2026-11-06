@@ -3,7 +3,16 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <meta name="theme-color" content="#faf9f7" />
+    <!-- The status bar takes its colour from here. One warm off-white was
+         painting a white bar above a near-black app on every dark phone, which
+         is the single thing that makes an installed app look like a web page
+         in a frame. These match the palette; App.tsx keeps them in step when
+         the theme is chosen by hand rather than by the device. -->
+    <meta name="theme-color" content="#f4f6f9" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0b1017" media="(prefers-color-scheme: dark)" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="WordFlow" />
     <meta name="description" content="Hands-free vocabulary review from any dictionary." />
     <title>WordFlow</title>
   </head>

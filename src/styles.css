@@ -76,7 +76,8 @@ button { font: inherit; color: inherit; cursor: pointer; }
   align-items: center;
   gap: 12px;
   padding: 14px 16px;
-  padding-top: max(14px, env(safe-area-inset-top));
+  /* The inset is where the notch ends, not where content should start. */
+  padding-top: calc(10px + env(safe-area-inset-top));
 }
 
 .icon {
@@ -346,14 +347,17 @@ h2.step {
 
 .stage {
   display: grid;
-  /* Anchored near the top, not centred. Centring the whole block made the word
-     jump upward by ~50px the moment the meaning appeared - exactly when you
-     are looking straight at it - because revealing it made the block taller.
-     The word now holds its place and everything else arrives underneath. */
-  align-content: start;
+  /* Centred, but only because the space under the word is reserved whether
+     anything is in it or not - see .meaning-slot. Centring the block on its
+     own made the word jump upward by ~50px the moment the meaning appeared,
+     exactly when you are looking straight at it, because revealing it made
+     the block taller. Anchoring it to the top instead fixed the jump and
+     left four hundred pixels of nothing under every card. This keeps the
+     word still and puts the card where the eye already is. */
+  align-content: center;
   justify-items: center;
   gap: 14px;
-  padding: clamp(32px, 17vh, 140px) 24px 20px;
+  padding: 16px 24px 20px;
   text-align: center;
   cursor: pointer;
   user-select: none;
@@ -379,7 +383,17 @@ h2.step {
 /* No reserved height any more: it existed to stop the layout jumping, and the
    anchored stage does that properly. Without it the word phase no longer has
    an empty hole beneath the word. */
-.meaning-slot { display: grid; align-content: start; justify-items: center; width: 100%; }
+/* The height is held open whether a meaning is showing or not, so revealing
+   one does not move the word above it. Cards longer than this still grow -
+   a few of Webster's do - but the word shifting on the longest card in the
+   deck is a far smaller price than every card sitting in the top third. */
+.meaning-slot {
+  display: grid;
+  align-content: start;
+  justify-items: center;
+  width: 100%;
+  min-height: 42vh;
+}
 .meaning {
   max-width: 34ch;
   margin: 0;
@@ -479,7 +493,7 @@ h2.step {
 
 .controls {
   padding: 0 16px 16px;
-  padding-bottom: max(16px, env(safe-area-inset-bottom));
+  padding-bottom: calc(14px + env(safe-area-inset-bottom));
   display: grid;
   gap: 14px;
   justify-items: center;
@@ -846,3 +860,162 @@ input[type='range'] { accent-color: var(--accent); width: 150px; }
   text-decoration: line-through;
   border-style: dashed;
 }
+
+/* ================== reads as an app, not a page ================== */
+
+/* Three things give a web page away on a phone before anything else: the grey
+   flash behind every tap, text that selects when a finger rests too long, and
+   content sliding under the notch. */
+body {
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  -webkit-user-select: none;
+}
+/* A meaning is worth copying. Nothing else here is. */
+.meaning,
+.word,
+.wordcard,
+input,
+textarea {
+  user-select: text;
+  -webkit-user-select: text;
+}
+
+.library {
+  padding-left: max(18px, env(safe-area-inset-left));
+  padding-right: max(18px, env(safe-area-inset-right));
+  padding-bottom: max(28px, env(safe-area-inset-bottom));
+}
+
+/* ---------- the app bar ---------- */
+
+/* One title, set in the interface face rather than the book face. The serif
+   is the voice of the words themselves; using it for furniture too left four
+   competing headlines down a single screen and nowhere for the eye to land. */
+.appbar {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 0 calc(-1 * max(18px, env(safe-area-inset-left))) 6px;
+  padding: max(10px, env(safe-area-inset-top)) max(18px, env(safe-area-inset-left)) 10px;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: saturate(1.4) blur(12px);
+  -webkit-backdrop-filter: saturate(1.4) blur(12px);
+  border-bottom: 1px solid transparent;
+}
+.appbar h1 {
+  font-family: var(--sans);
+  font-size: 19px;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+/* The line that says what this is, kept for the one screen that needs it. */
+.welcome {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.5;
+  margin: 2px 0 14px;
+}
+
+/* ---------- a deck, as a row rather than a poster ---------- */
+
+.deck { padding: 16px 16px 14px; border-radius: 18px; }
+.deck h3 {
+  font-family: var(--sans);
+  font-size: 17px;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+  margin: 0 0 3px;
+}
+.deck .meta { font-size: 13px; margin-bottom: 12px; }
+
+/* Four pixels and a full-width trough: a progress bar you can actually see
+   from across a room, instead of a hairline with a dot on the end of it. */
+.track { height: 5px; background: color-mix(in srgb, var(--ink) 10%, transparent); margin-bottom: 14px; }
+.track i { transition: width 0.3s ease; min-width: 5px; }
+
+/* ---------- a dictionary, as a row ---------- */
+
+/* Was a 300px poster carrying three lines of sales copy, so two of them
+   filled a phone. The blurb is worth reading once; after that it is in the
+   way of the thing you came to tap. */
+.choice {
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 2px 14px;
+  padding: 16px;
+  border-radius: 18px;
+}
+.choice-title {
+  grid-column: 1;
+  font-family: var(--sans);
+  font-size: 17px;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+}
+.choice-note {
+  grid-column: 1;
+  font-size: 13.5px;
+  line-height: 1.45;
+  color: var(--muted);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+}
+.choice-go {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  align-self: center;
+  margin: 0;
+  font-size: 22px;
+  line-height: 1;
+  color: var(--muted);
+  font-weight: 400;
+}
+.choice.primary .choice-go { color: var(--accent); }
+
+/* ---------- one button, three weights ---------- */
+
+.btn { border-radius: 12px; font-weight: 550; }
+.actions .btn { min-height: 42px; }
+.section-head .btn.small { min-height: 34px; }
+
+/* Nothing on a phone should be smaller than a fingertip. */
+@media (hover: none) {
+  .icon { min-width: 44px; min-height: 44px; }
+  .icon.small { min-width: 40px; min-height: 40px; }
+}
+
+/* The bar carries the actions now. A pill reading "Add words" next to a small
+   grey label was the heaviest thing on the screen and pointed at the least
+   important job on it. */
+.appbar-actions { display: flex; align-items: center; gap: 2px; }
+
+/* A letter in a tile, so a list of dictionaries reads as a list and the eye
+   has a left edge to run down. */
+.choice { grid-template-columns: auto 1fr auto; }
+.choice-mark {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  align-self: center;
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 11px;
+  background: color-mix(in srgb, var(--accent) 16%, transparent);
+  color: var(--accent);
+  font-size: 16px;
+  font-weight: 650;
+}
+.choice-title { grid-column: 2; }
+.choice-note { grid-column: 2; }
+.choice-go { grid-column: 3; }

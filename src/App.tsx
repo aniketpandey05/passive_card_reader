@@ -58,6 +58,21 @@ export default function App() {
     // then decides, and follows the device if it changes while open.
     if (settings.theme === 'system') delete document.documentElement.dataset.theme
     else document.documentElement.dataset.theme = settings.theme
+
+    // The status bar follows the page's own background rather than the media
+    // queries in the head, which only know what the device prefers and not
+    // what was chosen in Settings.
+    //
+    // Read from the token on the root, not from body's computed background:
+    // body's background propagates to the canvas, and what comes back from
+    // getComputedStyle is the old colour - which set the status bar to the
+    // theme the reader had just switched away from.
+    const bg = getComputedStyle(document.documentElement).getPropertyValue('--bg').trim()
+    if (bg) {
+      for (const tag of document.querySelectorAll<HTMLMetaElement>('meta[name="theme-color"]')) {
+        tag.content = bg
+      }
+    }
   }, [settings])
 
   const patch = useCallback(async (p: Partial<Settings>) => {
